@@ -3,6 +3,8 @@ ANY COMMERCIAL USE OF ANY IRIDESCENT FILES REQUIRES LICENSING contact george@geo
 
 Copyright 2022 George Charles Rosar II
 
+Teensy 4.1 should have at least 16MB or more of external RAM soldered into Teensy 4.1 PSRAM pads. Should either be soldered or connected to the Teensy Audio Adapter Card, also Teensy Audio Adapter Card should have an additional 2Gbit of Flash RAM soldered in the Audio Adapter.
+
 installing
 ```
 mkdir iridescentBUILD; cd iridescentBUILD
@@ -43,3 +45,12 @@ make clean; make V=1 DEBUG=1
 ```
 
 oh i forgot, i need to implement the /Applications/Teensyduino.app of which is required to load the firmware
+
+if you want to get daring copy the python modules for kivy, virtual environment, numpy, intelbinhex, pygame, matplotlib, music21, et cetera... :
+```
+cp -R iridescentBUILD/iridescentmicropython/ports/libmicropython/modulesTakenOut/* iridescentBUILD/iridescentmicropython/ports/libmicropython/modules/
+```
+and build again
+doubtful there's any hardware that will support it at the moment, however due to tiny flash ram size on hardware
+
+a board is in development for this firmware/OS
