@@ -1,0 +1,70 @@
+//
+//  middle_hook.cpp
+//  
+//
+//  Created by George Rosar on 12/2/22.
+//
+
+#include <stdio.h>
+#include <middle_hook.h>
+//#include "imxrt.h"
+#include "wiring.h"
+#include "usb_dev.h"
+#include "avr/pgmspace.h"
+#include "smalloc.h"
+#include <string.h>
+#include "mpconfigport.h"
+//added
+#include CLOCK_CONFIG_H
+#include "fsl_iomuxc.h"
+//added
+extern uint32_t SystemCoreClock;
+#include "debug/printf.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+extern void __libc_init_array(void); // C++ standard library'
+extern void secondaryMain(void);
+extern void startup_default_late_hook(void);
+void startup_default_middle_hook(void)
+{
+    board_init();
+    //from micropython core
+    analog_init();
+    pwm_init();
+    tempmon_init();
+    SystemCoreClockUpdate();
+#if !defined(TEENSY_INIT_USB_DELAY_BEFORE)
+        #define TEENSY_INIT_USB_DELAY_BEFORE 20
+#endif
+#if !defined(TEENSY_INIT_USB_DELAY_AFTER)
+        #define TEENSY_INIT_USB_DELAY_AFTER 280
+#endif
+    // for background about this startup delay, please see these conversations
+    // https://forum.pjrc.com/threads/36606?p=113980&viewfull=1#post113980
+    // https://forum.pjrc.com/threads/31290?p=87273&viewfull=1#post87273
+
+    while (millis() < TEENSY_INIT_USB_DELAY_BEFORE) ; // wait
+    //Reset_Handler();
+    usb_init();
+    while (millis() < TEENSY_INIT_USB_DELAY_AFTER + TEENSY_INIT_USB_DELAY_BEFORE) ; // wait
+    //printf("before C++ constructors\n");
+
+    //Reset_Handler();
+    startup_default_late_hook();
+    __libc_init_array();
+    //printf("after C++ constructors\n");
+    //printf("before setup\n");
+    ticks_init();
+    //tusb_init();
+    led_init();
+    pendsv_init();
+    secondaryMain();
+    //Reset_Handler();
+    
+    while (1) asm("WFI");
+}
+
+#ifdef __cplusplus
+}
+#endif
