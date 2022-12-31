@@ -1,0 +1,1 @@
+String builtInInstrumentsName[20] = {"RhodesLayer1", "RhodesLayer2", "RhodesLayer3", "RhodesLayer4", "RhodesLayer5", "RhodesLayer6", "RhodesLayer7", "RhodesLayer8", "DX7Rhodes", "Wurlitzer", "clavinetvelocity", "Clavinet2", "CP80EP", "StereoGrandBright", "DX7_2", "DX7_1", "Harpsichord_1", "Harpsichord_2", "Clavinet_1", "Clavinet_2", };
