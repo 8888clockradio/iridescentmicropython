@@ -1,0 +1,5 @@
+Q(__name__)
+Q(urandom)
+Q(getrandbits)
+Q(seed)
+Q(urandom)

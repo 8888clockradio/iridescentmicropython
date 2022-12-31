@@ -1,0 +1,9 @@
+build-shared/lib/tinyusb/src/class/midi/midi_device.o: \
+ ../../lib/tinyusb/src/class/midi/midi_device.c \
+ ../../lib/tinyusb/src/tusb_option.h \
+ ../../lib/tinyusb/src/common/tusb_compiler.h tusb_config.h \
+ ../../lib/tinyusb/src/common/tusb_mcu.h
+ ../../lib/tinyusb/src/class/midi/midi_device.c :
+ ../../lib/tinyusb/src/tusb_option.h :
+ ../../lib/tinyusb/src/common/tusb_compiler.h tusb_config.h :
+ ../../lib/tinyusb/src/common/tusb_mcu.h :

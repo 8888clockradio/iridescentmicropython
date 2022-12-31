@@ -1,0 +1,18 @@
+build-shared/py/ringbuf.o: ../../py/ringbuf.c ../../py/ringbuf.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h \
+ /Applications/ARM/arm-none-eabi/include/stdint.h \
+ /Applications/ARM/arm-none-eabi/include/machine/_default_types.h \
+ /Applications/ARM/arm-none-eabi/include/sys/features.h \
+ /Applications/ARM/arm-none-eabi/include/_newlib_version.h \
+ /Applications/ARM/arm-none-eabi/include/sys/_intsup.h \
+ /Applications/ARM/arm-none-eabi/include/sys/_stdint.h
+../../py/ringbuf.c ../../py/ringbuf.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h :
+ /Applications/ARM/arm-none-eabi/include/stdint.h :
+ /Applications/ARM/arm-none-eabi/include/machine/_default_types.h :
+ /Applications/ARM/arm-none-eabi/include/sys/features.h :
+ /Applications/ARM/arm-none-eabi/include/_newlib_version.h :
+ /Applications/ARM/arm-none-eabi/include/sys/_intsup.h :
+ /Applications/ARM/arm-none-eabi/include/sys/_stdint.h :

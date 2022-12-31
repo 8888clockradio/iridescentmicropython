@@ -1,0 +1,90 @@
+build-shared/py/objnamedtuple.o: ../../py/objnamedtuple.c \
+ /Applications/ARM/arm-none-eabi/include/string.h \
+ /Applications/ARM/arm-none-eabi/include/_ansi.h \
+ /Applications/ARM/arm-none-eabi/include/newlib.h \
+ /Applications/ARM/arm-none-eabi/include/_newlib_version.h \
+ /Applications/ARM/arm-none-eabi/include/sys/config.h \
+ /Applications/ARM/arm-none-eabi/include/machine/ieeefp.h \
+ /Applications/ARM/arm-none-eabi/include/sys/features.h \
+ /Applications/ARM/arm-none-eabi/include/sys/reent.h \
+ /Applications/ARM/arm-none-eabi/include/_ansi.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h \
+ /Applications/ARM/arm-none-eabi/include/sys/_types.h \
+ /Applications/ARM/arm-none-eabi/include/machine/_types.h \
+ /Applications/ARM/arm-none-eabi/include/machine/_default_types.h \
+ /Applications/ARM/arm-none-eabi/include/sys/lock.h \
+ /Applications/ARM/arm-none-eabi/include/sys/cdefs.h \
+ /Applications/ARM/arm-none-eabi/include/sys/string.h ../../py/objtuple.h \
+ ../../py/obj.h /Applications/ARM/arm-none-eabi/include/assert.h \
+ ../../py/mpconfig.h mpconfigport.h boards/TEENSY41/mpconfigboard.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdbool.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h \
+ /Applications/ARM/arm-none-eabi/include/stdint.h \
+ /Applications/ARM/arm-none-eabi/include/sys/_intsup.h \
+ /Applications/ARM/arm-none-eabi/include/sys/_stdint.h \
+ /Applications/ARM/arm-none-eabi/include/stdlib.h \
+ /Applications/ARM/arm-none-eabi/include/machine/stdlib.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/fsl_device_registers.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/MIMXRT1062.h \
+ ../../lib/cmsis/inc/core_cm7.h ../../lib/cmsis/inc/cmsis_version.h \
+ ../../lib/cmsis/inc/cmsis_compiler.h ../../lib/cmsis/inc/cmsis_gcc.h \
+ ../../lib/cmsis/inc/mpu_armv7.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/MIMXRT1062_features.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h \
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h \
+ /Applications/ARM/arm-none-eabi/include/alloca.h ../../py/misc.h \
+ ../../py/qstr.h build-shared/genhdr/qstrdefs.generated.h \
+ ../../py/mpprint.h ../../py/runtime0.h ../../py/runtime.h \
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include-fixed/limits.h \
+ ../../py/objlist.h ../../py/objexcept.h \
+ build-shared/genhdr/root_pointers.h ../../py/pystack.h ../../py/objstr.h \
+ ../../py/objarray.h ../../py/objnamedtuple.h
+../../py/objnamedtuple.c :
+ /Applications/ARM/arm-none-eabi/include/string.h :
+ /Applications/ARM/arm-none-eabi/include/_ansi.h :
+ /Applications/ARM/arm-none-eabi/include/newlib.h :
+ /Applications/ARM/arm-none-eabi/include/_newlib_version.h :
+ /Applications/ARM/arm-none-eabi/include/sys/config.h :
+ /Applications/ARM/arm-none-eabi/include/machine/ieeefp.h :
+ /Applications/ARM/arm-none-eabi/include/sys/features.h :
+ /Applications/ARM/arm-none-eabi/include/sys/reent.h :
+ /Applications/ARM/arm-none-eabi/include/_ansi.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h :
+ /Applications/ARM/arm-none-eabi/include/sys/_types.h :
+ /Applications/ARM/arm-none-eabi/include/machine/_types.h :
+ /Applications/ARM/arm-none-eabi/include/machine/_default_types.h :
+ /Applications/ARM/arm-none-eabi/include/sys/lock.h :
+ /Applications/ARM/arm-none-eabi/include/sys/cdefs.h :
+ /Applications/ARM/arm-none-eabi/include/sys/string.h ../../py/objtuple.h :
+ ../../py/obj.h /Applications/ARM/arm-none-eabi/include/assert.h :
+ ../../py/mpconfig.h mpconfigport.h boards/TEENSY41/mpconfigboard.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdbool.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h :
+ /Applications/ARM/arm-none-eabi/include/stdint.h :
+ /Applications/ARM/arm-none-eabi/include/sys/_intsup.h :
+ /Applications/ARM/arm-none-eabi/include/sys/_stdint.h :
+ /Applications/ARM/arm-none-eabi/include/stdlib.h :
+ /Applications/ARM/arm-none-eabi/include/machine/stdlib.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/fsl_device_registers.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/MIMXRT1062.h :
+ ../../lib/cmsis/inc/core_cm7.h ../../lib/cmsis/inc/cmsis_version.h :
+ ../../lib/cmsis/inc/cmsis_compiler.h ../../lib/cmsis/inc/cmsis_gcc.h :
+ ../../lib/cmsis/inc/mpu_armv7.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/MIMXRT1062_features.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h :
+ ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h :
+ /Applications/ARM/arm-none-eabi/include/alloca.h ../../py/misc.h :
+ ../../py/qstr.h build-shared/genhdr/qstrdefs.generated.h :
+ ../../py/mpprint.h ../../py/runtime0.h ../../py/runtime.h :
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include-fixed/limits.h :
+ ../../py/objlist.h ../../py/objexcept.h :
+ build-shared/genhdr/root_pointers.h ../../py/pystack.h ../../py/objstr.h :
+ ../../py/objarray.h ../../py/objnamedtuple.h :

@@ -1,0 +1,3 @@
+build-SHAREDLIB/lib/libm_dbl/thumb_vfp_sqrt.o: \
+ ../../lib/libm_dbl/thumb_vfp_sqrt.c
+ ../../lib/libm_dbl/thumb_vfp_sqrt.c :

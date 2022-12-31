@@ -1,0 +1,2 @@
+build-shared/mimxrt_sdram.o: mimxrt_sdram.c
+mimxrt_sdram.c :

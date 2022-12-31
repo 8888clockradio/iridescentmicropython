@@ -1,0 +1,2316 @@
+#ifndef SDL_SetError
+#define SDL_SetError SDL_SetError_REAL
+#endif
+#ifndef SDL_Log
+#define SDL_Log SDL_Log_REAL
+#endif
+#ifndef SDL_LogVerbose
+#define SDL_LogVerbose SDL_LogVerbose_REAL
+#endif
+#ifndef SDL_LogDebug
+#define SDL_LogDebug SDL_LogDebug_REAL
+#endif
+#ifndef SDL_LogInfo
+#define SDL_LogInfo SDL_LogInfo_REAL
+#endif
+#ifndef SDL_LogWarn
+#define SDL_LogWarn SDL_LogWarn_REAL
+#endif
+#ifndef SDL_LogError
+#define SDL_LogError SDL_LogError_REAL
+#endif
+#ifndef SDL_LogCritical
+#define SDL_LogCritical SDL_LogCritical_REAL
+#endif
+#ifndef SDL_LogMessage
+#define SDL_LogMessage SDL_LogMessage_REAL
+#endif
+#ifndef SDL_sscanf
+#define SDL_sscanf SDL_sscanf_REAL
+#endif
+#ifndef SDL_snprintf
+#define SDL_snprintf SDL_snprintf_REAL
+#endif
+#ifndef SDL_CreateThread
+#define SDL_CreateThread SDL_CreateThread_REAL
+#endif
+#ifndef SDL_RWFromFP
+#define SDL_RWFromFP SDL_RWFromFP_REAL
+#endif
+#ifndef SDL_RegisterApp
+#define SDL_RegisterApp SDL_RegisterApp_REAL
+#endif
+#ifndef SDL_UnregisterApp
+#define SDL_UnregisterApp SDL_UnregisterApp_REAL
+#endif
+#ifndef SDL_Direct3D9GetAdapterIndex
+#define SDL_Direct3D9GetAdapterIndex SDL_Direct3D9GetAdapterIndex_REAL
+#endif
+#ifndef SDL_RenderGetD3D9Device
+#define SDL_RenderGetD3D9Device SDL_RenderGetD3D9Device_REAL
+#endif
+#ifndef SDL_iPhoneSetAnimationCallback
+#define SDL_iPhoneSetAnimationCallback SDL_iPhoneSetAnimationCallback_REAL
+#endif
+#ifndef SDL_iPhoneSetEventPump
+#define SDL_iPhoneSetEventPump SDL_iPhoneSetEventPump_REAL
+#endif
+#ifndef SDL_AndroidGetJNIEnv
+#define SDL_AndroidGetJNIEnv SDL_AndroidGetJNIEnv_REAL
+#endif
+#ifndef SDL_AndroidGetActivity
+#define SDL_AndroidGetActivity SDL_AndroidGetActivity_REAL
+#endif
+#ifndef SDL_AndroidGetInternalStoragePath
+#define SDL_AndroidGetInternalStoragePath SDL_AndroidGetInternalStoragePath_REAL
+#endif
+#ifndef SDL_AndroidGetExternalStorageState
+#define SDL_AndroidGetExternalStorageState SDL_AndroidGetExternalStorageState_REAL
+#endif
+#ifndef SDL_AndroidGetExternalStoragePath
+#define SDL_AndroidGetExternalStoragePath SDL_AndroidGetExternalStoragePath_REAL
+#endif
+#ifndef SDL_Init
+#define SDL_Init SDL_Init_REAL
+#endif
+#ifndef SDL_InitSubSystem
+#define SDL_InitSubSystem SDL_InitSubSystem_REAL
+#endif
+#ifndef SDL_QuitSubSystem
+#define SDL_QuitSubSystem SDL_QuitSubSystem_REAL
+#endif
+#ifndef SDL_WasInit
+#define SDL_WasInit SDL_WasInit_REAL
+#endif
+#ifndef SDL_Quit
+#define SDL_Quit SDL_Quit_REAL
+#endif
+#ifndef SDL_ReportAssertion
+#define SDL_ReportAssertion SDL_ReportAssertion_REAL
+#endif
+#ifndef SDL_SetAssertionHandler
+#define SDL_SetAssertionHandler SDL_SetAssertionHandler_REAL
+#endif
+#ifndef SDL_GetAssertionReport
+#define SDL_GetAssertionReport SDL_GetAssertionReport_REAL
+#endif
+#ifndef SDL_ResetAssertionReport
+#define SDL_ResetAssertionReport SDL_ResetAssertionReport_REAL
+#endif
+#ifndef SDL_AtomicTryLock
+#define SDL_AtomicTryLock SDL_AtomicTryLock_REAL
+#endif
+#ifndef SDL_AtomicLock
+#define SDL_AtomicLock SDL_AtomicLock_REAL
+#endif
+#ifndef SDL_AtomicUnlock
+#define SDL_AtomicUnlock SDL_AtomicUnlock_REAL
+#endif
+#ifndef SDL_AtomicCAS
+#define SDL_AtomicCAS SDL_AtomicCAS_REAL
+#endif
+#ifndef SDL_AtomicSet
+#define SDL_AtomicSet SDL_AtomicSet_REAL
+#endif
+#ifndef SDL_AtomicGet
+#define SDL_AtomicGet SDL_AtomicGet_REAL
+#endif
+#ifndef SDL_AtomicAdd
+#define SDL_AtomicAdd SDL_AtomicAdd_REAL
+#endif
+#ifndef SDL_AtomicCASPtr
+#define SDL_AtomicCASPtr SDL_AtomicCASPtr_REAL
+#endif
+#ifndef SDL_AtomicSetPtr
+#define SDL_AtomicSetPtr SDL_AtomicSetPtr_REAL
+#endif
+#ifndef SDL_AtomicGetPtr
+#define SDL_AtomicGetPtr SDL_AtomicGetPtr_REAL
+#endif
+#ifndef SDL_GetNumAudioDrivers
+#define SDL_GetNumAudioDrivers SDL_GetNumAudioDrivers_REAL
+#endif
+#ifndef SDL_GetAudioDriver
+#define SDL_GetAudioDriver SDL_GetAudioDriver_REAL
+#endif
+#ifndef SDL_AudioInit
+#define SDL_AudioInit SDL_AudioInit_REAL
+#endif
+#ifndef SDL_AudioQuit
+#define SDL_AudioQuit SDL_AudioQuit_REAL
+#endif
+#ifndef SDL_GetCurrentAudioDriver
+#define SDL_GetCurrentAudioDriver SDL_GetCurrentAudioDriver_REAL
+#endif
+#ifndef SDL_OpenAudio
+#define SDL_OpenAudio SDL_OpenAudio_REAL
+#endif
+#ifndef SDL_GetNumAudioDevices
+#define SDL_GetNumAudioDevices SDL_GetNumAudioDevices_REAL
+#endif
+#ifndef SDL_GetAudioDeviceName
+#define SDL_GetAudioDeviceName SDL_GetAudioDeviceName_REAL
+#endif
+#ifndef SDL_OpenAudioDevice
+#define SDL_OpenAudioDevice SDL_OpenAudioDevice_REAL
+#endif
+#ifndef SDL_GetAudioStatus
+#define SDL_GetAudioStatus SDL_GetAudioStatus_REAL
+#endif
+#ifndef SDL_GetAudioDeviceStatus
+#define SDL_GetAudioDeviceStatus SDL_GetAudioDeviceStatus_REAL
+#endif
+#ifndef SDL_PauseAudio
+#define SDL_PauseAudio SDL_PauseAudio_REAL
+#endif
+#ifndef SDL_PauseAudioDevice
+#define SDL_PauseAudioDevice SDL_PauseAudioDevice_REAL
+#endif
+#ifndef SDL_LoadWAV_RW
+#define SDL_LoadWAV_RW SDL_LoadWAV_RW_REAL
+#endif
+#ifndef SDL_FreeWAV
+#define SDL_FreeWAV SDL_FreeWAV_REAL
+#endif
+#ifndef SDL_BuildAudioCVT
+#define SDL_BuildAudioCVT SDL_BuildAudioCVT_REAL
+#endif
+#ifndef SDL_ConvertAudio
+#define SDL_ConvertAudio SDL_ConvertAudio_REAL
+#endif
+#ifndef SDL_MixAudio
+#define SDL_MixAudio SDL_MixAudio_REAL
+#endif
+#ifndef SDL_MixAudioFormat
+#define SDL_MixAudioFormat SDL_MixAudioFormat_REAL
+#endif
+#ifndef SDL_LockAudio
+#define SDL_LockAudio SDL_LockAudio_REAL
+#endif
+#ifndef SDL_LockAudioDevice
+#define SDL_LockAudioDevice SDL_LockAudioDevice_REAL
+#endif
+#ifndef SDL_UnlockAudio
+#define SDL_UnlockAudio SDL_UnlockAudio_REAL
+#endif
+#ifndef SDL_UnlockAudioDevice
+#define SDL_UnlockAudioDevice SDL_UnlockAudioDevice_REAL
+#endif
+#ifndef SDL_CloseAudio
+#define SDL_CloseAudio SDL_CloseAudio_REAL
+#endif
+#ifndef SDL_CloseAudioDevice
+#define SDL_CloseAudioDevice SDL_CloseAudioDevice_REAL
+#endif
+#ifndef SDL_SetClipboardText
+#define SDL_SetClipboardText SDL_SetClipboardText_REAL
+#endif
+#ifndef SDL_GetClipboardText
+#define SDL_GetClipboardText SDL_GetClipboardText_REAL
+#endif
+#ifndef SDL_HasClipboardText
+#define SDL_HasClipboardText SDL_HasClipboardText_REAL
+#endif
+#ifndef SDL_GetCPUCount
+#define SDL_GetCPUCount SDL_GetCPUCount_REAL
+#endif
+#ifndef SDL_GetCPUCacheLineSize
+#define SDL_GetCPUCacheLineSize SDL_GetCPUCacheLineSize_REAL
+#endif
+#ifndef SDL_HasRDTSC
+#define SDL_HasRDTSC SDL_HasRDTSC_REAL
+#endif
+#ifndef SDL_HasAltiVec
+#define SDL_HasAltiVec SDL_HasAltiVec_REAL
+#endif
+#ifndef SDL_HasMMX
+#define SDL_HasMMX SDL_HasMMX_REAL
+#endif
+#ifndef SDL_Has3DNow
+#define SDL_Has3DNow SDL_Has3DNow_REAL
+#endif
+#ifndef SDL_HasSSE
+#define SDL_HasSSE SDL_HasSSE_REAL
+#endif
+#ifndef SDL_HasSSE2
+#define SDL_HasSSE2 SDL_HasSSE2_REAL
+#endif
+#ifndef SDL_HasSSE3
+#define SDL_HasSSE3 SDL_HasSSE3_REAL
+#endif
+#ifndef SDL_HasSSE41
+#define SDL_HasSSE41 SDL_HasSSE41_REAL
+#endif
+#ifndef SDL_HasSSE42
+#define SDL_HasSSE42 SDL_HasSSE42_REAL
+#endif
+#ifndef SDL_GetSystemRAM
+#define SDL_GetSystemRAM SDL_GetSystemRAM_REAL
+#endif
+#ifndef SDL_GetError
+#define SDL_GetError SDL_GetError_REAL
+#endif
+#ifndef SDL_ClearError
+#define SDL_ClearError SDL_ClearError_REAL
+#endif
+#ifndef SDL_Error
+#define SDL_Error SDL_Error_REAL
+#endif
+#ifndef SDL_PumpEvents
+#define SDL_PumpEvents SDL_PumpEvents_REAL
+#endif
+#ifndef SDL_PeepEvents
+#define SDL_PeepEvents SDL_PeepEvents_REAL
+#endif
+#ifndef SDL_HasEvent
+#define SDL_HasEvent SDL_HasEvent_REAL
+#endif
+#ifndef SDL_HasEvents
+#define SDL_HasEvents SDL_HasEvents_REAL
+#endif
+#ifndef SDL_FlushEvent
+#define SDL_FlushEvent SDL_FlushEvent_REAL
+#endif
+#ifndef SDL_FlushEvents
+#define SDL_FlushEvents SDL_FlushEvents_REAL
+#endif
+#ifndef SDL_PollEvent
+#define SDL_PollEvent SDL_PollEvent_REAL
+#endif
+#ifndef SDL_WaitEvent
+#define SDL_WaitEvent SDL_WaitEvent_REAL
+#endif
+#ifndef SDL_WaitEventTimeout
+#define SDL_WaitEventTimeout SDL_WaitEventTimeout_REAL
+#endif
+#ifndef SDL_PushEvent
+#define SDL_PushEvent SDL_PushEvent_REAL
+#endif
+#ifndef SDL_SetEventFilter
+#define SDL_SetEventFilter SDL_SetEventFilter_REAL
+#endif
+#ifndef SDL_GetEventFilter
+#define SDL_GetEventFilter SDL_GetEventFilter_REAL
+#endif
+#ifndef SDL_AddEventWatch
+#define SDL_AddEventWatch SDL_AddEventWatch_REAL
+#endif
+#ifndef SDL_DelEventWatch
+#define SDL_DelEventWatch SDL_DelEventWatch_REAL
+#endif
+#ifndef SDL_FilterEvents
+#define SDL_FilterEvents SDL_FilterEvents_REAL
+#endif
+#ifndef SDL_EventState
+#define SDL_EventState SDL_EventState_REAL
+#endif
+#ifndef SDL_RegisterEvents
+#define SDL_RegisterEvents SDL_RegisterEvents_REAL
+#endif
+#ifndef SDL_GetBasePath
+#define SDL_GetBasePath SDL_GetBasePath_REAL
+#endif
+#ifndef SDL_GetPrefPath
+#define SDL_GetPrefPath SDL_GetPrefPath_REAL
+#endif
+#ifndef SDL_GameControllerAddMapping
+#define SDL_GameControllerAddMapping SDL_GameControllerAddMapping_REAL
+#endif
+#ifndef SDL_GameControllerMappingForGUID
+#define SDL_GameControllerMappingForGUID SDL_GameControllerMappingForGUID_REAL
+#endif
+#ifndef SDL_GameControllerMapping
+#define SDL_GameControllerMapping SDL_GameControllerMapping_REAL
+#endif
+#ifndef SDL_IsGameController
+#define SDL_IsGameController SDL_IsGameController_REAL
+#endif
+#ifndef SDL_GameControllerNameForIndex
+#define SDL_GameControllerNameForIndex SDL_GameControllerNameForIndex_REAL
+#endif
+#ifndef SDL_GameControllerOpen
+#define SDL_GameControllerOpen SDL_GameControllerOpen_REAL
+#endif
+#ifndef SDL_GameControllerName
+#define SDL_GameControllerName SDL_GameControllerName_REAL
+#endif
+#ifndef SDL_GameControllerGetAttached
+#define SDL_GameControllerGetAttached SDL_GameControllerGetAttached_REAL
+#endif
+#ifndef SDL_GameControllerGetJoystick
+#define SDL_GameControllerGetJoystick SDL_GameControllerGetJoystick_REAL
+#endif
+#ifndef SDL_GameControllerEventState
+#define SDL_GameControllerEventState SDL_GameControllerEventState_REAL
+#endif
+#ifndef SDL_GameControllerUpdate
+#define SDL_GameControllerUpdate SDL_GameControllerUpdate_REAL
+#endif
+#ifndef SDL_GameControllerGetAxisFromString
+#define SDL_GameControllerGetAxisFromString SDL_GameControllerGetAxisFromString_REAL
+#endif
+#ifndef SDL_GameControllerGetStringForAxis
+#define SDL_GameControllerGetStringForAxis SDL_GameControllerGetStringForAxis_REAL
+#endif
+#ifndef SDL_GameControllerGetBindForAxis
+#define SDL_GameControllerGetBindForAxis SDL_GameControllerGetBindForAxis_REAL
+#endif
+#ifndef SDL_GameControllerGetAxis
+#define SDL_GameControllerGetAxis SDL_GameControllerGetAxis_REAL
+#endif
+#ifndef SDL_GameControllerGetButtonFromString
+#define SDL_GameControllerGetButtonFromString SDL_GameControllerGetButtonFromString_REAL
+#endif
+#ifndef SDL_GameControllerGetStringForButton
+#define SDL_GameControllerGetStringForButton SDL_GameControllerGetStringForButton_REAL
+#endif
+#ifndef SDL_GameControllerGetBindForButton
+#define SDL_GameControllerGetBindForButton SDL_GameControllerGetBindForButton_REAL
+#endif
+#ifndef SDL_GameControllerGetButton
+#define SDL_GameControllerGetButton SDL_GameControllerGetButton_REAL
+#endif
+#ifndef SDL_GameControllerClose
+#define SDL_GameControllerClose SDL_GameControllerClose_REAL
+#endif
+#ifndef SDL_RecordGesture
+#define SDL_RecordGesture SDL_RecordGesture_REAL
+#endif
+#ifndef SDL_SaveAllDollarTemplates
+#define SDL_SaveAllDollarTemplates SDL_SaveAllDollarTemplates_REAL
+#endif
+#ifndef SDL_SaveDollarTemplate
+#define SDL_SaveDollarTemplate SDL_SaveDollarTemplate_REAL
+#endif
+#ifndef SDL_LoadDollarTemplates
+#define SDL_LoadDollarTemplates SDL_LoadDollarTemplates_REAL
+#endif
+#ifndef SDL_NumHaptics
+#define SDL_NumHaptics SDL_NumHaptics_REAL
+#endif
+#ifndef SDL_HapticName
+#define SDL_HapticName SDL_HapticName_REAL
+#endif
+#ifndef SDL_HapticOpen
+#define SDL_HapticOpen SDL_HapticOpen_REAL
+#endif
+#ifndef SDL_HapticOpened
+#define SDL_HapticOpened SDL_HapticOpened_REAL
+#endif
+#ifndef SDL_HapticIndex
+#define SDL_HapticIndex SDL_HapticIndex_REAL
+#endif
+#ifndef SDL_MouseIsHaptic
+#define SDL_MouseIsHaptic SDL_MouseIsHaptic_REAL
+#endif
+#ifndef SDL_HapticOpenFromMouse
+#define SDL_HapticOpenFromMouse SDL_HapticOpenFromMouse_REAL
+#endif
+#ifndef SDL_JoystickIsHaptic
+#define SDL_JoystickIsHaptic SDL_JoystickIsHaptic_REAL
+#endif
+#ifndef SDL_HapticOpenFromJoystick
+#define SDL_HapticOpenFromJoystick SDL_HapticOpenFromJoystick_REAL
+#endif
+#ifndef SDL_HapticClose
+#define SDL_HapticClose SDL_HapticClose_REAL
+#endif
+#ifndef SDL_HapticNumEffects
+#define SDL_HapticNumEffects SDL_HapticNumEffects_REAL
+#endif
+#ifndef SDL_HapticNumEffectsPlaying
+#define SDL_HapticNumEffectsPlaying SDL_HapticNumEffectsPlaying_REAL
+#endif
+#ifndef SDL_HapticQuery
+#define SDL_HapticQuery SDL_HapticQuery_REAL
+#endif
+#ifndef SDL_HapticNumAxes
+#define SDL_HapticNumAxes SDL_HapticNumAxes_REAL
+#endif
+#ifndef SDL_HapticEffectSupported
+#define SDL_HapticEffectSupported SDL_HapticEffectSupported_REAL
+#endif
+#ifndef SDL_HapticNewEffect
+#define SDL_HapticNewEffect SDL_HapticNewEffect_REAL
+#endif
+#ifndef SDL_HapticUpdateEffect
+#define SDL_HapticUpdateEffect SDL_HapticUpdateEffect_REAL
+#endif
+#ifndef SDL_HapticRunEffect
+#define SDL_HapticRunEffect SDL_HapticRunEffect_REAL
+#endif
+#ifndef SDL_HapticStopEffect
+#define SDL_HapticStopEffect SDL_HapticStopEffect_REAL
+#endif
+#ifndef SDL_HapticDestroyEffect
+#define SDL_HapticDestroyEffect SDL_HapticDestroyEffect_REAL
+#endif
+#ifndef SDL_HapticGetEffectStatus
+#define SDL_HapticGetEffectStatus SDL_HapticGetEffectStatus_REAL
+#endif
+#ifndef SDL_HapticSetGain
+#define SDL_HapticSetGain SDL_HapticSetGain_REAL
+#endif
+#ifndef SDL_HapticSetAutocenter
+#define SDL_HapticSetAutocenter SDL_HapticSetAutocenter_REAL
+#endif
+#ifndef SDL_HapticPause
+#define SDL_HapticPause SDL_HapticPause_REAL
+#endif
+#ifndef SDL_HapticUnpause
+#define SDL_HapticUnpause SDL_HapticUnpause_REAL
+#endif
+#ifndef SDL_HapticStopAll
+#define SDL_HapticStopAll SDL_HapticStopAll_REAL
+#endif
+#ifndef SDL_HapticRumbleSupported
+#define SDL_HapticRumbleSupported SDL_HapticRumbleSupported_REAL
+#endif
+#ifndef SDL_HapticRumbleInit
+#define SDL_HapticRumbleInit SDL_HapticRumbleInit_REAL
+#endif
+#ifndef SDL_HapticRumblePlay
+#define SDL_HapticRumblePlay SDL_HapticRumblePlay_REAL
+#endif
+#ifndef SDL_HapticRumbleStop
+#define SDL_HapticRumbleStop SDL_HapticRumbleStop_REAL
+#endif
+#ifndef SDL_SetHintWithPriority
+#define SDL_SetHintWithPriority SDL_SetHintWithPriority_REAL
+#endif
+#ifndef SDL_SetHint
+#define SDL_SetHint SDL_SetHint_REAL
+#endif
+#ifndef SDL_GetHint
+#define SDL_GetHint SDL_GetHint_REAL
+#endif
+#ifndef SDL_AddHintCallback
+#define SDL_AddHintCallback SDL_AddHintCallback_REAL
+#endif
+#ifndef SDL_DelHintCallback
+#define SDL_DelHintCallback SDL_DelHintCallback_REAL
+#endif
+#ifndef SDL_ClearHints
+#define SDL_ClearHints SDL_ClearHints_REAL
+#endif
+#ifndef SDL_NumJoysticks
+#define SDL_NumJoysticks SDL_NumJoysticks_REAL
+#endif
+#ifndef SDL_JoystickNameForIndex
+#define SDL_JoystickNameForIndex SDL_JoystickNameForIndex_REAL
+#endif
+#ifndef SDL_JoystickOpen
+#define SDL_JoystickOpen SDL_JoystickOpen_REAL
+#endif
+#ifndef SDL_JoystickName
+#define SDL_JoystickName SDL_JoystickName_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceGUID
+#define SDL_JoystickGetDeviceGUID SDL_JoystickGetDeviceGUID_REAL
+#endif
+#ifndef SDL_JoystickGetGUID
+#define SDL_JoystickGetGUID SDL_JoystickGetGUID_REAL
+#endif
+#ifndef SDL_JoystickGetGUIDString
+#define SDL_JoystickGetGUIDString SDL_JoystickGetGUIDString_REAL
+#endif
+#ifndef SDL_JoystickGetGUIDFromString
+#define SDL_JoystickGetGUIDFromString SDL_JoystickGetGUIDFromString_REAL
+#endif
+#ifndef SDL_JoystickGetAttached
+#define SDL_JoystickGetAttached SDL_JoystickGetAttached_REAL
+#endif
+#ifndef SDL_JoystickInstanceID
+#define SDL_JoystickInstanceID SDL_JoystickInstanceID_REAL
+#endif
+#ifndef SDL_JoystickNumAxes
+#define SDL_JoystickNumAxes SDL_JoystickNumAxes_REAL
+#endif
+#ifndef SDL_JoystickNumBalls
+#define SDL_JoystickNumBalls SDL_JoystickNumBalls_REAL
+#endif
+#ifndef SDL_JoystickNumHats
+#define SDL_JoystickNumHats SDL_JoystickNumHats_REAL
+#endif
+#ifndef SDL_JoystickNumButtons
+#define SDL_JoystickNumButtons SDL_JoystickNumButtons_REAL
+#endif
+#ifndef SDL_JoystickUpdate
+#define SDL_JoystickUpdate SDL_JoystickUpdate_REAL
+#endif
+#ifndef SDL_JoystickEventState
+#define SDL_JoystickEventState SDL_JoystickEventState_REAL
+#endif
+#ifndef SDL_JoystickGetAxis
+#define SDL_JoystickGetAxis SDL_JoystickGetAxis_REAL
+#endif
+#ifndef SDL_JoystickGetHat
+#define SDL_JoystickGetHat SDL_JoystickGetHat_REAL
+#endif
+#ifndef SDL_JoystickGetBall
+#define SDL_JoystickGetBall SDL_JoystickGetBall_REAL
+#endif
+#ifndef SDL_JoystickGetButton
+#define SDL_JoystickGetButton SDL_JoystickGetButton_REAL
+#endif
+#ifndef SDL_JoystickClose
+#define SDL_JoystickClose SDL_JoystickClose_REAL
+#endif
+#ifndef SDL_GetKeyboardFocus
+#define SDL_GetKeyboardFocus SDL_GetKeyboardFocus_REAL
+#endif
+#ifndef SDL_GetKeyboardState
+#define SDL_GetKeyboardState SDL_GetKeyboardState_REAL
+#endif
+#ifndef SDL_GetModState
+#define SDL_GetModState SDL_GetModState_REAL
+#endif
+#ifndef SDL_SetModState
+#define SDL_SetModState SDL_SetModState_REAL
+#endif
+#ifndef SDL_GetKeyFromScancode
+#define SDL_GetKeyFromScancode SDL_GetKeyFromScancode_REAL
+#endif
+#ifndef SDL_GetScancodeFromKey
+#define SDL_GetScancodeFromKey SDL_GetScancodeFromKey_REAL
+#endif
+#ifndef SDL_GetScancodeName
+#define SDL_GetScancodeName SDL_GetScancodeName_REAL
+#endif
+#ifndef SDL_GetScancodeFromName
+#define SDL_GetScancodeFromName SDL_GetScancodeFromName_REAL
+#endif
+#ifndef SDL_GetKeyName
+#define SDL_GetKeyName SDL_GetKeyName_REAL
+#endif
+#ifndef SDL_GetKeyFromName
+#define SDL_GetKeyFromName SDL_GetKeyFromName_REAL
+#endif
+#ifndef SDL_StartTextInput
+#define SDL_StartTextInput SDL_StartTextInput_REAL
+#endif
+#ifndef SDL_IsTextInputActive
+#define SDL_IsTextInputActive SDL_IsTextInputActive_REAL
+#endif
+#ifndef SDL_StopTextInput
+#define SDL_StopTextInput SDL_StopTextInput_REAL
+#endif
+#ifndef SDL_SetTextInputRect
+#define SDL_SetTextInputRect SDL_SetTextInputRect_REAL
+#endif
+#ifndef SDL_HasScreenKeyboardSupport
+#define SDL_HasScreenKeyboardSupport SDL_HasScreenKeyboardSupport_REAL
+#endif
+#ifndef SDL_IsScreenKeyboardShown
+#define SDL_IsScreenKeyboardShown SDL_IsScreenKeyboardShown_REAL
+#endif
+#ifndef SDL_LoadObject
+#define SDL_LoadObject SDL_LoadObject_REAL
+#endif
+#ifndef SDL_LoadFunction
+#define SDL_LoadFunction SDL_LoadFunction_REAL
+#endif
+#ifndef SDL_UnloadObject
+#define SDL_UnloadObject SDL_UnloadObject_REAL
+#endif
+#ifndef SDL_LogSetAllPriority
+#define SDL_LogSetAllPriority SDL_LogSetAllPriority_REAL
+#endif
+#ifndef SDL_LogSetPriority
+#define SDL_LogSetPriority SDL_LogSetPriority_REAL
+#endif
+#ifndef SDL_LogGetPriority
+#define SDL_LogGetPriority SDL_LogGetPriority_REAL
+#endif
+#ifndef SDL_LogResetPriorities
+#define SDL_LogResetPriorities SDL_LogResetPriorities_REAL
+#endif
+#ifndef SDL_LogMessageV
+#define SDL_LogMessageV SDL_LogMessageV_REAL
+#endif
+#ifndef SDL_LogGetOutputFunction
+#define SDL_LogGetOutputFunction SDL_LogGetOutputFunction_REAL
+#endif
+#ifndef SDL_LogSetOutputFunction
+#define SDL_LogSetOutputFunction SDL_LogSetOutputFunction_REAL
+#endif
+#ifndef SDL_SetMainReady
+#define SDL_SetMainReady SDL_SetMainReady_REAL
+#endif
+#ifndef SDL_ShowMessageBox
+#define SDL_ShowMessageBox SDL_ShowMessageBox_REAL
+#endif
+#ifndef SDL_ShowSimpleMessageBox
+#define SDL_ShowSimpleMessageBox SDL_ShowSimpleMessageBox_REAL
+#endif
+#ifndef SDL_GetMouseFocus
+#define SDL_GetMouseFocus SDL_GetMouseFocus_REAL
+#endif
+#ifndef SDL_GetMouseState
+#define SDL_GetMouseState SDL_GetMouseState_REAL
+#endif
+#ifndef SDL_GetRelativeMouseState
+#define SDL_GetRelativeMouseState SDL_GetRelativeMouseState_REAL
+#endif
+#ifndef SDL_WarpMouseInWindow
+#define SDL_WarpMouseInWindow SDL_WarpMouseInWindow_REAL
+#endif
+#ifndef SDL_SetRelativeMouseMode
+#define SDL_SetRelativeMouseMode SDL_SetRelativeMouseMode_REAL
+#endif
+#ifndef SDL_GetRelativeMouseMode
+#define SDL_GetRelativeMouseMode SDL_GetRelativeMouseMode_REAL
+#endif
+#ifndef SDL_CreateCursor
+#define SDL_CreateCursor SDL_CreateCursor_REAL
+#endif
+#ifndef SDL_CreateColorCursor
+#define SDL_CreateColorCursor SDL_CreateColorCursor_REAL
+#endif
+#ifndef SDL_CreateSystemCursor
+#define SDL_CreateSystemCursor SDL_CreateSystemCursor_REAL
+#endif
+#ifndef SDL_SetCursor
+#define SDL_SetCursor SDL_SetCursor_REAL
+#endif
+#ifndef SDL_GetCursor
+#define SDL_GetCursor SDL_GetCursor_REAL
+#endif
+#ifndef SDL_GetDefaultCursor
+#define SDL_GetDefaultCursor SDL_GetDefaultCursor_REAL
+#endif
+#ifndef SDL_FreeCursor
+#define SDL_FreeCursor SDL_FreeCursor_REAL
+#endif
+#ifndef SDL_ShowCursor
+#define SDL_ShowCursor SDL_ShowCursor_REAL
+#endif
+#ifndef SDL_CreateMutex
+#define SDL_CreateMutex SDL_CreateMutex_REAL
+#endif
+#ifndef SDL_LockMutex
+#define SDL_LockMutex SDL_LockMutex_REAL
+#endif
+#ifndef SDL_TryLockMutex
+#define SDL_TryLockMutex SDL_TryLockMutex_REAL
+#endif
+#ifndef SDL_UnlockMutex
+#define SDL_UnlockMutex SDL_UnlockMutex_REAL
+#endif
+#ifndef SDL_DestroyMutex
+#define SDL_DestroyMutex SDL_DestroyMutex_REAL
+#endif
+#ifndef SDL_CreateSemaphore
+#define SDL_CreateSemaphore SDL_CreateSemaphore_REAL
+#endif
+#ifndef SDL_DestroySemaphore
+#define SDL_DestroySemaphore SDL_DestroySemaphore_REAL
+#endif
+#ifndef SDL_SemWait
+#define SDL_SemWait SDL_SemWait_REAL
+#endif
+#ifndef SDL_SemTryWait
+#define SDL_SemTryWait SDL_SemTryWait_REAL
+#endif
+#ifndef SDL_SemWaitTimeout
+#define SDL_SemWaitTimeout SDL_SemWaitTimeout_REAL
+#endif
+#ifndef SDL_SemPost
+#define SDL_SemPost SDL_SemPost_REAL
+#endif
+#ifndef SDL_SemValue
+#define SDL_SemValue SDL_SemValue_REAL
+#endif
+#ifndef SDL_CreateCond
+#define SDL_CreateCond SDL_CreateCond_REAL
+#endif
+#ifndef SDL_DestroyCond
+#define SDL_DestroyCond SDL_DestroyCond_REAL
+#endif
+#ifndef SDL_CondSignal
+#define SDL_CondSignal SDL_CondSignal_REAL
+#endif
+#ifndef SDL_CondBroadcast
+#define SDL_CondBroadcast SDL_CondBroadcast_REAL
+#endif
+#ifndef SDL_CondWait
+#define SDL_CondWait SDL_CondWait_REAL
+#endif
+#ifndef SDL_CondWaitTimeout
+#define SDL_CondWaitTimeout SDL_CondWaitTimeout_REAL
+#endif
+#ifndef SDL_GetPixelFormatName
+#define SDL_GetPixelFormatName SDL_GetPixelFormatName_REAL
+#endif
+#ifndef SDL_PixelFormatEnumToMasks
+#define SDL_PixelFormatEnumToMasks SDL_PixelFormatEnumToMasks_REAL
+#endif
+#ifndef SDL_MasksToPixelFormatEnum
+#define SDL_MasksToPixelFormatEnum SDL_MasksToPixelFormatEnum_REAL
+#endif
+#ifndef SDL_AllocFormat
+#define SDL_AllocFormat SDL_AllocFormat_REAL
+#endif
+#ifndef SDL_FreeFormat
+#define SDL_FreeFormat SDL_FreeFormat_REAL
+#endif
+#ifndef SDL_AllocPalette
+#define SDL_AllocPalette SDL_AllocPalette_REAL
+#endif
+#ifndef SDL_SetPixelFormatPalette
+#define SDL_SetPixelFormatPalette SDL_SetPixelFormatPalette_REAL
+#endif
+#ifndef SDL_SetPaletteColors
+#define SDL_SetPaletteColors SDL_SetPaletteColors_REAL
+#endif
+#ifndef SDL_FreePalette
+#define SDL_FreePalette SDL_FreePalette_REAL
+#endif
+#ifndef SDL_MapRGB
+#define SDL_MapRGB SDL_MapRGB_REAL
+#endif
+#ifndef SDL_MapRGBA
+#define SDL_MapRGBA SDL_MapRGBA_REAL
+#endif
+#ifndef SDL_GetRGB
+#define SDL_GetRGB SDL_GetRGB_REAL
+#endif
+#ifndef SDL_GetRGBA
+#define SDL_GetRGBA SDL_GetRGBA_REAL
+#endif
+#ifndef SDL_CalculateGammaRamp
+#define SDL_CalculateGammaRamp SDL_CalculateGammaRamp_REAL
+#endif
+#ifndef SDL_GetPlatform
+#define SDL_GetPlatform SDL_GetPlatform_REAL
+#endif
+#ifndef SDL_GetPowerInfo
+#define SDL_GetPowerInfo SDL_GetPowerInfo_REAL
+#endif
+#ifndef SDL_HasIntersection
+#define SDL_HasIntersection SDL_HasIntersection_REAL
+#endif
+#ifndef SDL_IntersectRect
+#define SDL_IntersectRect SDL_IntersectRect_REAL
+#endif
+#ifndef SDL_UnionRect
+#define SDL_UnionRect SDL_UnionRect_REAL
+#endif
+#ifndef SDL_EnclosePoints
+#define SDL_EnclosePoints SDL_EnclosePoints_REAL
+#endif
+#ifndef SDL_IntersectRectAndLine
+#define SDL_IntersectRectAndLine SDL_IntersectRectAndLine_REAL
+#endif
+#ifndef SDL_GetNumRenderDrivers
+#define SDL_GetNumRenderDrivers SDL_GetNumRenderDrivers_REAL
+#endif
+#ifndef SDL_GetRenderDriverInfo
+#define SDL_GetRenderDriverInfo SDL_GetRenderDriverInfo_REAL
+#endif
+#ifndef SDL_CreateWindowAndRenderer
+#define SDL_CreateWindowAndRenderer SDL_CreateWindowAndRenderer_REAL
+#endif
+#ifndef SDL_CreateRenderer
+#define SDL_CreateRenderer SDL_CreateRenderer_REAL
+#endif
+#ifndef SDL_CreateSoftwareRenderer
+#define SDL_CreateSoftwareRenderer SDL_CreateSoftwareRenderer_REAL
+#endif
+#ifndef SDL_GetRenderer
+#define SDL_GetRenderer SDL_GetRenderer_REAL
+#endif
+#ifndef SDL_GetRendererInfo
+#define SDL_GetRendererInfo SDL_GetRendererInfo_REAL
+#endif
+#ifndef SDL_GetRendererOutputSize
+#define SDL_GetRendererOutputSize SDL_GetRendererOutputSize_REAL
+#endif
+#ifndef SDL_CreateTexture
+#define SDL_CreateTexture SDL_CreateTexture_REAL
+#endif
+#ifndef SDL_CreateTextureFromSurface
+#define SDL_CreateTextureFromSurface SDL_CreateTextureFromSurface_REAL
+#endif
+#ifndef SDL_QueryTexture
+#define SDL_QueryTexture SDL_QueryTexture_REAL
+#endif
+#ifndef SDL_SetTextureColorMod
+#define SDL_SetTextureColorMod SDL_SetTextureColorMod_REAL
+#endif
+#ifndef SDL_GetTextureColorMod
+#define SDL_GetTextureColorMod SDL_GetTextureColorMod_REAL
+#endif
+#ifndef SDL_SetTextureAlphaMod
+#define SDL_SetTextureAlphaMod SDL_SetTextureAlphaMod_REAL
+#endif
+#ifndef SDL_GetTextureAlphaMod
+#define SDL_GetTextureAlphaMod SDL_GetTextureAlphaMod_REAL
+#endif
+#ifndef SDL_SetTextureBlendMode
+#define SDL_SetTextureBlendMode SDL_SetTextureBlendMode_REAL
+#endif
+#ifndef SDL_GetTextureBlendMode
+#define SDL_GetTextureBlendMode SDL_GetTextureBlendMode_REAL
+#endif
+#ifndef SDL_UpdateTexture
+#define SDL_UpdateTexture SDL_UpdateTexture_REAL
+#endif
+#ifndef SDL_UpdateYUVTexture
+#define SDL_UpdateYUVTexture SDL_UpdateYUVTexture_REAL
+#endif
+#ifndef SDL_LockTexture
+#define SDL_LockTexture SDL_LockTexture_REAL
+#endif
+#ifndef SDL_UnlockTexture
+#define SDL_UnlockTexture SDL_UnlockTexture_REAL
+#endif
+#ifndef SDL_RenderTargetSupported
+#define SDL_RenderTargetSupported SDL_RenderTargetSupported_REAL
+#endif
+#ifndef SDL_SetRenderTarget
+#define SDL_SetRenderTarget SDL_SetRenderTarget_REAL
+#endif
+#ifndef SDL_GetRenderTarget
+#define SDL_GetRenderTarget SDL_GetRenderTarget_REAL
+#endif
+#ifndef SDL_RenderSetLogicalSize
+#define SDL_RenderSetLogicalSize SDL_RenderSetLogicalSize_REAL
+#endif
+#ifndef SDL_RenderGetLogicalSize
+#define SDL_RenderGetLogicalSize SDL_RenderGetLogicalSize_REAL
+#endif
+#ifndef SDL_RenderSetViewport
+#define SDL_RenderSetViewport SDL_RenderSetViewport_REAL
+#endif
+#ifndef SDL_RenderGetViewport
+#define SDL_RenderGetViewport SDL_RenderGetViewport_REAL
+#endif
+#ifndef SDL_RenderSetClipRect
+#define SDL_RenderSetClipRect SDL_RenderSetClipRect_REAL
+#endif
+#ifndef SDL_RenderGetClipRect
+#define SDL_RenderGetClipRect SDL_RenderGetClipRect_REAL
+#endif
+#ifndef SDL_RenderSetScale
+#define SDL_RenderSetScale SDL_RenderSetScale_REAL
+#endif
+#ifndef SDL_RenderGetScale
+#define SDL_RenderGetScale SDL_RenderGetScale_REAL
+#endif
+#ifndef SDL_SetRenderDrawColor
+#define SDL_SetRenderDrawColor SDL_SetRenderDrawColor_REAL
+#endif
+#ifndef SDL_GetRenderDrawColor
+#define SDL_GetRenderDrawColor SDL_GetRenderDrawColor_REAL
+#endif
+#ifndef SDL_SetRenderDrawBlendMode
+#define SDL_SetRenderDrawBlendMode SDL_SetRenderDrawBlendMode_REAL
+#endif
+#ifndef SDL_GetRenderDrawBlendMode
+#define SDL_GetRenderDrawBlendMode SDL_GetRenderDrawBlendMode_REAL
+#endif
+#ifndef SDL_RenderClear
+#define SDL_RenderClear SDL_RenderClear_REAL
+#endif
+#ifndef SDL_RenderDrawPoint
+#define SDL_RenderDrawPoint SDL_RenderDrawPoint_REAL
+#endif
+#ifndef SDL_RenderDrawPoints
+#define SDL_RenderDrawPoints SDL_RenderDrawPoints_REAL
+#endif
+#ifndef SDL_RenderDrawLine
+#define SDL_RenderDrawLine SDL_RenderDrawLine_REAL
+#endif
+#ifndef SDL_RenderDrawLines
+#define SDL_RenderDrawLines SDL_RenderDrawLines_REAL
+#endif
+#ifndef SDL_RenderDrawRect
+#define SDL_RenderDrawRect SDL_RenderDrawRect_REAL
+#endif
+#ifndef SDL_RenderDrawRects
+#define SDL_RenderDrawRects SDL_RenderDrawRects_REAL
+#endif
+#ifndef SDL_RenderFillRect
+#define SDL_RenderFillRect SDL_RenderFillRect_REAL
+#endif
+#ifndef SDL_RenderFillRects
+#define SDL_RenderFillRects SDL_RenderFillRects_REAL
+#endif
+#ifndef SDL_RenderCopy
+#define SDL_RenderCopy SDL_RenderCopy_REAL
+#endif
+#ifndef SDL_RenderCopyEx
+#define SDL_RenderCopyEx SDL_RenderCopyEx_REAL
+#endif
+#ifndef SDL_RenderReadPixels
+#define SDL_RenderReadPixels SDL_RenderReadPixels_REAL
+#endif
+#ifndef SDL_RenderPresent
+#define SDL_RenderPresent SDL_RenderPresent_REAL
+#endif
+#ifndef SDL_DestroyTexture
+#define SDL_DestroyTexture SDL_DestroyTexture_REAL
+#endif
+#ifndef SDL_DestroyRenderer
+#define SDL_DestroyRenderer SDL_DestroyRenderer_REAL
+#endif
+#ifndef SDL_GL_BindTexture
+#define SDL_GL_BindTexture SDL_GL_BindTexture_REAL
+#endif
+#ifndef SDL_GL_UnbindTexture
+#define SDL_GL_UnbindTexture SDL_GL_UnbindTexture_REAL
+#endif
+#ifndef SDL_RWFromFile
+#define SDL_RWFromFile SDL_RWFromFile_REAL
+#endif
+#ifndef SDL_RWFromMem
+#define SDL_RWFromMem SDL_RWFromMem_REAL
+#endif
+#ifndef SDL_RWFromConstMem
+#define SDL_RWFromConstMem SDL_RWFromConstMem_REAL
+#endif
+#ifndef SDL_AllocRW
+#define SDL_AllocRW SDL_AllocRW_REAL
+#endif
+#ifndef SDL_FreeRW
+#define SDL_FreeRW SDL_FreeRW_REAL
+#endif
+#ifndef SDL_ReadU8
+#define SDL_ReadU8 SDL_ReadU8_REAL
+#endif
+#ifndef SDL_ReadLE16
+#define SDL_ReadLE16 SDL_ReadLE16_REAL
+#endif
+#ifndef SDL_ReadBE16
+#define SDL_ReadBE16 SDL_ReadBE16_REAL
+#endif
+#ifndef SDL_ReadLE32
+#define SDL_ReadLE32 SDL_ReadLE32_REAL
+#endif
+#ifndef SDL_ReadBE32
+#define SDL_ReadBE32 SDL_ReadBE32_REAL
+#endif
+#ifndef SDL_ReadLE64
+#define SDL_ReadLE64 SDL_ReadLE64_REAL
+#endif
+#ifndef SDL_ReadBE64
+#define SDL_ReadBE64 SDL_ReadBE64_REAL
+#endif
+#ifndef SDL_WriteU8
+#define SDL_WriteU8 SDL_WriteU8_REAL
+#endif
+#ifndef SDL_WriteLE16
+#define SDL_WriteLE16 SDL_WriteLE16_REAL
+#endif
+#ifndef SDL_WriteBE16
+#define SDL_WriteBE16 SDL_WriteBE16_REAL
+#endif
+#ifndef SDL_WriteLE32
+#define SDL_WriteLE32 SDL_WriteLE32_REAL
+#endif
+#ifndef SDL_WriteBE32
+#define SDL_WriteBE32 SDL_WriteBE32_REAL
+#endif
+#ifndef SDL_WriteLE64
+#define SDL_WriteLE64 SDL_WriteLE64_REAL
+#endif
+#ifndef SDL_WriteBE64
+#define SDL_WriteBE64 SDL_WriteBE64_REAL
+#endif
+#ifndef SDL_CreateShapedWindow
+#define SDL_CreateShapedWindow SDL_CreateShapedWindow_REAL
+#endif
+#ifndef SDL_IsShapedWindow
+#define SDL_IsShapedWindow SDL_IsShapedWindow_REAL
+#endif
+#ifndef SDL_SetWindowShape
+#define SDL_SetWindowShape SDL_SetWindowShape_REAL
+#endif
+#ifndef SDL_GetShapedWindowMode
+#define SDL_GetShapedWindowMode SDL_GetShapedWindowMode_REAL
+#endif
+#ifndef SDL_malloc
+#define SDL_malloc SDL_malloc_REAL
+#endif
+#ifndef SDL_calloc
+#define SDL_calloc SDL_calloc_REAL
+#endif
+#ifndef SDL_realloc
+#define SDL_realloc SDL_realloc_REAL
+#endif
+#ifndef SDL_free
+#define SDL_free SDL_free_REAL
+#endif
+#ifndef SDL_getenv
+#define SDL_getenv SDL_getenv_REAL
+#endif
+#ifndef SDL_setenv
+#define SDL_setenv SDL_setenv_REAL
+#endif
+#ifndef SDL_qsort
+#define SDL_qsort SDL_qsort_REAL
+#endif
+#ifndef SDL_abs
+#define SDL_abs SDL_abs_REAL
+#endif
+#ifndef SDL_isdigit
+#define SDL_isdigit SDL_isdigit_REAL
+#endif
+#ifndef SDL_isspace
+#define SDL_isspace SDL_isspace_REAL
+#endif
+#ifndef SDL_toupper
+#define SDL_toupper SDL_toupper_REAL
+#endif
+#ifndef SDL_tolower
+#define SDL_tolower SDL_tolower_REAL
+#endif
+#ifndef SDL_memset
+#define SDL_memset SDL_memset_REAL
+#endif
+#ifndef SDL_memcpy
+#define SDL_memcpy SDL_memcpy_REAL
+#endif
+#ifndef SDL_memmove
+#define SDL_memmove SDL_memmove_REAL
+#endif
+#ifndef SDL_memcmp
+#define SDL_memcmp SDL_memcmp_REAL
+#endif
+#ifndef SDL_wcslen
+#define SDL_wcslen SDL_wcslen_REAL
+#endif
+#ifndef SDL_wcslcpy
+#define SDL_wcslcpy SDL_wcslcpy_REAL
+#endif
+#ifndef SDL_wcslcat
+#define SDL_wcslcat SDL_wcslcat_REAL
+#endif
+#ifndef SDL_strlen
+#define SDL_strlen SDL_strlen_REAL
+#endif
+#ifndef SDL_strlcpy
+#define SDL_strlcpy SDL_strlcpy_REAL
+#endif
+#ifndef SDL_utf8strlcpy
+#define SDL_utf8strlcpy SDL_utf8strlcpy_REAL
+#endif
+#ifndef SDL_strlcat
+#define SDL_strlcat SDL_strlcat_REAL
+#endif
+#ifndef SDL_strdup
+#define SDL_strdup SDL_strdup_REAL
+#endif
+#ifndef SDL_strrev
+#define SDL_strrev SDL_strrev_REAL
+#endif
+#ifndef SDL_strupr
+#define SDL_strupr SDL_strupr_REAL
+#endif
+#ifndef SDL_strlwr
+#define SDL_strlwr SDL_strlwr_REAL
+#endif
+#ifndef SDL_strchr
+#define SDL_strchr SDL_strchr_REAL
+#endif
+#ifndef SDL_strrchr
+#define SDL_strrchr SDL_strrchr_REAL
+#endif
+#ifndef SDL_strstr
+#define SDL_strstr SDL_strstr_REAL
+#endif
+#ifndef SDL_itoa
+#define SDL_itoa SDL_itoa_REAL
+#endif
+#ifndef SDL_uitoa
+#define SDL_uitoa SDL_uitoa_REAL
+#endif
+#ifndef SDL_ltoa
+#define SDL_ltoa SDL_ltoa_REAL
+#endif
+#ifndef SDL_ultoa
+#define SDL_ultoa SDL_ultoa_REAL
+#endif
+#ifndef SDL_lltoa
+#define SDL_lltoa SDL_lltoa_REAL
+#endif
+#ifndef SDL_ulltoa
+#define SDL_ulltoa SDL_ulltoa_REAL
+#endif
+#ifndef SDL_atoi
+#define SDL_atoi SDL_atoi_REAL
+#endif
+#ifndef SDL_atof
+#define SDL_atof SDL_atof_REAL
+#endif
+#ifndef SDL_strtol
+#define SDL_strtol SDL_strtol_REAL
+#endif
+#ifndef SDL_strtoul
+#define SDL_strtoul SDL_strtoul_REAL
+#endif
+#ifndef SDL_strtoll
+#define SDL_strtoll SDL_strtoll_REAL
+#endif
+#ifndef SDL_strtoull
+#define SDL_strtoull SDL_strtoull_REAL
+#endif
+#ifndef SDL_strtod
+#define SDL_strtod SDL_strtod_REAL
+#endif
+#ifndef SDL_strcmp
+#define SDL_strcmp SDL_strcmp_REAL
+#endif
+#ifndef SDL_strncmp
+#define SDL_strncmp SDL_strncmp_REAL
+#endif
+#ifndef SDL_strcasecmp
+#define SDL_strcasecmp SDL_strcasecmp_REAL
+#endif
+#ifndef SDL_strncasecmp
+#define SDL_strncasecmp SDL_strncasecmp_REAL
+#endif
+#ifndef SDL_vsnprintf
+#define SDL_vsnprintf SDL_vsnprintf_REAL
+#endif
+#ifndef SDL_acos
+#define SDL_acos SDL_acos_REAL
+#endif
+#ifndef SDL_asin
+#define SDL_asin SDL_asin_REAL
+#endif
+#ifndef SDL_atan
+#define SDL_atan SDL_atan_REAL
+#endif
+#ifndef SDL_atan2
+#define SDL_atan2 SDL_atan2_REAL
+#endif
+#ifndef SDL_ceil
+#define SDL_ceil SDL_ceil_REAL
+#endif
+#ifndef SDL_copysign
+#define SDL_copysign SDL_copysign_REAL
+#endif
+#ifndef SDL_cos
+#define SDL_cos SDL_cos_REAL
+#endif
+#ifndef SDL_cosf
+#define SDL_cosf SDL_cosf_REAL
+#endif
+#ifndef SDL_fabs
+#define SDL_fabs SDL_fabs_REAL
+#endif
+#ifndef SDL_floor
+#define SDL_floor SDL_floor_REAL
+#endif
+#ifndef SDL_log
+#define SDL_log SDL_log_REAL
+#endif
+#ifndef SDL_pow
+#define SDL_pow SDL_pow_REAL
+#endif
+#ifndef SDL_scalbn
+#define SDL_scalbn SDL_scalbn_REAL
+#endif
+#ifndef SDL_sin
+#define SDL_sin SDL_sin_REAL
+#endif
+#ifndef SDL_sinf
+#define SDL_sinf SDL_sinf_REAL
+#endif
+#ifndef SDL_sqrt
+#define SDL_sqrt SDL_sqrt_REAL
+#endif
+#ifndef SDL_iconv_open
+#define SDL_iconv_open SDL_iconv_open_REAL
+#endif
+#ifndef SDL_iconv_close
+#define SDL_iconv_close SDL_iconv_close_REAL
+#endif
+#ifndef SDL_iconv
+#define SDL_iconv SDL_iconv_REAL
+#endif
+#ifndef SDL_iconv_string
+#define SDL_iconv_string SDL_iconv_string_REAL
+#endif
+#ifndef SDL_CreateRGBSurfaceWithFormat
+#define SDL_CreateRGBSurfaceWithFormat SDL_CreateRGBSurfaceWithFormat_REAL
+#endif
+#ifndef SDL_CreateRGBSurfaceWithFormatFrom
+#define SDL_CreateRGBSurfaceWithFormatFrom SDL_CreateRGBSurfaceWithFormatFrom_REAL
+#endif
+#ifndef SDL_CreateRGBSurface
+#define SDL_CreateRGBSurface SDL_CreateRGBSurface_REAL
+#endif
+#ifndef SDL_CreateRGBSurfaceFrom
+#define SDL_CreateRGBSurfaceFrom SDL_CreateRGBSurfaceFrom_REAL
+#endif
+#ifndef SDL_FreeSurface
+#define SDL_FreeSurface SDL_FreeSurface_REAL
+#endif
+#ifndef SDL_SetSurfacePalette
+#define SDL_SetSurfacePalette SDL_SetSurfacePalette_REAL
+#endif
+#ifndef SDL_LockSurface
+#define SDL_LockSurface SDL_LockSurface_REAL
+#endif
+#ifndef SDL_UnlockSurface
+#define SDL_UnlockSurface SDL_UnlockSurface_REAL
+#endif
+#ifndef SDL_LoadBMP_RW
+#define SDL_LoadBMP_RW SDL_LoadBMP_RW_REAL
+#endif
+#ifndef SDL_SaveBMP_RW
+#define SDL_SaveBMP_RW SDL_SaveBMP_RW_REAL
+#endif
+#ifndef SDL_SetSurfaceRLE
+#define SDL_SetSurfaceRLE SDL_SetSurfaceRLE_REAL
+#endif
+#ifndef SDL_SetColorKey
+#define SDL_SetColorKey SDL_SetColorKey_REAL
+#endif
+#ifndef SDL_GetColorKey
+#define SDL_GetColorKey SDL_GetColorKey_REAL
+#endif
+#ifndef SDL_SetSurfaceColorMod
+#define SDL_SetSurfaceColorMod SDL_SetSurfaceColorMod_REAL
+#endif
+#ifndef SDL_GetSurfaceColorMod
+#define SDL_GetSurfaceColorMod SDL_GetSurfaceColorMod_REAL
+#endif
+#ifndef SDL_SetSurfaceAlphaMod
+#define SDL_SetSurfaceAlphaMod SDL_SetSurfaceAlphaMod_REAL
+#endif
+#ifndef SDL_GetSurfaceAlphaMod
+#define SDL_GetSurfaceAlphaMod SDL_GetSurfaceAlphaMod_REAL
+#endif
+#ifndef SDL_SetSurfaceBlendMode
+#define SDL_SetSurfaceBlendMode SDL_SetSurfaceBlendMode_REAL
+#endif
+#ifndef SDL_GetSurfaceBlendMode
+#define SDL_GetSurfaceBlendMode SDL_GetSurfaceBlendMode_REAL
+#endif
+#ifndef SDL_SetClipRect
+#define SDL_SetClipRect SDL_SetClipRect_REAL
+#endif
+#ifndef SDL_GetClipRect
+#define SDL_GetClipRect SDL_GetClipRect_REAL
+#endif
+#ifndef SDL_ConvertSurface
+#define SDL_ConvertSurface SDL_ConvertSurface_REAL
+#endif
+#ifndef SDL_ConvertSurfaceFormat
+#define SDL_ConvertSurfaceFormat SDL_ConvertSurfaceFormat_REAL
+#endif
+#ifndef SDL_ConvertPixels
+#define SDL_ConvertPixels SDL_ConvertPixels_REAL
+#endif
+#ifndef SDL_FillRect
+#define SDL_FillRect SDL_FillRect_REAL
+#endif
+#ifndef SDL_FillRects
+#define SDL_FillRects SDL_FillRects_REAL
+#endif
+#ifndef SDL_UpperBlit
+#define SDL_UpperBlit SDL_UpperBlit_REAL
+#endif
+#ifndef SDL_LowerBlit
+#define SDL_LowerBlit SDL_LowerBlit_REAL
+#endif
+#ifndef SDL_SoftStretch
+#define SDL_SoftStretch SDL_SoftStretch_REAL
+#endif
+#ifndef SDL_UpperBlitScaled
+#define SDL_UpperBlitScaled SDL_UpperBlitScaled_REAL
+#endif
+#ifndef SDL_LowerBlitScaled
+#define SDL_LowerBlitScaled SDL_LowerBlitScaled_REAL
+#endif
+#ifndef SDL_GetWindowWMInfo
+#define SDL_GetWindowWMInfo SDL_GetWindowWMInfo_REAL
+#endif
+#ifndef SDL_GetThreadName
+#define SDL_GetThreadName SDL_GetThreadName_REAL
+#endif
+#ifndef SDL_ThreadID
+#define SDL_ThreadID SDL_ThreadID_REAL
+#endif
+#ifndef SDL_GetThreadID
+#define SDL_GetThreadID SDL_GetThreadID_REAL
+#endif
+#ifndef SDL_SetThreadPriority
+#define SDL_SetThreadPriority SDL_SetThreadPriority_REAL
+#endif
+#ifndef SDL_WaitThread
+#define SDL_WaitThread SDL_WaitThread_REAL
+#endif
+#ifndef SDL_DetachThread
+#define SDL_DetachThread SDL_DetachThread_REAL
+#endif
+#ifndef SDL_TLSCreate
+#define SDL_TLSCreate SDL_TLSCreate_REAL
+#endif
+#ifndef SDL_TLSGet
+#define SDL_TLSGet SDL_TLSGet_REAL
+#endif
+#ifndef SDL_TLSSet
+#define SDL_TLSSet SDL_TLSSet_REAL
+#endif
+#ifndef SDL_GetTicks
+#define SDL_GetTicks SDL_GetTicks_REAL
+#endif
+#ifndef SDL_GetPerformanceCounter
+#define SDL_GetPerformanceCounter SDL_GetPerformanceCounter_REAL
+#endif
+#ifndef SDL_GetPerformanceFrequency
+#define SDL_GetPerformanceFrequency SDL_GetPerformanceFrequency_REAL
+#endif
+#ifndef SDL_Delay
+#define SDL_Delay SDL_Delay_REAL
+#endif
+#ifndef SDL_AddTimer
+#define SDL_AddTimer SDL_AddTimer_REAL
+#endif
+#ifndef SDL_RemoveTimer
+#define SDL_RemoveTimer SDL_RemoveTimer_REAL
+#endif
+#ifndef SDL_GetNumTouchDevices
+#define SDL_GetNumTouchDevices SDL_GetNumTouchDevices_REAL
+#endif
+#ifndef SDL_GetTouchDevice
+#define SDL_GetTouchDevice SDL_GetTouchDevice_REAL
+#endif
+#ifndef SDL_GetNumTouchFingers
+#define SDL_GetNumTouchFingers SDL_GetNumTouchFingers_REAL
+#endif
+#ifndef SDL_GetTouchFinger
+#define SDL_GetTouchFinger SDL_GetTouchFinger_REAL
+#endif
+#ifndef SDL_GetVersion
+#define SDL_GetVersion SDL_GetVersion_REAL
+#endif
+#ifndef SDL_GetRevision
+#define SDL_GetRevision SDL_GetRevision_REAL
+#endif
+#ifndef SDL_GetRevisionNumber
+#define SDL_GetRevisionNumber SDL_GetRevisionNumber_REAL
+#endif
+#ifndef SDL_GetNumVideoDrivers
+#define SDL_GetNumVideoDrivers SDL_GetNumVideoDrivers_REAL
+#endif
+#ifndef SDL_GetVideoDriver
+#define SDL_GetVideoDriver SDL_GetVideoDriver_REAL
+#endif
+#ifndef SDL_VideoInit
+#define SDL_VideoInit SDL_VideoInit_REAL
+#endif
+#ifndef SDL_VideoQuit
+#define SDL_VideoQuit SDL_VideoQuit_REAL
+#endif
+#ifndef SDL_GetCurrentVideoDriver
+#define SDL_GetCurrentVideoDriver SDL_GetCurrentVideoDriver_REAL
+#endif
+#ifndef SDL_GetNumVideoDisplays
+#define SDL_GetNumVideoDisplays SDL_GetNumVideoDisplays_REAL
+#endif
+#ifndef SDL_GetDisplayName
+#define SDL_GetDisplayName SDL_GetDisplayName_REAL
+#endif
+#ifndef SDL_GetDisplayBounds
+#define SDL_GetDisplayBounds SDL_GetDisplayBounds_REAL
+#endif
+#ifndef SDL_GetDisplayDPI
+#define SDL_GetDisplayDPI SDL_GetDisplayDPI_REAL
+#endif
+#ifndef SDL_GetNumDisplayModes
+#define SDL_GetNumDisplayModes SDL_GetNumDisplayModes_REAL
+#endif
+#ifndef SDL_GetDisplayMode
+#define SDL_GetDisplayMode SDL_GetDisplayMode_REAL
+#endif
+#ifndef SDL_GetDesktopDisplayMode
+#define SDL_GetDesktopDisplayMode SDL_GetDesktopDisplayMode_REAL
+#endif
+#ifndef SDL_GetCurrentDisplayMode
+#define SDL_GetCurrentDisplayMode SDL_GetCurrentDisplayMode_REAL
+#endif
+#ifndef SDL_GetClosestDisplayMode
+#define SDL_GetClosestDisplayMode SDL_GetClosestDisplayMode_REAL
+#endif
+#ifndef SDL_GetWindowDisplayIndex
+#define SDL_GetWindowDisplayIndex SDL_GetWindowDisplayIndex_REAL
+#endif
+#ifndef SDL_SetWindowDisplayMode
+#define SDL_SetWindowDisplayMode SDL_SetWindowDisplayMode_REAL
+#endif
+#ifndef SDL_GetWindowDisplayMode
+#define SDL_GetWindowDisplayMode SDL_GetWindowDisplayMode_REAL
+#endif
+#ifndef SDL_GetWindowPixelFormat
+#define SDL_GetWindowPixelFormat SDL_GetWindowPixelFormat_REAL
+#endif
+#ifndef SDL_CreateWindow
+#define SDL_CreateWindow SDL_CreateWindow_REAL
+#endif
+#ifndef SDL_CreateWindowFrom
+#define SDL_CreateWindowFrom SDL_CreateWindowFrom_REAL
+#endif
+#ifndef SDL_GetWindowID
+#define SDL_GetWindowID SDL_GetWindowID_REAL
+#endif
+#ifndef SDL_GetWindowFromID
+#define SDL_GetWindowFromID SDL_GetWindowFromID_REAL
+#endif
+#ifndef SDL_GetWindowFlags
+#define SDL_GetWindowFlags SDL_GetWindowFlags_REAL
+#endif
+#ifndef SDL_SetWindowTitle
+#define SDL_SetWindowTitle SDL_SetWindowTitle_REAL
+#endif
+#ifndef SDL_GetWindowTitle
+#define SDL_GetWindowTitle SDL_GetWindowTitle_REAL
+#endif
+#ifndef SDL_SetWindowIcon
+#define SDL_SetWindowIcon SDL_SetWindowIcon_REAL
+#endif
+#ifndef SDL_SetWindowData
+#define SDL_SetWindowData SDL_SetWindowData_REAL
+#endif
+#ifndef SDL_GetWindowData
+#define SDL_GetWindowData SDL_GetWindowData_REAL
+#endif
+#ifndef SDL_SetWindowPosition
+#define SDL_SetWindowPosition SDL_SetWindowPosition_REAL
+#endif
+#ifndef SDL_GetWindowPosition
+#define SDL_GetWindowPosition SDL_GetWindowPosition_REAL
+#endif
+#ifndef SDL_SetWindowSize
+#define SDL_SetWindowSize SDL_SetWindowSize_REAL
+#endif
+#ifndef SDL_GetWindowSize
+#define SDL_GetWindowSize SDL_GetWindowSize_REAL
+#endif
+#ifndef SDL_SetWindowMinimumSize
+#define SDL_SetWindowMinimumSize SDL_SetWindowMinimumSize_REAL
+#endif
+#ifndef SDL_GetWindowMinimumSize
+#define SDL_GetWindowMinimumSize SDL_GetWindowMinimumSize_REAL
+#endif
+#ifndef SDL_SetWindowMaximumSize
+#define SDL_SetWindowMaximumSize SDL_SetWindowMaximumSize_REAL
+#endif
+#ifndef SDL_GetWindowMaximumSize
+#define SDL_GetWindowMaximumSize SDL_GetWindowMaximumSize_REAL
+#endif
+#ifndef SDL_SetWindowBordered
+#define SDL_SetWindowBordered SDL_SetWindowBordered_REAL
+#endif
+#ifndef SDL_ShowWindow
+#define SDL_ShowWindow SDL_ShowWindow_REAL
+#endif
+#ifndef SDL_HideWindow
+#define SDL_HideWindow SDL_HideWindow_REAL
+#endif
+#ifndef SDL_RaiseWindow
+#define SDL_RaiseWindow SDL_RaiseWindow_REAL
+#endif
+#ifndef SDL_MaximizeWindow
+#define SDL_MaximizeWindow SDL_MaximizeWindow_REAL
+#endif
+#ifndef SDL_MinimizeWindow
+#define SDL_MinimizeWindow SDL_MinimizeWindow_REAL
+#endif
+#ifndef SDL_RestoreWindow
+#define SDL_RestoreWindow SDL_RestoreWindow_REAL
+#endif
+#ifndef SDL_SetWindowFullscreen
+#define SDL_SetWindowFullscreen SDL_SetWindowFullscreen_REAL
+#endif
+#ifndef SDL_GetWindowSurface
+#define SDL_GetWindowSurface SDL_GetWindowSurface_REAL
+#endif
+#ifndef SDL_UpdateWindowSurface
+#define SDL_UpdateWindowSurface SDL_UpdateWindowSurface_REAL
+#endif
+#ifndef SDL_UpdateWindowSurfaceRects
+#define SDL_UpdateWindowSurfaceRects SDL_UpdateWindowSurfaceRects_REAL
+#endif
+#ifndef SDL_SetWindowGrab
+#define SDL_SetWindowGrab SDL_SetWindowGrab_REAL
+#endif
+#ifndef SDL_GetWindowGrab
+#define SDL_GetWindowGrab SDL_GetWindowGrab_REAL
+#endif
+#ifndef SDL_SetWindowBrightness
+#define SDL_SetWindowBrightness SDL_SetWindowBrightness_REAL
+#endif
+#ifndef SDL_GetWindowBrightness
+#define SDL_GetWindowBrightness SDL_GetWindowBrightness_REAL
+#endif
+#ifndef SDL_SetWindowGammaRamp
+#define SDL_SetWindowGammaRamp SDL_SetWindowGammaRamp_REAL
+#endif
+#ifndef SDL_GetWindowGammaRamp
+#define SDL_GetWindowGammaRamp SDL_GetWindowGammaRamp_REAL
+#endif
+#ifndef SDL_DestroyWindow
+#define SDL_DestroyWindow SDL_DestroyWindow_REAL
+#endif
+#ifndef SDL_IsScreenSaverEnabled
+#define SDL_IsScreenSaverEnabled SDL_IsScreenSaverEnabled_REAL
+#endif
+#ifndef SDL_EnableScreenSaver
+#define SDL_EnableScreenSaver SDL_EnableScreenSaver_REAL
+#endif
+#ifndef SDL_DisableScreenSaver
+#define SDL_DisableScreenSaver SDL_DisableScreenSaver_REAL
+#endif
+#ifndef SDL_GL_LoadLibrary
+#define SDL_GL_LoadLibrary SDL_GL_LoadLibrary_REAL
+#endif
+#ifndef SDL_GL_GetProcAddress
+#define SDL_GL_GetProcAddress SDL_GL_GetProcAddress_REAL
+#endif
+#ifndef SDL_GL_UnloadLibrary
+#define SDL_GL_UnloadLibrary SDL_GL_UnloadLibrary_REAL
+#endif
+#ifndef SDL_GL_ExtensionSupported
+#define SDL_GL_ExtensionSupported SDL_GL_ExtensionSupported_REAL
+#endif
+#ifndef SDL_GL_SetAttribute
+#define SDL_GL_SetAttribute SDL_GL_SetAttribute_REAL
+#endif
+#ifndef SDL_GL_GetAttribute
+#define SDL_GL_GetAttribute SDL_GL_GetAttribute_REAL
+#endif
+#ifndef SDL_GL_CreateContext
+#define SDL_GL_CreateContext SDL_GL_CreateContext_REAL
+#endif
+#ifndef SDL_GL_MakeCurrent
+#define SDL_GL_MakeCurrent SDL_GL_MakeCurrent_REAL
+#endif
+#ifndef SDL_GL_GetCurrentWindow
+#define SDL_GL_GetCurrentWindow SDL_GL_GetCurrentWindow_REAL
+#endif
+#ifndef SDL_GL_GetCurrentContext
+#define SDL_GL_GetCurrentContext SDL_GL_GetCurrentContext_REAL
+#endif
+#ifndef SDL_GL_GetDrawableSize
+#define SDL_GL_GetDrawableSize SDL_GL_GetDrawableSize_REAL
+#endif
+#ifndef SDL_GL_SetSwapInterval
+#define SDL_GL_SetSwapInterval SDL_GL_SetSwapInterval_REAL
+#endif
+#ifndef SDL_GL_GetSwapInterval
+#define SDL_GL_GetSwapInterval SDL_GL_GetSwapInterval_REAL
+#endif
+#ifndef SDL_GL_SwapWindow
+#define SDL_GL_SwapWindow SDL_GL_SwapWindow_REAL
+#endif
+#ifndef SDL_GL_DeleteContext
+#define SDL_GL_DeleteContext SDL_GL_DeleteContext_REAL
+#endif
+#ifndef SDL_vsscanf
+#define SDL_vsscanf SDL_vsscanf_REAL
+#endif
+#ifndef SDL_GameControllerAddMappingsFromRW
+#define SDL_GameControllerAddMappingsFromRW SDL_GameControllerAddMappingsFromRW_REAL
+#endif
+#ifndef SDL_GL_ResetAttributes
+#define SDL_GL_ResetAttributes SDL_GL_ResetAttributes_REAL
+#endif
+#ifndef SDL_HasAVX
+#define SDL_HasAVX SDL_HasAVX_REAL
+#endif
+#ifndef SDL_GetDefaultAssertionHandler
+#define SDL_GetDefaultAssertionHandler SDL_GetDefaultAssertionHandler_REAL
+#endif
+#ifndef SDL_GetAssertionHandler
+#define SDL_GetAssertionHandler SDL_GetAssertionHandler_REAL
+#endif
+#ifndef SDL_DXGIGetOutputInfo
+#define SDL_DXGIGetOutputInfo SDL_DXGIGetOutputInfo_REAL
+#endif
+#ifndef SDL_RenderIsClipEnabled
+#define SDL_RenderIsClipEnabled SDL_RenderIsClipEnabled_REAL
+#endif
+#ifndef SDL_WinRTRunApp
+#define SDL_WinRTRunApp SDL_WinRTRunApp_REAL
+#endif
+#ifndef SDL_WarpMouseGlobal
+#define SDL_WarpMouseGlobal SDL_WarpMouseGlobal_REAL
+#endif
+#ifndef SDL_WinRTGetFSPathUNICODE
+#define SDL_WinRTGetFSPathUNICODE SDL_WinRTGetFSPathUNICODE_REAL
+#endif
+#ifndef SDL_WinRTGetFSPathUTF8
+#define SDL_WinRTGetFSPathUTF8 SDL_WinRTGetFSPathUTF8_REAL
+#endif
+#ifndef SDL_WinRTRunApp
+#define SDL_WinRTRunApp SDL_WinRTRunApp_REAL
+#endif
+#ifndef SDL_sqrtf
+#define SDL_sqrtf SDL_sqrtf_REAL
+#endif
+#ifndef SDL_tan
+#define SDL_tan SDL_tan_REAL
+#endif
+#ifndef SDL_tanf
+#define SDL_tanf SDL_tanf_REAL
+#endif
+#ifndef SDL_CaptureMouse
+#define SDL_CaptureMouse SDL_CaptureMouse_REAL
+#endif
+#ifndef SDL_SetWindowHitTest
+#define SDL_SetWindowHitTest SDL_SetWindowHitTest_REAL
+#endif
+#ifndef SDL_GetGlobalMouseState
+#define SDL_GetGlobalMouseState SDL_GetGlobalMouseState_REAL
+#endif
+#ifndef SDL_HasAVX2
+#define SDL_HasAVX2 SDL_HasAVX2_REAL
+#endif
+#ifndef SDL_QueueAudio
+#define SDL_QueueAudio SDL_QueueAudio_REAL
+#endif
+#ifndef SDL_GetQueuedAudioSize
+#define SDL_GetQueuedAudioSize SDL_GetQueuedAudioSize_REAL
+#endif
+#ifndef SDL_ClearQueuedAudio
+#define SDL_ClearQueuedAudio SDL_ClearQueuedAudio_REAL
+#endif
+#ifndef SDL_GetGrabbedWindow
+#define SDL_GetGrabbedWindow SDL_GetGrabbedWindow_REAL
+#endif
+#ifndef SDL_SetWindowsMessageHook
+#define SDL_SetWindowsMessageHook SDL_SetWindowsMessageHook_REAL
+#endif
+#ifndef SDL_JoystickCurrentPowerLevel
+#define SDL_JoystickCurrentPowerLevel SDL_JoystickCurrentPowerLevel_REAL
+#endif
+#ifndef SDL_GameControllerFromInstanceID
+#define SDL_GameControllerFromInstanceID SDL_GameControllerFromInstanceID_REAL
+#endif
+#ifndef SDL_JoystickFromInstanceID
+#define SDL_JoystickFromInstanceID SDL_JoystickFromInstanceID_REAL
+#endif
+#ifndef SDL_GetDisplayUsableBounds
+#define SDL_GetDisplayUsableBounds SDL_GetDisplayUsableBounds_REAL
+#endif
+#ifndef SDL_GetWindowBordersSize
+#define SDL_GetWindowBordersSize SDL_GetWindowBordersSize_REAL
+#endif
+#ifndef SDL_SetWindowOpacity
+#define SDL_SetWindowOpacity SDL_SetWindowOpacity_REAL
+#endif
+#ifndef SDL_GetWindowOpacity
+#define SDL_GetWindowOpacity SDL_GetWindowOpacity_REAL
+#endif
+#ifndef SDL_SetWindowInputFocus
+#define SDL_SetWindowInputFocus SDL_SetWindowInputFocus_REAL
+#endif
+#ifndef SDL_SetWindowModalFor
+#define SDL_SetWindowModalFor SDL_SetWindowModalFor_REAL
+#endif
+#ifndef SDL_RenderSetIntegerScale
+#define SDL_RenderSetIntegerScale SDL_RenderSetIntegerScale_REAL
+#endif
+#ifndef SDL_RenderGetIntegerScale
+#define SDL_RenderGetIntegerScale SDL_RenderGetIntegerScale_REAL
+#endif
+#ifndef SDL_DequeueAudio
+#define SDL_DequeueAudio SDL_DequeueAudio_REAL
+#endif
+#ifndef SDL_SetWindowResizable
+#define SDL_SetWindowResizable SDL_SetWindowResizable_REAL
+#endif
+#ifndef SDL_CreateRGBSurfaceWithFormat
+#define SDL_CreateRGBSurfaceWithFormat SDL_CreateRGBSurfaceWithFormat_REAL
+#endif
+#ifndef SDL_CreateRGBSurfaceWithFormatFrom
+#define SDL_CreateRGBSurfaceWithFormatFrom SDL_CreateRGBSurfaceWithFormatFrom_REAL
+#endif
+#ifndef SDL_GetHintBoolean
+#define SDL_GetHintBoolean SDL_GetHintBoolean_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceVendor
+#define SDL_JoystickGetDeviceVendor SDL_JoystickGetDeviceVendor_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceProduct
+#define SDL_JoystickGetDeviceProduct SDL_JoystickGetDeviceProduct_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceProductVersion
+#define SDL_JoystickGetDeviceProductVersion SDL_JoystickGetDeviceProductVersion_REAL
+#endif
+#ifndef SDL_JoystickGetVendor
+#define SDL_JoystickGetVendor SDL_JoystickGetVendor_REAL
+#endif
+#ifndef SDL_JoystickGetProduct
+#define SDL_JoystickGetProduct SDL_JoystickGetProduct_REAL
+#endif
+#ifndef SDL_JoystickGetProductVersion
+#define SDL_JoystickGetProductVersion SDL_JoystickGetProductVersion_REAL
+#endif
+#ifndef SDL_GameControllerGetVendor
+#define SDL_GameControllerGetVendor SDL_GameControllerGetVendor_REAL
+#endif
+#ifndef SDL_GameControllerGetProduct
+#define SDL_GameControllerGetProduct SDL_GameControllerGetProduct_REAL
+#endif
+#ifndef SDL_GameControllerGetProductVersion
+#define SDL_GameControllerGetProductVersion SDL_GameControllerGetProductVersion_REAL
+#endif
+#ifndef SDL_HasNEON
+#define SDL_HasNEON SDL_HasNEON_REAL
+#endif
+#ifndef SDL_GameControllerNumMappings
+#define SDL_GameControllerNumMappings SDL_GameControllerNumMappings_REAL
+#endif
+#ifndef SDL_GameControllerMappingForIndex
+#define SDL_GameControllerMappingForIndex SDL_GameControllerMappingForIndex_REAL
+#endif
+#ifndef SDL_JoystickGetAxisInitialState
+#define SDL_JoystickGetAxisInitialState SDL_JoystickGetAxisInitialState_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceType
+#define SDL_JoystickGetDeviceType SDL_JoystickGetDeviceType_REAL
+#endif
+#ifndef SDL_JoystickGetType
+#define SDL_JoystickGetType SDL_JoystickGetType_REAL
+#endif
+#ifndef SDL_MemoryBarrierReleaseFunction
+#define SDL_MemoryBarrierReleaseFunction SDL_MemoryBarrierReleaseFunction_REAL
+#endif
+#ifndef SDL_MemoryBarrierAcquireFunction
+#define SDL_MemoryBarrierAcquireFunction SDL_MemoryBarrierAcquireFunction_REAL
+#endif
+#ifndef SDL_JoystickGetDeviceInstanceID
+#define SDL_JoystickGetDeviceInstanceID SDL_JoystickGetDeviceInstanceID_REAL
+#endif
+#ifndef SDL_utf8strlen
+#define SDL_utf8strlen SDL_utf8strlen_REAL
+#endif
+#ifndef SDL_LoadFile_RW
+#define SDL_LoadFile_RW SDL_LoadFile_RW_REAL
+#endif
+#ifndef SDL_wcscmp
+#define SDL_wcscmp SDL_wcscmp_REAL
+#endif
+#ifndef SDL_ComposeCustomBlendMode
+#define SDL_ComposeCustomBlendMode SDL_ComposeCustomBlendMode_REAL
+#endif
+#ifndef SDL_DuplicateSurface
+#define SDL_DuplicateSurface SDL_DuplicateSurface_REAL
+#endif
+#ifndef SDL_Vulkan_LoadLibrary
+#define SDL_Vulkan_LoadLibrary SDL_Vulkan_LoadLibrary_REAL
+#endif
+#ifndef SDL_Vulkan_GetVkGetInstanceProcAddr
+#define SDL_Vulkan_GetVkGetInstanceProcAddr SDL_Vulkan_GetVkGetInstanceProcAddr_REAL
+#endif
+#ifndef SDL_Vulkan_UnloadLibrary
+#define SDL_Vulkan_UnloadLibrary SDL_Vulkan_UnloadLibrary_REAL
+#endif
+#ifndef SDL_Vulkan_GetInstanceExtensions
+#define SDL_Vulkan_GetInstanceExtensions SDL_Vulkan_GetInstanceExtensions_REAL
+#endif
+#ifndef SDL_Vulkan_CreateSurface
+#define SDL_Vulkan_CreateSurface SDL_Vulkan_CreateSurface_REAL
+#endif
+#ifndef SDL_Vulkan_GetDrawableSize
+#define SDL_Vulkan_GetDrawableSize SDL_Vulkan_GetDrawableSize_REAL
+#endif
+#ifndef SDL_LockJoysticks
+#define SDL_LockJoysticks SDL_LockJoysticks_REAL
+#endif
+#ifndef SDL_UnlockJoysticks
+#define SDL_UnlockJoysticks SDL_UnlockJoysticks_REAL
+#endif
+#ifndef SDL_GetMemoryFunctions
+#define SDL_GetMemoryFunctions SDL_GetMemoryFunctions_REAL
+#endif
+#ifndef SDL_SetMemoryFunctions
+#define SDL_SetMemoryFunctions SDL_SetMemoryFunctions_REAL
+#endif
+#ifndef SDL_GetNumAllocations
+#define SDL_GetNumAllocations SDL_GetNumAllocations_REAL
+#endif
+#ifndef SDL_NewAudioStream
+#define SDL_NewAudioStream SDL_NewAudioStream_REAL
+#endif
+#ifndef SDL_AudioStreamPut
+#define SDL_AudioStreamPut SDL_AudioStreamPut_REAL
+#endif
+#ifndef SDL_AudioStreamGet
+#define SDL_AudioStreamGet SDL_AudioStreamGet_REAL
+#endif
+#ifndef SDL_AudioStreamClear
+#define SDL_AudioStreamClear SDL_AudioStreamClear_REAL
+#endif
+#ifndef SDL_AudioStreamAvailable
+#define SDL_AudioStreamAvailable SDL_AudioStreamAvailable_REAL
+#endif
+#ifndef SDL_FreeAudioStream
+#define SDL_FreeAudioStream SDL_FreeAudioStream_REAL
+#endif
+#ifndef SDL_AudioStreamFlush
+#define SDL_AudioStreamFlush SDL_AudioStreamFlush_REAL
+#endif
+#ifndef SDL_acosf
+#define SDL_acosf SDL_acosf_REAL
+#endif
+#ifndef SDL_asinf
+#define SDL_asinf SDL_asinf_REAL
+#endif
+#ifndef SDL_atanf
+#define SDL_atanf SDL_atanf_REAL
+#endif
+#ifndef SDL_atan2f
+#define SDL_atan2f SDL_atan2f_REAL
+#endif
+#ifndef SDL_ceilf
+#define SDL_ceilf SDL_ceilf_REAL
+#endif
+#ifndef SDL_copysignf
+#define SDL_copysignf SDL_copysignf_REAL
+#endif
+#ifndef SDL_fabsf
+#define SDL_fabsf SDL_fabsf_REAL
+#endif
+#ifndef SDL_floorf
+#define SDL_floorf SDL_floorf_REAL
+#endif
+#ifndef SDL_logf
+#define SDL_logf SDL_logf_REAL
+#endif
+#ifndef SDL_powf
+#define SDL_powf SDL_powf_REAL
+#endif
+#ifndef SDL_scalbnf
+#define SDL_scalbnf SDL_scalbnf_REAL
+#endif
+#ifndef SDL_fmod
+#define SDL_fmod SDL_fmod_REAL
+#endif
+#ifndef SDL_fmodf
+#define SDL_fmodf SDL_fmodf_REAL
+#endif
+#ifndef SDL_SetYUVConversionMode
+#define SDL_SetYUVConversionMode SDL_SetYUVConversionMode_REAL
+#endif
+#ifndef SDL_GetYUVConversionMode
+#define SDL_GetYUVConversionMode SDL_GetYUVConversionMode_REAL
+#endif
+#ifndef SDL_GetYUVConversionModeForResolution
+#define SDL_GetYUVConversionModeForResolution SDL_GetYUVConversionModeForResolution_REAL
+#endif
+#ifndef SDL_RenderGetMetalLayer
+#define SDL_RenderGetMetalLayer SDL_RenderGetMetalLayer_REAL
+#endif
+#ifndef SDL_RenderGetMetalCommandEncoder
+#define SDL_RenderGetMetalCommandEncoder SDL_RenderGetMetalCommandEncoder_REAL
+#endif
+#ifndef SDL_IsAndroidTV
+#define SDL_IsAndroidTV SDL_IsAndroidTV_REAL
+#endif
+#ifndef SDL_WinRTGetDeviceFamily
+#define SDL_WinRTGetDeviceFamily SDL_WinRTGetDeviceFamily_REAL
+#endif
+#ifndef SDL_log10
+#define SDL_log10 SDL_log10_REAL
+#endif
+#ifndef SDL_log10f
+#define SDL_log10f SDL_log10f_REAL
+#endif
+#ifndef SDL_GameControllerMappingForDeviceIndex
+#define SDL_GameControllerMappingForDeviceIndex SDL_GameControllerMappingForDeviceIndex_REAL
+#endif
+#ifndef SDL_LinuxSetThreadPriority
+#define SDL_LinuxSetThreadPriority SDL_LinuxSetThreadPriority_REAL
+#endif
+#ifndef SDL_HasAVX512F
+#define SDL_HasAVX512F SDL_HasAVX512F_REAL
+#endif
+#ifndef SDL_IsChromebook
+#define SDL_IsChromebook SDL_IsChromebook_REAL
+#endif
+#ifndef SDL_IsDeXMode
+#define SDL_IsDeXMode SDL_IsDeXMode_REAL
+#endif
+#ifndef SDL_AndroidBackButton
+#define SDL_AndroidBackButton SDL_AndroidBackButton_REAL
+#endif
+#ifndef SDL_exp
+#define SDL_exp SDL_exp_REAL
+#endif
+#ifndef SDL_expf
+#define SDL_expf SDL_expf_REAL
+#endif
+#ifndef SDL_wcsdup
+#define SDL_wcsdup SDL_wcsdup_REAL
+#endif
+#ifndef SDL_GameControllerRumble
+#define SDL_GameControllerRumble SDL_GameControllerRumble_REAL
+#endif
+#ifndef SDL_JoystickRumble
+#define SDL_JoystickRumble SDL_JoystickRumble_REAL
+#endif
+#ifndef SDL_NumSensors
+#define SDL_NumSensors SDL_NumSensors_REAL
+#endif
+#ifndef SDL_SensorGetDeviceName
+#define SDL_SensorGetDeviceName SDL_SensorGetDeviceName_REAL
+#endif
+#ifndef SDL_SensorGetDeviceType
+#define SDL_SensorGetDeviceType SDL_SensorGetDeviceType_REAL
+#endif
+#ifndef SDL_SensorGetDeviceNonPortableType
+#define SDL_SensorGetDeviceNonPortableType SDL_SensorGetDeviceNonPortableType_REAL
+#endif
+#ifndef SDL_SensorGetDeviceInstanceID
+#define SDL_SensorGetDeviceInstanceID SDL_SensorGetDeviceInstanceID_REAL
+#endif
+#ifndef SDL_SensorOpen
+#define SDL_SensorOpen SDL_SensorOpen_REAL
+#endif
+#ifndef SDL_SensorFromInstanceID
+#define SDL_SensorFromInstanceID SDL_SensorFromInstanceID_REAL
+#endif
+#ifndef SDL_SensorGetName
+#define SDL_SensorGetName SDL_SensorGetName_REAL
+#endif
+#ifndef SDL_SensorGetType
+#define SDL_SensorGetType SDL_SensorGetType_REAL
+#endif
+#ifndef SDL_SensorGetNonPortableType
+#define SDL_SensorGetNonPortableType SDL_SensorGetNonPortableType_REAL
+#endif
+#ifndef SDL_SensorGetInstanceID
+#define SDL_SensorGetInstanceID SDL_SensorGetInstanceID_REAL
+#endif
+#ifndef SDL_SensorGetData
+#define SDL_SensorGetData SDL_SensorGetData_REAL
+#endif
+#ifndef SDL_SensorClose
+#define SDL_SensorClose SDL_SensorClose_REAL
+#endif
+#ifndef SDL_SensorUpdate
+#define SDL_SensorUpdate SDL_SensorUpdate_REAL
+#endif
+#ifndef SDL_IsTablet
+#define SDL_IsTablet SDL_IsTablet_REAL
+#endif
+#ifndef SDL_GetDisplayOrientation
+#define SDL_GetDisplayOrientation SDL_GetDisplayOrientation_REAL
+#endif
+#ifndef SDL_HasColorKey
+#define SDL_HasColorKey SDL_HasColorKey_REAL
+#endif
+#ifndef SDL_CreateThreadWithStackSize
+#define SDL_CreateThreadWithStackSize SDL_CreateThreadWithStackSize_REAL
+#endif
+#ifndef SDL_JoystickGetDevicePlayerIndex
+#define SDL_JoystickGetDevicePlayerIndex SDL_JoystickGetDevicePlayerIndex_REAL
+#endif
+#ifndef SDL_JoystickGetPlayerIndex
+#define SDL_JoystickGetPlayerIndex SDL_JoystickGetPlayerIndex_REAL
+#endif
+#ifndef SDL_GameControllerGetPlayerIndex
+#define SDL_GameControllerGetPlayerIndex SDL_GameControllerGetPlayerIndex_REAL
+#endif
+#ifndef SDL_RenderFlush
+#define SDL_RenderFlush SDL_RenderFlush_REAL
+#endif
+#ifndef SDL_RenderDrawPointF
+#define SDL_RenderDrawPointF SDL_RenderDrawPointF_REAL
+#endif
+#ifndef SDL_RenderDrawPointsF
+#define SDL_RenderDrawPointsF SDL_RenderDrawPointsF_REAL
+#endif
+#ifndef SDL_RenderDrawLineF
+#define SDL_RenderDrawLineF SDL_RenderDrawLineF_REAL
+#endif
+#ifndef SDL_RenderDrawLinesF
+#define SDL_RenderDrawLinesF SDL_RenderDrawLinesF_REAL
+#endif
+#ifndef SDL_RenderDrawRectF
+#define SDL_RenderDrawRectF SDL_RenderDrawRectF_REAL
+#endif
+#ifndef SDL_RenderDrawRectsF
+#define SDL_RenderDrawRectsF SDL_RenderDrawRectsF_REAL
+#endif
+#ifndef SDL_RenderFillRectF
+#define SDL_RenderFillRectF SDL_RenderFillRectF_REAL
+#endif
+#ifndef SDL_RenderFillRectsF
+#define SDL_RenderFillRectsF SDL_RenderFillRectsF_REAL
+#endif
+#ifndef SDL_RenderCopyF
+#define SDL_RenderCopyF SDL_RenderCopyF_REAL
+#endif
+#ifndef SDL_RenderCopyExF
+#define SDL_RenderCopyExF SDL_RenderCopyExF_REAL
+#endif
+#ifndef SDL_GetTouchDeviceType
+#define SDL_GetTouchDeviceType SDL_GetTouchDeviceType_REAL
+#endif
+#ifndef SDL_UIKitRunApp
+#define SDL_UIKitRunApp SDL_UIKitRunApp_REAL
+#endif
+#ifndef SDL_SIMDGetAlignment
+#define SDL_SIMDGetAlignment SDL_SIMDGetAlignment_REAL
+#endif
+#ifndef SDL_SIMDAlloc
+#define SDL_SIMDAlloc SDL_SIMDAlloc_REAL
+#endif
+#ifndef SDL_SIMDFree
+#define SDL_SIMDFree SDL_SIMDFree_REAL
+#endif
+#ifndef SDL_RWsize
+#define SDL_RWsize SDL_RWsize_REAL
+#endif
+#ifndef SDL_RWseek
+#define SDL_RWseek SDL_RWseek_REAL
+#endif
+#ifndef SDL_RWtell
+#define SDL_RWtell SDL_RWtell_REAL
+#endif
+#ifndef SDL_RWread
+#define SDL_RWread SDL_RWread_REAL
+#endif
+#ifndef SDL_RWwrite
+#define SDL_RWwrite SDL_RWwrite_REAL
+#endif
+#ifndef SDL_RWclose
+#define SDL_RWclose SDL_RWclose_REAL
+#endif
+#ifndef SDL_LoadFile
+#define SDL_LoadFile SDL_LoadFile_REAL
+#endif
+#ifndef SDL_Metal_CreateView
+#define SDL_Metal_CreateView SDL_Metal_CreateView_REAL
+#endif
+#ifndef SDL_Metal_DestroyView
+#define SDL_Metal_DestroyView SDL_Metal_DestroyView_REAL
+#endif
+#ifndef SDL_LockTextureToSurface
+#define SDL_LockTextureToSurface SDL_LockTextureToSurface_REAL
+#endif
+#ifndef SDL_HasARMSIMD
+#define SDL_HasARMSIMD SDL_HasARMSIMD_REAL
+#endif
+#ifndef SDL_strtokr
+#define SDL_strtokr SDL_strtokr_REAL
+#endif
+#ifndef SDL_wcsstr
+#define SDL_wcsstr SDL_wcsstr_REAL
+#endif
+#ifndef SDL_wcsncmp
+#define SDL_wcsncmp SDL_wcsncmp_REAL
+#endif
+#ifndef SDL_GameControllerTypeForIndex
+#define SDL_GameControllerTypeForIndex SDL_GameControllerTypeForIndex_REAL
+#endif
+#ifndef SDL_GameControllerGetType
+#define SDL_GameControllerGetType SDL_GameControllerGetType_REAL
+#endif
+#ifndef SDL_GameControllerFromPlayerIndex
+#define SDL_GameControllerFromPlayerIndex SDL_GameControllerFromPlayerIndex_REAL
+#endif
+#ifndef SDL_GameControllerSetPlayerIndex
+#define SDL_GameControllerSetPlayerIndex SDL_GameControllerSetPlayerIndex_REAL
+#endif
+#ifndef SDL_JoystickFromPlayerIndex
+#define SDL_JoystickFromPlayerIndex SDL_JoystickFromPlayerIndex_REAL
+#endif
+#ifndef SDL_JoystickSetPlayerIndex
+#define SDL_JoystickSetPlayerIndex SDL_JoystickSetPlayerIndex_REAL
+#endif
+#ifndef SDL_SetTextureScaleMode
+#define SDL_SetTextureScaleMode SDL_SetTextureScaleMode_REAL
+#endif
+#ifndef SDL_GetTextureScaleMode
+#define SDL_GetTextureScaleMode SDL_GetTextureScaleMode_REAL
+#endif
+#ifndef SDL_OnApplicationWillTerminate
+#define SDL_OnApplicationWillTerminate SDL_OnApplicationWillTerminate_REAL
+#endif
+#ifndef SDL_OnApplicationDidReceiveMemoryWarning
+#define SDL_OnApplicationDidReceiveMemoryWarning SDL_OnApplicationDidReceiveMemoryWarning_REAL
+#endif
+#ifndef SDL_OnApplicationWillResignActive
+#define SDL_OnApplicationWillResignActive SDL_OnApplicationWillResignActive_REAL
+#endif
+#ifndef SDL_OnApplicationDidEnterBackground
+#define SDL_OnApplicationDidEnterBackground SDL_OnApplicationDidEnterBackground_REAL
+#endif
+#ifndef SDL_OnApplicationWillEnterForeground
+#define SDL_OnApplicationWillEnterForeground SDL_OnApplicationWillEnterForeground_REAL
+#endif
+#ifndef SDL_OnApplicationDidBecomeActive
+#define SDL_OnApplicationDidBecomeActive SDL_OnApplicationDidBecomeActive_REAL
+#endif
+#ifndef SDL_OnApplicationDidChangeStatusBarOrientation
+#define SDL_OnApplicationDidChangeStatusBarOrientation SDL_OnApplicationDidChangeStatusBarOrientation_REAL
+#endif
+#ifndef SDL_GetAndroidSDKVersion
+#define SDL_GetAndroidSDKVersion SDL_GetAndroidSDKVersion_REAL
+#endif
+#ifndef SDL_isupper
+#define SDL_isupper SDL_isupper_REAL
+#endif
+#ifndef SDL_islower
+#define SDL_islower SDL_islower_REAL
+#endif
+#ifndef SDL_JoystickAttachVirtual
+#define SDL_JoystickAttachVirtual SDL_JoystickAttachVirtual_REAL
+#endif
+#ifndef SDL_JoystickDetachVirtual
+#define SDL_JoystickDetachVirtual SDL_JoystickDetachVirtual_REAL
+#endif
+#ifndef SDL_JoystickIsVirtual
+#define SDL_JoystickIsVirtual SDL_JoystickIsVirtual_REAL
+#endif
+#ifndef SDL_JoystickSetVirtualAxis
+#define SDL_JoystickSetVirtualAxis SDL_JoystickSetVirtualAxis_REAL
+#endif
+#ifndef SDL_JoystickSetVirtualBall
+#define SDL_JoystickSetVirtualBall SDL_JoystickSetVirtualBall_REAL
+#endif
+#ifndef SDL_JoystickSetVirtualButton
+#define SDL_JoystickSetVirtualButton SDL_JoystickSetVirtualButton_REAL
+#endif
+#ifndef SDL_JoystickSetVirtualHat
+#define SDL_JoystickSetVirtualHat SDL_JoystickSetVirtualHat_REAL
+#endif
+#ifndef SDL_GetErrorMsg
+#define SDL_GetErrorMsg SDL_GetErrorMsg_REAL
+#endif
+#ifndef SDL_LockSensors
+#define SDL_LockSensors SDL_LockSensors_REAL
+#endif
+#ifndef SDL_UnlockSensors
+#define SDL_UnlockSensors SDL_UnlockSensors_REAL
+#endif
+#ifndef SDL_Metal_GetLayer
+#define SDL_Metal_GetLayer SDL_Metal_GetLayer_REAL
+#endif
+#ifndef SDL_Metal_GetDrawableSize
+#define SDL_Metal_GetDrawableSize SDL_Metal_GetDrawableSize_REAL
+#endif
+#ifndef SDL_trunc
+#define SDL_trunc SDL_trunc_REAL
+#endif
+#ifndef SDL_truncf
+#define SDL_truncf SDL_truncf_REAL
+#endif
+#ifndef SDL_GetPreferredLocales
+#define SDL_GetPreferredLocales SDL_GetPreferredLocales_REAL
+#endif
+#ifndef SDL_SIMDRealloc
+#define SDL_SIMDRealloc SDL_SIMDRealloc_REAL
+#endif
+#ifndef SDL_AndroidRequestPermission
+#define SDL_AndroidRequestPermission SDL_AndroidRequestPermission_REAL
+#endif
+#ifndef SDL_OpenURL
+#define SDL_OpenURL SDL_OpenURL_REAL
+#endif
+#ifndef SDL_HasSurfaceRLE
+#define SDL_HasSurfaceRLE SDL_HasSurfaceRLE_REAL
+#endif
+#ifndef SDL_GameControllerHasLED
+#define SDL_GameControllerHasLED SDL_GameControllerHasLED_REAL
+#endif
+#ifndef SDL_GameControllerSetLED
+#define SDL_GameControllerSetLED SDL_GameControllerSetLED_REAL
+#endif
+#ifndef SDL_JoystickHasLED
+#define SDL_JoystickHasLED SDL_JoystickHasLED_REAL
+#endif
+#ifndef SDL_JoystickSetLED
+#define SDL_JoystickSetLED SDL_JoystickSetLED_REAL
+#endif
+#ifndef SDL_GameControllerRumbleTriggers
+#define SDL_GameControllerRumbleTriggers SDL_GameControllerRumbleTriggers_REAL
+#endif
+#ifndef SDL_JoystickRumbleTriggers
+#define SDL_JoystickRumbleTriggers SDL_JoystickRumbleTriggers_REAL
+#endif
+#ifndef SDL_GameControllerHasAxis
+#define SDL_GameControllerHasAxis SDL_GameControllerHasAxis_REAL
+#endif
+#ifndef SDL_GameControllerHasButton
+#define SDL_GameControllerHasButton SDL_GameControllerHasButton_REAL
+#endif
+#ifndef SDL_GameControllerGetNumTouchpads
+#define SDL_GameControllerGetNumTouchpads SDL_GameControllerGetNumTouchpads_REAL
+#endif
+#ifndef SDL_GameControllerGetNumTouchpadFingers
+#define SDL_GameControllerGetNumTouchpadFingers SDL_GameControllerGetNumTouchpadFingers_REAL
+#endif
+#ifndef SDL_GameControllerGetTouchpadFinger
+#define SDL_GameControllerGetTouchpadFinger SDL_GameControllerGetTouchpadFinger_REAL
+#endif
+#ifndef SDL_crc32
+#define SDL_crc32 SDL_crc32_REAL
+#endif
+#ifndef SDL_GameControllerGetSerial
+#define SDL_GameControllerGetSerial SDL_GameControllerGetSerial_REAL
+#endif
+#ifndef SDL_JoystickGetSerial
+#define SDL_JoystickGetSerial SDL_JoystickGetSerial_REAL
+#endif
+#ifndef SDL_GameControllerHasSensor
+#define SDL_GameControllerHasSensor SDL_GameControllerHasSensor_REAL
+#endif
+#ifndef SDL_GameControllerSetSensorEnabled
+#define SDL_GameControllerSetSensorEnabled SDL_GameControllerSetSensorEnabled_REAL
+#endif
+#ifndef SDL_GameControllerIsSensorEnabled
+#define SDL_GameControllerIsSensorEnabled SDL_GameControllerIsSensorEnabled_REAL
+#endif
+#ifndef SDL_GameControllerGetSensorData
+#define SDL_GameControllerGetSensorData SDL_GameControllerGetSensorData_REAL
+#endif
+#ifndef SDL_wcscasecmp
+#define SDL_wcscasecmp SDL_wcscasecmp_REAL
+#endif
+#ifndef SDL_wcsncasecmp
+#define SDL_wcsncasecmp SDL_wcsncasecmp_REAL
+#endif
+#ifndef SDL_round
+#define SDL_round SDL_round_REAL
+#endif
+#ifndef SDL_roundf
+#define SDL_roundf SDL_roundf_REAL
+#endif
+#ifndef SDL_lround
+#define SDL_lround SDL_lround_REAL
+#endif
+#ifndef SDL_lroundf
+#define SDL_lroundf SDL_lroundf_REAL
+#endif
+#ifndef SDL_SoftStretchLinear
+#define SDL_SoftStretchLinear SDL_SoftStretchLinear_REAL
+#endif
+#ifndef SDL_RenderGetD3D11Device
+#define SDL_RenderGetD3D11Device SDL_RenderGetD3D11Device_REAL
+#endif
+#ifndef SDL_UpdateNVTexture
+#define SDL_UpdateNVTexture SDL_UpdateNVTexture_REAL
+#endif
+#ifndef SDL_SetWindowKeyboardGrab
+#define SDL_SetWindowKeyboardGrab SDL_SetWindowKeyboardGrab_REAL
+#endif
+#ifndef SDL_SetWindowMouseGrab
+#define SDL_SetWindowMouseGrab SDL_SetWindowMouseGrab_REAL
+#endif
+#ifndef SDL_GetWindowKeyboardGrab
+#define SDL_GetWindowKeyboardGrab SDL_GetWindowKeyboardGrab_REAL
+#endif
+#ifndef SDL_GetWindowMouseGrab
+#define SDL_GetWindowMouseGrab SDL_GetWindowMouseGrab_REAL
+#endif

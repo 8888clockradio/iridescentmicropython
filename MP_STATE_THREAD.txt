@@ -1,0 +1,100 @@
+./ports/esp32/mpthreadport.c:// so MP_STATE_THREAD is not valid and it does not have the GIL.
+./ports/esp32/gccollect.c:        gc_collect_root((void **)sp, ((mp_uint_t)MP_STATE_THREAD(stack_top) - sp) / sizeof(uint32_t));
+./ports/esp8266/modnetwork.c:        if (MP_STATE_THREAD(mp_pending_exception) != NULL) {
+./ports/unix/main.c:    MP_STATE_THREAD(prof_trace_callback) = MP_OBJ_NULL;
+./ports/unix/mpthreadport.c:        void **ptrs = (void **)(void *)MP_STATE_THREAD(pystack_start);
+./ports/unix/mpthreadport.c:        gc_collect_root(ptrs, (MP_STATE_THREAD(pystack_cur) - MP_STATE_THREAD(pystack_start)) / sizeof(void *));
+./ports/nrf/boards/microbit/modules/microbitdisplay.c:        if (MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL) {
+./ports/nrf/modules/music/modmusic.c:        if (MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL) {
+./ports/pic16bit/main.c:    MP_STATE_THREAD(stack_top) = (char *)&stack_dummy;
+./ports/pic16bit/main.c:    gc_collect_root(&dummy, ((mp_uint_t)&dummy - (mp_uint_t)MP_STATE_THREAD(stack_top)) / sizeof(mp_uint_t));
+./ports/zephyr/machine_pin.c:    char *orig_stack_top = MP_STATE_THREAD(stack_top);
+./ports/zephyr/machine_pin.c:    size_t orig_stack_limit = MP_STATE_THREAD(stack_limit);
+./ports/zephyr/machine_pin.c:    MP_STATE_THREAD(stack_top) = (void *)&irq;
+./ports/zephyr/machine_pin.c:    MP_STATE_THREAD(stack_limit) = CONFIG_ISR_STACK_SIZE - 512;
+./ports/zephyr/machine_pin.c:    MP_STATE_THREAD(stack_top) = orig_stack_top;
+./ports/zephyr/machine_pin.c:    MP_STATE_THREAD(stack_limit) = orig_stack_limit;
+./ports/zephyr/main.c:    gc_collect_root(&dummy, ((mp_uint_t)MP_STATE_THREAD(stack_top) - (mp_uint_t)&dummy) / sizeof(mp_uint_t));
+./py/runtime.c:    MP_STATE_THREAD(mp_pending_exception) = MP_OBJ_NULL;
+./py/runtime.c:    MP_STATE_THREAD(prof_trace_callback) = MP_OBJ_NULL;
+./py/runtime.c:    MP_STATE_THREAD(prof_callback_is_executing) = false;
+./py/runtime.c:    MP_STATE_THREAD(current_code_state) = NULL;
+./py/runtime.c:        MP_STATE_THREAD(stop_iteration_arg) = MP_OBJ_NULL;
+./py/runtime.c:        MP_STATE_THREAD(stop_iteration_arg) = MP_OBJ_NULL;
+./py/runtime.c:        MP_STATE_THREAD(stop_iteration_arg) = MP_OBJ_NULL;
+./py/runtime.c:            *ret_val = MP_STATE_THREAD(stop_iteration_arg);
+./py/nlr.h:#define MP_NLR_SAVE_PYSTACK(nlr_buf) (nlr_buf)->pystack = MP_STATE_THREAD(pystack_cur)
+./py/nlr.h:#define MP_NLR_RESTORE_PYSTACK(nlr_buf) MP_STATE_THREAD(pystack_cur) = (nlr_buf)->pystack
+./py/nlr.h:    nlr_buf_t **_top_ptr = &MP_STATE_THREAD(nlr_top); \
+./py/nlr.h:        /*printf("nlr_raise: nlr_top=%p\n", MP_STATE_THREAD(nlr_top)); \
+./py/nlr.h:    assert(MP_STATE_THREAD(nlr_top) != val), nlr_push(val)
+./py/nlr.h:    printf("nlr_push: before: nlr_top=%p, val=%p\n", MP_STATE_THREAD(nlr_top), val),assert(MP_STATE_THREAD(nlr_top) != val),nlr_push(val)
+./py/profile.h:#define mp_prof_is_executing MP_STATE_THREAD(prof_callback_is_executing)
+./py/nlrsetjmp.c:    nlr_buf_t **top_ptr = &MP_STATE_THREAD(nlr_top);
+./py/pystack.h:    assert((uint8_t *)ptr >= MP_STATE_THREAD(pystack_start));
+./py/pystack.h:    assert((uint8_t *)ptr <= MP_STATE_THREAD(pystack_cur));
+./py/pystack.h:    size_t n_bytes_to_free = MP_STATE_THREAD(pystack_cur) - (uint8_t *)ptr;
+./py/pystack.h:    size_t n_bytes = *(size_t *)(MP_STATE_THREAD(pystack_cur) - MICROPY_PYSTACK_ALIGN);
+./py/pystack.h:        n_bytes += *(size_t *)(MP_STATE_THREAD(pystack_cur) - n_bytes - MICROPY_PYSTACK_ALIGN);
+./py/pystack.h:            (uint)*(size_t *)(MP_STATE_THREAD(pystack_cur) - MICROPY_PYSTACK_ALIGN));
+./py/pystack.h:    MP_STATE_THREAD(pystack_cur) = (uint8_t *)ptr;
+./py/pystack.h:    return MP_STATE_THREAD(pystack_cur) - MP_STATE_THREAD(pystack_start);
+./py/pystack.h:    return MP_STATE_THREAD(pystack_end) - MP_STATE_THREAD(pystack_start);
+./py/vm.c:    MP_STATE_THREAD(current_code_state) = code_state; \
+./py/vm.c:    code_state->prev_state = MP_STATE_THREAD(current_code_state); \
+./py/vm.c:    MP_STATE_THREAD(current_code_state) = code_state->prev_state; \
+./py/vm.c:    assert(MP_STATE_THREAD(current_code_state) == code_state); \
+./py/vm.c:    assert(MP_STATE_THREAD(current_code_state) == code_state); \
+./py/vm.c:    if (!mp_prof_is_executing && code_state->frame && MP_STATE_THREAD(prof_trace_callback)) { \
+./py/vm.c:                    MP_STATE_VM(sched_state) == MP_SCHED_PENDING || MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL
+./py/vm.c:                    MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL
+./py/stackctrl.c:    MP_STATE_THREAD(stack_top) = (char *)&stack_dummy;
+./py/stackctrl.c:    MP_STATE_THREAD(stack_top) = top;
+./py/stackctrl.c:    return MP_STATE_THREAD(stack_top) - (char *)&stack_dummy;
+./py/stackctrl.c:    MP_STATE_THREAD(stack_limit) = limit;
+./py/stackctrl.c:    if (mp_stack_usage() >= MP_STATE_THREAD(stack_limit)) {
+./py/runtime.h:    return MP_STATE_THREAD(dict_locals);
+./py/runtime.h:    MP_STATE_THREAD(dict_locals) = d;
+./py/runtime.h:    return MP_STATE_THREAD(dict_globals);
+./py/runtime.h:    MP_STATE_THREAD(dict_globals) = d;
+./py/runtime.h:    MP_STATE_THREAD(stop_iteration_arg) = o;
+./py/nlr.c:    nlr_buf_t **top = &MP_STATE_THREAD(nlr_top);
+./py/nlr.c:    nlr_buf_t **top = &MP_STATE_THREAD(nlr_top);
+./py/modmicropython.c:        mp_stack_usage(), (mp_uint_t)MP_STATE_THREAD(stack_limit));
+./py/modmicropython.c:    return MP_OBJ_NEW_SMALL_INT(MP_STATE_THREAD(gc_lock_depth));
+./py/modmicropython.c:    return MP_OBJ_NEW_SMALL_INT(MP_STATE_THREAD(gc_lock_depth));
+./py/profile.c:#define prof_trace_cb MP_STATE_THREAD(prof_trace_callback)
+./py/profile.c:    if (MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL) {
+./py/scheduler.c:            MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL ||
+./py/scheduler.c:    if (MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL) {
+./py/scheduler.c:        mp_obj_t obj = MP_STATE_THREAD(mp_pending_exception);
+./py/scheduler.c:            MP_STATE_THREAD(mp_pending_exception) = MP_OBJ_NULL;
+./py/pystack.c:    MP_STATE_THREAD(pystack_start) = start;
+./py/pystack.c:    MP_STATE_THREAD(pystack_end) = end;
+./py/pystack.c:    MP_STATE_THREAD(pystack_cur) = start;
+./py/pystack.c:    if (MP_STATE_THREAD(pystack_cur) + n_bytes > MP_STATE_THREAD(pystack_end)) {
+./py/pystack.c:    void *ptr = MP_STATE_THREAD(pystack_cur);
+./py/pystack.c:    MP_STATE_THREAD(pystack_cur) += n_bytes;
+./py/pystack.c:    *(size_t *)(MP_STATE_THREAD(pystack_cur) - MICROPY_PYSTACK_ALIGN) = n_bytes;
+./py/mpstate.h:#define MP_STATE_THREAD(x) (mp_thread_get_state()->x)
+./py/mpstate.h:#define MP_STATE_THREAD(x)  MP_STATE_MAIN_THREAD(x)
+./py/modthread.c:    DEBUG_printf("[thread] start ts=%p args=%p stack=%p\n", &ts, &args, MP_STATE_THREAD(stack_top));
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth) = 0;
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth)++;
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth)--;
+./py/gc.c:    return MP_STATE_THREAD(gc_lock_depth) != 0;
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth)++;
+./py/gc.c:    ptrs = (void **)(void *)MP_STATE_THREAD(pystack_start);
+./py/gc.c:    gc_collect_root(ptrs, (MP_STATE_THREAD(pystack_cur) - MP_STATE_THREAD(pystack_start)) / sizeof(void *));
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth)--;
+./py/gc.c:    MP_STATE_THREAD(gc_lock_depth)++;
+./py/gc.c:    if (MP_STATE_THREAD(gc_lock_depth) > 0) {
+./py/gc.c:    if (MP_STATE_THREAD(gc_lock_depth) > 0) {
+./py/gc.c:    if (MP_STATE_THREAD(gc_lock_depth) > 0) {
+./py/gc.c:                        len = ((mp_uint_t)MP_STATE_THREAD(stack_top) - (mp_uint_t)&c) / sizeof(mp_uint_t);
+./py/modbuiltins.c:            mp_raise_StopIteration(MP_STATE_THREAD(stop_iteration_arg));
+./py/modbuiltins.c:        mp_raise_StopIteration(MP_STATE_THREAD(stop_iteration_arg));
+./shared/runtime/gchelper_generic.c:    gc_collect_root(regs_ptr, ((uintptr_t)MP_STATE_THREAD(stack_top) - (uintptr_t)&regs) / sizeof(uintptr_t));
+./shared/runtime/gchelper_native.c:    gc_collect_root((void **)sp, ((uint32_t)MP_STATE_THREAD(stack_top) - sp) / sizeof(uint32_t));
+./shared/runtime/pyexec.c:        if (MP_STATE_THREAD(gc_lock_depth) != 0) {
+./shared/runtime/pyexec.c:            MP_STATE_THREAD(gc_lock_depth) = 0;

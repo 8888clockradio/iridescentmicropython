@@ -1,0 +1,8 @@
+build-shared/shared/libc/string0.o: ../../shared/libc/string0.c \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint-gcc.h \
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h
+../../shared/libc/string0.c :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stdint-gcc.h :
+ /Applications/ARM/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h :
