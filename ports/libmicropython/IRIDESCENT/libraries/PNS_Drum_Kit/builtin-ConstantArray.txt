@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 3;
+const instrument_data* builtInInstruments[3] = {&PNSDrumKitAcPercusUpper, &PNSDrumKitAcPercusMid, &PNSDrumKitAcoustDryKit, };

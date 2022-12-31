@@ -1,0 +1,3 @@
+#include "PNSDrumKitAcPercusUpper_samples.h"
+#include "PNSDrumKitAcPercusMid_samples.h"
+#include "PNSDrumKitAcoustDryKit_samples.h"
