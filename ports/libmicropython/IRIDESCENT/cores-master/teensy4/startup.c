@@ -42,6 +42,8 @@ extern unsigned long rtc_get(void);
 uint32_t set_arm_clock(uint32_t frequency); // clockspeed.c
 extern void __libc_init_array(void); // C++ standard library
 
+extern void board_init(void);
+
 uint8_t external_psram_size = 0;
 #ifdef ARDUINO_TEENSY41
 struct smalloc_pool extmem_smalloc_pool;
@@ -93,7 +95,7 @@ void ResetHandler(void)
 
 	// enable exception handling
 	SCB_SHCSR |= SCB_SHCSR_MEMFAULTENA | SCB_SHCSR_BUSFAULTENA | SCB_SHCSR_USGFAULTENA;
-
+    
 	// Configure clocks
 	// TODO: make sure all affected peripherals are turned off!
 	// PIT & GPT timers to run from 24 MHz clock (independent of CPU speed)
@@ -114,11 +116,13 @@ void ResetHandler(void)
 	printf("\n***********IMXRT Startup**********\n");
 	printf("test %d %d %d\n", 1, -1234567, 3);
 
+    board_init();
+    BOARD_BootClockRUN();
 	configure_cache();
 	configure_systick();
     
 	usb_pll_start();	
-	reset_PFD(); //TODO: is this really needed?
+	//reset_PFD(); //TODO: is this really needed?
 #ifdef F_CPU
 	set_arm_clock(F_CPU);
 #endif
