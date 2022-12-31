@@ -1,0 +1,1200 @@
+Determining if the __GLIBC__ exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3QtERj
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e6495/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e6495.dir/build.make CMakeFiles/cmTC_e6495.dir/build
+Building C object CMakeFiles/cmTC_e6495.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_e6495.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3QtERj/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3QtERj/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3QtERj/CheckSymbolExists.c:8:19: error: '__GLIBC__' undeclared (first use in this function); did you mean '__LINE__'?
+    8 |   return ((int*)(&__GLIBC__))[argc];
+      |                   ^~~~~~~~~
+      |                   __LINE__
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3QtERj/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_e6495.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_e6495/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __GLIBC__
+  return ((int*)(&__GLIBC__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_X86 failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9fdb7/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9fdb7.dir/build.make CMakeFiles/cmTC_9fdb7.dir/build
+Building C object CMakeFiles/cmTC_9fdb7.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_X86   -o CMakeFiles/cmTC_9fdb7.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV/src.c:6:3: error: 'choke' undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-5xKYGV/src.c:6:8: error: expected ';' before '}' token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+make[2]: *** [CMakeFiles/cmTC_9fdb7.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_9fdb7/fast] Error 2
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__i386__) || defined(__i486__) || defined(__i586__) || defined(__i686__) ||defined( __i386) || defined(_M_IX86)
+  return 0;
+#else
+  choke
+#endif
+}
+
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_X64 failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6d1bd/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6d1bd.dir/build.make CMakeFiles/cmTC_6d1bd.dir/build
+Building C object CMakeFiles/cmTC_6d1bd.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_X64   -o CMakeFiles/cmTC_6d1bd.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn/src.c:6:3: error: 'choke' undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xJxUCn/src.c:6:8: error: expected ';' before '}' token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+make[2]: *** [CMakeFiles/cmTC_6d1bd.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_6d1bd/fast] Error 2
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64) || defined(_M_X64) || defined(_M_AMD64)
+  return 0;
+#else
+  choke
+#endif
+}
+
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_ARM64 failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_39ee6/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_39ee6.dir/build.make CMakeFiles/cmTC_39ee6.dir/build
+Building C object CMakeFiles/cmTC_39ee6.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_ARM64   -o CMakeFiles/cmTC_39ee6.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L/src.c:6:3: error: 'choke' undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-pKd43L/src.c:6:8: error: expected ';' before '}' token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+make[2]: *** [CMakeFiles/cmTC_39ee6.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_39ee6/fast] Error 2
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__aarch64__) || defined(_M_ARM64)
+  return 0;
+#else
+  choke
+#endif
+}
+
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_LOONGARCH64 failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ea49d/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ea49d.dir/build.make CMakeFiles/cmTC_ea49d.dir/build
+Building C object CMakeFiles/cmTC_ea49d.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_LOONGARCH64   -o CMakeFiles/cmTC_ea49d.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo/src.c:6:3: error: 'choke' undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-x8bElo/src.c:6:8: error: expected ';' before '}' token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+make[2]: *** [CMakeFiles/cmTC_ea49d.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_ea49d/fast] Error 2
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__loongarch64)
+  return 0;
+#else
+  choke
+#endif
+}
+
+
+Performing C SOURCE FILE Test HAVE_GCC_PREFERRED_STACK_BOUNDARY failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-FJ00l7
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2291f/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2291f.dir/build.make CMakeFiles/cmTC_2291f.dir/build
+Building C object CMakeFiles/cmTC_2291f.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_GCC_PREFERRED_STACK_BOUNDARY  -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -mpreferred-stack-boundary=2 -o CMakeFiles/cmTC_2291f.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-FJ00l7/src.c
+arm-none-eabi-gcc: error: unrecognized command-line option '-mpreferred-stack-boundary=2'
+make[2]: *** [CMakeFiles/cmTC_2291f.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_2291f/fast] Error 2
+
+
+Source file was:
+int x = 0; int main(int argc, char **argv) { return 0; }
+
+Determining if the include file immintrin.h exists failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lROmhd
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a5a7c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a5a7c.dir/build.make CMakeFiles/cmTC_a5a7c.dir/build
+Building C object CMakeFiles/cmTC_a5a7c.dir/CheckIncludeFile.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_a5a7c.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lROmhd/CheckIncludeFile.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lROmhd/CheckIncludeFile.c:1:10: fatal error: immintrin.h: No such file or directory
+    1 | #include <immintrin.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_a5a7c.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [cmTC_a5a7c/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xEkeb6
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5d9b5/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5d9b5.dir/build.make CMakeFiles/cmTC_5d9b5.dir/build
+Building C object CMakeFiles/cmTC_5d9b5.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_ALTIVEC_H_HDR  -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -maltivec -o CMakeFiles/cmTC_5d9b5.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-xEkeb6/src.c
+arm-none-eabi-gcc: error: unrecognized command-line option '-maltivec'
+make[2]: *** [CMakeFiles/cmTC_5d9b5.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_5d9b5/fast] Error 2
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+
+Performing C SOURCE FILE Test CPU_SUPPORTS_ALTIVEC failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-92rRZI
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7203c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7203c.dir/build.make CMakeFiles/cmTC_7203c.dir/build
+Building C object CMakeFiles/cmTC_7203c.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCPU_SUPPORTS_ALTIVEC  -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -maltivec -o CMakeFiles/cmTC_7203c.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-92rRZI/src.c
+arm-none-eabi-gcc: error: unrecognized command-line option '-maltivec'
+make[2]: *** [CMakeFiles/cmTC_7203c.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_7203c/fast] Error 2
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HBGf4d
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c7f2d/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c7f2d.dir/build.make CMakeFiles/cmTC_c7f2d.dir/build
+Building C object CMakeFiles/cmTC_c7f2d.dir/CheckIncludeFile.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_c7f2d.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HBGf4d/CheckIncludeFile.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HBGf4d/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_c7f2d.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [cmTC_c7f2d/fast] Error 2
+
+
+
+Determining if the include file linux/input.h exists failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hbopmm
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77b96/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_77b96.dir/build.make CMakeFiles/cmTC_77b96.dir/build
+Building C object CMakeFiles/cmTC_77b96.dir/CheckIncludeFile.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_77b96.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hbopmm/CheckIncludeFile.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hbopmm/CheckIncludeFile.c:1:10: fatal error: linux/input.h: No such file or directory
+    1 | #include <linux/input.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_77b96.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [cmTC_77b96/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_MPROTECT failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-XO96oQ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_10b90/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_10b90.dir/build.make CMakeFiles/cmTC_10b90.dir/build
+Building C object CMakeFiles/cmTC_10b90.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_MPROTECT  -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_10b90.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-XO96oQ/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-XO96oQ/src.c:2:39: fatal error: sys/mman.h: No such file or directory
+    2 |                              #include <sys/mman.h>
+      |                                       ^~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_10b90.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_10b90/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+                             #include <sys/mman.h>
+                             int main(void) { return 0; }
+
+Determining if the _strrev exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-tUhHfc
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_58589/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_58589.dir/build.make CMakeFiles/cmTC_58589.dir/build
+Building C object CMakeFiles/cmTC_58589.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_58589.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-tUhHfc/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-tUhHfc/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-tUhHfc/CheckSymbolExists.c:14:19: error: '_strrev' undeclared (first use in this function)
+   14 |   return ((int*)(&_strrev))[argc];
+      |                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-tUhHfc/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_58589.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_58589/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strrev
+  return ((int*)(&_strrev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strupr exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-VpCqwr
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8817c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8817c.dir/build.make CMakeFiles/cmTC_8817c.dir/build
+Building C object CMakeFiles/cmTC_8817c.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_8817c.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-VpCqwr/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-VpCqwr/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-VpCqwr/CheckSymbolExists.c:14:19: error: '_strupr' undeclared (first use in this function); did you mean 'strupr'?
+   14 |   return ((int*)(&_strupr))[argc];
+      |                   ^~~~~~~
+      |                   strupr
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-VpCqwr/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_8817c.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_8817c/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strupr
+  return ((int*)(&_strupr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strlwr exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-CU50Pn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77b61/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_77b61.dir/build.make CMakeFiles/cmTC_77b61.dir/build
+Building C object CMakeFiles/cmTC_77b61.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_77b61.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-CU50Pn/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-CU50Pn/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-CU50Pn/CheckSymbolExists.c:14:19: error: '_strlwr' undeclared (first use in this function); did you mean 'strlwr'?
+   14 |   return ((int*)(&_strlwr))[argc];
+      |                   ^~~~~~~
+      |                   strlwr
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-CU50Pn/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_77b61.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_77b61/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strlwr
+  return ((int*)(&_strlwr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ltoa exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lUG2QH
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77151/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_77151.dir/build.make CMakeFiles/cmTC_77151.dir/build
+Building C object CMakeFiles/cmTC_77151.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_77151.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lUG2QH/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lUG2QH/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lUG2QH/CheckSymbolExists.c:14:19: error: '_ltoa' undeclared (first use in this function)
+   14 |   return ((int*)(&_ltoa))[argc];
+      |                   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lUG2QH/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_77151.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_77151/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ltoa
+  return ((int*)(&_ltoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _uitoa exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Dofboo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cc8e8/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cc8e8.dir/build.make CMakeFiles/cmTC_cc8e8.dir/build
+Building C object CMakeFiles/cmTC_cc8e8.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_cc8e8.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Dofboo/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Dofboo/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Dofboo/CheckSymbolExists.c:14:19: error: '_uitoa' undeclared (first use in this function); did you mean '__itoa'?
+   14 |   return ((int*)(&_uitoa))[argc];
+      |                   ^~~~~~
+      |                   __itoa
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Dofboo/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_cc8e8.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_cc8e8/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _uitoa
+  return ((int*)(&_uitoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ultoa exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F4jYTu
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7c94e/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7c94e.dir/build.make CMakeFiles/cmTC_7c94e.dir/build
+Building C object CMakeFiles/cmTC_7c94e.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_7c94e.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F4jYTu/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F4jYTu/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F4jYTu/CheckSymbolExists.c:14:19: error: '_ultoa' undeclared (first use in this function); did you mean 'utoa'?
+   14 |   return ((int*)(&_ultoa))[argc];
+      |                   ^~~~~~
+      |                   utoa
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F4jYTu/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_7c94e.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_7c94e/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ultoa
+  return ((int*)(&_ultoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _i64toa exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVIFu8
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ace2a/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ace2a.dir/build.make CMakeFiles/cmTC_ace2a.dir/build
+Building C object CMakeFiles/cmTC_ace2a.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_ace2a.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVIFu8/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVIFu8/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVIFu8/CheckSymbolExists.c:14:19: error: '_i64toa' undeclared (first use in this function); did you mean 'itoa'?
+   14 |   return ((int*)(&_i64toa))[argc];
+      |                   ^~~~~~~
+      |                   itoa
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVIFu8/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_ace2a.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_ace2a/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _i64toa
+  return ((int*)(&_i64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ui64toa exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AqtT39
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_71467/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_71467.dir/build.make CMakeFiles/cmTC_71467.dir/build
+Building C object CMakeFiles/cmTC_71467.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_71467.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AqtT39/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AqtT39/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AqtT39/CheckSymbolExists.c:14:19: error: '_ui64toa' undeclared (first use in this function); did you mean '__itoa'?
+   14 |   return ((int*)(&_ui64toa))[argc];
+      |                   ^~~~~~~~
+      |                   __itoa
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AqtT39/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_71467.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_71467/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ui64toa
+  return ((int*)(&_ui64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _stricmp exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AuKc4D
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d564a/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d564a.dir/build.make CMakeFiles/cmTC_d564a.dir/build
+Building C object CMakeFiles/cmTC_d564a.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_d564a.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AuKc4D/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AuKc4D/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AuKc4D/CheckSymbolExists.c:14:19: error: '_stricmp' undeclared (first use in this function); did you mean 'strncmp'?
+   14 |   return ((int*)(&_stricmp))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AuKc4D/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_d564a.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_d564a/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _stricmp
+  return ((int*)(&_stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strnicmp exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AfWzHi
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1f891/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1f891.dir/build.make CMakeFiles/cmTC_1f891.dir/build
+Building C object CMakeFiles/cmTC_1f891.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_1f891.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AfWzHi/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AfWzHi/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AfWzHi/CheckSymbolExists.c:14:19: error: '_strnicmp' undeclared (first use in this function); did you mean 'strncmp'?
+   14 |   return ((int*)(&_strnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   strncmp
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-AfWzHi/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_1f891.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_1f891/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strnicmp
+  return ((int*)(&_strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcasestr exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Vfr7l7
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cd2f5/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cd2f5.dir/build.make CMakeFiles/cmTC_cd2f5.dir/build
+Building C object CMakeFiles/cmTC_cd2f5.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_cd2f5.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Vfr7l7/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Vfr7l7/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Vfr7l7/CheckSymbolExists.c:14:19: error: 'strcasestr' undeclared (first use in this function); did you mean 'strcasecmp'?
+   14 |   return ((int*)(&strcasestr))[argc];
+      |                   ^~~~~~~~~~
+      |                   strcasecmp
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-Vfr7l7/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_cd2f5.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_cd2f5/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasestr
+  return ((int*)(&strcasestr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsdup exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-YyJO0j
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9fc0c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9fc0c.dir/build.make CMakeFiles/cmTC_9fc0c.dir/build
+Building C object CMakeFiles/cmTC_9fc0c.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_9fc0c.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-YyJO0j/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-YyJO0j/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-YyJO0j/CheckSymbolExists.c:14:19: error: '_wcsdup' undeclared (first use in this function); did you mean 'wcsdup'?
+   14 |   return ((int*)(&_wcsdup))[argc];
+      |                   ^~~~~~~
+      |                   wcsdup
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-YyJO0j/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_9fc0c.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_9fc0c/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsdup
+  return ((int*)(&_wcsdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsicmp exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-bqnz9Z
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5130f/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5130f.dir/build.make CMakeFiles/cmTC_5130f.dir/build
+Building C object CMakeFiles/cmTC_5130f.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_5130f.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-bqnz9Z/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-bqnz9Z/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-bqnz9Z/CheckSymbolExists.c:14:19: error: '_wcsicmp' undeclared (first use in this function); did you mean 'wcsncmp'?
+   14 |   return ((int*)(&_wcsicmp))[argc];
+      |                   ^~~~~~~~
+      |                   wcsncmp
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-bqnz9Z/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_5130f.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_5130f/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsicmp
+  return ((int*)(&_wcsicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsnicmp exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVMeLN
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9d953/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9d953.dir/build.make CMakeFiles/cmTC_9d953.dir/build
+Building C object CMakeFiles/cmTC_9d953.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_9d953.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVMeLN/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVMeLN/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVMeLN/CheckSymbolExists.c:14:19: error: '_wcsnicmp' undeclared (first use in this function); did you mean 'wcsncmp'?
+   14 |   return ((int*)(&_wcsnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   wcsncmp
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HVMeLN/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_9d953.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_9d953/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsnicmp
+  return ((int*)(&_wcsnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fopen64 exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-emrvZn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_30ae5/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_30ae5.dir/build.make CMakeFiles/cmTC_30ae5.dir/build
+Building C object CMakeFiles/cmTC_30ae5.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_30ae5.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-emrvZn/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-emrvZn/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-emrvZn/CheckSymbolExists.c:14:19: error: 'fopen64' undeclared (first use in this function); did you mean 'fopen'?
+   14 |   return ((int*)(&fopen64))[argc];
+      |                   ^~~~~~~
+      |                   fopen
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-emrvZn/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_30ae5.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_30ae5/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fopen64
+  return ((int*)(&fopen64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fseeko64 exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HjjBDY
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cbd45/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cbd45.dir/build.make CMakeFiles/cmTC_cbd45.dir/build
+Building C object CMakeFiles/cmTC_cbd45.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_cbd45.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HjjBDY/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HjjBDY/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HjjBDY/CheckSymbolExists.c:14:19: error: 'fseeko64' undeclared (first use in this function); did you mean 'fseeko'?
+   14 |   return ((int*)(&fseeko64))[argc];
+      |                   ^~~~~~~~
+      |                   fseeko
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-HjjBDY/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_cbd45.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_cbd45/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fseeko64
+  return ((int*)(&fseeko64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sigaction exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3JFXi
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1ce4e/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1ce4e.dir/build.make CMakeFiles/cmTC_1ce4e.dir/build
+Building C object CMakeFiles/cmTC_1ce4e.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_1ce4e.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3JFXi/CheckSymbolExists.c
+Linking C executable cmTC_1ce4e
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ce4e.dir/link.txt --verbose=1
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -specs=nosys.specs  CMakeFiles/cmTC_1ce4e.dir/CheckSymbolExists.c.obj -o cmTC_1ce4e 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-closer.o): in function `_close_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/closer.c:47: warning: _close is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_getpid_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:83: warning: _getpid is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_kill_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:53: warning: _kill is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-lseekr.o): in function `_lseek_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49: warning: _lseek is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-readr.o): in function `_read_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/readr.c:49: warning: _read is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-writer.o): in function `_write_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/writer.c:49: warning: _write is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/cmTC_1ce4e.dir/CheckSymbolExists.c.obj: in function `main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3JFXi/CheckSymbolExists.c:13: undefined reference to `sigaction'
+collect2: error: ld returned 1 exit status
+make[2]: *** [cmTC_1ce4e] Error 1
+make[1]: *** [cmTC_1ce4e/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <signal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sigaction
+  return ((int*)(&sigaction))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the nanosleep exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-8lqZnQ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_706a1/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_706a1.dir/build.make CMakeFiles/cmTC_706a1.dir/build
+Building C object CMakeFiles/cmTC_706a1.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_706a1.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-8lqZnQ/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-8lqZnQ/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-8lqZnQ/CheckSymbolExists.c:8:19: error: 'nanosleep' undeclared (first use in this function)
+    8 |   return ((int*)(&nanosleep))[argc];
+      |                   ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-8lqZnQ/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_706a1.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_706a1/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef nanosleep
+  return ((int*)(&nanosleep))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sysconf exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-TyKFHq
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_15cf9/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_15cf9.dir/build.make CMakeFiles/cmTC_15cf9.dir/build
+Building C object CMakeFiles/cmTC_15cf9.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_15cf9.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-TyKFHq/CheckSymbolExists.c
+Linking C executable cmTC_15cf9
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15cf9.dir/link.txt --verbose=1
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -specs=nosys.specs  CMakeFiles/cmTC_15cf9.dir/CheckSymbolExists.c.obj -o cmTC_15cf9 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-closer.o): in function `_close_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/closer.c:47: warning: _close is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_getpid_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:83: warning: _getpid is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_kill_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:53: warning: _kill is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-lseekr.o): in function `_lseek_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49: warning: _lseek is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-readr.o): in function `_read_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/readr.c:49: warning: _read is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-writer.o): in function `_write_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/writer.c:49: warning: _write is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/cmTC_15cf9.dir/CheckSymbolExists.c.obj: in function `main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-TyKFHq/CheckSymbolExists.c:13: undefined reference to `sysconf'
+collect2: error: ld returned 1 exit status
+make[2]: *** [cmTC_15cf9] Error 1
+make[1]: *** [cmTC_15cf9/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysconf
+  return ((int*)(&sysconf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sysctlbyname exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hfyhWs
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b31fe/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b31fe.dir/build.make CMakeFiles/cmTC_b31fe.dir/build
+Building C object CMakeFiles/cmTC_b31fe.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_b31fe.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hfyhWs/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-hfyhWs/CheckSymbolExists.c:3:10: fatal error: sys/sysctl.h: No such file or directory
+    3 | #include <sys/sysctl.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_b31fe.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_b31fe/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysctlbyname
+  return ((int*)(&sysctlbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getauxval exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nfPn4W
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ea54c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ea54c.dir/build.make CMakeFiles/cmTC_ea54c.dir/build
+Building C object CMakeFiles/cmTC_ea54c.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_ea54c.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nfPn4W/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nfPn4W/CheckSymbolExists.c:2:10: fatal error: sys/auxv.h: No such file or directory
+    2 | #include <sys/auxv.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_ea54c.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_ea54c/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getauxval
+  return ((int*)(&getauxval))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nmIRPs
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b1c0b/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b1c0b.dir/build.make CMakeFiles/cmTC_b1c0b.dir/build
+Building C object CMakeFiles/cmTC_b1c0b.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_b1c0b.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nmIRPs/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nmIRPs/CheckSymbolExists.c:2:10: fatal error: sys/auxv.h: No such file or directory
+    2 | #include <sys/auxv.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_b1c0b.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_b1c0b/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the poll exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-SYFJtk
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c1cfe/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c1cfe.dir/build.make CMakeFiles/cmTC_c1cfe.dir/build
+Building C object CMakeFiles/cmTC_c1cfe.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_c1cfe.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-SYFJtk/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-SYFJtk/CheckSymbolExists.c:2:10: fatal error: poll.h: No such file or directory
+    2 | #include <poll.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_c1cfe.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_c1cfe/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <poll.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef poll
+  return ((int*)(&poll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MGD4Ir
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c9df4/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c9df4.dir/build.make CMakeFiles/cmTC_c9df4.dir/build
+Building C object CMakeFiles/cmTC_c9df4.dir/CheckFunctionExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -o CMakeFiles/cmTC_c9df4.dir/CheckFunctionExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MGD4Ir/CheckFunctionExists.c
+Linking C executable cmTC_c9df4
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9df4.dir/link.txt --verbose=1
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -specs=nosys.specs  CMakeFiles/cmTC_c9df4.dir/CheckFunctionExists.c.obj -o cmTC_c9df4  -liconv 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: cannot find -liconv: No such file or directory
+collect2: error: ld returned 1 exit status
+make[2]: *** [cmTC_c9df4] Error 1
+make[1]: *** [cmTC_c9df4/fast] Error 2
+
+
+
+Determining if the function iconv_open exists in the c failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3FbuR
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_90a64/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_90a64.dir/build.make CMakeFiles/cmTC_90a64.dir/build
+Building C object CMakeFiles/cmTC_90a64.dir/CheckFunctionExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -o CMakeFiles/cmTC_90a64.dir/CheckFunctionExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3FbuR/CheckFunctionExists.c
+Linking C executable cmTC_90a64
+/usr/local/Cellar/cmake/3.25.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90a64.dir/link.txt --verbose=1
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -specs=nosys.specs  CMakeFiles/cmTC_90a64.dir/CheckFunctionExists.c.obj -o cmTC_90a64  -lc 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-closer.o): in function `_close_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/closer.c:47: warning: _close is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_getpid_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:83: warning: _getpid is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libg.a(libc_a-signalr.o): in function `_kill_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/signalr.c:53: warning: _kill is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49: warning: _lseek is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-readr.o): in function `_read_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/readr.c:49: warning: _read is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-writer.o): in function `_write_r':
+/Volumes/data/jenkins/workspace/GNU-toolchain/arm-12-mpacbti/src/newlib-cygwin/newlib/libc/reent/writer.c:49: warning: _write is not implemented and will always fail
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/cmTC_90a64.dir/CheckFunctionExists.c.obj: in function `main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-T3FbuR/CheckFunctionExists.c:17: undefined reference to `iconv_open'
+collect2: error: ld returned 1 exit status
+make[2]: *** [cmTC_90a64] Error 1
+make[1]: *** [cmTC_90a64/fast] Error 2
+
+
+
+Determining if the alloca exist failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lzPnsP
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f6e70/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f6e70.dir/build.make CMakeFiles/cmTC_f6e70.dir/build
+Building C object CMakeFiles/cmTC_f6e70.dir/CheckSymbolExists.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_f6e70.dir/CheckSymbolExists.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lzPnsP/CheckSymbolExists.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lzPnsP/CheckSymbolExists.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lzPnsP/CheckSymbolExists.c:8:19: error: 'alloca' undeclared (first use in this function); did you mean 'valloc'?
+    8 |   return ((int*)(&alloca))[argc];
+      |                   ^~~~~~
+      |                   valloc
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-lzPnsP/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [CMakeFiles/cmTC_f6e70.dir/CheckSymbolExists.c.obj] Error 1
+make[1]: *** [cmTC_f6e70/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test HAVE_SA_SIGACTION failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-e4Jpzn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5bac2/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5bac2.dir/build.make CMakeFiles/cmTC_5bac2.dir/build
+Building C object CMakeFiles/cmTC_5bac2.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_SA_SIGACTION  -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_5bac2.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-e4Jpzn/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-e4Jpzn/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-e4Jpzn/src.c:6:39: error: 'struct sigaction' has no member named 'sa_sigaction'
+    6 |   (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+      |                                       ^~
+make[2]: *** [CMakeFiles/cmTC_5bac2.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_5bac2/fast] Error 2
+
+
+Source file was:
+
+#include <signal.h>
+
+int main()
+{
+  (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+  return 0;
+}
+
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-83iXWB
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fe2a6/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fe2a6.dir/build.make CMakeFiles/cmTC_fe2a6.dir/build
+Building C object CMakeFiles/cmTC_fe2a6.dir/CheckIncludeFile.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -ggdb -O2 -D_POSIX_THREADS -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -idirafter "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/khronos"  -o CMakeFiles/cmTC_fe2a6.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-83iXWB/CheckIncludeFile.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-83iXWB/CheckIncludeFile.c:1:10: fatal error: samplerate.h: No such file or directory
+    1 | #include <samplerate.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/cmTC_fe2a6.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [cmTC_fe2a6/fast] Error 2
+
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":

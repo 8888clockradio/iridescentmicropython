@@ -1,0 +1,2 @@
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libSDL3_main.a CMakeFiles/SDL3_main.dir/src/main/dummy/SDL_dummy_main.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libSDL3_main.a

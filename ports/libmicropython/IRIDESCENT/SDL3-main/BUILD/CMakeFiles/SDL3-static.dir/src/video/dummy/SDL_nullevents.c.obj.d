@@ -1,0 +1,21 @@
+CMakeFiles/SDL3-static.dir/src/video/dummy/SDL_nullevents.c.obj: \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/SDL_nullevents.c \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/SDL_internal.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_events_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/../video/SDL_sysvideo.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/../video/SDL_vulkan_internal.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/include/SDL3/SDL_vulkan.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/include/SDL3/SDL_video.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/include/SDL3/begin_code.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/include/SDL3/close_code.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_clipboardevents_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_displayevents_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_dropevents_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_gesture_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_keyboard_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_mouse_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_touch_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../../events/SDL_windowevents_c.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/SDL_nullvideo.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/../SDL_sysvideo.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src/video/dummy/SDL_nullevents_c.h
