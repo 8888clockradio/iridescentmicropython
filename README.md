@@ -1,5 +1,5 @@
 iridescentmicropython
-ONLY COMMERCIAL USE OF ANY IRIDESCENT FILES REQUIRES LICENSING contact george@georgerosar.com
+ANY COMMERCIAL USE OF ANY IRIDESCENT FILES REQUIRES LICENSING contact george@georgerosar.com
 
 Copyright 2022 George Charles Rosar II
 
