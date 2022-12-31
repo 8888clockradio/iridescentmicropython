@@ -54,3 +54,9 @@ and build again
 doubtful there's any hardware that will support it at the moment, however due to tiny flash ram size on hardware
 
 a board is in development for this firmware/OS
+
+if you have kdbg installed through brew
+you can run to debug in a very basic way
+```
+cd iridescentmicropython/ports/libmicropython; ./kdbg.sh
+```
