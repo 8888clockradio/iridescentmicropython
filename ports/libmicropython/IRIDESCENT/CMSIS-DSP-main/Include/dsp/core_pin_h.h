@@ -1,0 +1,870 @@
+//
+//  core_pin_h.h
+//  
+//
+//  Created by George Rosar on 8/25/22.
+//
+
+#ifndef core_pin_h_h
+#define core_pin_h_h
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <float.h>
+#include <Arduino.h>
+//#include <core_and_avr_common.h>
+#include <arm_math.h>
+//#include <stdc++.h>
+#ifndef   __ASM
+  #define __ASM                                  __asm
+#endif
+#ifndef   __STATIC_FORCEINLINE
+  #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+#endif
+
+#define asm                 __asm
+
+/*enum IRQ_NUMBER_t {
+        IRQ_DMA_CH0 =           0,
+        IRQ_DMA_CH1 =           1,
+        IRQ_DMA_CH2 =           2,
+        IRQ_DMA_CH3 =           3,
+        IRQ_DMA_CH4 =           4,
+        IRQ_DMA_CH5 =           5,
+        IRQ_DMA_CH6 =           6,
+        IRQ_DMA_CH7 =           7,
+        IRQ_DMA_CH8 =           8,
+        IRQ_DMA_CH9 =           9,
+        IRQ_DMA_CH10 =          10,
+        IRQ_DMA_CH11 =          11,
+        IRQ_DMA_CH12 =          12,
+        IRQ_DMA_CH13 =          13,
+        IRQ_DMA_CH14 =          14,
+        IRQ_DMA_CH15 =          15,
+        IRQ_DMA_ERROR =         16,
+        IRQ_CTI0 =              17,
+        IRQ_CTI1 =              18,
+        IRQ_CORE_ERROR =        19, // TODO - name?
+        IRQ_LPUART1 =           20,
+        IRQ_LPUART2 =           21,
+        IRQ_LPUART3 =           22,
+        IRQ_LPUART4 =           23,
+        IRQ_LPUART5 =           24,
+        IRQ_LPUART6 =           25,
+        IRQ_LPUART7 =           26,
+        IRQ_LPUART8 =           27,
+        IRQ_LPI2C1 =            28,
+        IRQ_LPI2C2 =            29,
+        IRQ_LPI2C3 =            30,
+        IRQ_LPI2C4 =            31,
+        IRQ_LPSPI1 =            32,
+        IRQ_LPSPI2 =            33,
+        IRQ_LPSPI3 =            34,
+        IRQ_LPSPI4 =            35,
+        IRQ_CAN1 =              36,
+        IRQ_CAN2 =              37,
+        IRQ_ADDR_ERR =          38, // TODO: name?
+        IRQ_KPP =               39,
+        IRQ_TSC_DIG =           40,
+        IRQ_GPR_IRQ =           41,
+        IRQ_LCDIF =             42,
+        IRQ_CSI =               43,
+        IRQ_PXP =               44,
+        IRQ_WDOG2 =             45,
+        IRQ_SNVS_IRQ =          46,
+        IRQ_SNVS_SECURITY =     47,
+        IRQ_SNVS_ONOFF =        48,
+        IRQ_CSU =               49,
+        IRQ_DCP0 =              50, // TODO: ???
+        IRQ_DCP1 =              51, // TODO: ???
+        IRQ_DCP2 =              52, // TODO: ???
+        IRQ_TRNG =              53,
+        IRQ_SJC_IRQ =           54,
+        IRQ_BEE =               55,
+        IRQ_SAI1 =              56,
+        IRQ_SAI2 =              57,
+        IRQ_SAI3_RX =           58,
+        IRQ_SAI3_TX =           59,
+        IRQ_SPDIF =             60,
+        IRQ_BROWNOUT0 =         61,
+        IRQ_Reserved1 =         62,
+        IRQ_TEMPERATURE =       63,
+        IRQ_TEMPERATURE_PANIC = 64,
+        IRQ_USBPHY0 =           65,
+        IRQ_USBPHY1 =           66,
+        IRQ_ADC1 =              67,
+        IRQ_ADC2 =              68,
+        IRQ_DCDC =              69,
+        IRQ_SOFTWARE =          70,
+        IRQ_Reserved2 =         71,
+        IRQ_GPIO1_INT0 =        72,
+        IRQ_GPIO1_INT1 =        73,
+        IRQ_GPIO1_INT2 =        74,
+        IRQ_GPIO1_INT3 =        75,
+        IRQ_GPIO1_INT4 =        76,
+        IRQ_GPIO1_INT5 =        77,
+        IRQ_GPIO1_INT6 =        78,
+        IRQ_GPIO1_INT7 =        79,
+        IRQ_GPIO1_0_15 =        80,
+        IRQ_GPIO1_16_31 =       81,
+        IRQ_GPIO2_0_15 =        82,
+        IRQ_GPIO2_16_31 =       83,
+        IRQ_GPIO3_0_15 =        84,
+        IRQ_GPIO3_16_31 =       85,
+        IRQ_GPIO4_0_15 =        86,
+        IRQ_GPIO4_16_31 =       87,
+        IRQ_GPIO5_0_15 =        88,
+        IRQ_GPIO5_16_31 =       89,
+        IRQ_FLEXIO1 =           90,
+        IRQ_FLEXIO2 =           91,
+        IRQ_WDOG1 =             92,
+        IRQ_RTWDOG =            93,
+        IRQ_EWM =               94,
+        IRQ_CCM1 =              95,
+        IRQ_CCM2 =              96,
+        IRQ_GPC =               97,
+        IRQ_SRC =               98,
+        IRQ_Reserved3 =         99,
+        IRQ_GPT1 =              100,
+        IRQ_GPT2 =              101,
+        IRQ_FLEXPWM1_0 =        102,
+        IRQ_FLEXPWM1_1 =        103,
+        IRQ_FLEXPWM1_2 =        104,
+        IRQ_FLEXPWM1_3 =        105,
+        IRQ_FLEXPWM1_FAULT =    106,
+        IRQ_FLEXSPI2 =          107, // RT1060 only
+        IRQ_FLEXSPI =           108,
+        IRQ_SEMC =              109,
+        IRQ_SDHC1 =             110,
+        IRQ_SDHC2 =             111,
+        IRQ_USB2 =              112,
+        IRQ_USB1 =              113,
+        IRQ_ENET =              114,
+        IRQ_ENET_TIMER =        115,
+        IRQ_XBAR1_01 =          116,
+        IRQ_XBAR1_23 =          117,
+        IRQ_ADC_ETC0 =          118,
+        IRQ_ADC_ETC1 =          119,
+        IRQ_ADC_ETC2 =          120,
+        IRQ_ADC_ETC_ERR =       121,
+        IRQ_PIT =               122,
+        IRQ_ACMP1 =             123,
+        IRQ_ACMP2 =             124,
+        IRQ_ACMP3 =             125,
+        IRQ_ACMP4 =             126,
+        IRQ_Reserved4 =         127,
+        IRQ_Reserved5 =         128,
+        IRQ_ENC1 =              129,
+        IRQ_ENC2 =              130,
+        IRQ_ENC3 =              131,
+        IRQ_ENC4 =              132,
+        IRQ_QTIMER1 =           133,
+        IRQ_QTIMER2 =           134,
+        IRQ_QTIMER3 =           135,
+        IRQ_QTIMER4 =           136,
+        IRQ_FLEXPWM2_0 =        137,
+        IRQ_FLEXPWM2_1 =        138,
+        IRQ_FLEXPWM2_2 =        139,
+        IRQ_FLEXPWM2_3 =        140,
+        IRQ_FLEXPWM2_FAULT =    141,
+        IRQ_FLEXPWM3_0 =        142,
+        IRQ_FLEXPWM3_1 =        143,
+        IRQ_FLEXPWM3_2 =        144,
+        IRQ_FLEXPWM3_3 =        145,
+        IRQ_FLEXPWM3_FAULT =    146,
+        IRQ_FLEXPWM4_0 =        147,
+        IRQ_FLEXPWM4_1 =        148,
+        IRQ_FLEXPWM4_2 =        149,
+        IRQ_FLEXPWM4_3 =        150,
+        IRQ_FLEXPWM4_FAULT =    151,
+        IRQ_ENET2 =             152, // RT1060 only
+        IRQ_ENET2_TIMER =       153, // RT1060 only
+        IRQ_CAN3 =              154, // RT1060 only
+        IRQ_Reserved6 =         155,
+        IRQ_FLEXIO3 =           156, // RT1060 only
+        IRQ_GPIO6789 =          157, // RT1060 only
+        IRQ_SJC_DEBUG =         158,
+        IRQ_NMI_WAKEUP =        159
+};*/
+
+#define IMXRT_GPC_ADDRESS        0x400F4000
+#define IMXRT_GPIO1_ADDRESS        0x401B8000
+#define IMXRT_GPIO2_ADDRESS        0x401BC000
+#define IMXRT_GPIO3_ADDRESS        0x401C0000
+#define IMXRT_GPIO4_ADDRESS        0x401C4000
+#define IMXRT_GPIO5_ADDRESS        0x400C0000
+#define IMXRT_GPIO6_ADDRESS        0x42000000
+#define IMXRT_GPIO7_ADDRESS        0x42004000
+#define IMXRT_GPIO8_ADDRESS        0x42008000
+#define IMXRT_GPIO9_ADDRESS        0x4200C000
+#define IMXRT_GPT1_ADDRESS        0x401EC000
+#define IMXRT_GPT2_ADDRESS        0x401F0000
+#define IMXRT_IOMUXC_GPR_ADDRESS    0x400AC000
+#define IMXRT_IOMUXC_SNVS_ADDRESS    0x400A8000
+#define IMXRT_IOMUXC_SNVS_GPR_ADDRESS    0x400A4000
+#define IMXRT_IOMUXC_ADDRESS        0x401F8000
+
+#define ARM_DEMCR               (*(volatile uint32_t *)0xE000EDFC) // Debug Exception and Monitor Control
+#define ARM_DEMCR_TRCENA                (1 << 24)        // Enable debugging & monitoring blocks
+#define ARM_DWT_CTRL            (*(volatile uint32_t *)0xE0001000) // DWT control register
+#define ARM_DWT_CTRL_CYCCNTENA          (1 << 0)                // Enable cycle count
+#define ARM_DWT_CYCCNT          (*(volatile uint32_t *)0xE0001004) // Cycle count register
+
+// DateTimeFields follows C library "struct tm" convention, but uses much less memory
+#define IMXRT_GPIO1        (*(IMXRT_GPIO_t *)IMXRT_GPIO1_ADDRESS)
+#define GPIO1_DR            (IMXRT_GPIO1.DR)
+#define GPIO1_GDIR            (IMXRT_GPIO1.GDIR)
+#define GPIO1_PSR            (IMXRT_GPIO1.PSR)
+#define GPIO1_ICR1            (IMXRT_GPIO1.ICR1)
+#define GPIO1_ICR2            (IMXRT_GPIO1.ICR2)
+#define GPIO1_IMR            (IMXRT_GPIO1.IMR)
+#define GPIO1_ISR            (IMXRT_GPIO1.ISR)
+#define GPIO1_EDGE_SEL            (IMXRT_GPIO1.EDGE_SEL)
+#define GPIO1_DR_SET            (IMXRT_GPIO1.DR_SET)
+#define GPIO1_DR_CLEAR            (IMXRT_GPIO1.DR_CLEAR)
+#define GPIO1_DR_TOGGLE            (IMXRT_GPIO1.DR_TOGGLE)
+#define IMXRT_GPIO2        (*(IMXRT_GPIO_t *)IMXRT_GPIO2_ADDRESS)
+#define GPIO2_DR            (IMXRT_GPIO2.DR)
+#define GPIO2_GDIR            (IMXRT_GPIO2.GDIR)
+#define GPIO2_PSR            (IMXRT_GPIO2.PSR)
+#define GPIO2_ICR1            (IMXRT_GPIO2.ICR1)
+#define GPIO2_ICR2            (IMXRT_GPIO2.ICR2)
+#define GPIO2_IMR            (IMXRT_GPIO2.IMR)
+#define GPIO2_ISR            (IMXRT_GPIO2.ISR)
+#define GPIO2_EDGE_SEL            (IMXRT_GPIO2.EDGE_SEL)
+#define GPIO2_DR_SET            (IMXRT_GPIO2.DR_SET)
+#define GPIO2_DR_CLEAR            (IMXRT_GPIO2.DR_CLEAR)
+#define GPIO2_DR_TOGGLE            (IMXRT_GPIO2.DR_TOGGLE)
+#define IMXRT_GPIO3        (*(IMXRT_GPIO_t *)IMXRT_GPIO3_ADDRESS)
+#define GPIO3_DR            (IMXRT_GPIO3.DR)
+#define GPIO3_GDIR            (IMXRT_GPIO3.GDIR)
+#define GPIO3_PSR            (IMXRT_GPIO3.PSR)
+#define GPIO3_ICR1            (IMXRT_GPIO3.ICR1)
+#define GPIO3_ICR2            (IMXRT_GPIO3.ICR2)
+#define GPIO3_IMR            (IMXRT_GPIO3.IMR)
+#define GPIO3_ISR            (IMXRT_GPIO3.ISR)
+#define GPIO3_EDGE_SEL            (IMXRT_GPIO3.EDGE_SEL)
+#define GPIO3_DR_SET            (IMXRT_GPIO3.DR_SET)
+#define GPIO3_DR_CLEAR            (IMXRT_GPIO3.DR_CLEAR)
+#define GPIO3_DR_TOGGLE            (IMXRT_GPIO3.DR_TOGGLE)
+#define IMXRT_GPIO4        (*(IMXRT_GPIO_t *)IMXRT_GPIO4_ADDRESS)
+#define GPIO4_DR            (IMXRT_GPIO4.DR)
+#define GPIO4_GDIR            (IMXRT_GPIO4.GDIR)
+#define GPIO4_PSR            (IMXRT_GPIO4.PSR)
+#define GPIO4_ICR1            (IMXRT_GPIO4.ICR1)
+#define GPIO4_ICR2            (IMXRT_GPIO4.ICR2)
+#define GPIO4_IMR            (IMXRT_GPIO4.IMR)
+#define GPIO4_ISR            (IMXRT_GPIO4.ISR)
+#define GPIO4_EDGE_SEL            (IMXRT_GPIO4.EDGE_SEL)
+#define GPIO4_DR_SET            (IMXRT_GPIO4.DR_SET)
+#define GPIO4_DR_CLEAR            (IMXRT_GPIO4.DR_CLEAR)
+#define GPIO4_DR_TOGGLE            (IMXRT_GPIO4.DR_TOGGLE)
+#define IMXRT_GPIO5        (*(IMXRT_GPIO_t *)IMXRT_GPIO5_ADDRESS)
+#define GPIO5_DR            (IMXRT_GPIO5.DR)
+#define GPIO5_GDIR            (IMXRT_GPIO5.GDIR)
+#define GPIO5_PSR            (IMXRT_GPIO5.PSR)
+#define GPIO5_ICR1            (IMXRT_GPIO5.ICR1)
+#define GPIO5_ICR2            (IMXRT_GPIO5.ICR2)
+#define GPIO5_IMR            (IMXRT_GPIO5.IMR)
+#define GPIO5_ISR            (IMXRT_GPIO5.ISR)
+#define GPIO5_EDGE_SEL            (IMXRT_GPIO5.EDGE_SEL)
+#define GPIO5_DR_SET            (IMXRT_GPIO5.DR_SET)
+#define GPIO5_DR_CLEAR            (IMXRT_GPIO5.DR_CLEAR)
+#define GPIO5_DR_TOGGLE            (IMXRT_GPIO5.DR_TOGGLE)
+
+#define IMXRT_GPIO6        (*(IMXRT_GPIO_t *)IMXRT_GPIO6_ADDRESS)
+#define GPIO6_DR            (IMXRT_GPIO6.DR)
+#define GPIO6_GDIR            (IMXRT_GPIO6.GDIR)
+#define GPIO6_PSR            (IMXRT_GPIO6.PSR)
+#define GPIO6_ICR1            (IMXRT_GPIO6.ICR1)
+#define GPIO6_ICR2            (IMXRT_GPIO6.ICR2)
+#define GPIO6_IMR            (IMXRT_GPIO6.IMR)
+#define GPIO6_ISR            (IMXRT_GPIO6.ISR)
+#define GPIO6_EDGE_SEL            (IMXRT_GPIO6.EDGE_SEL)
+#define GPIO6_DR_SET            (IMXRT_GPIO6.DR_SET)
+#define GPIO6_DR_CLEAR            (IMXRT_GPIO6.DR_CLEAR)
+#define GPIO6_DR_TOGGLE            (IMXRT_GPIO6.DR_TOGGLE)
+#define IMXRT_GPIO7        (*(IMXRT_GPIO_t *)IMXRT_GPIO7_ADDRESS)
+#define GPIO7_DR            (IMXRT_GPIO7.DR)
+#define GPIO7_GDIR            (IMXRT_GPIO7.GDIR)
+#define GPIO7_PSR            (IMXRT_GPIO7.PSR)
+#define GPIO7_ICR1            (IMXRT_GPIO7.ICR1)
+#define GPIO7_ICR2            (IMXRT_GPIO7.ICR2)
+#define GPIO7_IMR            (IMXRT_GPIO7.IMR)
+#define GPIO7_ISR            (IMXRT_GPIO7.ISR)
+#define GPIO7_EDGE_SEL            (IMXRT_GPIO7.EDGE_SEL)
+#define GPIO7_DR_SET            (IMXRT_GPIO7.DR_SET)
+#define GPIO7_DR_CLEAR            (IMXRT_GPIO7.DR_CLEAR)
+#define GPIO7_DR_TOGGLE            (IMXRT_GPIO7.DR_TOGGLE)
+#define IMXRT_GPIO8        (*(IMXRT_GPIO_t *)IMXRT_GPIO8_ADDRESS)
+#define GPIO8_DR            (IMXRT_GPIO8.DR)
+#define GPIO8_GDIR            (IMXRT_GPIO8.GDIR)
+#define GPIO8_PSR            (IMXRT_GPIO8.PSR)
+#define GPIO8_ICR1            (IMXRT_GPIO8.ICR1)
+#define GPIO8_ICR2            (IMXRT_GPIO8.ICR2)
+#define GPIO8_IMR            (IMXRT_GPIO8.IMR)
+#define GPIO8_ISR            (IMXRT_GPIO8.ISR)
+#define GPIO8_EDGE_SEL            (IMXRT_GPIO8.EDGE_SEL)
+#define GPIO8_DR_SET            (IMXRT_GPIO8.DR_SET)
+#define GPIO8_DR_CLEAR            (IMXRT_GPIO8.DR_CLEAR)
+#define GPIO8_DR_TOGGLE            (IMXRT_GPIO8.DR_TOGGLE)
+#define IMXRT_GPIO9        (*(IMXRT_GPIO_t *)IMXRT_GPIO9_ADDRESS)
+#define GPIO9_DR            (IMXRT_GPIO9.DR)
+#define GPIO9_GDIR            (IMXRT_GPIO9.GDIR)
+#define GPIO9_PSR            (IMXRT_GPIO9.PSR)
+#define GPIO9_ICR1            (IMXRT_GPIO9.ICR1)
+#define GPIO9_ICR2            (IMXRT_GPIO9.ICR2)
+#define GPIO9_IMR            (IMXRT_GPIO9.IMR)
+#define GPIO9_ISR            (IMXRT_GPIO9.ISR)
+#define GPIO9_EDGE_SEL            (IMXRT_GPIO9.EDGE_SEL)
+#define GPIO9_DR_SET            (IMXRT_GPIO9.DR_SET)
+#define GPIO9_DR_CLEAR            (IMXRT_GPIO9.DR_CLEAR)
+#define GPIO9_DR_TOGGLE            (IMXRT_GPIO9.DR_TOGGLE)
+
+// 52.7: page 2957
+#define IMXRT_GPT1        (*(IMXRT_REGISTER32_t *)IMXRT_GPT1_ADDRESS)
+#define GPT1_CR                (IMXRT_GPT1.offset000)
+#define GPT1_PR                (IMXRT_GPT1.offset004)
+#define GPT1_SR                (IMXRT_GPT1.offset008)
+#define GPT1_IR                (IMXRT_GPT1.offset00C)
+#define GPT1_OCR1            (IMXRT_GPT1.offset010)
+#define GPT1_OCR2            (IMXRT_GPT1.offset014)
+#define GPT1_OCR3            (IMXRT_GPT1.offset018)
+#define GPT1_ICR1            (IMXRT_GPT1.offset01C)
+#define GPT1_ICR2            (IMXRT_GPT1.offset020)
+#define GPT1_CNT            (IMXRT_GPT1.offset024)
+#define IMXRT_GPT2        (*(IMXRT_REGISTER32_t *)IMXRT_GPT2_ADDRESS)
+#define GPT2_CR                (IMXRT_GPT2.offset000)
+#define GPT2_PR                (IMXRT_GPT2.offset004)
+#define GPT2_SR                (IMXRT_GPT2.offset008)
+#define GPT2_IR                (IMXRT_GPT2.offset00C)
+#define GPT2_OCR1            (IMXRT_GPT2.offset010)
+#define GPT2_OCR2            (IMXRT_GPT2.offset014)
+#define GPT2_OCR3            (IMXRT_GPT2.offset018)
+#define GPT2_ICR1            (IMXRT_GPT2.offset01C)
+#define GPT2_ICR2            (IMXRT_GPT2.offset020)
+#define GPT2_CNT            (IMXRT_GPT2.offset024)
+#define GPT_CR_FO3                ((uint32_t)(1<<31))
+#define GPT_CR_FO2                ((uint32_t)(1<<30))
+#define GPT_CR_FO1                ((uint32_t)(1<<29))
+#define GPT_CR_OM3(n)                ((uint32_t)(((n) & 0x07) << 26))
+#define GPT_CR_OM2(n)                ((uint32_t)(((n) & 0x07) << 23))
+#define GPT_CR_OM1(n)                ((uint32_t)(((n) & 0x07) << 20))
+#define GPT_CR_IM2(n)                ((uint32_t)(((n) & 0x03) << 18))
+#define GPT_CR_IM1(n)                ((uint32_t)(((n) & 0x03) << 16))
+#define GPT_CR_SWR                ((uint32_t)(1<<15))
+#define GPT_CR_EN_24M                ((uint32_t)(1<<10))
+#define GPT_CR_FRR                ((uint32_t)(1<<9))
+#define GPT_CR_CLKSRC(n)            ((uint32_t)(((n) & 0x07) << 6))
+#define GPT_CR_STOPEN                ((uint32_t)(1<<5))
+#define GPT_CR_DOZEEN                ((uint32_t)(1<<4))
+#define GPT_CR_WAITEN                ((uint32_t)(1<<3))
+#define GPT_CR_DBGEN                ((uint32_t)(1<<2))
+#define GPT_CR_ENMOD                ((uint32_t)(1<<1))
+#define GPT_CR_EN                ((uint32_t)(1<<0))
+#define GPT_PR_PRESCALER24M(n)            ((uint32_t)(((n) & 0x0F) << 12))
+#define GPT_PR_PRESCALER(n)            ((uint32_t)(((n) & 0xFFF) << 0))
+#define GPT_SR_ROV                ((uint32_t)(1<<5))
+#define GPT_SR_IF2                ((uint32_t)(1<<4))
+#define GPT_SR_IF1                ((uint32_t)(1<<3))
+#define GPT_SR_OF3                ((uint32_t)(1<<2))
+#define GPT_SR_OF2                ((uint32_t)(1<<1))
+#define GPT_SR_OF1                ((uint32_t)(1<<0))
+#define GPT_IR_ROVIE                ((uint32_t)(1<<5))
+#define GPT_IR_IF2IE                ((uint32_t)(1<<4))
+#define GPT_IR_IF1IE                ((uint32_t)(1<<3))
+#define GPT_IR_OF3IE                ((uint32_t)(1<<2))
+#define GPT_IR_OF2IE                ((uint32_t)(1<<1))
+#define GPT_IR_OF1IE                ((uint32_t)(1<<0))
+
+#define IMXRT_IOMUXC        (*(IMXRT_REGISTER32_t *)IMXRT_IOMUXC_ADDRESS)
+#define IMXRT_IOMUXC_b        (*(IMXRT_REGISTER32_t *)(IMXRT_IOMUXC_ADDRESS+0x400))
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_00    (IMXRT_IOMUXC.offset014)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_01    (IMXRT_IOMUXC.offset018)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_02    (IMXRT_IOMUXC.offset01C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_03    (IMXRT_IOMUXC.offset020)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_04    (IMXRT_IOMUXC.offset024)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_05    (IMXRT_IOMUXC.offset028)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_06    (IMXRT_IOMUXC.offset02C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_07    (IMXRT_IOMUXC.offset030)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_08    (IMXRT_IOMUXC.offset034)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_09    (IMXRT_IOMUXC.offset038)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_10    (IMXRT_IOMUXC.offset03C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_11    (IMXRT_IOMUXC.offset040)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_12    (IMXRT_IOMUXC.offset044)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_13    (IMXRT_IOMUXC.offset048)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_14    (IMXRT_IOMUXC.offset04C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_15    (IMXRT_IOMUXC.offset050)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_16    (IMXRT_IOMUXC.offset054)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_17    (IMXRT_IOMUXC.offset058)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_18    (IMXRT_IOMUXC.offset05C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_19    (IMXRT_IOMUXC.offset060)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_20    (IMXRT_IOMUXC.offset064)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_21    (IMXRT_IOMUXC.offset068)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_22    (IMXRT_IOMUXC.offset06C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_23    (IMXRT_IOMUXC.offset070)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_24    (IMXRT_IOMUXC.offset074)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_25    (IMXRT_IOMUXC.offset078)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_26    (IMXRT_IOMUXC.offset07C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_27    (IMXRT_IOMUXC.offset080)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_28    (IMXRT_IOMUXC.offset084)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_29    (IMXRT_IOMUXC.offset088)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_30    (IMXRT_IOMUXC.offset08C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_31    (IMXRT_IOMUXC.offset090)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_32    (IMXRT_IOMUXC.offset094)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_33    (IMXRT_IOMUXC.offset098)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_34    (IMXRT_IOMUXC.offset09C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_35    (IMXRT_IOMUXC.offset0A0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_36    (IMXRT_IOMUXC.offset0A4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_37    (IMXRT_IOMUXC.offset0A8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_38    (IMXRT_IOMUXC.offset0AC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_39    (IMXRT_IOMUXC.offset0B0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_40    (IMXRT_IOMUXC.offset0B4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_41    (IMXRT_IOMUXC.offset0B8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_00    (IMXRT_IOMUXC.offset0BC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_01    (IMXRT_IOMUXC.offset0C0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_02    (IMXRT_IOMUXC.offset0C4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_03    (IMXRT_IOMUXC.offset0C8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04    (IMXRT_IOMUXC.offset0CC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_05    (IMXRT_IOMUXC.offset0D0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_06    (IMXRT_IOMUXC.offset0D4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_07    (IMXRT_IOMUXC.offset0D8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_08    (IMXRT_IOMUXC.offset0DC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_09    (IMXRT_IOMUXC.offset0E0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_10    (IMXRT_IOMUXC.offset0E4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_11    (IMXRT_IOMUXC.offset0E8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_12    (IMXRT_IOMUXC.offset0EC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_13    (IMXRT_IOMUXC.offset0F0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_14    (IMXRT_IOMUXC.offset0F4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_15    (IMXRT_IOMUXC.offset0F8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_00    (IMXRT_IOMUXC.offset0FC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_01    (IMXRT_IOMUXC.offset100)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_02    (IMXRT_IOMUXC.offset104)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_03    (IMXRT_IOMUXC.offset108)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_04    (IMXRT_IOMUXC.offset10C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_05    (IMXRT_IOMUXC.offset110)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_06    (IMXRT_IOMUXC.offset114)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_07    (IMXRT_IOMUXC.offset118)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_08    (IMXRT_IOMUXC.offset11C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_09    (IMXRT_IOMUXC.offset120)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_10    (IMXRT_IOMUXC.offset124)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_11    (IMXRT_IOMUXC.offset128)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_12    (IMXRT_IOMUXC.offset12C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_13    (IMXRT_IOMUXC.offset130)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_14    (IMXRT_IOMUXC.offset134)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B1_15    (IMXRT_IOMUXC.offset138)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_00    (IMXRT_IOMUXC.offset13C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_01    (IMXRT_IOMUXC.offset140)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_02    (IMXRT_IOMUXC.offset144)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_03    (IMXRT_IOMUXC.offset148)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_04    (IMXRT_IOMUXC.offset14C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_05    (IMXRT_IOMUXC.offset150)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_06    (IMXRT_IOMUXC.offset154)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_07    (IMXRT_IOMUXC.offset158)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_08    (IMXRT_IOMUXC.offset15C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_09    (IMXRT_IOMUXC.offset160)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_10    (IMXRT_IOMUXC.offset164)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_11    (IMXRT_IOMUXC.offset168)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_12    (IMXRT_IOMUXC.offset16C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_13    (IMXRT_IOMUXC.offset170)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_14    (IMXRT_IOMUXC.offset174)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B0_15    (IMXRT_IOMUXC.offset178)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_00    (IMXRT_IOMUXC.offset17C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_01    (IMXRT_IOMUXC.offset180)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_02    (IMXRT_IOMUXC.offset184)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_03    (IMXRT_IOMUXC.offset188)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_04    (IMXRT_IOMUXC.offset18C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_05    (IMXRT_IOMUXC.offset190)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_06    (IMXRT_IOMUXC.offset194)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_07    (IMXRT_IOMUXC.offset198)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_08    (IMXRT_IOMUXC.offset19C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_09    (IMXRT_IOMUXC.offset1A0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_10    (IMXRT_IOMUXC.offset1A4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_11    (IMXRT_IOMUXC.offset1A8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_12    (IMXRT_IOMUXC.offset1AC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_13    (IMXRT_IOMUXC.offset1B0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_14    (IMXRT_IOMUXC.offset1B4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_B1_15    (IMXRT_IOMUXC.offset1B8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_00    (IMXRT_IOMUXC.offset1BC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_01    (IMXRT_IOMUXC.offset1C0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_02    (IMXRT_IOMUXC.offset1C4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_03    (IMXRT_IOMUXC.offset1C8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_04    (IMXRT_IOMUXC.offset1CC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B0_05    (IMXRT_IOMUXC.offset1D0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_00    (IMXRT_IOMUXC.offset1D4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_01    (IMXRT_IOMUXC.offset1D8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_02    (IMXRT_IOMUXC.offset1DC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_03    (IMXRT_IOMUXC.offset1E0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_04    (IMXRT_IOMUXC.offset1E4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_05    (IMXRT_IOMUXC.offset1E8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_06    (IMXRT_IOMUXC.offset1EC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_07    (IMXRT_IOMUXC.offset1F0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_08    (IMXRT_IOMUXC.offset1F4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_09    (IMXRT_IOMUXC.offset1F8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_10    (IMXRT_IOMUXC.offset1FC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SD_B1_11    (IMXRT_IOMUXC.offset200)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_00    (IMXRT_IOMUXC.offset204)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_01    (IMXRT_IOMUXC.offset208)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_02    (IMXRT_IOMUXC.offset20C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_03    (IMXRT_IOMUXC.offset210)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_04    (IMXRT_IOMUXC.offset214)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_05    (IMXRT_IOMUXC.offset218)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_06    (IMXRT_IOMUXC.offset21C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_07    (IMXRT_IOMUXC.offset220)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_08    (IMXRT_IOMUXC.offset224)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_09    (IMXRT_IOMUXC.offset228)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_10    (IMXRT_IOMUXC.offset22C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_11    (IMXRT_IOMUXC.offset230)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_12    (IMXRT_IOMUXC.offset234)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_13    (IMXRT_IOMUXC.offset238)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_14    (IMXRT_IOMUXC.offset23C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_15    (IMXRT_IOMUXC.offset240)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_16    (IMXRT_IOMUXC.offset244)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_17    (IMXRT_IOMUXC.offset248)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_18    (IMXRT_IOMUXC.offset24C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_19    (IMXRT_IOMUXC.offset250)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_20    (IMXRT_IOMUXC.offset254)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_21    (IMXRT_IOMUXC.offset258)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_22    (IMXRT_IOMUXC.offset25C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_23    (IMXRT_IOMUXC.offset260)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_24    (IMXRT_IOMUXC.offset264)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_25    (IMXRT_IOMUXC.offset268)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_26    (IMXRT_IOMUXC.offset26C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_27    (IMXRT_IOMUXC.offset270)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_28    (IMXRT_IOMUXC.offset274)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_29    (IMXRT_IOMUXC.offset278)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_30    (IMXRT_IOMUXC.offset27C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_31    (IMXRT_IOMUXC.offset280)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_32    (IMXRT_IOMUXC.offset284)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_33    (IMXRT_IOMUXC.offset288)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_34    (IMXRT_IOMUXC.offset28C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_35    (IMXRT_IOMUXC.offset290)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_36    (IMXRT_IOMUXC.offset294)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_37    (IMXRT_IOMUXC.offset298)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_38    (IMXRT_IOMUXC.offset29C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_39    (IMXRT_IOMUXC.offset2A0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_40    (IMXRT_IOMUXC.offset2A4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_41    (IMXRT_IOMUXC.offset2A8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_00    (IMXRT_IOMUXC.offset2AC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_01    (IMXRT_IOMUXC.offset2B0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_02    (IMXRT_IOMUXC.offset2B4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_03    (IMXRT_IOMUXC.offset2B8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_04    (IMXRT_IOMUXC.offset2BC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_05    (IMXRT_IOMUXC.offset2C0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_06    (IMXRT_IOMUXC.offset2C4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_07    (IMXRT_IOMUXC.offset2C8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_08    (IMXRT_IOMUXC.offset2CC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_09    (IMXRT_IOMUXC.offset2D0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_10    (IMXRT_IOMUXC.offset2D4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_11    (IMXRT_IOMUXC.offset2D8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_12    (IMXRT_IOMUXC.offset2DC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_13    (IMXRT_IOMUXC.offset2E0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_14    (IMXRT_IOMUXC.offset2E4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B0_15    (IMXRT_IOMUXC.offset2E8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_00    (IMXRT_IOMUXC.offset2EC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_01    (IMXRT_IOMUXC.offset2F0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_02    (IMXRT_IOMUXC.offset2F4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_03    (IMXRT_IOMUXC.offset2F8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_04    (IMXRT_IOMUXC.offset2FC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_05    (IMXRT_IOMUXC.offset300)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_06    (IMXRT_IOMUXC.offset304)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_07    (IMXRT_IOMUXC.offset308)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_08    (IMXRT_IOMUXC.offset30C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_09    (IMXRT_IOMUXC.offset310)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_10    (IMXRT_IOMUXC.offset314)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_11    (IMXRT_IOMUXC.offset318)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_12    (IMXRT_IOMUXC.offset31C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_13    (IMXRT_IOMUXC.offset320)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_14    (IMXRT_IOMUXC.offset324)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_AD_B1_15    (IMXRT_IOMUXC.offset328)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_00    (IMXRT_IOMUXC.offset32C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_01    (IMXRT_IOMUXC.offset330)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_02    (IMXRT_IOMUXC.offset334)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_03    (IMXRT_IOMUXC.offset338)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_04    (IMXRT_IOMUXC.offset33C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_05    (IMXRT_IOMUXC.offset340)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_06    (IMXRT_IOMUXC.offset344)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_07    (IMXRT_IOMUXC.offset348)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_08    (IMXRT_IOMUXC.offset34C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_09    (IMXRT_IOMUXC.offset350)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_10    (IMXRT_IOMUXC.offset354)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_11    (IMXRT_IOMUXC.offset358)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_12    (IMXRT_IOMUXC.offset35C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_13    (IMXRT_IOMUXC.offset360)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_14    (IMXRT_IOMUXC.offset364)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B0_15    (IMXRT_IOMUXC.offset368)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_00    (IMXRT_IOMUXC.offset36C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_01    (IMXRT_IOMUXC.offset370)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_02    (IMXRT_IOMUXC.offset374)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_03    (IMXRT_IOMUXC.offset378)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_04    (IMXRT_IOMUXC.offset37C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_05    (IMXRT_IOMUXC.offset380)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_06    (IMXRT_IOMUXC.offset384)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_07    (IMXRT_IOMUXC.offset388)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_08    (IMXRT_IOMUXC.offset38C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_09    (IMXRT_IOMUXC.offset390)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_10    (IMXRT_IOMUXC.offset394)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_11    (IMXRT_IOMUXC.offset398)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_12    (IMXRT_IOMUXC.offset39C)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_13    (IMXRT_IOMUXC.offset3A0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_14    (IMXRT_IOMUXC.offset3A4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_B1_15    (IMXRT_IOMUXC.offset3A8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_00    (IMXRT_IOMUXC.offset3AC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_01    (IMXRT_IOMUXC.offset3B0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_02    (IMXRT_IOMUXC.offset3B4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_03    (IMXRT_IOMUXC.offset3B8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_04    (IMXRT_IOMUXC.offset3BC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B0_05    (IMXRT_IOMUXC.offset3C0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_00    (IMXRT_IOMUXC.offset3C4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_01    (IMXRT_IOMUXC.offset3C8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_02    (IMXRT_IOMUXC.offset3CC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_03    (IMXRT_IOMUXC.offset3D0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_04    (IMXRT_IOMUXC.offset3D4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_05    (IMXRT_IOMUXC.offset3D8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_06    (IMXRT_IOMUXC.offset3DC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_07    (IMXRT_IOMUXC.offset3E0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_08    (IMXRT_IOMUXC.offset3E4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_09    (IMXRT_IOMUXC.offset3E8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_10    (IMXRT_IOMUXC.offset3EC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SD_B1_11    (IMXRT_IOMUXC.offset3F0)
+#define IOMUXC_ANATOP_USB_OTG_ID_SELECT_INPUT    (IMXRT_IOMUXC.offset3F4)
+#define IOMUXC_ANATOP_USB_UH1_ID_SELECT_INPUT    (IMXRT_IOMUXC.offset3F8)
+#define IOMUXC_CCM_PMIC_READY_SELECT_INPUT    (IMXRT_IOMUXC.offset3FC)
+#define IOMUXC_CSI_DATA02_SELECT_INPUT        (IMXRT_IOMUXC_b.offset000)
+#define IOMUXC_CSI_DATA03_SELECT_INPUT        (IMXRT_IOMUXC_b.offset004)
+#define IOMUXC_CSI_DATA04_SELECT_INPUT        (IMXRT_IOMUXC_b.offset008)
+#define IOMUXC_CSI_DATA05_SELECT_INPUT        (IMXRT_IOMUXC_b.offset00C)
+#define IOMUXC_CSI_DATA06_SELECT_INPUT        (IMXRT_IOMUXC_b.offset010)
+#define IOMUXC_CSI_DATA07_SELECT_INPUT        (IMXRT_IOMUXC_b.offset014)
+#define IOMUXC_CSI_DATA08_SELECT_INPUT        (IMXRT_IOMUXC_b.offset018)
+#define IOMUXC_CSI_DATA09_SELECT_INPUT        (IMXRT_IOMUXC_b.offset01C)
+#define IOMUXC_CSI_HSYNC_SELECT_INPUT        (IMXRT_IOMUXC_b.offset020)
+#define IOMUXC_CSI_PIXCLK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset024)
+#define IOMUXC_CSI_VSYNC_SELECT_INPUT        (IMXRT_IOMUXC_b.offset028)
+#define IOMUXC_ENET_IPG_CLK_RMII_SELECT_INPUT    (IMXRT_IOMUXC_b.offset02C)
+#define IOMUXC_ENET_MDIO_SELECT_INPUT        (IMXRT_IOMUXC_b.offset030)
+#define IOMUXC_ENET0_RXDATA_SELECT_INPUT    (IMXRT_IOMUXC_b.offset034)
+#define IOMUXC_ENET1_RXDATA_SELECT_INPUT    (IMXRT_IOMUXC_b.offset038)
+#define IOMUXC_ENET_RXEN_SELECT_INPUT        (IMXRT_IOMUXC_b.offset03C)
+#define IOMUXC_ENET_RXERR_SELECT_INPUT        (IMXRT_IOMUXC_b.offset040)
+#define IOMUXC_ENET0_TIMER_SELECT_INPUT        (IMXRT_IOMUXC_b.offset044)
+#define IOMUXC_ENET_TXCLK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset048)
+#define IOMUXC_FLEXCAN1_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset04C)
+#define IOMUXC_FLEXCAN2_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset050)
+#define IOMUXC_FLEXPWM1_PWMA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset054)
+#define IOMUXC_FLEXPWM1_PWMA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset058)
+#define IOMUXC_FLEXPWM1_PWMA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset05C)
+#define IOMUXC_FLEXPWM1_PWMA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset060)
+#define IOMUXC_FLEXPWM1_PWMB3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset064)
+#define IOMUXC_FLEXPWM1_PWMB0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset068)
+#define IOMUXC_FLEXPWM1_PWMB1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset06C)
+#define IOMUXC_FLEXPWM1_PWMB2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset070)
+#define IOMUXC_FLEXPWM2_PWMA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset074)
+#define IOMUXC_FLEXPWM2_PWMA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset078)
+#define IOMUXC_FLEXPWM2_PWMA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset07C)
+#define IOMUXC_FLEXPWM2_PWMA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset080)
+#define IOMUXC_FLEXPWM2_PWMB3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset084)
+#define IOMUXC_FLEXPWM2_PWMB0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset088)
+#define IOMUXC_FLEXPWM2_PWMB1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset09C)
+#define IOMUXC_FLEXPWM2_PWMB2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset090)
+#define IOMUXC_FLEXPWM4_PWMA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset094)
+#define IOMUXC_FLEXPWM4_PWMA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset098)
+#define IOMUXC_FLEXPWM4_PWMA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset09C)
+#define IOMUXC_FLEXPWM4_PWMA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0A0)
+#define IOMUXC_FLEXSPIA_DQS_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0A4)
+#define IOMUXC_FLEXSPIA_DATA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0A8)
+#define IOMUXC_FLEXSPIA_DATA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0AC)
+#define IOMUXC_FLEXSPIA_DATA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0B0)
+#define IOMUXC_FLEXSPIA_DATA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0B4)
+#define IOMUXC_FLEXSPIB_DATA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0B8)
+#define IOMUXC_FLEXSPIB_DATA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0BC)
+#define IOMUXC_FLEXSPIB_DATA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0C0)
+#define IOMUXC_FLEXSPIB_DATA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0C4)
+#define IOMUXC_FLEXSPIA_SCK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset0C8)
+#define IOMUXC_LPI2C1_SCL_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0CC)
+#define IOMUXC_LPI2C1_SDA_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0D0)
+#define IOMUXC_LPI2C2_SCL_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0D4)
+#define IOMUXC_LPI2C2_SDA_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0D8)
+#define IOMUXC_LPI2C3_SCL_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0DC)
+#define IOMUXC_LPI2C3_SDA_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0E0)
+#define IOMUXC_LPI2C4_SCL_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0E4)
+#define IOMUXC_LPI2C4_SDA_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0E8)
+#define IOMUXC_LPSPI1_PCS0_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0EC)
+#define IOMUXC_LPSPI1_SCK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0F0)
+#define IOMUXC_LPSPI1_SDI_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0F4)
+#define IOMUXC_LPSPI1_SDO_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0F8)
+#define IOMUXC_LPSPI2_PCS0_SELECT_INPUT        (IMXRT_IOMUXC_b.offset0FC)
+#define IOMUXC_LPSPI2_SCK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset100)
+#define IOMUXC_LPSPI2_SDI_SELECT_INPUT        (IMXRT_IOMUXC_b.offset104)
+#define IOMUXC_LPSPI2_SDO_SELECT_INPUT        (IMXRT_IOMUXC_b.offset108)
+#define IOMUXC_LPSPI3_PCS0_SELECT_INPUT        (IMXRT_IOMUXC_b.offset10C)
+#define IOMUXC_LPSPI3_SCK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset110)
+#define IOMUXC_LPSPI3_SDI_SELECT_INPUT        (IMXRT_IOMUXC_b.offset114)
+#define IOMUXC_LPSPI3_SDO_SELECT_INPUT        (IMXRT_IOMUXC_b.offset118)
+#define IOMUXC_LPSPI4_PCS0_SELECT_INPUT        (IMXRT_IOMUXC_b.offset11C)
+#define IOMUXC_LPSPI4_SCK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset120)
+#define IOMUXC_LPSPI4_SDI_SELECT_INPUT        (IMXRT_IOMUXC_b.offset124)
+#define IOMUXC_LPSPI4_SDO_SELECT_INPUT        (IMXRT_IOMUXC_b.offset128)
+#define IOMUXC_LPUART2_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset12C)
+#define IOMUXC_LPUART2_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset130)
+#define IOMUXC_LPUART3_CTS_B_SELECT_INPUT    (IMXRT_IOMUXC_b.offset134)
+#define IOMUXC_LPUART3_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset138)
+#define IOMUXC_LPUART3_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset13C)
+#define IOMUXC_LPUART4_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset140)
+#define IOMUXC_LPUART4_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset144)
+#define IOMUXC_LPUART5_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset148)
+#define IOMUXC_LPUART5_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset14C)
+#define IOMUXC_LPUART6_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset150)
+#define IOMUXC_LPUART6_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset154)
+#define IOMUXC_LPUART7_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset158)
+#define IOMUXC_LPUART7_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset15C)
+#define IOMUXC_LPUART8_RX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset160)
+#define IOMUXC_LPUART8_TX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset164)
+#define IOMUXC_NMI_GLUE_NMI_SELECT_INPUT    (IMXRT_IOMUXC_b.offset168)
+#define IOMUXC_QTIMER2_TIMER0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset16C)
+#define IOMUXC_QTIMER2_TIMER1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset170)
+#define IOMUXC_QTIMER2_TIMER2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset174)
+#define IOMUXC_QTIMER2_TIMER3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset178)
+#define IOMUXC_QTIMER3_TIMER0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset17C)
+#define IOMUXC_QTIMER3_TIMER1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset180)
+#define IOMUXC_QTIMER3_TIMER2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset184)
+#define IOMUXC_QTIMER3_TIMER3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset188)
+#define IOMUXC_SAI1_MCLK2_SELECT_INPUT        (IMXRT_IOMUXC_b.offset18C)
+#define IOMUXC_SAI1_RX_BCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset190)
+#define IOMUXC_SAI1_RX_DATA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset194)
+#define IOMUXC_SAI1_RX_DATA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset198)
+#define IOMUXC_SAI1_RX_DATA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset19C)
+#define IOMUXC_SAI1_RX_DATA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1A0)
+#define IOMUXC_SAI1_RX_SYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1A4)
+#define IOMUXC_SAI1_TX_BCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1A8)
+#define IOMUXC_SAI1_TX_SYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1AC)
+#define IOMUXC_SAI2_MCLK2_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1B0)
+#define IOMUXC_SAI2_RX_BCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1B4)
+#define IOMUXC_SAI2_RX_DATA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1B8)
+#define IOMUXC_SAI2_RX_SYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1BC)
+#define IOMUXC_SAI2_TX_BCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1C0)
+#define IOMUXC_SAI2_TX_SYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1C4)
+#define IOMUXC_SPDIF_IN_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1C8)
+#define IOMUXC_USB_OTG2_OC_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1CC)
+#define IOMUXC_USB_OTG1_OC_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1D0)
+#define IOMUXC_USDHC1_CD_B_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1D4)
+#define IOMUXC_USDHC1_WP_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1D8)
+#define IOMUXC_USDHC2_CLK_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1DC)
+#define IOMUXC_USDHC2_CD_B_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1E0)
+#define IOMUXC_USDHC2_CMD_SELECT_INPUT        (IMXRT_IOMUXC_b.offset1E4)
+#define IOMUXC_USDHC2_DATA0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1E8)
+#define IOMUXC_USDHC2_DATA1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1EC)
+#define IOMUXC_USDHC2_DATA2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1F0)
+#define IOMUXC_USDHC2_DATA3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1F4)
+#define IOMUXC_USDHC2_DATA4_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1F8)
+#define IOMUXC_USDHC2_DATA5_SELECT_INPUT    (IMXRT_IOMUXC_b.offset1FC)
+#define IOMUXC_USDHC2_DATA6_SELECT_INPUT    (IMXRT_IOMUXC_b.offset200)
+#define IOMUXC_USDHC2_DATA7_SELECT_INPUT    (IMXRT_IOMUXC_b.offset204)
+#define IOMUXC_USDHC2_WP_SELECT_INPUT        (IMXRT_IOMUXC_b.offset208)
+#define IOMUXC_XBAR1_IN02_SELECT_INPUT        (IMXRT_IOMUXC_b.offset20C)
+#define IOMUXC_XBAR1_IN03_SELECT_INPUT        (IMXRT_IOMUXC_b.offset210)
+#define IOMUXC_XBAR1_IN04_SELECT_INPUT        (IMXRT_IOMUXC_b.offset214)
+#define IOMUXC_XBAR1_IN05_SELECT_INPUT        (IMXRT_IOMUXC_b.offset218)
+#define IOMUXC_XBAR1_IN06_SELECT_INPUT        (IMXRT_IOMUXC_b.offset21C)
+#define IOMUXC_XBAR1_IN07_SELECT_INPUT        (IMXRT_IOMUXC_b.offset220)
+#define IOMUXC_XBAR1_IN08_SELECT_INPUT        (IMXRT_IOMUXC_b.offset224)
+#define IOMUXC_XBAR1_IN09_SELECT_INPUT        (IMXRT_IOMUXC_b.offset228)
+#define IOMUXC_XBAR1_IN17_SELECT_INPUT        (IMXRT_IOMUXC_b.offset22C)
+#define IOMUXC_XBAR1_IN18_SELECT_INPUT        (IMXRT_IOMUXC_b.offset230)
+#define IOMUXC_XBAR1_IN20_SELECT_INPUT        (IMXRT_IOMUXC_b.offset234)
+#define IOMUXC_XBAR1_IN22_SELECT_INPUT        (IMXRT_IOMUXC_b.offset238)
+#define IOMUXC_XBAR1_IN23_SELECT_INPUT        (IMXRT_IOMUXC_b.offset23C)
+#define IOMUXC_XBAR1_IN24_SELECT_INPUT        (IMXRT_IOMUXC_b.offset240)
+#define IOMUXC_XBAR1_IN14_SELECT_INPUT        (IMXRT_IOMUXC_b.offset244)
+#define IOMUXC_XBAR1_IN15_SELECT_INPUT        (IMXRT_IOMUXC_b.offset248)
+#define IOMUXC_XBAR1_IN16_SELECT_INPUT        (IMXRT_IOMUXC_b.offset24C)
+#define IOMUXC_XBAR1_IN25_SELECT_INPUT        (IMXRT_IOMUXC_b.offset250)
+#define IOMUXC_XBAR1_IN19_SELECT_INPUT        (IMXRT_IOMUXC_b.offset254)
+#define IOMUXC_XBAR1_IN21_SELECT_INPUT        (IMXRT_IOMUXC_b.offset258)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_00    (IMXRT_IOMUXC_b.offset25C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_01    (IMXRT_IOMUXC_b.offset260)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_02    (IMXRT_IOMUXC_b.offset264)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_03    (IMXRT_IOMUXC_b.offset268)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_04    (IMXRT_IOMUXC_b.offset26C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_05    (IMXRT_IOMUXC_b.offset270)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_06    (IMXRT_IOMUXC_b.offset274)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_07    (IMXRT_IOMUXC_b.offset278)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_08    (IMXRT_IOMUXC_b.offset27C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_09    (IMXRT_IOMUXC_b.offset280)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_10    (IMXRT_IOMUXC_b.offset284)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_11    (IMXRT_IOMUXC_b.offset288)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_12    (IMXRT_IOMUXC_b.offset28C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B0_13    (IMXRT_IOMUXC_b.offset290)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_00    (IMXRT_IOMUXC_b.offset294)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_01    (IMXRT_IOMUXC_b.offset298)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_02    (IMXRT_IOMUXC_b.offset29C)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_03    (IMXRT_IOMUXC_b.offset2A0)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_04    (IMXRT_IOMUXC_b.offset2A4)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_05    (IMXRT_IOMUXC_b.offset2A8)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_06    (IMXRT_IOMUXC_b.offset2AC)
+#define IOMUXC_SW_MUX_CTL_PAD_GPIO_SPI_B1_07    (IMXRT_IOMUXC_b.offset2B0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_00    (IMXRT_IOMUXC_b.offset2B4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_01    (IMXRT_IOMUXC_b.offset2B8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_02    (IMXRT_IOMUXC_b.offset2BC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_03    (IMXRT_IOMUXC_b.offset2C0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_04    (IMXRT_IOMUXC_b.offset2C4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_05    (IMXRT_IOMUXC_b.offset2C8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_06    (IMXRT_IOMUXC_b.offset2CC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_07    (IMXRT_IOMUXC_b.offset2D0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_08    (IMXRT_IOMUXC_b.offset2D4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_09    (IMXRT_IOMUXC_b.offset2D8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_10    (IMXRT_IOMUXC_b.offset2DC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_11    (IMXRT_IOMUXC_b.offset2E0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_12    (IMXRT_IOMUXC_b.offset2E4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B0_13    (IMXRT_IOMUXC_b.offset2E8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_00    (IMXRT_IOMUXC_b.offset2EC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_01    (IMXRT_IOMUXC_b.offset2F0)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_02    (IMXRT_IOMUXC_b.offset2F4)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_03    (IMXRT_IOMUXC_b.offset2F8)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_04    (IMXRT_IOMUXC_b.offset2FC)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_05    (IMXRT_IOMUXC_b.offset300)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_06    (IMXRT_IOMUXC_b.offset304)
+#define IOMUXC_SW_PAD_CTL_PAD_GPIO_SPI_B1_07    (IMXRT_IOMUXC_b.offset308)
+#define IOMUXC_ENET2_IPG_CLK_RMII_SELECT_INPUT    (IMXRT_IOMUXC_b.offset30C)
+#define IOMUXC_ENET2_IPP_IND_MAC0_MDIO_SELECT_INPUT    (IMXRT_IOMUXC_b.offset310)
+#define IOMUXC_ENET2_IPP_IND_MAC0_RXDATA_SELECT_INPUT_0    (IMXRT_IOMUXC_b.offset314)
+#define IOMUXC_ENET2_IPP_IND_MAC0_RXDATA_SELECT_INPUT_1    (IMXRT_IOMUXC_b.offset318)
+#define IOMUXC_ENET2_IPP_IND_MAC0_RXEN_SELECT_INPUT    (IMXRT_IOMUXC_b.offset31C)
+#define IOMUXC_ENET2_IPP_IND_MAC0_RXERR_SELECT_INPUT    (IMXRT_IOMUXC_b.offset320)
+#define IOMUXC_ENET2_IPP_IND_MAC0_TIMER_SELECT_INPUT_0    (IMXRT_IOMUXC_b.offset324)
+#define IOMUXC_ENET2_IPP_IND_MAC0_TXCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset328)
+#define IOMUXC_FLEXSPI2_IPP_IND_DQS_FA_SELECT_INPUT    (IMXRT_IOMUXC_b.offset32C)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FA_BIT0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset330)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FA_BIT1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset334)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FA_BIT2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset338)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FA_BIT3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset33C)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FB_BIT0_SELECT_INPUT    (IMXRT_IOMUXC_b.offset340)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FB_BIT1_SELECT_INPUT    (IMXRT_IOMUXC_b.offset344)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FB_BIT2_SELECT_INPUT    (IMXRT_IOMUXC_b.offset348)
+#define IOMUXC_FLEXSPI2_IPP_IND_IO_FB_BIT3_SELECT_INPUT    (IMXRT_IOMUXC_b.offset34C)
+#define IOMUXC_FLEXSPI2_IPP_IND_SCK_FA_SELECT_INPUT    (IMXRT_IOMUXC_b.offset350)
+#define IOMUXC_FLEXSPI2_IPP_IND_SCK_FB_SELECT_INPUT    (IMXRT_IOMUXC_b.offset354)
+#define IOMUXC_GPT1_IPP_IND_CAPIN1_SELECT_INPUT        (IMXRT_IOMUXC_b.offset358)
+#define IOMUXC_GPT1_IPP_IND_CAPIN2_SELECT_INPUT        (IMXRT_IOMUXC_b.offset35C)
+#define IOMUXC_GPT1_IPP_IND_CLKIN_SELECT_INPUT        (IMXRT_IOMUXC_b.offset360)
+#define IOMUXC_GPT2_IPP_IND_CAPIN1_SELECT_INPUT        (IMXRT_IOMUXC_b.offset364)
+#define IOMUXC_GPT2_IPP_IND_CAPIN2_SELECT_INPUT        (IMXRT_IOMUXC_b.offset368)
+#define IOMUXC_GPT2_IPP_IND_CLKIN_SELECT_INPUT        (IMXRT_IOMUXC_b.offset36C)
+#define IOMUXC_SAI3_IPG_CLK_SAI_MCLK_SELECT_INPUT_2    (IMXRT_IOMUXC_b.offset370)
+#define IOMUXC_SAI3_IPP_IND_SAI_RXBCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset374)
+#define IOMUXC_SAI3_IPP_IND_SAI_RXDATA_SELECT_INPUT_0    (IMXRT_IOMUXC_b.offset378)
+#define IOMUXC_SAI3_IPP_IND_SAI_RXSYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset37C)
+#define IOMUXC_SAI3_IPP_IND_SAI_TXBCLK_SELECT_INPUT    (IMXRT_IOMUXC_b.offset380)
+#define IOMUXC_SAI3_IPP_IND_SAI_TXSYNC_SELECT_INPUT    (IMXRT_IOMUXC_b.offset384)
+#define IOMUXC_SEMC_I_IPP_IND_DQS4_SELECT_INPUT        (IMXRT_IOMUXC_b.offset388)
+#define IOMUXC_CANFD_IPP_IND_CANRX_SELECT_INPUT        (IMXRT_IOMUXC_b.offset38C)
+#define IOMUXC_PAD_SRE                    ((uint32_t)(1<<0))
+#define IOMUXC_PAD_DSE(n)                ((uint32_t)(((n) & 0x07) << 3))
+#define IOMUXC_PAD_SPEED(n)                ((uint32_t)(((n) & 0x03) << 6))
+#define IOMUXC_PAD_ODE                    ((uint32_t)(1<<11))
+#define IOMUXC_PAD_PKE                    ((uint32_t)(1<<12))
+#define IOMUXC_PAD_PUE                    ((uint32_t)(1<<13))
+#define IOMUXC_PAD_PUS(n)                ((uint32_t)(((n) & 0x03) << 14))
+#define IOMUXC_PAD_HYS                    ((uint32_t)(1<<16))
+
+#endif /* core_pin_h_h */
