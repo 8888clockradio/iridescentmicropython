@@ -46,7 +46,7 @@ make clean; make V=1 DEBUG=1
 
 oh i forgot, i need to implement the /Applications/Teensyduino.app of which is required to load the firmware
 
-if you want to get daring copy the python modules for kivy, virtual environment, numpy, intelbinhex, pygame, matplotlib, music21, et cetera... :
+if you want to get daring copy the python modules for kivy, virtual environment, numpy, intelbinhex, pygame, matplotlib, music21, et cetera :
 ```
 cp -R iridescentBUILD/iridescentmicropython/ports/libmicropython/modulesTakenOut/* iridescentBUILD/iridescentmicropython/ports/libmicropython/modules/
 ```
