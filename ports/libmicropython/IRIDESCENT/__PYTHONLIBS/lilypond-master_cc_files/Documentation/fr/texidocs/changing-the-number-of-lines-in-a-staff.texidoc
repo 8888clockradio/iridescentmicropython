@@ -1,0 +1,7 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Le nombre de lignes d'une portée se modifie par adaptation de la
+propriété @code{line-count} du @code{StaffSymbol}.
+"
+
+  doctitlefr = "Modification du nombre de lignes de la portée"

@@ -91,17 +91,17 @@
 # Do not replace tabs with spaces.  Needed for build rules
 # Unix line endings (\n)
 
-PREFIX ?= /Users/iridescent/iridescent/iridescentCoconutSynth2/qtshare
+PREFIX ?= $(abspath ../../../../qtshare)
 BINDIR ?= bin
 INCDIR ?= include
 LIBDIR ?= lib
 DOCDIR ?= share/doc/qhull
 MANDIR ?= share/man/man1
 PCDIR  ?= $(LIBDIR)/pkgconfig
-
-ABS_BINDIR = $(abspath ../../../../../iridescentmicropython/ports/libmicropython/IRIDESCENT/qhull-bin)
-ABS_INCDIR = $(abspath ../../../../../iridescentmicropython/ports/libmicropython/IRIDESCENT/qhull-inc)
-ABS_LIBDIR = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+include $(abspath ../../../../toolchain.mk)
+ABS_BINDIR = $(abspath ../../../../ports/libmicropython/IRIDESCENT/qhull-bin)
+ABS_INCDIR = $(abspath ../../../../ports/libmicropython/IRIDESCENT/qhull-inc)
+ABS_LIBDIR = $(LIBPATHFILEDROP)
 ABS_DOCDIR = $(DESTDIR)$(PREFIX)/$(DOCDIR)
 ABS_MANDIR = $(DESTDIR)$(PREFIX)/$(MANDIR)
 ABS_PCDIR  = $(DESTDIR)$(PREFIX)/$(PCDIR)
@@ -133,9 +133,9 @@ PRINTC = enscript -2r
 # -fpic may be slower for 32-bit builds on 64-bit hosts
 # Disable -fpic with 'make FPIC=' 
 FPIC      = -fpic
-CC        = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc)
+CC        = $(abspath $(COMPILERPATH)/arm-none-eabi-gcc)
 CC_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -ansi -Isrc/ $(CC_WARNINGS) $(M32) $(FPIC)
-CXX       = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-g++)
+CXX       = $(abspath $(COMPILERPATH)/arm-none-eabi-g++)
 
 # libqhullcpp must be listed before libqhull_r, otherwise libqhull_r pulls in userprintf_r.c
 CXX_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -O3 -Isrc/ $(CXX_WARNINGS) $(M32) $(FPIC)

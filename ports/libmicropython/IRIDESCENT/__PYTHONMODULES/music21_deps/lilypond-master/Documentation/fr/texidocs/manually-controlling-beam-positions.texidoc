@@ -1,0 +1,8 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Le positionnement et la pente des ligatures peuvent être contrôlés
+manuellement à l'aide d'une adaptation de la propriété @code{positions}
+de l'objet @code{Beam}.
+"
+
+  doctitlefr = "Contrôle manuel du positionnement des ligatures"

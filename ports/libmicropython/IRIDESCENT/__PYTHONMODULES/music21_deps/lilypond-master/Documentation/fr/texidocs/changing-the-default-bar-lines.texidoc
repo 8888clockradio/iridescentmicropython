@@ -1,0 +1,7 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Les barres de mesure par défaut peuvent se modifier grâce à leur
+redéfinition au sein d'un contexte @code{Score}.
+"
+
+  doctitlefr = "Modification des barres de mesure par défaut"

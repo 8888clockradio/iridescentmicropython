@@ -1,0 +1,12 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Dans cet extrait est supprimée la première accolade d'un
+@code{PianoStaff} ou d'un @code{GrandStaff}.
+
+Ceci peut s'avérer utile pour couper et coller l'image générée dans de
+la musique préexistante.
+
+Est utilisée la fonction @code{\\alterBroken}.
+"
+
+  doctitlefr = "Retrait de l'accolade à la première ligne d'une pièce pour piano"

@@ -1,0 +1,10 @@
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/SDL2main.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/SDL2.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/SDL2-static.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/uninstall.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/edit_cache.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/rebuild_cache.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/list_install_components.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/install.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/install/local.dir
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/libsdl2-master/BUILDDIR/CMakeFiles/install/strip.dir

@@ -1,0 +1,44 @@
+// Project: libv.frame, File: src/libv/frame/core.lpp, Author: Császár Mátyás [Vader]
+
+#pragma once
+
+// libv
+#include <libv/mt/executor_thread.hpp>
+#include <libv/utility/function_ref.hpp>
+// std
+#include <atomic>
+#include <mutex>
+#include <memory>
+
+
+namespace libv {
+namespace frame {
+
+// -------------------------------------------------------------------------------------------------
+
+class Core {
+private:
+	libv::ExecutorThread thread;
+	std::atomic_bool stopWait{false};
+	std::mutex mutex;
+
+public:
+	Core();
+	~Core();
+
+private:
+	void init();
+	void waitEvent();
+	void interruptWait();
+	void term();
+
+public:
+	void execute(libv::function_ref<void()> func);
+};
+
+std::shared_ptr<Core> getCoreInstance();
+
+// -------------------------------------------------------------------------------------------------
+
+} // namespace frame
+} // namespace libv

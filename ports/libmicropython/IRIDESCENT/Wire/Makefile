@@ -115,6 +115,7 @@ LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-d
 COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 endif
+include $(abspath ../../../../toolchain.mk)
 
 #************************************************************************
 # Settings below this point usually do not need to be edited

@@ -1,0 +1,124 @@
+
+Star - System integration demo
+
+--- STACK ------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+cleanup
+	config.cpp
+		update became weird again
+
+
+
+
+libv.ui: radio button / radio group
+libv.ui: toggle button
+libv.ui: tooltips
+
+
+
+app.star: Settings
+	grouping / separators / paging
+	tooltips with description
+
+
+
+
+
+star: "save/apply" preview and commit changes, or maybe the auto-save is fine as it is
+	star: Make save/apply buttons inactive if there is no change
+
+config: customization of behaviour:
+	on_corrupt_file::exit
+	on_corrupt_file::exit_and_alert
+	on_corrupt_file::prompt_user
+	on_corrupt_file::reset_to_default
+	on_corrupt_file::reset_to_default_and_alert
+
+	on_missing_file::create_default
+	on_missing_file::create_default_and_alert
+	on_missing_file::do_nothing
+	on_missing_file::exit
+	on_missing_file::exit_and_alert
+	on_missing_file::prompt_user
+
+	on_entry_change::auto_save(5s, 30s)
+	on_entry_change::do_nothing
+
+
+wish_generator(
+	TARGET  codegen
+	COMMAND codegen
+	OUTPUT  REPLACE ".in.lua" ".hpp"
+	OUTPUT  REPLACE ".in.lua" ".cpp"
+#	OUTPUT  REPLACE ".in.lua" ".hpp"
+#	OUTPUT  REPLACE ".inh.lua" ".hpp"
+#	OUTPUT  REPLACE ".ins.lua" ".hpp"
+#	OUTPUT  REPLACE ".ins.lua" ".cpp"
+)
+
+
+
+
+
+libv.ui: .add<Component>() syntax on containers
+		const auto& c = container.add<Component>()
+		const auto& c = container.add_n<Component>("name")
+		const auto& c = container.add_ns<Component>("name", "style")
+		const auto& c = container.add_s<Component>("style")
+		extra args?:
+		const auto& c = container.add<Component>(args...)
+		const auto& c = container.add_n<Component>("name", args...)
+		const auto& c = container.add_ns<Component>("name", "style", args...)
+		const auto& c = container.add_s<Component>("style", args...)
+
+libv.ui: Solve the issue with inheriting state selectors in styles
+
+libv.ui: Warn whenever a UI component out lives the UI object itself
+
+
+
+
+
+=================================================================================================
+
+
+app.star: Settings page back clear the focus while apply will rotate it to next
+app.star: Cannibalize config.hpp from vm4_viewer (but maybe change it to CTRP, investigate it)
+
+app.star: Better scene selector / navigation
+
+app.star: Self-Updater
+
+
+
+
+
+
+
+
+
+
+--- Paper ------------------------------------------------------------------------------------------
+
+Config:
+	Configuration > Setting > Property
+
+	Separate change and commit changes
+		only store the new values during change
+		during next frame loop apply change and broadcast events
+
+
+--- Article collection -----------------------------------------------------------------------------
+
+Infinite Grid: http://asliceofrendering.com/scene%20helper/2020/01/05/InfiniteGrid/
+CMake source generation step: https://crascit.com/2017/04/18/generated-sources-in-cmake-builds/
+Deterministic Lockstep: https://gafferongames.com/post/deterministic_lockstep/
+
+Improving vegetation vertex normals: https://www.artstation.com/artwork/w6nQ96
+

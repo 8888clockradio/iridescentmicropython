@@ -1,0 +1,10 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Il est d'usage, en matière de tablature, d'imprimer la première corde en
+haut. Il est toutefois possible de la positionner en bas grâce à une
+modification de la propriété de contexte @code{stringOneTopmost}.
+Définir ce réglage au sein d'un bloc @code{\\layout} l'appliquera à
+l'intégralité du contexte.
+"
+
+  doctitlefr = "Impression de la corde aiguë d'un @code{TabStaff} en bas"

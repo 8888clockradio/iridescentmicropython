@@ -116,6 +116,8 @@ COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darw
 
 endif
 
+include $(abspath ../../../../toolchain.mk)
+
 #************************************************************************
 # Settings below this point usually do not need to be edited
 #************************************************************************

@@ -1,0 +1,7 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Partant du problème que l'on ignore quel @code{midiInstrument} serait le
+plus adapté à sa composition, voici un fichier LilyPond de démonstration.
+"
+
+  doctitlefr = "Démonstration de @code{midiInstrument}"

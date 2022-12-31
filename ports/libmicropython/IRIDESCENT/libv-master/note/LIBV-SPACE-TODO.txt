@@ -1,0 +1,523 @@
+
+Space - System integration demo
+
+libv.rev: Implement shader management
+app.space: Improve arrow with geometry shader
+app.space: Add grid
+visual.grid: Make a pretty grid: Blender grid is awesome. Implement it:
+visual.grid: For grids expand and fade out line endings
+visual.grid: For grids fade out lines based on ray incident angle, lines should fade into the sky-box as seamlessly as possible
+visual.grid: For grids fade out small lines based on distance from the camera and make higher grid lines more visible
+visual.editor_bg: Non uniform color, use a grainy texture (like blue noise)
+app.space: Move origin gizmo into top right corner into screen space
+app.space: Burn a frame icon set into the binary and use it
+app.space: Have space working from the correct dir
+app.space: Screen picker integration - Place something onto the 3D world on mouse click
+app.space: Fleet that moves (without any arrow)
+app.space: Cleanup the shader error overlay code (PanelStatusLog + UIEventHub)
+app.space: Sim state manipulation only with commands
+app.space: Fleet with arrow and movement toward target (primitive)
+app.space: Add support for command arrow 'intent' (color) specification
+app.space: Revive the original debug arrow spiral
+app.space: Implement a more complete test arrow set (parallel, different length, star, spiral, rings, multiple chains with different rotation angles)
+app.space: Add support for command arrow animation offset
+app.space: Add support for chained command arrows
+app.space: Basic hacky networking
+libv.ui: Add overlay events to the global events, then use those to alter controls input ignore (attach can auto do this)
+app.space: Cannibalize style.lua from vm4_viewer
+app.space: Rename player -> user (and the ID, and the members vars in CTOs)
+app.space.net: Networking (Stage 2)
+app.space.net: Introduction with name, Protocol messages
+app.space.net: Lobby with list of connected clients
+app.space.net: Implement lobby snapshot sending/loading on connect
+app.space: Solve canvas and ui ctrl conflict
+app.space: Commands have a conflicting name, resolve it with an acronym like CTO (Command Transfer Object)
+app.space: Structure the whole program: UML time is upon us | Still not the cleanest, but improved
+app.space: 3D fleet picking
+app.space: Selected fleet highlight
+app.space: edge highlight (fresnel shader) https://forum.playcanvas.com/t/solved-custom-shader-fresnel/17355
+app.space: 3D secondary fleet picking
+app.space: Fleet selection, selection based commands
+app.space: Multi fleet selection
+app.space: Rename files *_behaviour -> *_control
+app.space: Move cto apply functions into universe
+app.space: Move canvas and camera files under view
+app.space: Adopt libv.rev post-processing
+app.space: Default focus canvas
+app.space: Add Controls help overlay (Simple, list only)
+app.space: Fleet visualisation with a simple model and orientation
+libv.rev: Bloom textures should not repeat, they could clamp
+app.space: F1 menu, list every control bindings
+app.space: Implement basic 2D text rendering over a 3D anchor point
+app.space: Implement Universe Snapshots
+app.space: Modernize and integrate model rendering for ships in fleets
+app.space: Fleet visual: Generate random number of ships and position them appropriately (simple mesh)
+app.space: Serialization of pointers/views
+app.space: Serialization of Snapshots in isLocal/isShared mode
+app.space: 'Universe' Snapshot need for unsynchronized / non-snapshot members in Universe
+app.space: Planets
+app.space: Factions
+app.space: Common base for entities
+app.space: Mitigate the compile-time regression
+app.space: Rename universe folder to sim
+libv.ui: Add support for Z-Index offset (Mouse only for now)
+app.space: Fix Z-Index issue with mp menu
+libv.net: Fix lifetime extension during termination of connection and acceptor
+libv.net: Fix io_context executor early termination by adding a work_guard to every io_context user
+libv.net: Fix crash when cancelling an async write in mtcp connection
+app.space: Fix entity leak on snapshot universe loading
+libv.ui: Fix incorrect ref_count management in components
+libv.net: Fix incorrect ref_count management in HandlerGuards
+app.space: Fix simple disconnect as a non-connected client will do long timeout
+app.space: Remove dead component during galaxy update
+libv.math: gradient
+
+
+
+
+
+
+--- STACK ------------------------------------------------------------------------------------------
+
+
+
+Evolving an Actor Library Based on Lessons Learned from Large-Scale Deployments - Benjamin Hindman
+https://www.youtube.com/watch?v=P6Y-Z1uPp4c
+
+Back to Basics: Concurrency - Mike Shah - CppCon 2021
+https://www.youtube.com/watch?v=pfIC-kle4b0
+
+Normal Maps, Tangent Space & IBL • Shaders for Game Devs [Part 3]
+https://www.youtube.com/watch?v=E4PHFnvMzFc
+
+visual.shader: glow net: https://www.youtube.com/watch?v=3CycKKJiwis
+
+
+
+
+
+
+
+
+
+
+
+
+ui
+	libv.ui: color picker
+	libv.ui: gradient picker
+	libv.ui: Component / Style composition (Tabs component)
+			style/property nesting
+			static composition
+	libv.ui: components
+		libv.ui: toggle
+		libv.ui: drop down
+		libv.ui: number input
+		libv.ui: number slider
+		libv.ui: color input
+			libv.ui: color picker
+		libv.ui: gradient input
+		libv.ui: tabs (card layout with controls)
+	libv.ui: default style sheet
+
+
+
+libv.mt: worker thread group support for launching the same tasks for multiple thread
+star: Settings page back clear the focus while apply will rotate it to next
+
+cereal: visiting_archive
+
+
+
+
+New and shinny simulation snapshot
+	codec only uses a simple tag type ()
+		rest of the snapshot payload left inside the archive
+
+	fixate some types around networking
+		vector<byte>
+
+	snapshot version could travel inside the tag and inside the archive
+		new versioned archive
+
+	simulation would load/save the state directly into an archive
+		BUT snapshot would have to still travel through the playout systen
+			movable archive
+			movable message
+
+	BUT THERE MUST BE A JSON DEBUG VISUALIZATION FOR SNAPSHOT
+
+
+
+Playout API needs the CTO's to be base classed so it does not include the serialization on API
+	CTO base class means code generation
+	BASE CLASS IS NOT MANDATORY, but a concept for CTO should include a serialization function
+
+
+UNDO SYSTEM
+	CTO's and playouts create a command pattern which should be able to handle
+	the undo system too
+	Command {
+		int properties_to_execute = 42;
+		int previous_state_stored_here_for_undo;
+
+		execute() {
+			do_execute(properties_to_execute)
+			previous_command_value_stored_here_for_undo = value
+		}
+		undo() {
+			do_execute(previous_command_value_stored_here_for_undo)
+		}
+
+
+
+
+
+Simulation
+	app.space: Simulation (container / master controller object)
+				A new container object/class that has the universe in it
+				Process functions are the member of the simulation
+		app.space: Rename universe folder to simulation
+
+	app.space: Simulation time control
+		app.space: Fix time step
+		app.space: Pause, Unpause (It will be a good practise for timers and controls)
+		app.space: Speed x1 x2 x4
+		app.space: Speed hotkeys: 0,1,2,3 = set, space = toggle pause and last non pause speed
+
+
+
+place.it:
+	ui events: propagation pass: capture pass, bubbling pass:
+		bubbling pass what we currently have
+		capture pass would precede it, in reverse order
+			granting the ability to capture an event a parent
+
+
+
+
+libv.utility: entity_store: cheap non alloc default ctor | this would allow usage after moved from
+
+
+app.space: Selection state storage
+		selectedFleetIDList have to die, or became a better index
+
+
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=pfIC-kle4b0
+
+
+
+Options
+	app.space: Debug views and grid on/off (and other options) with persistence
+
+
+entity_ptr
+	libv.utility: entity_store context_ptr: rename current context ptr to store_ptr and (re)introduce a context_ptr
+	app.space: entity_ptr circular reference leak mitigation ideas:
+		- have a primary owning ptr version too, which is
+				- move only
+				- can create (normal) view references
+				- will call kill() if dtored
+		- kill could auto use the serialization to discover entity_ptr-s with another archives
+
+app.space: Make snapshot_ptr_resolver.hpp not include the whole cereal.hpp
+
+app.space: During shutdown do not broadcast client disconnections one-by-one to others, but drop every connection at the same time
+
+app.space: Low Performance P4: app.space: 200*200 debug sphere causes low fps
+		| debug shapes have to switch to pre-uploaded meshes
+		| and instanced rendering
+
+app.space: Bug P4: crash with assert
+	open server
+	client 1 join
+	client 2 join
+	server -> join (switch to client mode)
+		Assertion failed: false && "Internal consistency error", file E:/dev/cpp/libv/app/space/view/scene_mp_status.cpp, line 55
+
+
+-----------------------------------------------------------------
+
+app.space: Formation
+		Float, slight movement, perlin noise based on position? and or time
+		Single ship join the fleet
+		Fleet-fleet merge
+
+-----------------------------------------------------------------
+
+TODO P1: Shortcut to save camera position and reload it upon restart
+         > Requires persistence
+TODO P1: Auto runtime hook option for random uniform variables
+TODO P1: Persist auto runtime hook options
+         > Requires persistence
+
+
+
+app.space: Controls: Clicking on shuffle button deselects
+		| feature_binary_raii
+app.space: Controls: Ctrl box selection support
+			| Maybe enough if we switch to binary feature for now
+				Good start, but need some working on the conflicts
+app.space: Controls: Clicking and rotating the camera it deselects
+		| Should analog features have priority over action/binary?
+				Or does (0,0) 'magic' happens and that causes the issue?
+app.space: Controls: Canvas controls should be more eager even it canvas is not focused it noone else grabs it input it should
+
+Main areas of focus:
+	60 / 4: Library: State machine generation
+	12 / 4: Library: Shader / Uniform block generation
+	libv.gen: New lib/app to gen source code
+		libv.gen: CMake wish integration to predetermine generated output source files
+				wish_create_exe(
+					Generator src/to/dir/**.in.lua
+				from that "Generator src/to/dir/**.in.lua" is executed in multiple steps
+					first step is only inspection to determine generated output files at configure time
+					second step is simple generation during build time
+					we might need a fake target that reruns the cmake if the output files list changes
+							^ and actually this is the hard part
+						\ Maybe start a daemon or be a daemon that is started at first compilation (shut it down after X min of inactivity)
+								\ still requires everything
+					Maybe output a .cmake file that is included that only contains the output files
+
+	app.space: Visual: Fleet selecting 4 corner animation / highlight effect
+
+	app.space: Galaxy generation (scripted)
+	app.space: Main menu
+	app.space: In game menu
+	app.space: Multiplayer lobby list
+	app.space: Map generation with lua
+	libv.ui: Component / Style composition (Tabs component)
+
+
+
+libv.rev: PostProcess should respect original framebuffer and viewport values
+
+libv.ctrl: Box selection support
+		start
+			[press]
+		update tick
+			[hold]
+		end
+			[release]
+libv.ctrl: Accidental collusion with Ctrl+A[press] and A[hold]
+libv.ctrl: Late enter of feature_binary: On context_enter call any binary feature that would become active with the current state
+libv.ctrl: 'Acquire "mouse"' similarly as UI does it
+libv.ctrl: arg.reject_feature(); aka a way to reject the feature activation from within the feature: in this case the next candidates would be called
+
+
+
+
+place.it:
+	ext: Adopt expected (should be coming in C++23): https://github.com/TartanLlama/expected
+
+	ranges chunk, pairwise and slide (might be in ranges::v3, but planned to come with C++23)
+		std::views::chunk(column_count)
+			could replace the column count view used by ui grid
+		std::views::pairwise
+		std::views::slide(number_of_nlets)
+			could replace the adjacent_pair algo is called with number_of_nlets=2
+
+	fmt::print("{}", container);
+	fmt::print("{}", container | view::join(":"));
+
+
+
+app.space.net: Networking
+	app.space.net: Networking (Stage 3)
+		app.space.net: Connection stages and states
+		app.space.net: Snapshot
+			app.space.net: Snapshot saving
+			app.space.net: Snapshot sending upon newly connected client (with pause)
+			app.space.net: Snapshot loading
+			app.space.net: ? Non-snapshot data members (fleet selection)
+		app.space.net: Smooth Snapshot
+			app.space.net: Non paused snapshot join
+				app.space.net: Fast forwarding after a snapshot loading happened
+				app.space.net: Apply, update, skip render repeat until catch up
+			app.space.net: [Optional] Snapshot delta to help catchup
+		app.space.net: Snapshot compression above X KB (64)
+
+	app.space.net: Networking (Stage 4)
+		app.space.net: Deterministic execution (Frame Index and lockstep)
+		app.space.net: Latency prediction
+		app.space.net: Latency hiding
+
+	app.space.net: Networking leftovers
+		app.space.net: Timer to kick "connectings" after X sec if they dont identify (Intro) themselves
+		app.space.net: Implement lobby status event
+		app.space.net: Implement lobby chat message event
+		app.space: Mini canvas show other clients view
+
+
+
+app.space.net: Networking PAPER:
+	Some random buzz words:
+		Deterministic lockstep
+		snapshot
+		delta update
+		playout delay buffer
+		adaptive playout delay
+
+
+app.space: Cannibalize config.hpp from vm4_viewer (but maybe change it to CTRP, investigate it)
+
+
+
+
+
+
+
+
+place.it:
+	CI/CD:
+		jenkins: pull
+		jenkins: build (parameterized with branch and version number (and git commit count))
+		jenkins: package
+		jenkins: ssh upload the release package to the update master
+		jenkins: trigger the update master
+		update-master: by default every release marked as internal
+		update-master: on some GUI mark this release not internal and mark update routes to be built
+		jenkins could ping update-master on build start (option to auto release feature)
+
+
+app.space: Simulation
+	app.space: On fleet command completion in chain: Do not waste energy, roll the excess 'movement time' into the next command
+
+
+
+app.space: RendererDebug
+	DONE: color property
+	DONE: line, triangle, quad, disc
+	DONE: sphere:
+		DONE: UV sphere, tessalation in renderer.cpp instead of canvas.cpp
+    DONE: frustum: 5 points, 1 quad, 4 sides
+    circle, [box]
+    plane
+    2D shapes in screen space(rectangle)
+	--------------
+	orientation (aka gizmo with colored endpoints)
+    arrow (not command arrow, but a 3D arrow model)
+    2D shapes in screen space(point, triangle, line, circle)
+
+app.space: Fleet merge commands
+	Fleet dtor has to cleanup references to it, tracking should be upon us
+
+app.space: Selection
+	app.space: 3D fleet box selection:
+		a: local coordinates starting anchor
+		b: world space starting anchor
+	app.space: 2.5D fleet box selection:
+		a: rectangle selection on grid
+		b: frustum selection
+
+	TODO P3: Selection Single: Expand / Invert / Subtract to current selection
+	TODO P2: Selection 2.5D: Handle cases when the camera is on the z=0 plane and/or the users clicks to +/- inf
+	TODO P3: Selection 2.5D: Use hitbox in intersection mode
+	TODO P4: Selection 2.5D: Use hitbox in full contain mode
+	TODO P3: Selection 2.5D: Variant: Implement both column selection and frustum selection based on the grid coordinates
+	TODO P3: Selection 2.5D: Expand / Invert / Subtract to current selection
+	TODO P2: Selection 3D: Handle cases where box is drawn in a BL<->TR direction causes no selection
+	TODO P2: Selection 3D: Handle case where staring and ending the box on the same frame causes everyone to be selected
+	TODO P4: Selection 3D: Variant (Figure out what was the 2 variant, maybe full contain and intersect?)
+	TODO P4: Selection 3D: Cleanup a little bit
+	TODO P3: Selection 3D: Expand / Invert / Subtract to current selection
+
+	TODO P3: * Expand / Invert / Subtract to current selection means ->
+			Box selections should not deselect by default
+
+	TODO P2: libv.ctrl: Upon leave context, (box selection) binary features may want to receive a deactivate call
+				| NOTE: This would conflict with binary false in selection, bc this time selection shouldn't commit
+					So not tri bool: True, False, Cancel?
+				| Thinking about it, starting a box select can be considered as an intent to replace current selection, so global deselect is reasonable
+
+
+app.space: Selection structure
+	- General API over the current selection whatever types those maybe, whatever API client code might need
+	- It can go into Simulation / GameState as well as Universe
+
+
+
+app.space: Main structure paper ! OUTDATED !
+
+	game instance (desktop) - GameInstance (an object spawned when you launch the application and that remains the same until you close it)
+		frame
+		controls
+		nexus
+		settings
+		user/player
+		ui
+		ui main (mp bar, shader overlay)
+			renderer(s)
+			session (aka old game mode) - GameSession (spawned when a level is loaded)
+				[Network base]
+				[Network server]
+				[Network client]
+				gamemode (aka new control concept)
+				universe - GameState (spawned by the gameMode)
+				playout
+				canvas
+					& renderers
+				ui session (cmd bar)
+				ui session mp (mp mini canvas list)
+
+				PlayerController [UI, Controls]
+					PlayerState (spawned when a PlayerController is spawned = when a player arrives in the game)
+
+	game.sim:
+		- Command based sim state manipulation | Playout
+			Types:
+			- Control tracking (Camera / Mouse movement, ?Selection)
+			- Sim state manipulation (Move, Attack, Production command, ?Selection)
+			- Session manipulation (Permission alteration, Kick, Ban, etc)
+
+
+
+
+
+app.space: Self-Updater
+
+app.space: Frustum visualization
+
+app.space: Camera: Pressing the camera alteration (move/rotate) in one direction for long time (>1-3s) increases speed
+app.space: Add multi camera / camera frustum visualization (uniforms and C++ clipping from the main camera, but view from another)
+
+app.space: Optimized VAO update for command arrows (prepare / render step is done, mesh re-upload and glr side should be checked)
+
+app.space: Fleet visualization
+	app.space: Render fleet group art
+	app.space: Movement, momentum, turning
+	app.space: Different fleet shapes (?blockade as shape)
+	app.space: Fleet name display (UI Label / Unit plates) 2D<->3D UI layout
+
+
+app.space: Command arrow improvements
+	app.space: Add support for source position offset (Instead of origin use an offset toward the heading direction)
+	app.space: Add support for target position offset (Instead of origin use an offset from the incoming direction)
+	app.space: Arrow strip placement control from lua (or something lua related) (With auto reload and everything)
+	app.space.visual: Command arrow add a glossy holo texture (~simple cloud mixture) to the arrows body (idea come from flowstorm's checkpoint body)
+	app.space.visual: Command arrow make the edges less bright to help with AA edge
+	app.space.debug: Make the debug command arrow shapes more uniform
+	app.space.debug: Make the debug command arrow shapes hooked into the options / settings / config persistent storage
+
+app.space: Line shader (Geometry shader with custom width support) (<1px width = transparency at 1 px)
+
+app.space: headless server
+	To optimize the binary size and skip linking in shit for headless,
+	a separate executable needed without any symbol usage of non-headless gamemode
+
+
+
+blur: (shaders are already implemented in app.space, but downscaling is not) https://www.youtube.com/watch?v=uZlwbWqQKpc
+		full screen quad pass with render_resolution / 2 with v blur shader
+		full screen quad pass with render_resolution / 2 with h blur shader
+		full screen quad pass with render_resolution / 8 with v blur shader
+		full screen quad pass with render_resolution / 8 with h blur shader
+

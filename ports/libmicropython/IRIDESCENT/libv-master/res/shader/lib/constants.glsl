@@ -1,0 +1,7 @@
+#pragma once
+
+
+const float pi = 3.14159265358979323846264338327950288;
+const float e = 2.71828182845904523536028747135266249;
+
+const float tau = 2.0 * pi;

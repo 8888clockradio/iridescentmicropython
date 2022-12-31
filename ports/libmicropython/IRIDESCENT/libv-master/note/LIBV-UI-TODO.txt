@@ -1,0 +1,766 @@
+libv.ui: Move x3 parser rules to globals with internal linkage
+libv.ui: Read nana 3rd party property tree lib API https://github.com/besh81/nana-extra
+libv.ui: batch component meshes into a bigger ui mesh cluster and use subcomponents, optimizations-optimizations | context_render take care of this
+libv.ui: Implement system (aka unignorable) event handlers
+libv.ui: Improve event connection (event_proxy API): operator() / connect / connect_front / connect_system
+libv.ui: Implement UI global dynamic event host
+libv.ui: context_event does not handle stop propagation, special case if type is derived from BaseEvent
+libv.ui: Spacing, not just margin, not just padding, but container level spacing support | SUPER useful
+libv.ui: Add support for component inheritance
+libv.ui: Fix that component removal does not invalidates the parent's layout
+libv.ui: Fix and improve markInvalidLayout related code
+libv.ui: Remove down recursion from component removal
+libv.ui: Add explicit component update step to UI loop
+libv.ui: Fix the one frame flicker in panel_status_log on removed children
+libv.ui: Rename PanelStatusLog to PanelStatusLine
+libv.ui: Implement expire event for PanelStatusLine
+libv.ui: Fix PanelStatusLine's missing children detach cleanup
+libv.ui: Add context entering to EventHub event broadcasting
+libv.ui: Implement permanent entry support in PanelStatusLine
+libv.glr: Fix clear if the depth buffer mask was disabled
+libv.glr: Add missing state update before native callback
+libv.ui: Fix renderer native callback execution order
+libv: Add support for disabling observer_ptr and observer_ref validations
+libv.ui: Event hub, a proxy for ui global events, weak_ptr like, and tolerates if UI dies in the meantime | auto ev = ui.event_hub(); ev.broadcast(e);
+libv.ui: Add component access to relative mouse position
+libv.ui: relative - mouse event should contain a watcher relative (local) coordinates too | they already did
+libv.ui: Relative mouse coordinate access for a state
+libv.ui: Panel Status Log (aka first composite component) | It ended up being something else
+libv.ui: Layout testing
+libv.ui: Research Spacing and Margin interactions in javaFX, Decide if they should collapse into each other | Yes, And they should even collapse with justify gaps
+libv.ui: Panel line: Implement correct justify alignment including margin and spacing sharing
+libv.ui: Test layout line: Spacing, Padding, Margin
+libv.ui: Implement margin support in PanelLine
+libv.ui: Panel line: Implement margin alignment: only push elements if they would collide with the containers border
+libv.ui: Resolve missing layout invalidation with dynamic
+libv.ui: Changing dynamic size (text of button) causes flicker (maybe double layout) | layout ran after mouse update: A new step was introduced into UI loop
+libv.ui: Position change of a component does not always updates mouse regions
+libv.ui: Window resize does not always updates mouse regions
+libv.ui: Implement style sheets loading and hot reloading support
+libv.ui: Fix and rework layout invalidation and layout properties
+libv.ui: background bring back size() query, not used on background, but for foreground it will be
+libv.ui: In every component background should not contribute to layout1 size
+libv.ui: Padding pattern support for internal padding
+libv.ui: bordered_padding_pattern (stripes_border.png with proper border handling)
+libv.ui: Fix input local positions when using padding
+libv.ui.style: Style based on component state (bit-mask)
+libv.ui: Add background property to panels
+libv.ui: Card layout | Its ended up being a full layout with card show/enable management
+libv.ui: Issue: In the ui sandbox tabs not tracking active card properly
+libv.ui: For 'Tabs' selected style state
+libv.ui: In card layout create an event for card change
+libv.ui: Issue: In the ui sandbox 1 frame flicker on card removal | solved by switching active card before the frame ends
+
+
+
+
+
+
+
+
+
+
+
+--- STACK ------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+libv.ui: 3D Anchor point layout (input camera) (For labels / UI Components over objects) (Most interesting stuff may happen in update or events)
+
+libv.ui: Allow focus not yet attached components
+libv.ui: Clicks into nothingness should clear focus | True, but define nothingness first
+
+libv.ui: Stateify every UI component (minimal: hover and focus)
+		label
+		button
+		input_field
+		...
+
+libv.ui: Stateify every UI component (extended: active (and selected))
+		label
+		button
+		input_field
+		...
+
+libv.ui: Add missing button state switch on off component active release
+
+libv.ui: border fragment = chained/nested background fragments
+
+libv.ui: check on that "recent" modification that i just did in ui.context_state to start the frame time at now
+	test time values at first frame
+
+
+
+
+
+libv.ui.property: scope / sheet / component type based style rules
+
+libv.ui: static_component system (lite)
+	Check on the _pastebin/legacy codes for this one
+
+	libv.ui: Restructure: property context creation stuffy simplification
+			maybe CRTP base for core components
+			| if core_component gets a CRTP base also implement virtual function overload detection idiom with it
+
+	libv.ui: non-dynamic based panels, aka static_containers (no remove, only auto add)
+	libv.ui: Composite component style / property system
+		libv.ui.property: complex composite component would result in "nested" property sets
+		libv.ui.property: property system interaction with static_component system
+		libv.ui.event: Composite components internal behaviour should be events that are hooked up in ctor with connect_unignorable_front
+
+libv.ui: Component Image, CheckBox, Slider(for bar) could have a foreground fragment too (layout 1 should switch to that size)
+
+libv.ui: Background fragment, property type that can be quad/image/stretch/paramed_stretch/gradient with color/shader/params
+	libv.ui: background to_string's: "Not implemented yet";
+
+	libv.ui: Implement getInnerContentBounds for every component
+		DONE: label
+		DONE: button
+		DONE: input_field
+
+	idea: Multiple fragment interaction?
+			render background plane
+			render borders (outer shadow/edge)
+			render content
+			render borders (inner shadow/edge)
+
+libv.ui: Alignment justify should not 'start' at top left but from the orientation's starting point (therefore AlignVertical rate 1.0 for justifieds are incorrect)
+
+libv.ui: Margin, Padding, Spacing and Alignment gaps
+	libv.ui: Make panel_line margin not collapsing with padding
+	libv.ui: Make panel_line alignment not considering padding region
+	libv.ui: Make panel_anchor child margin push away border if there is not enough space
+	libv.ui: padding support in every component (layout)
+			scroll_bar | what is used in padding? The bar? | Most likely yes, the bar (bar could be replaced to component in future anyways)
+	libv.ui: margin support in every component | margin only effects layouts, and considered outside of the component boundaries, so ratio and parent percent calculation should not include it
+				panel_full DONE?
+				panel_line (Partial)
+				panel_anchor (Partial)
+			panel_grid
+			scroll_pane
+			scroll_area
+					label_image NO-OP
+					button NO-OP
+					check_box NO-OP
+					image NO-OP
+					input_field NO-OP
+					label NO-OP
+					quad NO-OP
+					radio_button NO-OP
+					scroll_bar NO-OP
+					stretch NO-OP
+	libv.ui: Document what Padding/Margin/Spacing is: (Maybe in a table form)
+			? Interaction with border
+			Padding:
+				Part of the component but not part of the component 'content area'
+				Part of the background
+				Part of the size
+				Part of the mouse region
+				Does not collapses
+			Margin:
+				Not part of the component
+				Not part of the background (Invisible)
+				Not part of the size
+				Not part of the mouse region
+				Does collapses with neighboring Margin, Container spacing and container justify gap
+			Spacing:
+				Container mandated margin (only) between elements
+				Not part of the background (Invisible)
+				Not part of the component
+				Not part of the size
+				Not part of the mouse region
+				Does collapses with neighboring Margin, Container spacing and container justify gap
+
+libv.ui: Restructure: contexts, centralize and unify them, their construction, their referencing, improve naming (event -> comm)
+		organize which is public (like context_state), which is privet (like context_event)
+
+Cleanup / Implement
+	src/libv/ui/component/base_panel_static.*
+	src/libv/ui/component/check_box.*
+	src/libv/ui/component/file_picker.*
+	src/libv/ui/component/radio_button.*
+	src/libv/ui/component/radio_group.*
+
+place.it:
+	cpp: Virtual inheritance can be a solution for base injection: All virtual base subobjects are initialized before any non-virtual base subobject, so only the most derived class calls the constructors of the virtual bases in its member initializer list:
+			this can kill libv::net::detail::current_io_context
+			investigate the runtime cost
+			has memory overhead (I think it is merged with vtable ptr, so class already has one its zero)
+	idea: bloom_filter usage if there is a 8/16/32 bit implementation of it: Component "signal"-iness per event type
+
+
+
+--- Checkpoint ---
+
+
+
+libv.ui/libv.ctrl: Keyboard binding display (For useful fun)
+
+libv.ui: UI level storage system
+		context().storage<UIUserConfig>() : UIUserConfig&
+		should be accessible via UI too
+	libv.ui: Component scoped storage system
+			context().scoped_storage<FloatFrame>(label) : FloatFrame&
+			should be accessible via UI too
+
+libv.ui: UI based file watcher, libv.fsw > queue > ui loop event stage > broadcast
+		should be accessible via UI too
+		! There is one now for style script tracking, make it more ui-wise
+
+libv.ui: adopt libv.rev's Shader and ShaderLoader
+
+libv.ui: (?) Rename PanelAnchor to PanelAnchor
+
+libv.ui: Fix layout invalidation up propagation possibility (remove access to flags, and provide mark functions)
+		markInvalidLayout();
+		| Also this logic might punches through floatRegion "layout barriers" that I dont think it should, or is that not a barrier?
+
+
+
+--- Theme ---
+
+
+
+https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableView.html
+table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+imageHolder.minWidthProperty().bind(Bindings.createDoubleBinding(() ->
+        scroll.getViewportBounds().getWidth(), scroll.viewportBoundsProperty()));
+    grid.getChildren().add(imageHolder);
+
+
+
+app.theme: use event_reentry_guard in control.slider.event().change
+app.theme: create theme exporter: json and atlas texture
+
+app.theme: connect the theme gen with a running app to live update
+app.theme: clean up C++ blend/effect implementations
+
+libv.ui: multithreading cooldown for ui frame iteration. Aka: once_per_n_frame instead of X ms
+
+libv.ui: To fix property init
+		| scroll bar should not calculate any fucking layout in non layout
+		| it does it so it can process mouse event
+	libv.ui: Initialize every property in the constructor, or at least by the end of the ctor
+	libv.ui: Do not cache bar bounds in value_* functions | or only cache if attached
+	libv.ui: Do not use properties outside of callbacks, the values WILL BE incorrect
+
+
+glow falloff is incorrect on corners, find a better solution
+	idea: it is 0-1 1-0: in the first range falloff should be a noop bc those values can be considered 1 AA
+	libv.ui: Overlay zoom mouse hovered pixel color display
+	| size = 0, falloff = 1 highlight perfectly the affected pixels
+
+scroll bar change prompts layout, why? should it? | it does to recache the bar position
+
+app.theme: --- PAPER ---
+	So the way theme generation works (plan):
+	- lua script containing the styles incl properties and the recepies for the atlases
+	- running the lua script from C++ will generate the atlases and export it into an image and another lua script
+	- from c++ ui run the generated lua script to acquire the theme
+	- | NOPE
+	- 	-> I will not generate lua from lua, that would not make sense, but what would make sense, is to generate a hash from the lua and if the hash matches the atlas...
+
+
+libv.ui.theme: UI system need a system to communicate states to the style system, like hover, pressed, etc...
+libv.ui.theme: Property substructure system example: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#titledpane
+		https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#titledpane
+		https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#textfield
+		https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#typeeffect
+
+
+
+libv.ui: set_clear_color (?) | no need, client could use a full background any time, but this means client has to clear
+libv.ui: Button icon support (with left, top, down, right placement), if icon or text is not set, it is skipped
+
+libv.ui: implement base_line alignment: most likely will need a vec2 get_base_line() function
+libv.ui: scroll area: request_scroll_to(pos, size) or request_display_of(pos, size)
+libv.ui: vec2 get_scroll_size() and use in use min(client.get_scroll_size, client.layout_size)
+
+libv.ui: observation: clip and scroll are two orthogonal features
+		general concept: "floating" component that effects render, mouse, (layout)
+		general concept: clip component that effects render, mouse, (layout)
+
+libv.ui: current float region setting does not allows clean iteration and position determination of components, this is an issue. For example mouse and render behaviour are separated
+libv.ui.layout:	verify what is going on with position change based layout invalidation in float region
+
+libv.ui.layout: size over 100% is not an error
+
+libv.ui: make access_property a class member function (or use a single composite param)
+
+
+
+libv.ui: Make sure to invalidate flags after every child is iterated to prevent exception caused false unflagging
+libv.ui: Clean up redundant shader codes and add run time (with shader recompile) to switch between debug clip and no clip
+
+libv.ui: Make sure that (only) position change does not invalidates layout
+
+libv.ui: Idea: new raw texture, white with size of 1x1 px BUT on the getters it lies to 0x0 px so it would not effect layouts
+
+libv.ui: The ui should not know about glr, except in shader, context_render code and maybe the overlays
+
+libv.ui: overlay component layout stack highlight
+
+
+
+
+libv.ui: scroll_area only the "scroll pane" area without scroll bar
+	libv.ui: scroll area layout
+	libv.ui: scroll area render
+	libv.ui: scroll area (mouse) control
+	libv.ui: (?) scroll area size should equal or inherit(upward) it's content size
+			issue: If I want a scroll plane size to be content, I have to set the plane, the area and the line
+			idea: scroll area is not a component, but a component adaptor
+				what is a component adaptor? How does it fit a component hierarchy, how does it alters the behaviours?
+	libv.ui: container in scroll area, nested rendering alters clipping and control
+	libv.ui: scroll area in scroll area, nested rendering alters clipping and control
+
+	idea: ui glsl component info: 1 uniform block and a single index into it as vertex attribute
+			component bounds
+			clip bounds
+
+	problem: composition of components to create complex components
+		issue: create/attach/foreach/traverse/etc function implementations
+		issue: pollutes component hierarchy
+		issue: nested properties
+		issue: scroll area size propagation: if content is 50% area has to be set to 50% and content to 100%, so the size rules are messed up | would be nice to not deal with this issue, but transparent wrapping
+
+
+	ComponentHandler and EventHost should be "separated" to allow inheritance chains with different EventHosts
+
+	ideas and notes
+		new component memory models allows unlimited templates
+		component decorator
+		component that can be "hidden" in the component hierarchy but still function (aka a quick and dirty implementation of decorator)
+
+
+
+libv.ui: scroll_pane = client area + scroll bar
+	libv.ui: clipping vertex shader (with on/off)
+	libv.ui: shader clip plane (scissors), (effects every ui shader)
+			| stencil could also be a solution, and it would be even better, more generic, non intrusive for the other shaders
+			| or just use a viewport call and correct the projection matrix | would not allow 3D transforms
+			| clip planes should be the most generic solution
+	libv.ui: style sub component
+	libv.ui: component position is currently relative to origin, once 'frame' and 'scroll' component comes in this will change
+	libv.ui: mouse remapping regions and/or dimension and/or hubs to handle scroll panes and windows
+
+libv.ui: rename scroll bar to slider
+libv.ui: rename scroll bar (slider) value_min and value_max to value_low and value_high
+libv.ui: create a real scroll_bar = slider + buttons
+
+libv.ui: check box
+		Clickable elements with a cross in the middle that can be turned off or on.
+
+libv.ui: radio_button and/or group
+		https://github.com/cnjinhao/nana/blob/master/source/gui/widgets/checkbox.cpp
+libv.ui: toggle (toggle button)
+
+libv.ui: default style and theme set
+
+libv.ui: card layout
+libv.ui: progress bar | progress bar can have unknown max value, have a mode for it | 3 part: bg, bar, spark
+libv.ui: list layout / component
+libv.ui: table layout - only the columns and/or rows have size aka (more strict grid)
+		An invisible container that lays out children in a specific number of columns. Column width is given by the largest element contained.
+libv.ui: not owning container views (list and/or table)
+libv.ui: progressbar
+		Indicate progress by displaying a partially filled bar.
+
+
+
+--- libv.ui MVP checkpoint ------------
+
+
+
+libv.ui: tab layout = card layout + header buttons
+libv.ui: window
+		contain other elements. They have a caption (and, just like flows, they lay out children either horizontally or vertically)
+libv.ui: popup / tooltip
+		? tooltip is a layout
+		Its possilbe to implement tooltip container with hierarchy, context.storage.treeget/treeset could use that
+		context().tooltip(Component, tooltip_for_pos, tooltip_for_size, preferred_corner)
+libv.ui: menu bar / menu / popup menu
+libv.ui: separator / group (bordered and captioned)
+
+
+
+--- libv.ui MVP+ checkpoint -----------
+
+
+
+libv.ui: OverlayZoom use linearized zoom (like the Camera2 in vm4viewer)
+libv.ui: OverlayZoom in control mode should scale "sensitivity" based on zoom
+
+libv.ui: modernize every enum based property to match anchor's pattern: global table, to_string, operator<< | there will be another pass when UI gets dynamic property manipulation, like lists and such
+		| use enum generator
+libv.ui: Remove the half manual - half automated public property access (this might remove the whole AccessProperty | not really, but still a cleanup that is worth it)
+
+libv.ui: content property.hpp can be more hidden toward components (Especially the variant)
+libv.ui: Hide or remove CoreComponent usage from every API (like focus, AccessLayout)
+libv.ui: Remove .core() usages wherever possible
+
+libv.ui: icon button = background + image + text
+
+libv.ui: InputMask for input field
+		struct InputMask {
+			virtual void insert(std::string& text, std::string_view insert, size_t insert_pos);
+			virtual void remove(std::string& text, size_t remove_pos, size_t remove_size);
+			// virtual std::string_view empty();
+			// ...
+		};
+
+libv.ui: The UI Paper
+	Core
+			Core Component object containing every state of a given component, derived from CoreComponent
+	Component / Handler
+			Lightweight stateless handler object of a core component object, derived from Component
+	Host
+			Stateless event host
+
+	Notes for the real scroll bar:
+		double value; // current_line
+		double value_min; // 0
+		double value_max; // num_line
+		double value_range; // num_lines_displayed
+
+		double step_scroll; // [mouse wheel] 1 or 3 or settings.scroll_unit
+		double step_button; // [button >] 1 or 3 or settings.scroll_unit
+		double step_track; // [mouse button on track] 1 or 3 or settings.scroll_unit or inf
+		double step_track_interval; // 0.3 or 1 or settings.step_button_hold_interval
+		double step_button_hold; // [button > hold per interval] 1 or 3 or settings.scroll_unit
+		double step_button_hold_interval; // 0.3 or 1 or settings.step_button_hold_interval
+		double step_arrow; // [up/down] 1 or 3 or settings.scroll_unit
+		double step_page; // [pageup/pagedown] num_lines_displayed
+
+	Spacing / Margin / Padding
+
+		TODO P5: ASCII diagram
+
+		Spacing
+			In a container space between elements (none on the outside borders, only between elements)
+			It's a useful 'alias' for margins
+			Space between elements
+
+		Margin
+			Space around an element
+
+		Padding
+			Space between the border and the content inside an element
+
+	NOTES: fragments
+		caption
+		bg
+		? fg
+
+libv.ui: Idea for over restricted string_2D: if content would exceed limit, just push the lines or characters closer to each other (could be policy driven)
+
+libv.ui: Idea: Zombie state, instead of keeping the dying component in their container move them into a ui global zombie land, they would still point to their parent, but their parent would no longer know about them
+			zombie flag (rename / rework / reuse detach also works)
+			change removal to be instant (or at least before/during layout step)
+			first step of render is to render destroy all zombies
+			and detach will just doDetach and remove every zombies from the ui global storage
+		What does it solve?
+			viewLayouted and viewRendered container management during layouts
+			focusable also wins, no need to scan up for detaching parent | or at least traverse will skip obviously wrong candidates
+			layout flag would no longer be required
+		What issue could it cause?
+			? Maaaaaybe something around expecting it inside parent, but, even that
+
+
+--- "The" backlog ---
+
+
+
+component
+	libv.ui: possible component list https://en.wikipedia.org/wiki/Widget_(GUI)
+	libv.ui: Splitter
+	libv.ui: group: RadioButton
+	libv.ui: Component ideas from other systems
+	libv.ui: Docker layout with movable components (frames), who handles which responsibility? Think about it and postpone this task
+
+
+		button	 			Clickable elements.
+		sprite-button	 	A button that displays an image rather than text.
+		checkbox	 			Clickable elements with a cross in the middle that can be turned off or on.
+		flow					Invisible containers that lay out children either horizontally or vertically.
+		frame	 			Grey semi-transparent boxes that contain other elements. They have a caption, and, just like flows, they lay out children either horizontally or vertically.
+		label	 			A piece of text.
+		progressbar	 		Indicate progress by displaying a partially filled bar.
+		table	 			An invisible container that lays out children in a specific number of columns. Column width is given by the largest element contained.
+		textfield	 		Boxes of text the user can type in.
+		radiobutton	 		Identical to checkbox except circular.
+		sprite	 			An element that shows an image.
+		scroll-pane	 		Similar to a flow but includes the ability to show and use scroll bars.
+		drop-down	 		A drop down list of other elements.
+		list-box	 			A list of other elements.
+		camera	 			A camera that shows the game at the given position on the given surface.
+		choose-elem-button	A button that lets the player pick one of an: item, entity, tile, or signal similar to the filter-select window.
+		text-box				A multi-line text box that supports selection and copy-paste.
+		slider				A number picker.
+		entity-preview		A preview of an entity.
+		split-pane
+		tab-pane
+		property-lib:
+				auto& c = tree.category("xy")
+				auto& p = c.add("zw", new property_int{})
+				auto& p = c.add("zw", new property_choice{"enum0", "enum1", "enum2"})
+				p.value = 42;
+
+atlas
+	libv.ui: texture atlas definition/parsing
+	libv.ui.atlas: ui theme atlas loading and auto-preview, semi-auto atlas definition
+	libv.ui: support atlas based images
+
+ui
+	libv.ui: if ui size .x or .y is 0, do not execute anything from ui loop (frame buffer protection)
+	libv.ui: fragments, sub component reusable codes
+	libv.ui: ContextResource
+	libv.ui: ContextConfig
+	libv.ui: ContextFileWatcher
+	libv.ui: ContextLoopExecutor: any_thread_callable_cb = context.loop.callback_as_event(my_event_callback)
+	libv.ui: ContextExecutor
+		libv.ui: idea: A component could signal the UI if it want to execute a heavy computation task before (attach, layout, create, render, destroy)
+		libv.ui: async_task<T> work_async(const function<progress_report(multi_entry_call, stop_token)>& task);
+	libv.ui: ContextStat (not ContextState, stat is for ui statistics)
+	libv.ui: mark remove is non-sense for static component system, or composite objects, hide it
+	libv.ui: add a glr::remote& to UI to simplify app::frame
+	libv.ui: idea: For (debug overlay) UI 2D picker use the mouse wheel with indication beside the cursor to select underlying components
+
+cleanup
+	libv.ui: context_ui and libv.gl:image verify that targets are matching the requested target (2D)
+	libv.ui: cleanup context_ui redundant codes
+	libv.ui: fatal log before every assert
+
+mouse
+	libv.ui: mouse events should consider depending on if the window is focused or not | non trivial either way, might be best to have both option dynamically | need this as component level dynamically (camera controls need global, for other ui actions local is enough)
+	libv.ui: unchanged - updating watcher (any property) without change should not yield any event | do I care about it?
+	libv.ui: Mouse acquire should leave any over component (?)
+	libv.ui: Mouse release should enter any over component (?) (respect non-pass_through)
+	libv.ui: Absorb - make sure absorb/shield/plates is easy to have/access for even non interactive components
+
+event
+	libv.ui: if 'everything' 'above' is done re-read the requirements of mouse events and verify if all of them are met | context_mouse.cpp
+	libv.ui.event: mouse/keyboard/joystick ability to query sub-frame resolution of press/held/release cycle. Time the events (it will be a lot of timestamp)
+	libv.ui.event.host: UI global event host (optional) support for component hierarchical up-walking iteration over handlers
+	libv.ui.event.host: UI component hierarchically scoped custom event host (just like UI global)
+	libv.ui.event.host: UI global event host support for named global channels
+			context().events().connect<ShaderReportFailure>(this, "shader_reload", [](const auto& report){ ... });
+			context().events().fire("shader_reload", ShaderReportFailure{});
+
+properties / style
+	libv.ui.property: if fallback value is requested log a warning
+	libv.ui.property: dynamic access
+	libv.ui.style: verify that style change in child causes restyle in properties stored inside the parent
+	libv.ui.property: solve name/type collusion
+		libv.ui.style: either I centralize and static bind every property name to a single type OR i allow multiple different type/value under a single name
+	libv.ui.style: do not track style changes, require ui to be prompted about change
+	libv.ui.style: Style Sheet / A proper default style or a way to auto assign styles to components would be nice (this is not property fallback, its style sheet fallback.)
+	libv.ui.property: typed property registry
+	libv.ui.property: optimize property reset: address could be used to lookup
+
+interactive
+	libv.ui: Ability to select, copy or click link from Labels if the specific properties are set to allow it
+
+	libv.ui: Cursor image change
+	libv.ui: Make a sandbox for a input->button->label->list
+	libv.ui: mouse drag and drop system
+
+	libv.ui.input_field: Implement FocusSelectPolicy
+	libv.ui.input_field: Implement NewLine/MultiLinePolicy
+	libv.ui.input_field: if text does not fit, crop/layer it and only display around caret
+	libv.ui.input_field: if text does not fit, display a popup with full text on mouse hover and idle
+	libv.ui.input_field: input mask (this will possibly a different input_field type)
+	libv.ui.input_field: mask('*') for passwords
+	libv.ui.input_field: mouse hover cursor change to cursor-caret symbol
+	libv.ui.input_field: multi_line(true)
+	libv.ui.input_field: selection support
+	libv.ui.input_field: multi-selection support
+	libv.ui.input_field: synthesize selection property
+	libv.ui.input_field: synthesize multi-selection property
+	libv.ui.input_field: text function call should produce event
+	libv.ui.input_field: background_shadow_tip_string("Password")
+	libv.ui.input_field: tip_string("Generic password related tip")
+	libv.ui.input_field: undo/redo support
+	libv.ui.qol: On selecting a file name input field the caret should be placed before the extension and select the basename (even if the click is after the dot), but for a second click it should jump where it is requested
+
+ctrl
+	libv.ui.ctrl: ui.focus-backward = shift+tab
+	libv.ui.ctrl: ui.focus-forward = tab
+	libv.ui.ctrl: ui.focus-tab-backward = ctrl+shift+tab
+	libv.ui.ctrl: ui.focus-tab-forward = ctrl+tab
+	libv.ui.ctrl: ui.new-line = enter
+	libv.ui.ctrl: ui.select = space
+	libv.ui.ctrl: ui.send = enter
+	libv.ui.ctrl: ui.send = kp-enter
+	libv.ui.ctrl: ui.send-alt = shift+enter
+	libv.ui.ctrl: ui.send-alt = shift+kp-enter
+	libv.ui.ctrl: ui.text.cursor-down = down
+	libv.ui.ctrl: ui.text.cursor-left = left
+	libv.ui.ctrl: ui.text.cursor-right = right
+	libv.ui.ctrl: ui.text.cursor-up = up
+	libv.ui.ctrl: ui.text.jump-end = end
+	libv.ui.ctrl: ui.text.jump-home = home
+	libv.ui.ctrl: ui.text.remove-backward = backspace
+	libv.ui.ctrl: ui.text.remove-forward = delete
+	libv.ui.ctrl: ui.text.remove-word-backward = ctrl+backspace
+	libv.ui.ctrl: ui.text.remove-word-forward = ctrl+delete
+	libv.ui.ctrl: ui.text.select = lmb [hold]
+	libv.ui.ctrl: ui.text.select-left = shift+left
+	libv.ui.ctrl: ui.text.select-right = shift+right
+	libv.ui.ctrl: ui.text.select-word = lmb, lmb
+	libv.ui.ctrl: ui.text.select-word-left = ctrl+shift+left
+	libv.ui.ctrl: ui.text.select-word-right = ctrl+shift+right
+	libv.ui.ctrl: ui.redo = ctrl+[y] // logical y key
+	libv.ui.ctrl: ui.undo = ctrl+[z] // logical z key
+	libv.ui.ctrl: ui.redo-non-destructive // emacs style redo, not the default
+	libv.ui.ctrl: ui.undo-non-destructive // emacs style undo, not the default
+
+focus
+	libv.ui.focus: Key/Hotkey events can trigger focus-traversal
+	libv.ui.focus: easy way to trigger Focus traversal from events/components
+	libv.ui.focus: by default unhandled [tab] hotkeys should trigger focus traversal
+	libv.ui.focus: by default unhandled [esc] hotkeys should trigger focus clear
+	libv.ui.focus: Ability to yield focus gain, when a component receives the onFocus (gain) event it would be nice to have a way to refusing it forcing it to travel further
+	libv.ui.focus: Focus traversal order: direct link (ptr, ptr)
+	libv.ui.focus: Focus-traversal needs a component hierarchy independent way to be defined, no raw id or index, use ptr/refs when direct setting it
+
+	libv.ui.focus: Focus traversal order: layout driven (layout knows the orientation)
+	libv.ui.focus: Focus traversal order: (index) position based
+
+style
+	libv.ui: style sheets | aka themes
+	libv.ui: lua style parsing and lua file tracking with auto re-style | only style parsing
+	libv.ui.style: (style exclusive / multiple) multiple style usage in a component would still be nice, maybe synthesized styles?
+
+overlay
+	libv.ui: generic orthogonal component level overlay system
+		libv.ui: overlay ui errors/warnings: A generalized ui error report system (console with extras)
+
+		libv.ui: overlay event freeze
+			libv.ui: overlay event grab / multi-root / fake-root / overlay focus shaky
+			libv.ui: overlay controls / mode switches / overlay mode display / overlay control display
+
+		libv.ui: overlay zoom
+			libv.ui: pixel distance measure / pixel region measure
+
+		libv.ui: overlay cursor pixel highlight, coordinate display and mouse region stack display
+		libv.ui: overlay magnifier (local zoom) (optionally slow mouse movement speed (freeze cursor with frame))
+		libv.ui: overlay (mouse) stack display
+		libv.ui: overlay component tree display
+		libv.ui: overlay debug data stream, a context based output that can be written and displayed as a HUD
+
+		libv.ui.property: hybrid reflection - dynamic
+			libv.ui: detach should also be an event (mouse_table could utilize it to cleanup, debug observers could also use it)
+				libv.ui: overlay property inspector (name it inspector)
+
+		libv.ui: overlay resource viewer (textures, fonts, shaders (?))
+
+lua
+	libv.ui: lua binding | or rather a lua component or prototype parsing
+	libv.ui: make sandbox_ui.lua work
+
+libv.ui: include check everything / fwd everything
+libv.ui: statistics: each ui operation (attach, style, render, ...) histogram, min, max, count | maybe not store, only give an option to log the current values each frame, maybe with a default stat collector
+
+libv.ui: 2Dify UI: layout only makes sense in 2D, this does not forbids 3D element nor 3D layers nor 3D positions, but layouts makes no sense in 3D 99.99% of the cases | positions are 3D sizes are 2D and maybe 3D normals (?) | normal is not necessary per component, its enough to have one on the "tilting" container
+
+libv.ui: font failure to load means fallback | verify
+libv.ui: shader failure to load means fallback | verify
+libv.ui: shader dynamic loading from file
+
+libv.ui.font: fallback to Unicode Character 'REPLACEMENT CHARACTER' (U+FFFD) | add it back to fallback consolas_min font | https://www.fileformat.info/info/unicode/char/fffd/index.htm
+libv.ui.font: fallback to ascii '?'
+libv.ui.font: fallback to simple square (render the not found character by 'hand')
+libv.ui.font: https://www.freetype.org/freetype2/docs/tutorial/step2.html
+libv.ui.font: We do not check the error code returned by FT_Get_Kerning. This is because the function always sets the content of delta to (0,0) if an error occurs.
+
+libv.ui: String2D scream at the user if the API get a \r (or any non printable character beside \n \t), and ignore it
+
+libv.ui.event: slot / signal flags could be unflagged if a disconnect leaves an empty entry in the event context
+
+
+
+
+=== PAPERS ========================================================================================
+
+libv.ui: UI re-entering event loop problem and solution:
+	Solution event_reentry_guard:
+		On every call execute 2 step:
+			- Test Target. If it fails abort early
+			- Lock Source
+
+	Example:
+		// In the ui -> model event handler:
+		const auto reentry_guard = input.event_reentry_guard(source_component.ptr(), &target_model);
+		if (!reentry_guard)
+			return;
+
+		// In the model -> ui event handler:
+		const auto reentry_guard = input.event_reentry_guard(&source_model, target_component.ptr());
+		if (!reentry_guard)
+			return;
+
+
+
+PAPER: libv.ui: Component styled states PAPER:
+		Possible states:
+			Button
+				 Disabled : Normal : Hover : Focus : Active(Pressing) : Progress : Done/Error
+
+			Input Field
+				 Disabled : Normal : Hover : Focus
+
+			Slider
+				 Disabled : Normal : Hover : Focus : Active(Dragging)
+
+		- states are independent
+			bit-mask
+			limited number of state (max 32)
+			state names has to assigned to a unique int
+
+		- state def in style sheet
+				ui.style("style.name") {
+					properties...
+
+					state("[!]state{, [!]state}") {
+						conditional properties...
+					}
+				}
+
+		- overriding: in case of multiple definition of the same property the last with matching state wins
+
+
+
+
+
+
+Heritage:
+	struct FontEffect {};
+	struct FontFamily {};
+	struct FontSize {}; //font-size/line-height
+	struct FontStyle {}; //font-style - Specifies the font style. Default value is "normal". See font-style for possible values
+	struct FontVariant {}; //font-variant - Specifies the font variant. Default value is "normal". See font-variant for possible values
+	struct FontWeight {}; //font-weight - Specifies the font weight. Default value is "normal". See font-weight for possible values
+	text						The text to display in the label. The text can contain newlines.
+	NoTextInteraction			No interaction with the text is possible.
+	LinksAccessibleByKeyboard	Links can be focused using tab and activated with enter.
+	LinksAccessibleByMouse		Links can be highlighted and activated with the mouse.
+	TabIndex / Focusable		If true, the widget accepts input focus. The default is false. (takeFocus/TakeFocus)
+	TextSelectableByKeyboard	Text can be selected with the cursor keys on the keyboard.
+	TextSelectableByMouse		Text can be selected with the mouse and copied to the clipboard using a context menu or standard keyboard shortcuts.
+	horizontally_stretchable	If the GUI element stretches its size horizontally to other elements
+	vertically_stretchable		If the GUI element stretches its size vertically to other elements
+	horizontally_squashable		If the GUI element can be squashed (by maximal with of some parent element) horizontally This is mainly meant to be used for scroll-pane The default value is false
+	vertically_squashable		If the GUI element can be squashed (by maximal height of some parent element) vertically This is mainly meant to be used for scroll-pane The default (parent) value for scroll pane is true, false otherwise
+	cell_spacing				Space between the table cell contents and border.
+	horizontal_spacing			Horizontal space between individual cells.
+	vertical_spacing			Vertical space between individual cells.

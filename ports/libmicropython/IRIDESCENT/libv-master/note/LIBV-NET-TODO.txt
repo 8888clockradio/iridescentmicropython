@@ -1,0 +1,336 @@
+libv.diff: make sure every stream input respects offset (?) | for output it makes sense, but for input I need the end of it | Done with byte streams
+libv.hash: Generate md5 hash from file without needing to handle the istream
+libv.update: patch create folder
+libv.update: patch remove folder
+libv.update: Patch apply progress report
+libv.update: Patch improved logging
+libv.state: Find a state machine solution | for now boost statechart will be good enough
+libv.mt: pimpl worker_thread_pool and worker_thread
+libv.mt: common base queue for worker_thread_pool and worker_thread only difference is "run" calls (?)
+libv.mt: Add load function argument support for async_value
+ext: pulled in cppcoro, but need to work around cmake issue of WIN32 branching in lib
+ext: fork cppcoro to fix build issues
+libv.net: Implement new network handler based connection and acceptor
+libv.net: Implement sandbox chat server / session / client in libv_net_main.cpp
+libv: fix typo SERIALIAZTION -> SERIALIZATION
+libv.serialization: Rename libv.serialization to libv.serial
+libv.serialization: Rename SERIALIZATION to SERIAL
+libv.algorithm: Rename libv.algorithm to libv.algo
+libv: Result only types should be marked nodiscard
+libv.utility: input bytes on static memory should return correct amount of read bytes
+libv.serial: Add support for non stream based IO Binary archives
+libv.serial: Add support for non string based codec
+libv.update: Implement real server side version check response calculation
+libv.net: Add support for non string based connection send / receive
+libv.net: Solve the problem for resource server in connection_he, I need to track how many outgoing messages there are from a certain type to know to schedule the next fragment
+libv.utility: Implement IntervalRegistry utility type
+libv.security: Move signature checking of sandbox_openssl into a new wrapper lib (public / private key)
+libv.net.mtcp: Refactor the connection internal states
+libv.net.mtcp: Refactor the connection API
+libv.net.mtcp: Single write op for header and body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- STACK ------------------------------------------------------------------------------------------
+
+
+
+
+
+place.it:
+	CICD:
+		git: Commit count up to a revision: git rev-list --count HEAD
+
+libv.update: Resource Client
+	Single file download: Partial download recovery IDEA of an alternative approach would be to only write out the progress meta data every X seconds
+
+	Server connections and task coordination:
+		measure each connection
+		if
+
+	File download and saving process:
+		Check if 'file.temp' exits
+		if exits
+			Open 'file.temp'
+			Replay meta info onto the in-memory state
+			If a separator byte is missing or corrupt stop and dont include its record
+				Remove corrupted meta info from end of file
+		else
+			Open 'file.temp'
+
+		Write data chunk into place
+		Write chunk offset and size to meta data at the end of the file
+		Remove meta data
+		Close file
+		Calculate and verify checksum
+		if valid
+			Rename 'file.temp' to 'file'
+		else
+			Remove 'file.temp'
+			Start again
+
+
+libv.update: weed out the legacy codes related to file downloading
+	I think the best ones are in libv/update/resource/resource_server
+	and the correct pattern will be in sandbox_update_main (or sandbox_net_main)
+	| The libv/update/resource/update_client is marked for death
+	| Almost done
+
+
+libv.update: Cleanup dirty progress (mostly update server)
+libv.update: Net installer versions, aka "version 0" (which btw is a moving target)
+
+libv.net: Possible bug: In connection and acceptor io_context.post might not obey strand requirements
+libv.net: Add support for endpoint access in mtcp on_accept (passing other type than io_context might be the solution)
+			| This is important, IP bans could be implemented this way
+			| ? But be careful, endpoints are only set with the connect call
+
+
+!!! libv.serial: For safety the only change I should do for now, is get rid of reserves / resizes in serializers
+		This includes every:
+		cereal/types
+		libv/serial/types
+		libv/utility/entity/entity_ptr_serial
+		any *_serial file that serializes a size_type
+
+libv.update: PAPER
+	Update file name
+		{program}-{variant}-{target}-{source}.update
+		program-variant-01-00.update
+		parsing from the back should be possible
+
+	Updating:
+		// Legacy stuff
+		//
+		// */**
+		// */**.new
+		// */**.old
+		// .update/program-variant-target-source.update
+		// .update/meta
+		// .lock
+		// program
+		//
+		//	update outcomes:
+		//		failure - operation failure
+		//			attempt to retry and continue
+		//			rollback -> do nothing
+		//			rollback -> fix corruption -> do nothing
+		//			rollback -> fix corruption -> update again
+		//			force apply -> fix corruption
+		//		failure - corruption
+		//			rollback -> do nothing
+		//			rollback -> fix corruption -> do nothing
+		//			rollback -> fix corruption -> update again
+		//			force apply -> fix corruption
+		//		success
+		-
+		-
+		-
+
+		Check for update:
+			-
+			-
+			-
+
+	Resource ID:
+        app.update::variant::patch::{filename}
+                  ^^       ^^     ^^ separators
+                                    ^^^^^^^^^^ filename template
+                             ^^^^^ resource namespace
+                    ^^^^^^^ program variant (dev, daily, experimental, stable)
+        ^^^^^^^^^^ program / program url
+
+libv.net: Fix that the read/write limit currently cannot be used before the connect_* calls
+libv.net: IDEA that in the connection instead of forcing the handle of an incoming message place it into the queue that can be accessed in the callbacks
+			| This behaviour could be configurable with ctor flags
+			| This would allow change of connection handle type
+			| But there are other option like special call in the handler
+				| connection.convert_to<different_handler>()
+					| .differ_to<>()
+					| .handle_as<>()
+					| both different_handler.on_connect and optionally the "same" on_receive will be called on the new type
+				| And this is the perfect solution
+
+libv.serial: Optimization: Go template archives for the streams instead of libv::bytes_io, performance matters in that code
+libv.serial: Codec and Protocol: if handler is not invocable with function, do error mechanism with if constexpr
+
+libv.net: on_disconnect shall receive the first error that occurred which resulted in the disconnect if there was any
+
+app.update: Create a sandbox that flips version A->B B->A upon each start
+
+STACK
+		> Codec and Protocol
+	> ResourceServer Peer State machine
+	> ResourceServer Peer
+	> ResourceServer
+	> ResourceClient
+	> ResourceDownloading (FileDownloading)
+	> UpdateClient
+	> Updater
+	> Patch/Update Apply
+
+			> ConnectionAsyncIH
+			> Connection
+			> ConnectionSet
+			> Connection
+			> ConnectionAsyncCB No reuse, simplify
+			> ConnectionAsync sync API: disconnect_immediate | The main issue might be the naming
+				| disconnect // Does it on the spot canceling anything
+				| queue_disconnect_sync // (??) Queues and wait for disconnect
+				| queue_disconnect_async // Queues an async for disconnect
+
+			> (? delayed or canceled) SimpleServer, SimpleSession and SimpleClient
+
+
+
+
+
+libv.update.master Separate master sources and dependencies to a separate lib
+libv.update.common Separate common sources and dependencies to a separate lib
+libv.update.client Separate client sources and dependencies to a separate lib
+libv.update.server Separate server sources and dependencies to a separate lib
+
+libv.update: (?) patch apply progress ratio getter
+libv.update: (?) for updater progress made callback
+
+libv.update: Patch apply current step report (API to get the next step/operation)
+libv.update: Patch creation rename support
+libv.update: Patch creation modify to support
+
+place.it:
+	download.https: HTTPS download?: https://curl.se/libcurl/c/url2file.html
+	download.https: https://stackoverflow.com/questions/28264313/ssl-certificates-and-boost-asio
+	download.https: https://github.com/yhirose/cpp-httplib
+
+Update:
+	app.update: Implement an update server / client
+		app.update: Reconnect: attempts, timers
+
+		app.update: Security: Scope restriction on file access
+		app.update: Login
+		app.update: Server: Cache files in memory, watch if they change
+
+		app.update: Manifest, versions, etc...
+		app.update: List current clients on Server
+
+		app.update: Sign the patch (server auth is not needed for now, signing is enough)
+				https://eclipsesource.com/blogs/2016/09/07/tutorial-code-signing-and-verification-with-openssl/
+				https://gist.github.com/irbull/08339ddcd5686f509e9826964b17bb59
+
+	app.update: Upon patch apply failure, create manifest and send to server
+
+
+app.update: Paper
+		Version manifest:
+			list of files with MD5 hash in a folder
+		Patch manifest:
+			list of changes add/delete/(replace)/modify/rename
+
+		The update process:
+			prep
+				create release
+				server side create diff from
+					folder/release A
+					folder/release B
+				save diff into patch folder with relevant information
+				sign the update
+			update
+				download update
+				verify update signature
+				copy update.exe to update.exe.new
+				apply diff to update.exe.new
+				rename update.exe to update.exe.old
+				// <- This is the only bricking point is here, and even then .old could be renamed by hand
+				rename update.exe.new to update.exe
+				restart update.exe
+				remove update.exe.old
+
+
+update: Sometimes it might require a restart for the updater
+	- migration code is introduced -> need restart to run it, and only after that can the updater continue
+	- updater is updated -> needs restart
+		| with that we might enter the dual process updater world
+
+		migration can effect saves, options, configs, profiles or even DB, or install settings or other OS integration stuff
+		most of these are resource based so migration happen on demand but some dont (like os)
+		so therefore the best option is if the updater code (leaves a patch previous version info behind) returns the prev version
+
+
+app/update/res/gen.sh
+app/update/res/apply.sh
+app/update/res/gen.sh && app/update/res/apply.sh
+
+
+place.it:
+	libv.serial: ideas for limited container size during serialization:
+			template <typename Archive> inline void serialize(Archive& ar) {
+				std::string resource;
+				libv::serial::limited<std::string, 256> resource;
+				ar & LIBV_NVP(resource);
+				LIBV_NVP(ar, resource);
+				ar.limited(resource, "resource", 256);
+				ar.limited(LIBV_NVP(resource), 256);
+				ar(LIBV_NVP(resource), libv::serial::limit<256>());
+				ar(LIBV_NVP(resource), libv::serial::limit(256));
+				ar(LIBV_NVP(resource), ar.limit(256));
+			}
+
+cpp: if tellg fails it can return -1, review EVERY usage of it
+
+libv.net, libv.utility, app.update: stream read https://quick-bench.com/q/idbivSAx2upsgoXQQgIPhmsBIJU
+		| but the fastest is a local stack buffer of ~16KB that is filled and processed in a loop
+
+
+Network:
+	I could do this when resolving:
+	udp::resolver::query query(udp::v4(), response[0], response[1]);
+							   ^^^^^^^^^
+
+	libv.net.mtcp: Protocol messages, handshake with protocol ID and version
+		libv.net.mtcp: Symmetric transfer rate limiting (requires storing local and remote limit, use min) (requires protocol message)
+
+
+app.update.security: libv.serial secure container sizes
+app.update.security:
+	! must authenticate the server (optional if the patch or patch manifest can be verified by the next step)
+	! must sign and verify any downloaded content
+
+	https://stackoverflow.com/questions/11580944/client-to-server-authentication-in-c-using-sockets
+		The client connects to the server, sending in the user-name (but not password)
+		The server responds by sending out unique random number
+		The client encrypts that random number using the hash of their password as the key
+		The client sends the encrypted random number to the server
+		The server encrypts the random number with the correct hash of the user's password
+		The server compares the two encrypted random numbers
+
+	boost.asio.ssl
+		https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/overview/ssl.html
+		https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/example/cpp11/ssl/server.cpp
+		https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/example/cpp11/ssl/client.cpp
+
+
+libv.mt: worker_thread_pool and worker_thread, solve the next index loop around problem
+libv.net.mtcp: Idea of channel: open, close, receive, send, error, so a connection within a connection
+libv.utility: usage_ptr: A shared_ptr that runs code upon 0 or 1 external reference remaining
+		| investigate shared_ptr with custom deleter
+libv.utility: libv::storage<T> with: initialize, destroy
+			alignas(T) std::byte storage[sizeof(T)];
+			std::aligned_storage_t<sizeof(T), alignof(T)> storage;
+		| Use std::destroy_at and std::construct_at to allow constexpr-ness
+
+

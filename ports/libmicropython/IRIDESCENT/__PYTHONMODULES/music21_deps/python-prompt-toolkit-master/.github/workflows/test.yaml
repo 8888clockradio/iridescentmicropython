@@ -1,0 +1,48 @@
+name: test
+
+on:
+  push: # any branch
+  pull_request:
+    branches: [master]
+
+jobs:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9, "3.10"]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Dependencies
+        run: |
+          sudo apt remove python3-pip
+          python -m pip install --upgrade pip
+          python -m pip install . black coverage codecov flake8 isort==5.6.4 mypy pytest readme_renderer types-contextvars asyncssh
+          pip list
+      - name: Run Tests
+        run: |
+          flake8 .
+          coverage run -m pytest
+      - name: Type Checker
+        # Check wheather the imports were sorted correctly.
+        # When this fails, please run ./tools/sort-imports.sh
+        run: |
+          # We use --no-warn-usused-ignores, because on Python 3.6 there is one
+          # type:ignore that we don't need.
+          mypy --strict --no-warn-unused-ignores src/prompt_toolkit --platform win32
+          mypy --strict --no-warn-unused-ignores src/prompt_toolkit --platform linux
+          mypy --strict --no-warn-unused-ignores src/prompt_toolkit --platform darwin
+          isort -c --profile black src examples tests setup.py
+          black --check src examples tests setup.py
+      - name: Validate README.md
+        # Ensure that the README renders correctly (required for uploading to PyPI).
+        run: |
+          python -m readme_renderer README.rst > /dev/null
+      - name: Run codecov
+        run: |
+          codecov

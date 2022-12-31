@@ -1,0 +1,309 @@
+
+REV - Render Engine Vader
+
+libv.gl: Add support for GL Queries
+libv.rev: Shader
+libv.rev: ShaderLoader
+libv.gl: kill glsl compiler
+app.space: adopt libv.rev's Shader and ShaderLoader
+libv.rev: Implement the shader reload event hooks for GLSL source code error
+libv.rev: Implement the shader reload event hooks for successful reload
+libv.rev: Implement the shader reload event hooks for unloads
+libv.rev: Add multi thread support for the whole shader manager system
+libv.rev: Implement the shader reload event hooks for include or IO failure
+libv.rev: Cleanup shader manager system implementation
+libv.rev: Add block binding support on shader uniform container level
+libv.rev: Add load and current version numbering for shaders
+libv.gl: Add support for GL_TEXTURE_COMPARE_MODE
+libv.gl: Add support for GL_TEXTURE_COMPARE_FUNC
+libv.rev: Render target abstraction (over Framebuffer + RenderTarget / Texture)
+libv.rev: Post processing stack
+libv.rev: Tone mapping
+libv.rev: Vignette
+libv.rev: Bloom
+libv.rev: Resources: Models, Materials and Textures
+libv.rev: Move files: internal_ to internal/internal_
+libv.rev: Move files: glsl_ to glsl/glsl_
+libv.rev: Move files: *shader* to resource/*shader*
+libv.utility: xoroshiro128 shall handle {0,0} as low quality input
+libv.gl: Add support for glDrawBuffers https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glDrawBuffers.xhtml
+libv.glr: Add support for glDrawBuffers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- STACK ------------------------------------------------------------------------------------------
+
+
+
+vec2 dirToRectilinear(vec3 dir) {
+	float x = atan2(dir.y, dir.x) / tau + 0.5;
+	float y = dir.z * 0.5 + 0.5;
+	return vec2(x, y);
+}
+
+read:
+	https://open.gl/feedback
+	https://ogldev.org/www/tutorial28/tutorial28.html
+
+
+place.it:
+	forward+ rendering with 2 pass: forward base + forward add ('base' only uses sun, 'add' does every other lighting as additive)
+	free high quality textures: https://quixel.com/megascans/free
+
+libv.vm4: remove bitangent from the model format and calculate it on the fly as cross(normal, tangent) (or cross(normal, tangent))
+app.mimp: check last write time, and skip anything who doesn't needs to be updated unless the mimp version changed (more like the exe lwt changed)
+
+
+
+libv.rev: builtin:cube (XYZ cube)
+
+libv.rev.res: Events
+	libv.rev.res: Texture fs tracking
+	libv.rev.res: Model fs tracking
+	libv.rev.res: Material fs tracking (should be a kind of noop)
+	libv.rev.res: Model loading events: load, update/reload, unload (or as: create, update, destroy)
+	libv.rev.res: Texture loading events: load, update/reload, unload (or as: create, update, destroy)
+	libv.rev.res: Material loading events, but it should be a noop
+	libv.rev.res: void attach_libv_ui_hub(Hub&& hub);
+
+libv.rev.res: Extended loader API
+	libv.rev.res: Model better error messages for include directories passes
+	libv.rev.res: Texture better error messages for include directories passes
+	libv.rev.res: Model include directories API
+	libv.rev.res: Texture include directories API
+	libv.rev.res: Model foreach
+	libv.rev.res: Texture foreach
+	libv.rev.res: Model add_virtual_resource
+	libv.rev.res: Texture add_virtual_resource
+	libv.rev.res: Material add_virtual_resource
+
+libv.rev: Improve the job system
+	Classify job loading request types:
+		- create: (immediate) / blocking / delayed / (lod)
+		- update: blocking / delayed / (lod)
+		- required / optional
+		- common setting override: require all / optional all
+	Currently everything is 'optional' and 'blocking'
+
+libv.rev: Texture Loader: policy for error handling and fallback logic
+		per resource decision if load failure is tolerable or not
+		(update tolerance is different from create tolerance)
+libv.rev: Texture Loader: add_virtual_resource "builtin:white"
+libv.rev: Texture Loader: mipmap
+libv.rev: Texture Loader: filtering
+libv.rev: Texture Loader: anisotropic filtering
+
+libv.rev: Try to remove shaders (glr program include) from material headers
+
+
+
+
+
+
+
+struct TrackedFile {
+	libv::fsw::Watcher* watcher;
+	libv::fsw::Token token;
+	std::string path;
+
+	void update(std::string&& data);
+	void update(std::error_code ec);
+
+	~TrackedFile() {
+		watcher->unsubscribe(token);
+	}
+};
+
+libv.vm4: On load verify every indexing (nodeID materialID etc in range [maybe even vertex index range check too]) and the integrity (no node circles) of the loaded data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+place.it:
+	visual.ui: Age of empires 4 menu show/hide effect is cool
+
+libv.rev: Post processing
+
+	libv.rev: HDR: automatic exposure adjustment opengl
+	libv.rev: Post-processing exposure (I think it affects both bloom prefilter and combine input)
+
+	libv.rev: Bloom dirt texture
+			Some idea / look like Dirt texture and stronger sky bleed: https://www.youtube.com/watch?v=ThA9pueKvus
+				https://github.com/Unity-Technologies/Graphics/blob/master/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Bloom.shader
+				https://github.com/Unity-Technologies/Graphics/tree/master/com.unity.render-pipelines.universal
+
+	libv.rev: Vignette texture
+
+
+
+
+
+
+libv.gl: Add support for anisotropic filtering (not always available)
+libv.glr: Add support for anisotropic filtering
+			glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, 16);
+			glGenerateMipmap(GL_TEXTURE_2D);
+libv.rev: Add support for anisotropic filtering
+
+
+
+libv.glr: Add support for GL_TEXTURE_COMPARE_MODE
+libv.glr: Add support for GL_TEXTURE_COMPARE_FUNC
+libv.glr: Add support for GL Queries
+
+libv.gl: glColorMask
+libv.glr: glColorMask
+
+libv.rev: 'Global' uniforms: read what unity has to offer https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html
+
+libv.rev: Shadow
+	libv.rev: Multiple shadow casters:
+			Use a texture3D (glFramebufferTextureLayer needed)
+
+libv.rev: Render Pass
+		Opaque (0..N)
+		[Sky]
+		OpaqueReflective (0..N)
+		Transparent (0..N)
+		Post processing
+			Bloom
+			Vignette
+			Tone mapping
+
+libv.rev: Paper
+		Mesh - What
+		Shader - How
+		Material - Parameters (uniforms) to How (shader) and render state properties
+
+	libv.rev: Material
+			Material = Textures, Uniform values, Shader, Various material property
+
+			Material Instance = Material reference + instance based overrides
+
+			Material property = Determines every render property of the material
+				Render order / Pass information: Opaque or transparent (or other)
+				Sideness
+				Culling
+				BlendMode
+				DepthTest/Mask
+				AKA: The whole OpenGL capability and other state (libv.glr.state)
+
+libv.rev: 'Global' uniforms: read what unity has to offer https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html
+
+
+libv.rev: Skeleton animation
+	Renderer
+	AnimatedModel
+		VAO
+			pos, uv, normal, ...
+			vec4i boneIDs
+			vec4f boneWeights
+		Joint root
+			int id
+			vector<Joint>
+			mat4 transform
+	Animator
+		float animationTime
+		Animation
+			vector<KeyFrame>
+				float time
+				vector<JointTransform>
+					vec3 pos
+					quat rot
+
+	Renderer - Renders an animated model in the pose determined by the joint transforms
+	AnimatedModel - Mesh and skeleton data (VAO aka skin data is immutable)
+	Joint - Backed joint transforms that are modified by the Animator
+	Animator - Runs the animation timer and burns the Animation at the current interpolated state onto the AnimatedModel
+	Animation - Animation data (immutable)
+	KeyFrame - Animation data (immutable)
+	JointTransform - Animation data (immutable)
+
+
+
+
+
+libv.rev: glsl_source_loader: Add query API, aka what would this include be resolve too
+		has to handling errors, query could result in error (it should probe the file, so: no such file, cannot open, etc)
+		has to handling no match, query could result in no mapping
+
+
+
+--- Paper collection -------------------------------------------------------------------------------
+
+Bloom Paper
+	Input: HDR Color
+	Output: A texture with blurred bloom data with half the resolution of the input (last upsampling happens on combine)
+
+	Configuration:
+		threshold
+		knee
+		intensity
+
+	Quality options:
+		number of MIPs
+		downsample with 4 or 13
+		upsample with box or tent
+
+	Passes:
+		- Downsample 13 tap + Prefilter
+		- Downsample blur (N times)
+			- V Blur 9 tap
+			- H Blur 5 tap
+		- Upsample 9 tap (N+1 times)
+		- Combine (Upsample 9 tap)
+
+	Sources:
+		http://www.iryoku.com/next-generation-post-processing-in-call-of-duty-advanced-warfare
+		'Cherno' bloom overview: https://www.youtube.com/watch?v=ThA9pueKvus
+		'Cherno' bloom guide: https://www.youtube.com/watch?v=tI70-HIc5ro
+		sRGB, linearRGB, gamma, HDR, Tone mapping: https://www.youtube.com/watch?v=iikdcAA7cww
+		https://learnopengl.com/Advanced-Lighting/Bloom
+		Unity source PostProcessPass.cs: https://github.com/Unity-Technologies/Graphics/blob/31106afc882d7d1d7e3c0a51835df39c6f5e3073/com.unity.render-pipelines.universal/Runtime/Passes/PostProcessPass.cs
+		Unity source UberPost.shader:    https://github.com/Unity-Technologies/Graphics/blob/master/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader
+		Unity source Bloom.shader:       https://github.com/Unity-Technologies/Graphics/blob/master/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader
+
+--- Article collection -----------------------------------------------------------------------------
+
+Full screen triangle: https://wallisc.github.io/rendering/2021/04/18/Fullscreen-Pass.html
+sRGB, linearRGB, gamma, HDR, Tone mapping: https://www.youtube.com/watch?v=iikdcAA7cww
+
+std::format / fmt custom types: https://www.cppstories.com/2022/custom-stdformat-cpp20/

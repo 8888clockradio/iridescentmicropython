@@ -1,0 +1,7 @@
+%% Translation of GIT committish: dbf7c8f5883b9a7044a6d8303da97208848fb62a
+  texidocfr = "
+Dans certains cas, vous pouvez opter pour l'affichage textuel d'une clé
+située à côté d'un trou plutôt que sa représentation graphique.
+"
+
+  doctitlefr = "Ajout de texte à un diagramme de doigté"

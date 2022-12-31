@@ -1,0 +1,15 @@
+---
+Language:        Cpp
+
+# BasedOnStyle:  LLVM
+# tested with clang-format 9.0.0
+
+AlwaysBreakAfterReturnType: TopLevelDefinitions
+BreakBeforeBinaryOperators: All
+BreakBeforeBraces: GNU
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+SpaceAfterCStyleCast: true
+SpaceBeforeParens: Always
+ReflowComments: false
+...

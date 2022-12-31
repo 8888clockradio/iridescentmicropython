@@ -1,0 +1,50 @@
+---
+name: CI
+
+on:
+  push:
+    branches: [trunk]
+    tags: ["*"]
+  pull_request:
+    branches: [trunk]
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: "1"
+  TOX_TESTENV_PASSENV: FORCE_COLOR
+  PIP_DISABLE_VERSION_CHECK: "1"
+
+permissions:
+  contents: read
+  
+jobs:
+  tests:
+    name: tox on ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            docs.python.org:443
+            files.pythonhosted.org:443
+            github.com:443
+            pypi.org:443
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: "Install dependencies"
+        run: |
+          python -VV
+          python -m site
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade tox tox-gh-actions
+      - run: "python -m tox"
