@@ -1,0 +1,6 @@
+#include "ChrisMandolinFourUvThreeMandolinEight_samples.h"
+#include "ChrisMandolinFourUvThreeMandolinFour_samples.h"
+#include "ChrisMandolinFourUvThreeMandolinThree_samples.h"
+#include "ChrisMandolinFourUvThreeMandolinTwo_samples.h"
+#include "ChrisMandolinFourUvThreeMandolinOne_samples.h"
+#include "ChrisMandolinFourUvThreeMandolinOneZero_samples.h"

@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 6;
+const instrument_data* builtInInstruments[6] = {&ChrisMandolinFourUvThreeMandolinEight, &ChrisMandolinFourUvThreeMandolinFour, &ChrisMandolinFourUvThreeMandolinThree, &ChrisMandolinFourUvThreeMandolinTwo, &ChrisMandolinFourUvThreeMandolinOne, &ChrisMandolinFourUvThreeMandolinOneZero, };
