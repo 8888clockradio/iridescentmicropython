@@ -1,0 +1,14 @@
+# sdl pkg-config source file
+
+prefix=/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/BUILD../../SDL
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sdl3
+Description: Simple DirectMedia Layer is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.
+Version: 3.0.0
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}   -lSDL3    -lSDL3  -lm
+Cflags: -I${includedir}  -ggdb -O2 -D_POSIX_THREADS -DSDL_DYNAMIC_API -DARDUINO_TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/FreeRTOS-Plus-POSIX/include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/SDL3-main/src -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb
