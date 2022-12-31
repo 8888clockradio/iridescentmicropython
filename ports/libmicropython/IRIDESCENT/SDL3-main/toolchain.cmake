@@ -1,6 +1,6 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
-include("/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/toolchainSetup.cmake")
+#include("/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/toolchainSetup.cmake")
 
 
 set(CMAKE_C_COMPILER "${COMPILERPATH}/arm-none-eabi-gcc")
