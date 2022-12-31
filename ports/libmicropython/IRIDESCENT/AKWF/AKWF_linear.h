@@ -1,0 +1,93 @@
+#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <string.h>
+#include <Arduino.h>
+
+extern const FLASHMEM int16_t AKWF_linear_0001[256];
+extern const FLASHMEM int16_t AKWF_linear_0002[256];
+extern const FLASHMEM int16_t AKWF_linear_0003[256];
+extern const FLASHMEM int16_t AKWF_linear_0004[256];
+extern const FLASHMEM int16_t AKWF_linear_0005[256];
+extern const FLASHMEM int16_t AKWF_linear_0006[256];
+extern const FLASHMEM int16_t AKWF_linear_0007[256];
+extern const FLASHMEM int16_t AKWF_linear_0008[256];
+extern const FLASHMEM int16_t AKWF_linear_0009[256];
+extern const FLASHMEM int16_t AKWF_linear_0010[256];
+extern const FLASHMEM int16_t AKWF_linear_0011[256];
+extern const FLASHMEM int16_t AKWF_linear_0012[256];
+extern const FLASHMEM int16_t AKWF_linear_0013[256];
+extern const FLASHMEM int16_t AKWF_linear_0014[256];
+extern const FLASHMEM int16_t AKWF_linear_0015[256];
+extern const FLASHMEM int16_t AKWF_linear_0016[256];
+extern const FLASHMEM int16_t AKWF_linear_0017[256];
+extern const FLASHMEM int16_t AKWF_linear_0018[256];
+extern const FLASHMEM int16_t AKWF_linear_0019[256];
+extern const FLASHMEM int16_t AKWF_linear_0020[256];
+extern const FLASHMEM int16_t AKWF_linear_0021[256];
+extern const FLASHMEM int16_t AKWF_linear_0022[256];
+extern const FLASHMEM int16_t AKWF_linear_0023[256];
+extern const FLASHMEM int16_t AKWF_linear_0024[256];
+extern const FLASHMEM int16_t AKWF_linear_0025[256];
+extern const FLASHMEM int16_t AKWF_linear_0026[256];
+extern const FLASHMEM int16_t AKWF_linear_0027[256];
+extern const FLASHMEM int16_t AKWF_linear_0028[256];
+extern const FLASHMEM int16_t AKWF_linear_0029[256];
+extern const FLASHMEM int16_t AKWF_linear_0030[256];
+extern const FLASHMEM int16_t AKWF_linear_0031[256];
+extern const FLASHMEM int16_t AKWF_linear_0032[256];
+extern const FLASHMEM int16_t AKWF_linear_0033[256];
+extern const FLASHMEM int16_t AKWF_linear_0034[256];
+extern const FLASHMEM int16_t AKWF_linear_0035[256];
+extern const FLASHMEM int16_t AKWF_linear_0036[256];
+extern const FLASHMEM int16_t AKWF_linear_0037[256];
+extern const FLASHMEM int16_t AKWF_linear_0038[256];
+extern const FLASHMEM int16_t AKWF_linear_0039[256];
+extern const FLASHMEM int16_t AKWF_linear_0040[256];
+extern const FLASHMEM int16_t AKWF_linear_0041[256];
+extern const FLASHMEM int16_t AKWF_linear_0042[256];
+extern const FLASHMEM int16_t AKWF_linear_0043[256];
+extern const FLASHMEM int16_t AKWF_linear_0044[256];
+extern const FLASHMEM int16_t AKWF_linear_0045[256];
+extern const FLASHMEM int16_t AKWF_linear_0046[256];
+extern const FLASHMEM int16_t AKWF_linear_0047[256];
+extern const FLASHMEM int16_t AKWF_linear_0048[256];
+extern const FLASHMEM int16_t AKWF_linear_0049[256];
+extern const FLASHMEM int16_t AKWF_linear_0050[256];
+extern const FLASHMEM int16_t AKWF_linear_0051[256];
+extern const FLASHMEM int16_t AKWF_linear_0052[256];
+extern const FLASHMEM int16_t AKWF_linear_0053[256];
+extern const FLASHMEM int16_t AKWF_linear_0054[256];
+extern const FLASHMEM int16_t AKWF_linear_0055[256];
+extern const FLASHMEM int16_t AKWF_linear_0056[256];
+extern const FLASHMEM int16_t AKWF_linear_0057[256];
+extern const FLASHMEM int16_t AKWF_linear_0058[256];
+extern const FLASHMEM int16_t AKWF_linear_0059[256];
+extern const FLASHMEM int16_t AKWF_linear_0060[256];
+extern const FLASHMEM int16_t AKWF_linear_0061[256];
+extern const FLASHMEM int16_t AKWF_linear_0062[256];
+extern const FLASHMEM int16_t AKWF_linear_0063[256];
+extern const FLASHMEM int16_t AKWF_linear_0064[256];
+extern const FLASHMEM int16_t AKWF_linear_0065[256];
+extern const FLASHMEM int16_t AKWF_linear_0066[256];
+extern const FLASHMEM int16_t AKWF_linear_0067[256];
+extern const FLASHMEM int16_t AKWF_linear_0068[256];
+extern const FLASHMEM int16_t AKWF_linear_0069[256];
+extern const FLASHMEM int16_t AKWF_linear_0070[256];
+extern const FLASHMEM int16_t AKWF_linear_0071[256];
+extern const FLASHMEM int16_t AKWF_linear_0072[256];
+extern const FLASHMEM int16_t AKWF_linear_0073[256];
+extern const FLASHMEM int16_t AKWF_linear_0074[256];
+extern const FLASHMEM int16_t AKWF_linear_0075[256];
+extern const FLASHMEM int16_t AKWF_linear_0076[256];
+extern const FLASHMEM int16_t AKWF_linear_0077[256];
+extern const FLASHMEM int16_t AKWF_linear_0078[256];
+extern const FLASHMEM int16_t AKWF_linear_0079[256];
+extern const FLASHMEM int16_t AKWF_linear_0080[256];
+extern const FLASHMEM int16_t AKWF_linear_0081[256];
+extern const FLASHMEM int16_t AKWF_linear_0082[256];
+extern const FLASHMEM int16_t AKWF_linear_0083[256];
+extern const FLASHMEM int16_t AKWF_linear_0084[256];
+extern const FLASHMEM int16_t AKWF_linear_0085[256];
