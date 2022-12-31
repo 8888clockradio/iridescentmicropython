@@ -1,0 +1,3 @@
+#include "KBHRealChoirVTwoVocalAaah_samples.h"
+#include "KBHRealChoirVTwoVocalOooh_samples.h"
+#include "KBHRealChoirVTwoFiveFour_samples.h"
