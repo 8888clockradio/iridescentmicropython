@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 2;
+const instrument_data* builtInInstruments[2] = {&JRorganorgueTwo, &JRorganorgueOne, };
