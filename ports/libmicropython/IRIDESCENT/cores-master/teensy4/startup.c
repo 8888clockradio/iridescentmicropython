@@ -116,8 +116,8 @@ void ResetHandler(void)
 	printf("\n***********IMXRT Startup**********\n");
 	printf("test %d %d %d\n", 1, -1234567, 3);
 
-    board_init();
-    BOARD_BootClockRUN();
+    //board_init();
+    //BOARD_BootClockRUN();
 	configure_cache();
 	configure_systick();
     
