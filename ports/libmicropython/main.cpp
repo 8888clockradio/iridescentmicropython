@@ -314,7 +314,7 @@ void setup() {
         heap = new char[4096000];
         theStack = new char[4096000];
         
-        board_init();
+        //board_init();
         //halt_cpu();
         //ticks_init(); // does not work //
         //tusb_init(); //remove perm
