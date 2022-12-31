@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 4;
+const instrument_data* builtInInstruments[4] = {&JRmoodstring, &JRmoodbass, &JRmoodtom, &JRmoodmood, };

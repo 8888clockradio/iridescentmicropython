@@ -1,0 +1,4 @@
+#include "JRmoodstring_samples.h"
+#include "JRmoodbass_samples.h"
+#include "JRmoodtom_samples.h"
+#include "JRmoodmood_samples.h"
