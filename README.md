@@ -60,3 +60,23 @@ you can run to debug in a very basic way
 ```
 cd iridescentmicropython/ports/libmicropython; ./kdbg.sh
 ```
+
+NOTE: need to add FLASHMEM to all micropython boot up steps and modify startup.c to run boot clock start
+```
+iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/startup.c
+```
+generate extern blocks on FLASHMEM with #include <avr/pgmspace.h> from:
+```
+iridescentBUILD/iridescentmicropython/ports/libmicropython/board_init.c
+```
+AND BOTH:
+```
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.c
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.h
+```
+By inserting in: iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/startup.c in function void ResetHandler(void)
+
+LD Script is located:
+```
+iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/imxmrt_ld/imxrt1062_t41.ld
+```
