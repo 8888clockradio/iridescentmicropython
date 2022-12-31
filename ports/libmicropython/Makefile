@@ -16,6 +16,7 @@ COMPILER_ROOT = $(abspath ../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x8
 
 ADD_BIN = bin
 COMPILERPATH = $(COMPILER_ROOT)/bin
+include $(abspath ../../toolchain.mk)
 CROSS_COMPILE = $(COMPILERPATH)/arm-none-eabi-
 PATH := $(COMPILER_ROOT)/$(ADD_BIN):$(PATH)
 MICROPY_PY_LWIP = 1
@@ -27,6 +28,8 @@ define newline
 
 
 endef
+
+
 #&_mp_sstack: 0x20278000 &_mp_estack: 0x20280000
 # Set default values for optional variables
 #MICROPY_HW_FLASH_SIZE ?= 0x790000
@@ -653,7 +656,7 @@ libRA8875Clean:
 
 
 libSDL3:
-	mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) && $(MAKE) install
+	mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)  && $(MAKE) install
 	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
 	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	#cp -R IRIDESCENT/SDL3-main/BUILD/CMakeFiles/SDL3.dir/src/dynapi/SDL_dynapi.c.obj $(LIBPATHFILEDROP)/
@@ -664,7 +667,7 @@ libSDL3Clean:
 
 
 libSDL2Compat:
-	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} && $(MAKE) install
+	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
 	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
 	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
