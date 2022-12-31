@@ -69,12 +69,23 @@ generate extern blocks on FLASHMEM with #include <avr/pgmspace.h> from:
 ```
 iridescentBUILD/iridescentmicropython/ports/libmicropython/board_init.c
 ```
-AND BOTH:
+AND THESE:
 ```
 iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.c
 iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/system_MIMXRT1062.h
+iridescentBUILD/iridescentmicropython/ports/libmicropython/boards/MIMXRT1062_clock_config.c
+iridescentBUILD/iridescentmicropython/ports/libmicropython/boards/MIMXRT1062_clock_config.h
 ```
 By inserting in: iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/startup.c in function void ResetHandler(void)
+
+ALSO THESE FILES PROBABLY NEED FLASHMEM TOO (just in .h files) on functions (plus #include <avr/pgmspace.h>):
+```
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/fsl_device_registers.h
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_gpio.h
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_iomuxc.h
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h
+iridescentBUILD/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpuart.h
+```
 
 LD Script is located:
 ```
