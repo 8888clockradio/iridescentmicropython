@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 35;
+const instrument_data* builtInInstruments[35] = {&AcousticGuitarsJNvTwoOpenMuted, &AcousticGuitarsJNvTwoOpenLongRings, &AcousticGuitarsJNvTwoFretNoise, &AcousticGuitarsJNvTwoHRM, &AcousticGuitarsJNvTwoNylonFinger, &AcousticGuitarsJNvTwoSpanish, &AcousticGuitarsJNvTwoNylonFingerNoSli, &AcousticGuitarsJNvTwoSpanishNoSlide, &AcousticGuitarsJNvTwoNylonGuitarOne, &AcousticGuitarsJNvTwoTyrosNylonZero, &AcousticGuitarsJNvTwoTyrosNylonOne, };

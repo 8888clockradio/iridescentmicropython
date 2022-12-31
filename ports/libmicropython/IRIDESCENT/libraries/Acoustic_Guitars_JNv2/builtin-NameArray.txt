@@ -1,0 +1,1 @@
+String builtInInstrumentsName[35] = {"OpenMuted", "OpenLongRings", "FretNoise", "HRM", "NylonFinger", "Spanish", "NylonFingerNoSli", "SpanishNoSlide", "NylonGuitar1", "TyrosNylon0", "TyrosNylon1", };
