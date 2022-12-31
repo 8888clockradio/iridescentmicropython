@@ -1,0 +1,2 @@
+int builtinInstrumentNumbers = 18;
+const instrument_data* builtInInstruments[18] = {&JRanalogInstrumentOneEight, &JRanalogInstrumentOneNine, &JRanalogInstrumentOneSix, &JRanalogInstrumentOneFive, &JRanalogInstrumentOneFour, &JRanalogInstrumentOneThree, &JRanalogInstrumentOneTwo, &JRanalogInstrumentOneOne, &JRanalogInstrumentOneZero, &JRanalogInstrumentNine, &JRanalogInstrumentEight, &JRanalogInstrumentSeven, &JRanalogInstrumentSix, &JRanalogInstrumentFive, &JRanalogInstrumentFour, &JRanalogInstrumentThree, &JRanalogInstrumentTwo, &JRanalogInstrumentOne, };
