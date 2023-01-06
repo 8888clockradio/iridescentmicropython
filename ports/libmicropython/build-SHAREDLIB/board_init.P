@@ -1,4 +1,4 @@
-build-SHAREDLIB/board_init.o: board_init.c ../../py/runtime.h \
+build-SHAREDLIB/board_init.o: board_init.c \
  IRIDESCENT/cores-master/teensy4/avr/pgmspace.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/stdlib.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
@@ -21,7 +21,7 @@ build-SHAREDLIB/board_init.o: board_init.c ../../py/runtime.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
- ../../py/mpstate.h ../../py/mpconfig.h mpconfigport.h \
+ ../../py/runtime.h ../../py/mpstate.h ../../py/mpconfig.h mpconfigport.h \
  boards/TEENSY41/mpconfigboard.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/assert.h \
@@ -70,7 +70,7 @@ build-SHAREDLIB/board_init.o: board_init.c ../../py/runtime.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpuart.h \
  modmachine.h
-board_init.c ../../py/runtime.h :
+board_init.c :
  IRIDESCENT/cores-master/teensy4/avr/pgmspace.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/stdlib.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h :
@@ -93,7 +93,7 @@ board_init.c ../../py/runtime.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h :
- ../../py/mpstate.h ../../py/mpconfig.h mpconfigport.h :
+ ../../py/runtime.h ../../py/mpstate.h ../../py/mpconfig.h mpconfigport.h :
  boards/TEENSY41/mpconfigboard.h :
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h :
  /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/arm-none-eabi/include/assert.h :

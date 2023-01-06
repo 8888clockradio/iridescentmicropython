@@ -70,9 +70,9 @@ build-SHAREDLIB/extmod/machine_pwm.o: ../../extmod/machine_pwm.c \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_gpio.h \
  build-SHAREDLIB/genhdr/pins.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h \
- ../../ports/mimxrt/modmachine.h ../../ports/mimxrt/pin.h \
+ modmachine.h pin.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_iomuxc.h \
- ../../ports/mimxrt/hal/pwm_backport.h \
+ hal/pwm_backport.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_pwm.h \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_qtmr.h
 ../../extmod/machine_pwm.c :
@@ -147,8 +147,8 @@ build-SHAREDLIB/extmod/machine_pwm.o: ../../extmod/machine_pwm.c \
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_gpio.h :
  build-SHAREDLIB/genhdr/pins.h :
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h :
- ../../ports/mimxrt/modmachine.h ../../ports/mimxrt/pin.h :
+ modmachine.h pin.h :
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_iomuxc.h :
- ../../ports/mimxrt/hal/pwm_backport.h :
+ hal/pwm_backport.h :
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_pwm.h :
  ../../lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_qtmr.h :

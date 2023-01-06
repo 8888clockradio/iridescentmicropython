@@ -61,16 +61,11 @@ typedef enum {
 #undef DEF_RULE_NC
 } pn_kind_t;
 
-<<<<<<< HEAD
 // Whether a mp_parse_node_struct_t that has pns->kind == PN_testlist_comp
 // corresponds to a list comprehension or generator.
 #define MP_PARSE_NODE_TESTLIST_COMP_HAS_COMP_FOR(pns) \
     (MP_PARSE_NODE_STRUCT_NUM_NODES(pns) == 2 && \
     MP_PARSE_NODE_IS_STRUCT_KIND(pns->nodes[1], PN_comp_for))
-=======
-#define EMIT(fun, arg...) (emit_##fun(comp->emit, ##arg))
-#define EMIT_COMMON(fun, arg...) (emit_common_##fun(comp->pass, comp->scope_cur, ##arg))
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 
 #define NEED_METHOD_TABLE MICROPY_EMIT_NATIVE
 
@@ -538,18 +533,11 @@ STATIC void c_assign(compiler_t *comp, mp_parse_node_t pn, assign_kind_t assign_
             switch (assign_kind) {
                 case ASSIGN_STORE:
                 case ASSIGN_AUG_STORE:
-<<<<<<< HEAD
                     compile_store_id(comp, arg);
                     break;
                 case ASSIGN_AUG_LOAD:
                 default:
                     compile_load_id(comp, arg);
-=======
-                    EMIT_COMMON(store_id, comp->emit, arg);
-                    break;
-                case ASSIGN_AUG_LOAD:
-                    EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, arg);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
                     break;
             }
         } else {
@@ -963,17 +951,12 @@ STATIC void compile_decorated(compiler_t *comp, mp_parse_node_struct_t *pns) {
     }
 
     // store func/class object into name
-<<<<<<< HEAD
     compile_store_id(comp, body_name);
-=======
-    EMIT_COMMON(store_id, comp->emit, body_name);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 }
 
 STATIC void compile_funcdef(compiler_t *comp, mp_parse_node_struct_t *pns) {
     qstr fname = compile_funcdef_helper(comp, pns, comp->scope_cur->emit_options);
     // store function object into function name
-<<<<<<< HEAD
     compile_store_id(comp, fname);
 }
 
@@ -982,16 +965,6 @@ STATIC void c_del_stmt(compiler_t *comp, mp_parse_node_t pn) {
         compile_delete_id(comp, MP_PARSE_NODE_LEAF_ARG(pn));
     } else if (MP_PARSE_NODE_IS_STRUCT_KIND(pn, PN_atom_expr_normal)) {
         mp_parse_node_struct_t *pns = (mp_parse_node_struct_t *)pn;
-=======
-    EMIT_COMMON(store_id, comp->emit, fname);
-}
-
-void c_del_stmt(compiler_t *comp, py_parse_node_t pn) {
-    if (PY_PARSE_NODE_IS_ID(pn)) {
-        EMIT_COMMON(delete_id, comp->emit, PY_PARSE_NODE_LEAF_ARG(pn));
-    } else if (PY_PARSE_NODE_IS_STRUCT_KIND(pn, PN_power)) {
-        py_parse_node_struct_t *pns = (py_parse_node_struct_t*)pn;
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 
         compile_node(comp, pns->nodes[0]); // base of the atom_expr_normal node
 
@@ -1175,21 +1148,12 @@ STATIC void do_import_name(compiler_t *comp, mp_parse_node_t pn, qstr *q_base) {
     }
 }
 
-<<<<<<< HEAD
 STATIC void compile_dotted_as_name(compiler_t *comp, mp_parse_node_t pn) {
     EMIT_ARG(load_const_small_int, 0); // level 0 import
     EMIT_ARG(load_const_tok, MP_TOKEN_KW_NONE); // not importing from anything
     qstr q_base;
     do_import_name(comp, pn, &q_base);
     compile_store_id(comp, q_base);
-=======
-void compile_dotted_as_name(compiler_t *comp, py_parse_node_t pn) {
-    EMIT(load_const_small_int, 0); // ??
-    EMIT(load_const_tok, PY_TOKEN_KW_NONE);
-    qstr q1, q2;
-    do_import_name(comp, pn, &q1, &q2);
-    EMIT_COMMON(store_id, comp->emit, q1);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 }
 
 STATIC void compile_import_name(compiler_t *comp, mp_parse_node_struct_t *pns) {
@@ -1217,7 +1181,6 @@ STATIC void compile_import_from(compiler_t *comp, mp_parse_node_struct_t *pns) {
             // Not a relative import
             break;
         }
-<<<<<<< HEAD
 
         // get the list of . and/or ...'s
         mp_parse_node_t *nodes;
@@ -1279,31 +1242,12 @@ STATIC void compile_import_from(compiler_t *comp, mp_parse_node_struct_t *pns) {
                 compile_store_id(comp, id2);
             } else {
                 compile_store_id(comp, MP_PARSE_NODE_LEAF_ARG(pns3->nodes[1]));
-=======
-        if (n == 1) {
-            EMIT(load_const_verbatim_str, ",");
-        }
-        EMIT(load_const_verbatim_str, ")");
-        EMIT(load_const_verbatim_end);
-        qstr dummy_q, id1;
-        do_import_name(comp, pns->nodes[0], &dummy_q, &id1);
-        for (int i = 0; i < n; i++) {
-            assert(PY_PARSE_NODE_IS_STRUCT_KIND(pn_nodes[i], PN_import_as_name));
-            py_parse_node_struct_t *pns3 = (py_parse_node_struct_t*)pn_nodes[i];
-            qstr id2 = PY_PARSE_NODE_LEAF_ARG(pns3->nodes[0]); // should be id
-            EMIT(import_from, id2);
-            if (PY_PARSE_NODE_IS_NULL(pns3->nodes[1])) {
-                EMIT_COMMON(store_id, comp->emit, id2);
-            } else {
-                EMIT_COMMON(store_id, comp->emit, PY_PARSE_NODE_LEAF_ARG(pns3->nodes[1]));
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
             }
         }
         EMIT(pop_top);
     }
 }
 
-<<<<<<< HEAD
 STATIC void compile_declare_global(compiler_t *comp, mp_parse_node_t pn, id_info_t *id_info) {
     if (id_info->kind != ID_INFO_KIND_UNDECIDED && id_info->kind != ID_INFO_KIND_GLOBAL_EXPLICIT) {
         compile_syntax_error(comp, pn, MP_ERROR_TEXT("identifier redefined as global"));
@@ -1349,47 +1293,20 @@ STATIC void compile_global_nonlocal_stmt(compiler_t *comp, mp_parse_node_struct_
             } else {
                 compile_declare_nonlocal(comp, (mp_parse_node_t)pns, id_info);
             }
-=======
-void compile_global_stmt(compiler_t *comp, py_parse_node_struct_t *pns) {
-    if (PY_PARSE_NODE_IS_LEAF(pns->nodes[0])) {
-        EMIT_COMMON(declare_global, PY_PARSE_NODE_LEAF_ARG(pns->nodes[0]));
-    } else {
-        pns = (py_parse_node_struct_t*)pns->nodes[0];
-        int num_nodes = PY_PARSE_NODE_STRUCT_NUM_NODES(pns);
-        for (int i = 0; i < num_nodes; i++) {
-            EMIT_COMMON(declare_global, PY_PARSE_NODE_LEAF_ARG(pns->nodes[i]));
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
         }
     }
 }
 
-<<<<<<< HEAD
 STATIC void compile_assert_stmt(compiler_t *comp, mp_parse_node_struct_t *pns) {
     // with optimisations enabled we don't compile assertions
     if (MP_STATE_VM(mp_optimise_value) != 0) {
         return;
-=======
-void compile_nonlocal_stmt(compiler_t *comp, py_parse_node_struct_t *pns) {
-    if (PY_PARSE_NODE_IS_LEAF(pns->nodes[0])) {
-        EMIT_COMMON(declare_nonlocal, PY_PARSE_NODE_LEAF_ARG(pns->nodes[0]));
-    } else {
-        pns = (py_parse_node_struct_t*)pns->nodes[0];
-        int num_nodes = PY_PARSE_NODE_STRUCT_NUM_NODES(pns);
-        for (int i = 0; i < num_nodes; i++) {
-            EMIT_COMMON(declare_nonlocal, PY_PARSE_NODE_LEAF_ARG(pns->nodes[i]));
-        }
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
     }
 
     uint l_end = comp_next_label(comp);
     c_if_cond(comp, pns->nodes[0], true, l_end);
-<<<<<<< HEAD
     EMIT_LOAD_GLOBAL(MP_QSTR_AssertionError); // we load_global instead of load_id, to be consistent with CPython
     if (!MP_PARSE_NODE_IS_NULL(pns->nodes[1])) {
-=======
-    EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, comp->qstr_assertion_error);
-    if (!PY_PARSE_NODE_IS_NULL(pns->nodes[1])) {
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
         // assertion message
         compile_node(comp, pns->nodes[1]);
         EMIT_ARG(call_function, 1, 0, 0);
@@ -1723,11 +1640,7 @@ STATIC void compile_try_except(compiler_t *comp, mp_parse_node_t pn_body, int n_
         if (qstr_exception_local == 0) {
             EMIT(pop_top);
         } else {
-<<<<<<< HEAD
             compile_store_id(comp, qstr_exception_local);
-=======
-            EMIT_COMMON(store_id, comp->emit, qstr_exception_local);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
         }
 
         // If the exception is bound to a variable <e> then the <body> of the
@@ -1754,32 +1667,9 @@ STATIC void compile_try_except(compiler_t *comp, mp_parse_node_t pn_body, int n_
             compile_decrease_except_level(comp);
         }
 
-<<<<<<< HEAD
         EMIT_ARG(pop_except_jump, l2, true);
         EMIT_ARG(label_assign, end_finally_label);
         EMIT_ARG(adjust_stack_size, 1); // stack adjust for the exception instance
-=======
-        int l3;
-        if (qstr_exception_local != 0) {
-            l3 = EMIT(label_new);
-            EMIT(setup_finally, l3);
-        }
-        compile_node(comp, pns_except->nodes[1]);
-        if (qstr_exception_local != 0) {
-            EMIT(pop_block);
-        }
-        EMIT(pop_except);
-        if (qstr_exception_local != 0) {
-            EMIT(load_const_tok, PY_TOKEN_KW_NONE);
-            EMIT(label_assign, l3);
-            EMIT(load_const_tok, PY_TOKEN_KW_NONE);
-            EMIT_COMMON(store_id, comp->emit, qstr_exception_local);
-            EMIT_COMMON(delete_id, comp->emit, qstr_exception_local);
-            EMIT(end_finally);
-        }
-        EMIT(jump, l2);
-        EMIT(label_assign, end_finally_label);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
     }
 
     compile_decrease_except_level(comp);
@@ -2813,11 +2703,7 @@ STATIC void compile_dictorsetmaker_item(compiler_t *comp, mp_parse_node_struct_t
 STATIC void compile_classdef(compiler_t *comp, mp_parse_node_struct_t *pns) {
     qstr cname = compile_classdef_helper(comp, pns, comp->scope_cur->emit_options);
     // store class object into class name
-<<<<<<< HEAD
     compile_store_id(comp, cname);
-=======
-    EMIT_COMMON(store_id, comp->emit, cname);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 }
 
 STATIC void compile_yield_expr(compiler_t *comp, mp_parse_node_struct_t *pns) {
@@ -2875,7 +2761,6 @@ STATIC const compile_function_t compile_function[] = {
 STATIC void compile_node(compiler_t *comp, mp_parse_node_t pn) {
     if (MP_PARSE_NODE_IS_NULL(pn)) {
         // pass
-<<<<<<< HEAD
     } else if (MP_PARSE_NODE_IS_SMALL_INT(pn)) {
         mp_int_t arg = MP_PARSE_NODE_LEAF_SMALL_INT(pn);
         EMIT_ARG(load_const_small_int, arg);
@@ -2898,19 +2783,6 @@ STATIC void compile_node(compiler_t *comp, mp_parse_node_t pn) {
                     EMIT_ARG(load_const_tok, arg);
                 }
                 break;
-=======
-    } else if (PY_PARSE_NODE_IS_LEAF(pn)) {
-        int arg = PY_PARSE_NODE_LEAF_ARG(pn);
-        switch (PY_PARSE_NODE_LEAF_KIND(pn)) {
-            case PY_PARSE_NODE_ID: EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, arg); break;
-            case PY_PARSE_NODE_SMALL_INT: EMIT(load_const_small_int, arg); break;
-            case PY_PARSE_NODE_INTEGER: EMIT(load_const_int, arg); break;
-            case PY_PARSE_NODE_DECIMAL: EMIT(load_const_dec, arg); break;
-            case PY_PARSE_NODE_STRING: EMIT(load_const_str, arg, false); break;
-            case PY_PARSE_NODE_BYTES: EMIT(load_const_str, arg, true); break;
-            case PY_PARSE_NODE_TOKEN: EMIT(load_const_tok, arg); break;
-            default: assert(0);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
         }
     } else {
         mp_parse_node_struct_t *pns = (mp_parse_node_struct_t *)pn;
@@ -3101,7 +2973,6 @@ STATIC void check_for_doc_string(compiler_t *comp, mp_parse_node_t pn) {
     }
 
     // check the first statement for a doc string
-<<<<<<< HEAD
     if (MP_PARSE_NODE_IS_STRUCT_KIND(pn, PN_expr_stmt)) {
         mp_parse_node_struct_t *pns = (mp_parse_node_struct_t *)pn;
         if ((MP_PARSE_NODE_IS_LEAF(pns->nodes[0])
@@ -3112,17 +2983,6 @@ STATIC void check_for_doc_string(compiler_t *comp, mp_parse_node_t pn) {
             compile_node(comp, pns->nodes[0]);
             // store the doc string
             compile_store_id(comp, MP_QSTR___doc__);
-=======
-    if (PY_PARSE_NODE_IS_STRUCT_KIND(pn, PN_expr_stmt)) {
-        py_parse_node_struct_t* pns = (py_parse_node_struct_t*)pn;
-        if (PY_PARSE_NODE_IS_LEAF(pns->nodes[0])) {
-            int kind = PY_PARSE_NODE_LEAF_KIND(pns->nodes[0]);
-            if (kind == PY_PARSE_NODE_STRING) {
-                compile_node(comp, pns->nodes[0]); // a doc string
-                // store doc string
-                EMIT_COMMON(store_id, comp->emit, comp->qstr___doc__);
-            }
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
         }
     }
     #else
@@ -3236,7 +3096,6 @@ STATIC bool compile_scope(compiler_t *comp, scope_t *scope, pass_kind_t pass) {
         #endif
         }
 
-<<<<<<< HEAD
         // There are 4 slots on the stack for the iterator, and the first one is
         // NULL to indicate that the second one points to the iterator object.
         if (scope->kind == SCOPE_GEN_EXPR) {
@@ -3251,18 +3110,6 @@ STATIC bool compile_scope(compiler_t *comp, scope_t *scope, pass_kind_t pass) {
         }
 
         compile_scope_comp_iter(comp, pns_comp_for, pns->nodes[0], 0);
-=======
-        int l_end = EMIT(label_new);
-        int l_top = EMIT(label_new);
-        EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, qstr_arg);
-        EMIT(label_assign, l_top);
-        EMIT(for_iter, l_end);
-        c_assign(comp, pns_comp_for->nodes[0], ASSIGN_STORE);
-        compile_scope_comp_iter(comp, pns_comp_for->nodes[2], pns->nodes[0], l_top, 0);
-        EMIT(jump, l_top);
-        EMIT(label_assign, l_end);
-        EMIT(for_iter_end);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 
         if (scope->kind == SCOPE_GEN_EXPR) {
             EMIT_ARG(load_const_tok, MP_TOKEN_KW_NONE);
@@ -3278,7 +3125,6 @@ STATIC bool compile_scope(compiler_t *comp, scope_t *scope, pass_kind_t pass) {
             scope_find_or_add_id(scope, MP_QSTR___class__, ID_INFO_KIND_LOCAL);
         }
 
-<<<<<<< HEAD
         #if MICROPY_PY_SYS_SETTRACE
         EMIT_ARG(set_source_line, pns->source_line);
         #endif
@@ -3286,14 +3132,6 @@ STATIC bool compile_scope(compiler_t *comp, scope_t *scope, pass_kind_t pass) {
         compile_store_id(comp, MP_QSTR___module__);
         EMIT_ARG(load_const_str, MP_PARSE_NODE_LEAF_ARG(pns->nodes[0])); // 0 is class name
         compile_store_id(comp, MP_QSTR___qualname__);
-=======
-        EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, comp->qstr___locals__);
-        EMIT(store_locals);
-        EMIT_COMMON(load_id, comp->qstr___class__, comp->emit, comp->qstr___name__);
-        EMIT_COMMON(store_id, comp->emit, comp->qstr___module__);
-        EMIT(load_const_id, PY_PARSE_NODE_LEAF_ARG(pns->nodes[0])); // 0 is class name
-        EMIT_COMMON(store_id, comp->emit, comp->qstr___qualname__);
->>>>>>> 492d08245 (Use macro EMIT_COMMON for emit_common calls.)
 
         check_for_doc_string(comp, pns->nodes[2]);
         compile_node(comp, pns->nodes[2]); // 2 is class body
@@ -3589,7 +3427,7 @@ STATIC void scope_compute_things(scope_t *scope) {
 #if !MICROPY_PERSISTENT_CODE_SAVE
 STATIC
 #endif
-mp_compiled_module_t mp_compile_to_raw_code(mp_parse_tree_t *parse_tree, qstr source_file, bool is_repl, mp_module_context_t *context) {
+void mp_compile_to_raw_code(mp_parse_tree_t *parse_tree, qstr source_file, bool is_repl, mp_compiled_module_t *cm) {
     // put compiler state on the stack, it's relatively small
     compiler_t comp_state = {0};
     compiler_t *comp = &comp_state;
@@ -3730,26 +3568,24 @@ mp_compiled_module_t mp_compile_to_raw_code(mp_parse_tree_t *parse_tree, qstr so
     }
 
     // construct the global qstr/const table for this module
-    mp_compiled_module_t cm;
-    cm.rc = module_scope->raw_code;
-    cm.context = context;
+    cm->rc = module_scope->raw_code;
     #if MICROPY_PERSISTENT_CODE_SAVE
-    cm.has_native = false;
+    cm->has_native = false;
     #if MICROPY_EMIT_NATIVE
     if (emit_native != NULL) {
-        cm.has_native = true;
+        cm->has_native = true;
     }
     #endif
     #if MICROPY_EMIT_INLINE_ASM
     if (comp->emit_inline_asm != NULL) {
-        cm.has_native = true;
+        cm->has_native = true;
     }
     #endif
-    cm.n_qstr = comp->emit_common.qstr_map.used;
-    cm.n_obj = comp->emit_common.const_obj_list.len;
+    cm->n_qstr = comp->emit_common.qstr_map.used;
+    cm->n_obj = comp->emit_common.const_obj_list.len;
     #endif
     if (comp->compile_error == MP_OBJ_NULL) {
-        mp_emit_common_populate_module_context(&comp->emit_common, source_file, context);
+        mp_emit_common_populate_module_context(&comp->emit_common, source_file, cm->context);
 
         #if MICROPY_DEBUG_PRINTERS
         // now that the module context is valid, the raw codes can be printed
@@ -3757,7 +3593,7 @@ mp_compiled_module_t mp_compile_to_raw_code(mp_parse_tree_t *parse_tree, qstr so
             for (scope_t *s = comp->scope_head; s != NULL; s = s->next) {
                 mp_raw_code_t *rc = s->raw_code;
                 if (rc->kind == MP_CODE_BYTECODE) {
-                    mp_bytecode_print(&mp_plat_print, rc, &cm.context->constants);
+                    mp_bytecode_print(&mp_plat_print, rc, &cm->context->constants);
                 }
             }
         }
@@ -3791,14 +3627,13 @@ mp_compiled_module_t mp_compile_to_raw_code(mp_parse_tree_t *parse_tree, qstr so
     if (comp->compile_error != MP_OBJ_NULL) {
         nlr_raise(comp->compile_error);
     }
-
-    return cm;
 }
 
 mp_obj_t mp_compile(mp_parse_tree_t *parse_tree, qstr source_file, bool is_repl) {
-    mp_module_context_t *context = m_new_obj(mp_module_context_t);
-    context->module.globals = mp_globals_get();
-    mp_compiled_module_t cm = mp_compile_to_raw_code(parse_tree, source_file, is_repl, context);
+    mp_compiled_module_t cm;
+    cm.context = m_new_obj(mp_module_context_t);
+    cm.context->module.globals = mp_globals_get();
+    mp_compile_to_raw_code(parse_tree, source_file, is_repl, &cm);
     // return function that executes the outer module
     return mp_make_function_from_raw_code(cm.rc, cm.context, NULL);
 }

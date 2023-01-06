@@ -18,7 +18,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/sdl2-config.in"
   "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/sdl2_compat.pc.in"
   "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/toolchain.cmake"
-  "/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/toolchainSetup.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"

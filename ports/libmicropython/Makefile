@@ -7,7 +7,7 @@ BUILD ?= build-SHAREDLIB
 PORT ?= /dev/ttyACM0
 CROSS_COMPILE ?= arm-none-eabi-
 GIT_SUBMODULES += lib/tinyusb lib/nxp_driver lib/lwip lib/mbedtls
-LIBPATHFILEDROP = $(abspath ../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#LIBPATHFILEDROP = $(abspath ../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
 # MicroPython feature configurations
 FROZEN_MANIFEST ?= boards/manifest.py
 MICROPY_VFS_LFS2 ?= 1
