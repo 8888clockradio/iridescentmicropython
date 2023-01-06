@@ -128,7 +128,7 @@ COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-d
 
 endif
 
-include $(abspath ../../../../../../toolchain.mk)
+include $(abspath ../../../../../toolchain.mk)
 
 INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers)
 
