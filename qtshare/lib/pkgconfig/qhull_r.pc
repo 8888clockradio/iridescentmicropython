@@ -1,4 +1,4 @@
-prefix=/Users/iridescent/iridescent/iridescentCoconutSynth2/qtshare
+prefix=/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/qtshare
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
