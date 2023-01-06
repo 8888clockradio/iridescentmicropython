@@ -76,7 +76,6 @@ byte mac[] = {
  */
 //https://docs.micropython.org/en/latest/develop/porting.html
 #include "py/help_text.h"
-#include "mpconfigport.h"
 #include "mpthreadport.h"
 #include "py/compile.h"
 #include "py/runtime.h"
@@ -245,15 +244,44 @@ void micropython_thread(int data) {
     }
     */
     
+    //Serial.println("gc_init(heap, heap + sizeof(heap));");
+    gc_init(heap, heap + sizeof(heap));
+    //gc_init(&_gc_heap_start, &_gc_heap_end);
+    //Serial.println("mp_init();");
+    mp_init();
+    
+#if MICROPY_PY_NETWORK
+    //Serial.println("mod_network_init();");
+    mod_network_init();
+#endif
+    // Initialise sub-systems.
+    //Serial.println("readline_init0();");
+    readline_init0();
+    
+    // Execute _boot.py to set up the filesystem.
+    //Serial.println("pyexec_frozen_module(\"_boot.py\");");
+    pyexec_frozen_module("_boot.py");
+    
+    // Execute user scripts.
+    int ret = pyexec_file_if_exists("boot.py");
+    if (ret & PYEXEC_FORCED_EXIT) {
+        Serial.println("soft_reset_exit");
+        //goto soft_reset_exit;
+    }
+    // Do not execute main.py if boot.py failed
+    if (pyexec_mode_kind == PYEXEC_MODE_FRIENDLY_REPL && ret != 0) {
+        ret = pyexec_file_if_exists("main.py");
+        if (ret & PYEXEC_FORCED_EXIT) {
+            Serial.println("soft_reset_exit");
+            //goto soft_reset_exit;
+        }
+    }
     while (1) {
-        Serial.println("while (1)");
         if (pyexec_mode_kind == PYEXEC_MODE_RAW_REPL) {
             if (pyexec_raw_repl() != 0) {
-                break;
             }
         } else {
             if (pyexec_friendly_repl() != 0) {
-                break;
             }
         }
     }
@@ -261,11 +289,6 @@ void micropython_thread(int data) {
 
 
 void setup() {
-    //board_init();
-    //ticks_init();
-    //tusb_init();
-    //led_init();
-    //pendsv_init();
     //Ethernet.begin(mac, ip);
     Serial.begin(115200);
     //SerialUSB1.begin(115200);
@@ -339,50 +362,12 @@ void setup() {
         //delay(1000);
         //Serial.println("connecting...");
         
-        //Serial.println("mp_stack_ctrl_init();");
-        //mp_stack_ctrl_init();
-        ////mp_stack_set_top(&theStack + (4096000 - 1));
-        ////mp_stack_set_limit((&theStack + (4096000 - 1)) - &theStack - 1024);
-        //Serial.println("mp_stack_set_top(&_estack);");
-        //mp_stack_set_top(&_estack);
-        //mp_stack_set_limit(&_estack - &_sstack - 1024);
-        Serial.println("mp_stack_set_top(&_estack);");
+        Serial.println("mp_stack_ctrl_init();");
+        mp_stack_ctrl_init();
+        //mp_stack_set_top(&theStack + (4096000 - 1));
+        //mp_stack_set_limit((&theStack + (4096000 - 1)) - &theStack - 1024);
         mp_stack_set_top(&_estack);
-        //Serial.println("mp_stack_set_limit(&_estack - &_sstack - 1024);");
-        //mp_stack_set_limit(&_estack - &_sstack - 1024);
-
-        //Serial.println("gc_init(heap, heap + sizeof(heap));");
-        //gc_init(heap, heap + sizeof(heap));
-        ////gc_init(&_gc_heap_start, &_gc_heap_end);
-        //Serial.println("mp_init();");
-        //mp_init();
-
-    #if MICROPY_PY_NETWORK
-        Serial.println("mod_network_init();");
-        mod_network_init();
-    #endif
-        // Initialise sub-systems.
-        Serial.println("readline_init0();");
-        readline_init0();
-        
-        // Execute _boot.py to set up the filesystem.
-        Serial.println("pyexec_frozen_module(\"_boot.py\");");
-        pyexec_frozen_module("_boot.py");
-        
-        // Execute user scripts.
-        int ret = pyexec_file_if_exists("boot.py");
-        if (ret & PYEXEC_FORCED_EXIT) {
-            Serial.println("soft_reset_exit");
-            //goto soft_reset_exit;
-        }
-        // Do not execute main.py if boot.py failed
-        if (pyexec_mode_kind == PYEXEC_MODE_FRIENDLY_REPL && ret != 0) {
-            ret = pyexec_file_if_exists("main.py");
-            if (ret & PYEXEC_FORCED_EXIT) {
-                Serial.println("soft_reset_exit");
-                //goto soft_reset_exit;
-            }
-        }
+        mp_stack_set_limit(&_estack - &_sstack - 1024);
         //
         //#if MICROPY_PY_LWIP
         //    // lwIP doesn't allow to reinitialise itself by subsequent calls to this function

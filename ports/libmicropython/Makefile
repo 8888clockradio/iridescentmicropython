@@ -802,10 +802,10 @@ $(BUILD)/hal/%.o: %.S
 $(BUILD)/mpthreadport.o:
 	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=c++11 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) mpthreadport.cpp -o $(BUILD)/mpthreadport.o
 
-$(BUILD)/main.o:
-	rm -f $(BUILD)/main.o main.d
-	$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -std=gnu++20 main.cpp -o $(BUILD)/main.o
-	#cp $(BUILD)/main.o $(LIBPATHFILEDROP)/main.o
+$(BUILD)/micropython_main.o:
+	rm -f $(BUILD)/micropython_main.o micropython_main.d
+	$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -std=gnu++20 micropython_main.cpp -o $(BUILD)/micropython_main.o
+	cp $(BUILD)/micropython_main.o $(LIBPATHFILEDROP)/micropython_main.o
 
 $(BUILD)/mphalport.o:
 	$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) mphalport.cpp -o $(BUILD)/mphalport.o
@@ -826,7 +826,7 @@ $(BUILD)/libmicropython.a: $(RUST)
 	$(AR) rcs $(BUILD)/libmicropython.a $<
 	$(CROSS_COMPILE)size $@
 	
-$(BUILD)/$(TARGET).elf: $(RUST) $(BUILD)/main.o
+$(BUILD)/$(TARGET).elf: $(RUST)
 	#rm -f $(BUILD)/mphalport.o mphalport.d
 	#$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) mphalport.cpp -o $(BUILD)/mphalport.o
 	#rm -f $(BUILD)/board_init.o board_init.d

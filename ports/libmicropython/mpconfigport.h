@@ -28,14 +28,6 @@
 #define mpconfigport_h_h_h
 
 
-#define __MPU_PRESENT                  1         /**< Defines if an MPU is present or not */
-#define __ICACHE_PRESENT               1         /**< Defines if an ICACHE is present or not */
-#define __DCACHE_PRESENT               1         /**< Defines if an DCACHE is present or not */
-#define __DTCM_PRESENT                 1         /**< Defines if an DTCM is present or not */
-#define __NVIC_PRIO_BITS               4         /**< Number of priority bits implemented in the NVIC */
-#define __Vendor_SysTickConfig         0         /**< Vendor specific implementation of SysTickConfig is defined */
-#define __FPU_PRESENT                  1         /**< Defines if an FPU is present or not */
-
 //#if MICROPY_PY_BUILTINS_FLOAT
 //typedef struct _mp_obj_float_t {
 //    mp_obj_base_t base;

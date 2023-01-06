@@ -30,7 +30,7 @@
 
 #include <Arduino.h>
 
-#ifndef MELTYMAIN_H_EXTERN
+#ifdef MELTYMAIN_H_EXTERN
 extern "C" int main(void) __attribute__((section(".flashmem"), noinline));
 extern "C" int main(void)
 {
