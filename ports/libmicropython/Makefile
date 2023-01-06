@@ -46,7 +46,7 @@ CC=$(COMPILER_ROOT)/bin/$(CROSS_COMPILE)gcc
 SUPPORTS_HARDWARE_FP_SINGLE = 1
 SUPPORTS_HARDWARE_FP_DOUBLE = 1
 
-TARGET := micropython
+TARGET := iridescentmicropython
 # qstr definitions (must come before including py.mk)
 QSTR_DEFS = qstrdefsport.h
 QSTR_GLOBAL_DEPENDENCIES = $(BOARD_DIR)/mpconfigboard.h
