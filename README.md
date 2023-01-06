@@ -49,4 +49,3 @@ cd iridescentmicropython/ports/libmicropython
 make clean; make DEBUG V=1 DEBUG=1
 ```
 
-oh i forgot, i need to implement the /Applications/Teensyduino.app of which is required to load the firmware
