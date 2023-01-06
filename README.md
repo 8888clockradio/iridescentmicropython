@@ -1,9 +1,13 @@
 iridescentmicropython
 ANY COMMERCIAL USE OF ANY IRIDESCENT FILES REQUIRES LICENSING contact george@georgerosar.com
+please email george@georgerosar.com if you want to be a contributer
+
 
 Copyright 2022 George Charles Rosar II
 
 Teensy 4.1 should have at least 16MB or more of external RAM soldered into Teensy 4.1 PSRAM pads. Should either be soldered or connected to the Teensy Audio Adapter Card, also Teensy Audio Adapter Card should have an additional 2Gbit of Flash RAM soldered in the Audio Adapter.
+
+The MOST IMPORTANT development issue is getting micropython to recieve and send text to Serial.print() or Serial.read(), mphalport.cpp is not functioning properly.
 
 installing
 ```
