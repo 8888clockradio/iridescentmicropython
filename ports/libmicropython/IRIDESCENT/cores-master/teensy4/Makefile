@@ -130,7 +130,8 @@ endif
 
 include $(abspath ../../../../../toolchain.mk)
 
-INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers)
+INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/build-SHAREDLIB) -I$(abspath ../../freertos-teensy-master/src)
+INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/)
 
 #************************************************************************
 # Settings below this point usually do not need to be edited
@@ -140,10 +141,10 @@ INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/
 CPPFLAGS = -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD
 
 # compiler options for C++ only
-CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
+CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
 
 # compiler options for C only
-CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
+CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
 
 # linker options
 LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
@@ -196,13 +197,12 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 $(TARGET).elf: $(OBJS) $(MCU_LD)
 	$(CXX) -E -x c $(LDDEFINES) ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) $(OBJS) -o $(TARGET).elf
-	#$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
+	$(CXX) -Tlink.ld $(CPUOPTIONS) -Wl,--whole-archive -lmicropython -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhull_r -Wl,--no-whole-archive $(OBJS) -o $(TARGET).elf
+	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a
-
-#%.hex: %.elf
-#	$(SIZE) $<
+#%../../../build-SHAREDLIB/.hex: %.elf
+#	../../../build-SHAREDLIB/$(SIZE) $<
 #	$(OBJCOPY) -O ihex -R .eeprom $< $@
 #ifneq (,$(wildcard $(TOOLSPATH)))
 #	$(TOOLSPATH)/teensy_post_compile -file=$(basename $@) -path=$(shell pwd) -tools=$(TOOLSPATH)

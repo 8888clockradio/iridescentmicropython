@@ -1399,7 +1399,7 @@ typedef double mp_float_t;
 // Whether to provide sys.{stdin,stdout,stderr}.buffer object
 // This is implemented per-port
 #ifndef MICROPY_PY_SYS_STDIO_BUFFER
-#define MICROPY_PY_SYS_STDIO_BUFFER (MICROPY_CONFIG_ROM_LEVEL_AT_LEAST_EXTRA_FEATURES)
+#define MICROPY_PY_SYS_STDIO_BUFFER (1)
 #endif
 
 // Whether to provide sys.tracebacklimit mutable attribute
