@@ -22,7 +22,7 @@ PATH := $(COMPILER_ROOT)/$(ADD_BIN):$(PATH)
 MICROPY_PY_LWIP = 1
 MPY_CROSS_FLAGS = -march=armv7emdp
 # -msmall-int-bits=8
-TOOLSPATH ?= /Applications/Teensyduino.app/Contents/Java/hardware/tools
+#TOOLSPATH = /Applications/Teensyduino.app/Contents/Java/hardware/tools
 
 define newline
 
@@ -706,7 +706,7 @@ libTeensyStreamLibClean:
 	cd IRIDESCENT/StreamLib-master && $(MAKE) clean
 
 libTeensy41Core:
-	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH)
 	
 libTeensy41CoreClean:
 	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) clean

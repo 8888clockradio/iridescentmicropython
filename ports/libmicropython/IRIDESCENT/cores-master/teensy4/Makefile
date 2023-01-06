@@ -36,7 +36,7 @@
 MCU = IMXRT1062
 MCU_LD = imxrt1062_t41.ld
 MCU_DEF = ARDUINO_TEENSY41
-TOOLSPATH ?= /Applications/Teensyduino.app/Contents/Java/hardware/tools
+#TOOLSPATH ?= /Applications/Teensyduino.app/Contents/Java/hardware/tools
 # The name of your project (used to name the compiled .hex file)
 TARGET = libTeensy41Core
 
