@@ -672,12 +672,14 @@ libSDL2Compat:
 	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
 libSDL2CompatClean:
-		cd IRIDESCENT/sdl2-compat-main/BUILD && rm -rf ./*
+	cd IRIDESCENT/sdl2-compat-main/BUILD && rm -rf ./*
 
 libqhull:
-
+	cd IRIDESCENT/qhull-2020.2 && $(MAKE) DEBUG=$(DEBUG) V=$(V) && $(MAKE) install
+	cp ../../qtshare/lib/*.a $(LIBPATHFILEDROP)/
+	
 libqhullClean:
-
+	cd IRIDESCENT/qhull-2020.2 && $(MAKE) clean
 
 libTeensyOpenGL:
 	cd IRIDESCENT/TeensyOpenGL_t4-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
@@ -697,7 +699,7 @@ libglew:
 libglewClean:
 
 
-all: libSDL3 libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
+all: libSDL3 libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libqhull libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
 
 libTeensyStreamLib:
 	cd IRIDESCENT/StreamLib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)

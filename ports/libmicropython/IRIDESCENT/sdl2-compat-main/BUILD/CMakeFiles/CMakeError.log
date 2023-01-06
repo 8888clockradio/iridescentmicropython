@@ -1,15 +1,15 @@
 Performing C SOURCE FILE Test HAVE_OPENGLES_V1 failed with the following output:
-Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-jQU4Ii
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nXgXal
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c052c/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c052c.dir/build.make CMakeFiles/cmTC_c052c.dir/build
-Building C object CMakeFiles/cmTC_c052c.dir/src.c.obj
-/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_OPENGLES_V1   -o CMakeFiles/cmTC_c052c.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-jQU4Ii/src.c
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-jQU4Ii/src.c:2:16: fatal error: GLES/gl.h: No such file or directory
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8b224/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8b224.dir/build.make CMakeFiles/cmTC_8b224.dir/build
+Building C object CMakeFiles/cmTC_8b224.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_OPENGLES_V1   -o CMakeFiles/cmTC_8b224.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nXgXal/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-nXgXal/src.c:2:16: fatal error: GLES/gl.h: No such file or directory
     2 |       #include <GLES/gl.h>
       |                ^~~~~~~~~~~
 compilation terminated.
-make[2]: *** [CMakeFiles/cmTC_c052c.dir/src.c.obj] Error 1
-make[1]: *** [cmTC_c052c/fast] Error 2
+make[2]: *** [CMakeFiles/cmTC_8b224.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_8b224/fast] Error 2
 
 
 Source file was:
@@ -19,17 +19,17 @@ Source file was:
       int main (int argc, char** argv) { return 0; }
 
 Performing C SOURCE FILE Test HAVE_OPENGLES_V2 failed with the following output:
-Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F1lXpH
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3RQnlo
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c6ab7/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c6ab7.dir/build.make CMakeFiles/cmTC_c6ab7.dir/build
-Building C object CMakeFiles/cmTC_c6ab7.dir/src.c.obj
-/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_OPENGLES_V2   -o CMakeFiles/cmTC_c6ab7.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F1lXpH/src.c
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-F1lXpH/src.c:2:16: fatal error: GLES2/gl2.h: No such file or directory
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_eb417/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eb417.dir/build.make CMakeFiles/cmTC_eb417.dir/build
+Building C object CMakeFiles/cmTC_eb417.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DHAVE_OPENGLES_V2   -o CMakeFiles/cmTC_eb417.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3RQnlo/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-3RQnlo/src.c:2:16: fatal error: GLES2/gl2.h: No such file or directory
     2 |       #include <GLES2/gl2.h>
       |                ^~~~~~~~~~~~~
 compilation terminated.
-make[2]: *** [CMakeFiles/cmTC_c6ab7.dir/src.c.obj] Error 1
-make[1]: *** [cmTC_c6ab7/fast] Error 2
+make[2]: *** [CMakeFiles/cmTC_eb417.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_eb417/fast] Error 2
 
 
 Source file was:
@@ -39,25 +39,25 @@ Source file was:
       int main (int argc, char** argv) { return 0; }
 
 Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_X86 failed with the following output:
-Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_ed4d8/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ed4d8.dir/build.make CMakeFiles/cmTC_ed4d8.dir/build
-Building C object CMakeFiles/cmTC_ed4d8.dir/src.c.obj
-/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_X86   -o CMakeFiles/cmTC_ed4d8.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z/src.c
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z/src.c: In function 'main':
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z/src.c:6:3: error: 'choke' undeclared (first use in this function)
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b30e0/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b30e0.dir/build.make CMakeFiles/cmTC_b30e0.dir/build
+Building C object CMakeFiles/cmTC_b30e0.dir/src.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -DCHECK_CPU_ARCHITECTURE_X86   -o CMakeFiles/cmTC_b30e0.dir/src.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj/src.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj/src.c: In function 'main':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj/src.c:6:3: error: 'choke' undeclared (first use in this function)
     6 |   choke
       |   ^~~~~
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-MMg89z/src.c:6:8: error: expected ';' before '}' token
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-k2wTBj/src.c:6:8: error: expected ';' before '}' token
     6 |   choke
       |        ^
       |        ;
     7 | #endif
     8 | }
       | ~       
-make[2]: *** [CMakeFiles/cmTC_ed4d8.dir/src.c.obj] Error 1
-make[1]: *** [cmTC_ed4d8/fast] Error 2
+make[2]: *** [CMakeFiles/cmTC_b30e0.dir/src.c.obj] Error 1
+make[1]: *** [cmTC_b30e0/fast] Error 2
 
 
 Source file was:
@@ -72,17 +72,17 @@ int main(int argc, char *argv[]) {
 
 
 Determining if the include file immintrin.h exists failed with the following output:
-Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-gTX7DX
+Change Dir: /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-kbFpQJ
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_bd75e/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bd75e.dir/build.make CMakeFiles/cmTC_bd75e.dir/build
-Building C object CMakeFiles/cmTC_bd75e.dir/CheckIncludeFile.c.obj
-/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_bd75e.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-gTX7DX/CheckIncludeFile.c
-/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-gTX7DX/CheckIncludeFile.c:1:10: fatal error: immintrin.h: No such file or directory
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_21dae/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_21dae.dir/build.make CMakeFiles/cmTC_21dae.dir/build
+Building C object CMakeFiles/cmTC_21dae.dir/CheckIncludeFile.c.obj
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_21dae.dir/CheckIncludeFile.c.obj -c /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-kbFpQJ/CheckIncludeFile.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/sdl2-compat-main/BUILD/CMakeFiles/CMakeScratch/TryCompile-kbFpQJ/CheckIncludeFile.c:1:10: fatal error: immintrin.h: No such file or directory
     1 | #include <immintrin.h>
       |          ^~~~~~~~~~~~~
 compilation terminated.
-make[2]: *** [CMakeFiles/cmTC_bd75e.dir/CheckIncludeFile.c.obj] Error 1
-make[1]: *** [cmTC_bd75e/fast] Error 2
+make[2]: *** [CMakeFiles/cmTC_21dae.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [cmTC_21dae/fast] Error 2
 
 
 
