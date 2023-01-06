@@ -261,6 +261,11 @@ void micropython_thread(int data) {
 
 
 void setup() {
+    //board_init();
+    //ticks_init();
+    //tusb_init();
+    //led_init();
+    //pendsv_init();
     //Ethernet.begin(mac, ip);
     Serial.begin(115200);
     //SerialUSB1.begin(115200);
@@ -343,14 +348,14 @@ void setup() {
         //mp_stack_set_limit(&_estack - &_sstack - 1024);
         Serial.println("mp_stack_set_top(&_estack);");
         mp_stack_set_top(&_estack);
-        Serial.println("mp_stack_set_limit(&_estack - &_sstack - 1024);");
-        mp_stack_set_limit(&_estack - &_sstack - 1024);
+        //Serial.println("mp_stack_set_limit(&_estack - &_sstack - 1024);");
+        //mp_stack_set_limit(&_estack - &_sstack - 1024);
 
-        Serial.println("gc_init(heap, heap + sizeof(heap));");
-        gc_init(heap, heap + sizeof(heap));
-        //gc_init(&_gc_heap_start, &_gc_heap_end);
-        Serial.println("mp_init();");
-        mp_init();
+        //Serial.println("gc_init(heap, heap + sizeof(heap));");
+        //gc_init(heap, heap + sizeof(heap));
+        ////gc_init(&_gc_heap_start, &_gc_heap_end);
+        //Serial.println("mp_init();");
+        //mp_init();
 
     #if MICROPY_PY_NETWORK
         Serial.println("mod_network_init();");
