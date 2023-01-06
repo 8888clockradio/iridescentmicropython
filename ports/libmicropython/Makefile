@@ -696,7 +696,7 @@ libgstreamerClean:
 
 
 libglew:
-	cd IRIDESCENT/glew-master # && cmake -Hbuild/cmake -Bout/build/glew -Dbsl=-UBUILD_SHARED_LIBS -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS
+	cd IRIDESCENT/glew-master # && cmake -Hbuild/cmake -Bout/build/glew -Dbsl=-UBUILD_SHARED_LIBS -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out) -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS
 	
 libglewClean:
 	cd IRIDESCENT/glew-master && $(MAKE) clean
