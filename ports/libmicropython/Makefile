@@ -681,6 +681,7 @@ libqhull:
 libqhullClean:
 	cd IRIDESCENT/qhull-2020.2 && $(MAKE) clean
 
+
 libTeensyOpenGL:
 	cd IRIDESCENT/TeensyOpenGL_t4-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
 	cp IRIDESCENT/TeensyOpenGL_t4-master/libTeensyOpenGL.a $(LIBPATHFILEDROP)/
@@ -695,11 +696,12 @@ libgstreamerClean:
 
 
 libglew:
-
+	cd IRIDESCENT/glew-master && mkdir -p ZBUILD && cd ZBUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../glew -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	
 libglewClean:
+	cd IRIDESCENT/glew-master && $(MAKE) clean
 
-
-all: libSDL3 libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libqhull libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
+all: libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libglew libSDL3 libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
 
 libTeensyStreamLib:
 	cd IRIDESCENT/StreamLib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
