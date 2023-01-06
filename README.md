@@ -13,12 +13,14 @@ edit iridescentBUILD/iridescentmicropython/toolchain.mk
 
 change
 ```
-LIBPATHFILEDROP = $(abspath ../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+LIBPATHFILEDROP = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard
+COMPILERPATH = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin
 ```
 
 to the path of your arm-none-eabi gcc and g++ toolchain, try and use current versions not the Teensyduino.app included one
 download arm-gnu-toolchain-12.2.rel1-darwin-arm64-arm-none-eabi.tar.xz or similar from
+
+keep thumb/v7e-m+dp/hard in the LIBPATHFILEDROP and make sure you add /bin to COMPILERPATH
 ```
 https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
 ```
