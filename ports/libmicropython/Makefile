@@ -667,7 +667,7 @@ libSDL3Clean:
 
 
 libSDL2Compat:
-	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && # cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD # &&  cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
 	#cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
 	#cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
