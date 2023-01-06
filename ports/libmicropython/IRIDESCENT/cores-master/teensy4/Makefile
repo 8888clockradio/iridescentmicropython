@@ -144,7 +144,7 @@ CPPFLAGS = -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exception
 CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
 
 # compiler options for C only
-CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
+CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
 
 # linker options
 LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
@@ -197,7 +197,7 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 $(TARGET).elf: $(OBJS) $(MCU_LD)
 	$(CXX) -E -x c $(LDDEFINES) ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) $(OBJS) -lmicropython -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -o $(TARGET).elf
+	$(CXX) -Tlink.ld $(CPUOPTIONS) -Wl,--whole-archive -lmicropython -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhull_r -Wl,--no-whole-archive $(OBJS) -o $(TARGET).elf
 	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a
