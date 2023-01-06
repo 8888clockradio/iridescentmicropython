@@ -197,13 +197,12 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 $(TARGET).elf: $(OBJS) $(MCU_LD)
 	$(CXX) -E -x c $(LDDEFINES) ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) $(OBJS) ../../../build-SHAREDLIB/board_init.o ../../../build-SHAREDLIB/ticks.o ../../../build-SHAREDLIB/led.o ../../../build-SHAREDLIB/pendsv.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_adc.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_cache.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_dmamux.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_edma.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_flexram.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_flexspi.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_gpio.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_gpt.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpi2c.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpspi.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpspi_edma.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_lpuart.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_pit.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_pwm.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_sai.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_snvs_lp.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_trng.o ../../../build-SHAREDLIB/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_wdog.o -o $(TARGET).elf
-	#$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
+	$(CXX) -Tlink.ld $(CPUOPTIONS) $(OBJS) -lmicropython -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -o $(TARGET).elf
+	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a
-
-#%.hex: %.elf
-#	$(SIZE) $<
+#%../../../build-SHAREDLIB/.hex: %.elf
+#	../../../build-SHAREDLIB/$(SIZE) $<
 #	$(OBJCOPY) -O ihex -R .eeprom $< $@
 #ifneq (,$(wildcard $(TOOLSPATH)))
 #	$(TOOLSPATH)/teensy_post_compile -file=$(basename $@) -path=$(shell pwd) -tools=$(TOOLSPATH)
