@@ -667,9 +667,9 @@ libSDL3Clean:
 
 
 libSDL2Compat:
-	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD # &&  cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
-	#cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
-	#cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
+	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
+	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
 libSDL2CompatClean:
 	cd IRIDESCENT/sdl2-compat-main/BUILD && rm -rf ./*
@@ -696,7 +696,7 @@ libgstreamerClean:
 
 
 libglew:
-	cd IRIDESCENT/glew-master && cmake -Hbuild/cmake -Bout/build/glew -Dbsl=-UBUILD_SHARED_LIBS -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out) -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS
+	cd IRIDESCENT/glew-master # && cmake -Hbuild/cmake -Bout/build/glew -Dbsl=-UBUILD_SHARED_LIBS -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS
 	
 libglewClean:
 	cd IRIDESCENT/glew-master && $(MAKE) clean
