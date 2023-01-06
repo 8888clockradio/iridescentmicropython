@@ -76,6 +76,7 @@ byte mac[] = {
  */
 //https://docs.micropython.org/en/latest/develop/porting.html
 #include "py/help_text.h"
+#include "mpconfigport.h"
 #include "mpthreadport.h"
 #include "py/compile.h"
 #include "py/runtime.h"

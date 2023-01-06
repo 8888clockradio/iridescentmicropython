@@ -97,6 +97,7 @@ uintptr_t mp_hal_stdio_poll(uintptr_t poll_flags) {
     ret |= mp_uos_dupterm_poll(poll_flags);
     #endif
     */
+    ret = 0;
     return ret;
 }
 
@@ -118,8 +119,9 @@ uintptr_t mp_hal_stdio_poll(uintptr_t poll_flags) {
 }*/
     
 int mp_hal_stdin_rx_chr(void) {
-    //for (;;) {
-        if (Serial.available()) {
+    for (;;) {
+        Serial.println("ABRACADABRA");
+        if (Serial.available() > 0) {
             int c = (int) Serial.read();
             if (c != -1) {
                 return c;
@@ -133,7 +135,7 @@ int mp_hal_stdin_rx_chr(void) {
         #endif
         */
         MICROPY_EVENT_POLL_HOOK
-    //}
+    }
 }
 // Receive single character
 /*int mp_hal_stdin_rx_chr(void) {
@@ -151,6 +153,7 @@ int mp_hal_stdin_rx_chr(void) {
 */
 
 void mp_hal_stdout_tx_strn(const char *str, mp_uint_t len) {
+    Serial.println("JOIN US");
     if (Serial) {
         //for (size_t i = 0; i < len;) {
             //uint32_t n = len - i;
@@ -161,9 +164,9 @@ void mp_hal_stdout_tx_strn(const char *str, mp_uint_t len) {
             //    __WFE();
             //}
             //uint32_t n2 = tud_cdc_write(str + i, n);
-        for (size_t i = 0; i < (sizeof(str) / sizeof(const char)); i++) {
-            usb_serial_putchar(str[i]);
-        }
+        //for (size_t i = 0; i < (sizeof(str) / sizeof(const char)); i++) {
+            Serial.print(str);
+        //}
             //printf("%s", str);
             //tud_cdc_write_flush();
             //i += n2;
