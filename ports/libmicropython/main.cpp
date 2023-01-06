@@ -245,22 +245,22 @@ void micropython_thread(int data) {
     }
     */
     
-    //Serial.println("gc_init(heap, heap + sizeof(heap));");
+    Serial.println("gc_init(heap, heap + sizeof(heap));");
     gc_init(heap, heap + sizeof(heap));
     //gc_init(&_gc_heap_start, &_gc_heap_end);
-    //Serial.println("mp_init();");
+    Serial.println("mp_init();");
     mp_init();
     
 #if MICROPY_PY_NETWORK
-    //Serial.println("mod_network_init();");
+    Serial.println("mod_network_init();");
     mod_network_init();
 #endif
     // Initialise sub-systems.
-    //Serial.println("readline_init0();");
+    Serial.println("readline_init0();");
     readline_init0();
     
     // Execute _boot.py to set up the filesystem.
-    //Serial.println("pyexec_frozen_module(\"_boot.py\");");
+    Serial.println("pyexec_frozen_module(\"_boot.py\");");
     pyexec_frozen_module("_boot.py");
     
     // Execute user scripts.
@@ -278,6 +278,7 @@ void micropython_thread(int data) {
         }
     }
     while (1) {
+        Serial.println("while (1)");
         if (pyexec_mode_kind == PYEXEC_MODE_RAW_REPL) {
             if (pyexec_raw_repl() != 0) {
             }
@@ -368,6 +369,7 @@ void setup() {
         //mp_stack_set_top(&theStack + (4096000 - 1));
         //mp_stack_set_limit((&theStack + (4096000 - 1)) - &theStack - 1024);
         mp_stack_set_top(&_estack);
+        Serial.println("mp_stack_set_top(&_estack);");
         mp_stack_set_limit(&_estack - &_sstack - 1024);
         //
         //#if MICROPY_PY_LWIP
