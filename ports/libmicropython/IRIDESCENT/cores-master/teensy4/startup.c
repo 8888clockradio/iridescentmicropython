@@ -6,7 +6,7 @@
 #include "smalloc.h"
 #include <string.h>
 
-#include "py/help_text.h"
+//#include "py/help_text.h"
 #include "mpconfigport.h"
 #include "py/compile.h"
 #include "py/runtime.h"
