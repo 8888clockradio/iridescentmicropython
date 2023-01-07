@@ -114,20 +114,22 @@ ifdef ARDUINOPATH
 #LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
 
 # path location for the arm-none-eabi compiler
-LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 LDFLAGS = -O2 \
-	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 
 else
 # Default to the normal GNU/Linux compiler path if NO_ARDUINO
 # and ARDUINOPATH was not set.
-LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 endif
-
+LDFLAGS = -O2 \
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
+	
 include $(abspath ../../../../../toolchain.mk)
 
 INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/build-SHAREDLIB) -I$(abspath ../../freertos-teensy-master/src)
@@ -147,18 +149,18 @@ CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-s
 CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
 
 # linker options
-LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 #LDFLAGS = -Os -Wl,--gc-sections,--relax $(SPECS) $(CPUOPTIONS) -T$(MCU_LD)
 
 # additional libraries to link
 #LIBS = -larm_cortexM7lfsp_math -lm -lstdc++
 
 # names for the compiler programs
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AR = $(COMPILERPATH)/arm-none-eabi-ar
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 
 LIBS = -lmicropython -lm -larm_cortexM7lfsp_math -lstdc++
 
