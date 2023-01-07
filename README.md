@@ -101,3 +101,12 @@ LD Script is located:
 iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/imxmrt_ld/imxrt1062_t41.ld
 ```
 ****
+
+
+Most of the desktop OS will be based off this concept, as matlibplot and kivy will work together with music21:
+So either build GUI with matlibplot through kivy or just through kivy
+```
+iridescentBUILD/iridescentmicropython/ports/libmicropython/modulesTakenOut/kivy/garden/garden/matplotlib/examples
+```
+
+I'm going to try one of the arch linux compilers and see if it boots along with the teensy core in arch linux, brb- mostly for loading external libraries and modules
