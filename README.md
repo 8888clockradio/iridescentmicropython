@@ -19,9 +19,17 @@ edit iridescentBUILD/iridescentmicropython/toolchain.mk
 
 change
 ```
-LIBPATHFILEDROP = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard
-COMPILERPATH = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin
-TOOLSPATH = /Applications/Teensyduino.app/Contents/Java/hardware/tools
+# path location for the arm-none-eabi compiler
+LIBPATHFILEDROP := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard
+COMPILERPATH := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin
+TOOLSPATH := /Applications/Teensyduino.app/Contents/Java/hardware/tools
+CROSSCOMPILEPREFIX := arm-none-eabi
+
+# path location for the arm-unknown-linux-gnueabi compiler (NOT TESTED)
+#LIBPATHFILEDROP := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/lib/gcc/arm-unknown-linux-gnueabi/8.3.0/thumb/v7e-m+dp/hard
+#COMPILERPATH := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/bin
+#TOOLSPATH := /Applications/Teensyduino.app/Contents/Java/hardware/tools
+#CROSSCOMPILEPREFIX := arm-unknown-linux-gnueabi
 ```
 
 to the path of your arm-none-eabi gcc and g++ toolchain, try and use current versions not the Teensyduino.app included one download arm-gnu-toolchain-12.2.rel1-darwin-arm64-arm-none-eabi.tar.xz or similar from
@@ -42,9 +50,10 @@ iridescentBUILD/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/
 
 example:
 ```
-LIBPATHFILEDROP = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard
-COMPILERPATH = /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin
-TOOLSPATH = /Applications/Teensyduino.app/Contents/Java/hardware/tools
+LIBPATHFILEDROP := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard
+COMPILERPATH := /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin
+TOOLSPATH := /Applications/Teensyduino.app/Contents/Java/hardware/tools
+CROSSCOMPILEPREFIX := arm-none-eabi
 ```
 
 to build:
@@ -109,4 +118,4 @@ So either build GUI with matlibplot through kivy or just through kivy
 iridescentBUILD/iridescentmicropython/ports/libmicropython/modulesTakenOut/kivy/garden/garden/matplotlib/examples
 ```
 
-I'm going to try one of the arch linux compilers and see if it boots along with the teensy core in arch linux, brb- mostly for loading external libraries and modules
+I'm going to try one of the arch linux compilers and see if it boots along with the teensy core in arch linux, brb- mostly for loading external libraries and modules. Not sure it's going to work, lol. But we'll see.
