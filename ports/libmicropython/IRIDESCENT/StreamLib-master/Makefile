@@ -100,19 +100,19 @@ IRIDESCENT_ROOT ?= $(abspath ..)
 ifdef ARDUINOPATH
 
 # path location for Teensy Loader, teensy_post_compile and teensy_reboot (on Linux)
-TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
+#TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
 
 # path location for Arduino libraries (currently not used)
-LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
+#LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
 
 # path location for the arm-none-eabi compiler
-LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 else
 # Default to the normal GNU/Linux compiler path if NO_ARDUINO
 # and ARDUINOPATH was not set.
-LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 endif
 
@@ -146,24 +146,24 @@ CFLAGS += -O2
 CXXFLAGS += -O2
 CPPFLAGS += -O2
 ASFLAGS += -O2
-LDFLAGS = -ggdb -Wl,--cref,--gc-sections,--print-memory-usage,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -ggdb -Wl,--cref,--gc-sections,--print-memory-usage,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 
 else
 CFLAGS += -Os -DNDEBUG
 CXXFLAGS += -Os -DNDEBUG
 CPPFLAGS += -Os -DNDEBUG
 ASFLAGS += -Os -DNDEBUG
-LDFLAGS = -Os -Wl,--cref,--gc-sections,--print-memory-usage,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -Os -Wl,--cref,--gc-sections,--print-memory-usage,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 endif
 
 # linker options
 #LDFLAGS = -Os -Wl,--gc-sections,--relax $(SPECS) $(CPUOPTIONS) -T$(MCU_LD)
 # names for the compiler programs
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AR = $(COMPILERPATH)/arm-none-eabi-ar
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 # additional libraries to link
 LIBS = -lTeensy41Core -larm_cortexM7lfsp_math -lm -lstdc++ $(shell $(CXX) $(CPPFLAGS) -print-libgcc-file-name)
 #LIBS = -larm_cortexM7lfsp_math -lm -lstdc++
