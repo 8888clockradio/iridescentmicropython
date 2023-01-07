@@ -1100,7 +1100,6 @@ void ResetHandler(void)
 	printf("\n***********IMXRT Startup**********\n");
 	printf("test %d %d %d\n", 1, -1234567, 3);
 
-    ///board_init();
 	configure_cache();
 	configure_systick();
     
@@ -1130,10 +1129,12 @@ void ResetHandler(void)
 #ifdef ARDUINO_TEENSY41
 	configure_external_ram();
 #endif
-   //ticks_init();
+    //board_init();
+    //ticks_init();
    ////tusb_init();
    //led_init();
    //pendsv_init();
+    
 	analog_init();
 	pwm_init();
 	tempmon_init();
