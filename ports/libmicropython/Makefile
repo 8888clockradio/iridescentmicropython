@@ -5,7 +5,7 @@ BOARD ?= TEENSY41
 BOARD_DIR ?= boards/$(BOARD)
 BUILD ?= build-SHAREDLIB
 PORT ?= /dev/ttyACM0
-CROSS_COMPILE ?= arm-none-eabi-
+#CROSS_COMPILE ?= arm-none-eabi-
 GIT_SUBMODULES += lib/tinyusb lib/nxp_driver lib/lwip lib/mbedtls
 #LIBPATHFILEDROP = $(abspath ../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
 # MicroPython feature configurations
@@ -17,8 +17,8 @@ MICROPY_VFS_FAT ?= 1
 ADD_BIN = bin
 #COMPILERPATH = $(COMPILER_ROOT)/bin
 include $(abspath ../../toolchain.mk)
-CROSS_COMPILE = $(COMPILERPATH)/arm-none-eabi-
-PATH := $(COMPILER_ROOT)/$(ADD_BIN):$(PATH)
+CROSS_COMPILE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-
+PATH := $(COMPILERPATH):$(PATH)
 MICROPY_PY_LWIP = 1
 MPY_CROSS_FLAGS = -march=armv7emdp
 # -msmall-int-bits=8
@@ -656,7 +656,7 @@ libRA8875Clean:
 
 
 libSDL3:
-	mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) && $(MAKE) install
 	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
 	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	#cp -R IRIDESCENT/SDL3-main/BUILD/CMakeFiles/SDL3.dir/src/dynapi/SDL_dynapi.c.obj $(LIBPATHFILEDROP)/
@@ -667,7 +667,7 @@ libSDL3Clean:
 
 
 libSDL2Compat:
-	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
 	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
 	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
@@ -675,7 +675,7 @@ libSDL2CompatClean:
 	cd IRIDESCENT/sdl2-compat-main/BUILD && rm -rf ./*
 
 libqhull:
-	cd IRIDESCENT/qhull-2020.2 && $(MAKE) DEBUG=$(DEBUG) V=$(V) && $(MAKE) install
+	cd IRIDESCENT/qhull-2020.2 && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) && $(MAKE) install
 	cp ../../qtshare/lib/*.a $(LIBPATHFILEDROP)/
 	
 libqhullClean:
@@ -683,7 +683,7 @@ libqhullClean:
 
 
 libTeensyOpenGL:
-	cd IRIDESCENT/TeensyOpenGL_t4-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/TeensyOpenGL_t4-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX)
 	cp IRIDESCENT/TeensyOpenGL_t4-master/libTeensyOpenGL.a $(LIBPATHFILEDROP)/
 	
 libTeensyOpenGLClean:
@@ -696,7 +696,7 @@ libgstreamerClean:
 
 
 libglew:
-	cd IRIDESCENT/glew-master # && cmake -Hbuild/cmake -Bout/build/glew -Dbsl=-UBUILD_SHARED_LIBS -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out) -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS
+	cd IRIDESCENT/glew-master # && cmake -Hbuild/cmake -Bout/build/glew -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) -Dbsl=-UBUILD_SHARED_LIBS --toolchain toolchain.cmake -Dgusl=-UGLEW_USE_STATIC_LIBS -DCMAKE_INSTALL_PREFIX=$(abspath IRIDESCENT/glew-master/out) -DCMAKE_BUILD_TYPE=Debug -UBUILD_SHARED_LIBS && cd build && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libglewClean:
 	cd IRIDESCENT/glew-master && $(MAKE) clean
@@ -704,67 +704,67 @@ libglewClean:
 all: libSDL3 libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libglew libSDL3 libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
 
 libTeensyStreamLib:
-	cd IRIDESCENT/StreamLib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/StreamLib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyStreamLibClean:
 	cd IRIDESCENT/StreamLib-master && $(MAKE) clean
 
 libTeensy41Core:
-	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH)
+	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensy41CoreClean:
 	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) clean
 	
 libTeensyWire:
-	cd IRIDESCENT/Wire && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/Wire && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyWireClean:
 	cd IRIDESCENT/Wire && $(MAKE) clean
 	
 libTeensySerialFlash:
-	cd IRIDESCENT/SerialFlash && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/SerialFlash && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensySerialFlashClean:
 	cd IRIDESCENT/SerialFlash && $(MAKE) clean
 	
 libTeensySPI:
-	cd IRIDESCENT/SPI && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/SPI && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensySPIClean:
 	cd IRIDESCENT/SPI && $(MAKE) clean
 	
 libTeensyDebug:
-	cd IRIDESCENT/TeensyDebug-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/TeensyDebug-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyDebugClean:
 	cd IRIDESCENT/TeensyDebug-master && $(MAKE) clean
 
 libTeensyThreads:
-	cd IRIDESCENT/TeensyThreads-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/TeensyThreads-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyThreadsClean:
 	cd IRIDESCENT/TeensyThreads-master && $(MAKE) clean
 
 libTeensyMBEDTLS:
-	cd IRIDESCENT/FNET-master/third_party/mbedtls && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/FNET-master/third_party/mbedtls && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 
 libTeensyMBEDTLSClean:
 	cd IRIDESCENT/FNET-master/third_party/mbedtls && $(MAKE) clean
 
 libTeensyFNET:
-	cd IRIDESCENT/FNET-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/FNET-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 
 libTeensyFNETClean:
 	cd IRIDESCENT/FNET-master && $(MAKE) clean
 	
 libTeensyNativeEthernet:
-	cd IRIDESCENT/NativeEthernet-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/NativeEthernet-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyNativeEthernetClean:
 	cd IRIDESCENT/NativeEthernet-master && $(MAKE) clean
 	
 libz:
-	cd IRIDESCENT/zlib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V)
+	cd IRIDESCENT/zlib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libzClean:
 	cd IRIDESCENT/zlib-master && $(MAKE) clean
