@@ -133,9 +133,9 @@ PRINTC = enscript -2r
 # -fpic may be slower for 32-bit builds on 64-bit hosts
 # Disable -fpic with 'make FPIC=' 
 FPIC      = -fpic
-CC        = $(abspath $(COMPILERPATH)/arm-none-eabi-gcc)
+CC        = $(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc)
 CC_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -ansi -Isrc/ $(CC_WARNINGS) $(M32) $(FPIC)
-CXX       = $(abspath $(COMPILERPATH)/arm-none-eabi-g++)
+CXX       = $(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++)
 
 # libqhullcpp must be listed before libqhull_r, otherwise libqhull_r pulls in userprintf_r.c
 CXX_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -O3 -Isrc/ $(CXX_WARNINGS) $(M32) $(FPIC)
@@ -727,17 +727,17 @@ lib/libqhullstatic.a: $(LIBQHULLS_RBOX_OBJS)
 	@echo ==========================================
 	@echo ==== If 'ar' fails, try 'make qhullx' ====
 	@echo ==========================================
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
 	#If 'ar -rs' fails, try using 'ar -s' with 'ranlib'
 	#ranlib $@
 
 lib/libqhullstatic_r.a: $(LIBQHULLSR_RBOX_OBJS)
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
 	#ranlib $@
 
 # Do not create libqhullcpp as a shared library.  Qhull C++ classes may change layout and size. 
 lib/libqhullcpp.a: $(LIBQHULLCPP_OBJS)
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
 	#ranlib $@
 
 lib/libqhull_r.$(SO): $(LIBQHULLSR_RBOX_OBJS)
