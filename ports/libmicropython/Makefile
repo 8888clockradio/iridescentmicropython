@@ -632,7 +632,7 @@ OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
 SIZE = $(COMPILERPATH)/arm-none-eabi-size
 AS = $(COMPILERPATH)/arm-none-eabi-gcc $(ASFLAGS)
 
-QUADLIBS = -larm_cortexM7lfsp_math -lm -lstdc++
+QUADLIBS = -larm_cortexM7lfdp_math -lm -lstdc++
 
 LIBS += -Llib -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhull_r
 #-lTeensyThreads
