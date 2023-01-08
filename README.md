@@ -111,7 +111,6 @@ LD Script is located:
 ```
 iridescentBUILD/iridescentmicropython/ports/libmicropython/IRIDESCENT/imxmrt_ld/imxrt1062_t41.ld
 ```
-=======
 ****
 
 
