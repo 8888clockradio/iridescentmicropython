@@ -138,11 +138,11 @@ CC_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions 
 CXX       = $(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++)
 
 # libqhullcpp must be listed before libqhull_r, otherwise libqhull_r pulls in userprintf_r.c
-CXX_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -O3 -Isrc/ $(CXX_WARNINGS) $(M32) $(FPIC)
+CXX_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -Isrc/ $(CXX_WARNINGS) $(M32) $(FPIC)
 
 # for shared library link
-CC_OPTS3  = -ggdb -O2
-
+CC_OPTS3  = -ggdb -O2 \
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98
 # for Sun's cc compiler, -fast or O2 for optimization, -g for debugging, -Xc for ANSI
 #CC       = cc
 #CC_OPTS1 = -Xc -v -fast
@@ -637,14 +637,14 @@ qhullx: src/qconvex/qconvex.o src/qdelaunay/qdelaun.o src/qhalf/qhalf.o src/qvor
 	    src/qhull/unix_r.o src/rbox/rbox.o src/testqset/testqset.o src/testqset_r/testqset_r.o\
 	    $(LIBQHULLS_RBOX_OBJS) $(LIBQHULLSR_USER_OBJS) $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o
 	mkdir -p bin/
-	$(CC) -o bin/qconvex $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qconvex/qconvex.o
-	$(CC) -o bin/qdelaunay $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qdelaunay/qdelaun.o
-	$(CC) -o bin/qhalf $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qhalf/qhalf.o
-	$(CC) -o bin/qvoronoi $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qvoronoi/qvoronoi.o
-	$(CC) -o bin/qhull $(CC_OPTS2) -lm $(LIBQHULLSR_USER_OBJS) src/qhull/unix_r.o
-	$(CC) -o bin/rbox $(CC_OPTS2) -lm $(LIBQHULLS_RBOX_OBJS) src/rbox/rbox.o
-	$(CC) -o bin/testqset $(CC_OPTS2) -lm $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o src/testqset/testqset.o
-	$(CC) -o bin/testqset_r $(CC_OPTS2) -lm $(LSR)/mem_r.o $(LSR)/qset_r.o $(LSR)/usermem_r.o src/testqset_r/testqset_r.o
+	$(CC) -o bin/qconvex $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qconvex/qconvex.o
+	$(CC) -o bin/qdelaunay $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qdelaunay/qdelaun.o
+	$(CC) -o bin/qhalf $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qhalf/qhalf.o
+	$(CC) -o bin/qvoronoi $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qvoronoi/qvoronoi.o
+	$(CC) -o bin/qhull $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLSR_USER_OBJS) src/qhull/unix_r.o
+	$(CC) -o bin/rbox $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_RBOX_OBJS) src/rbox/rbox.o
+	$(CC) -o bin/testqset $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o src/testqset/testqset.o
+	$(CC) -o bin/testqset_r $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LSR)/mem_r.o $(LSR)/qset_r.o $(LSR)/usermem_r.o src/testqset_r/testqset_r.o
 	-bin/testqset 10000
 	-bin/testqset_r 10000
 	-bin/rbox D4 | bin/qhull
@@ -727,17 +727,17 @@ lib/libqhullstatic.a: $(LIBQHULLS_RBOX_OBJS)
 	@echo ==========================================
 	@echo ==== If 'ar' fails, try 'make qhullx' ====
 	@echo ==========================================
-	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#If 'ar -rs' fails, try using 'ar -s' with 'ranlib'
 	#ranlib $@
 
 lib/libqhullstatic_r.a: $(LIBQHULLSR_RBOX_OBJS)
-	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#ranlib $@
 
 # Do not create libqhullcpp as a shared library.  Qhull C++ classes may change layout and size. 
 lib/libqhullcpp.a: $(LIBQHULLCPP_OBJS)
-	$(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar) -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#ranlib $@
 
 lib/libqhull_r.$(SO): $(LIBQHULLSR_RBOX_OBJS)
