@@ -1,21 +1,24 @@
 #pragma GCC optimize ("O0")
 
 #include <Arduino.h>
-#include <Wire.h>
+#include <i2c_device.h>
 #include <SPI.h>
 #include <SerialFlash.h>
 #include "StreamLib.h"
 #include "TeensyDebug.h"
 #include "TeensyThreads.h"
-#include <cerrno>
-#include <iomanip>
+//#include <std.h>
+//#include <locale>
+//#include <cerrno>
+//#include <iomanip>
+#include <endian.h>
 #include <time.h>
 #include <elapsedMillis.h>
-#include <ostream>
-#include <stdexcept>
-#include <task.h>
+//#include <ostream>
+//#include <stdexcept>
+//#include <task.h>
 #include <libqhull_r/qhull_ra.h>
-#include <freeRTOS.h>
+//#include <freeRTOS.h>
 #include <RA8875.h>
 #include <TeensyGL.h>
 //#include <SDL2/SDL.h>
@@ -77,7 +80,7 @@ byte mac[] = {
 //https://docs.micropython.org/en/latest/develop/porting.html
 #include "py/help_text.h"
 #include "mpconfigport.h"
-#include "mpthreadport.h"
+//#include "mpthreadport.h"
 #include "py/compile.h"
 #include "py/runtime.h"
 #include "py/gc.h"

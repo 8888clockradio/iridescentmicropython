@@ -1,0 +1,1948 @@
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcc  -Wall -D__GNUC_PYTHON__ -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -MMD -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/Include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/ComputeLibrary/Include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/PrivateInclude -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src/bits -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mlong-calls  -c -o src/croutine.o src/croutine.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcc  -Wall -D__GNUC_PYTHON__ -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -MMD -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/Include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/ComputeLibrary/Include -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/CMSIS-DSP-main/PrivateInclude -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src/bits -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mlong-calls  -c -o src/event_groups.o src/event_groups.c
+In file included from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h: In function '__ctype_get_mb_cur_max':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:97:53: error: expected declaration specifiers before '__wur'
+ extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;
+                                                     ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:101:15: error: storage class specified for parameter 'atof'
+ extern double atof (const char *__nptr)
+               ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:102:49: error: expected ',' or ';' before '__wur'
+      __THROW __attribute_pure__ __nonnull ((1)) __wur;
+                                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:104:12: error: storage class specified for parameter 'atoi'
+ extern int atoi (const char *__nptr)
+            ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:105:49: error: expected ',' or ';' before '__wur'
+      __THROW __attribute_pure__ __nonnull ((1)) __wur;
+                                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:107:17: error: storage class specified for parameter 'atol'
+ extern long int atol (const char *__nptr)
+                 ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:108:49: error: expected ',' or ';' before '__wur'
+      __THROW __attribute_pure__ __nonnull ((1)) __wur;
+                                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:112:1: error: expected declaration specifiers before '__extension__'
+ __extension__ extern long long int atoll (const char *__nptr)
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:117:15: error: storage class specified for parameter 'strtod'
+ extern double strtod (const char *__restrict __nptr,
+               ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:123:14: error: storage class specified for parameter 'strtof'
+ extern float strtof (const char *__restrict __nptr,
+              ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:126:20: error: storage class specified for parameter 'strtold'
+ extern long double strtold (const char *__restrict __nptr,
+                    ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:176:17: error: storage class specified for parameter 'strtol'
+ extern long int strtol (const char *__restrict __nptr,
+                 ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:180:26: error: storage class specified for parameter 'strtoul'
+ extern unsigned long int strtoul (const char *__restrict __nptr,
+                          ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:186:1: error: expected declaration specifiers before '__extension__'
+ __extension__
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:191:1: error: expected declaration specifiers before '__extension__'
+ __extension__
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:199:1: error: expected declaration specifiers before '__extension__'
+ __extension__
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:204:1: error: expected declaration specifiers before '__extension__'
+ __extension__
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:385:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+ extern char *l64a (long int __n) __THROW __wur;
+                                          ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:388:17: error: storage class specified for parameter 'a64l'
+ extern long int a64l (const char *__s)
+                 ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:389:49: error: expected ',' or ';' before '__wur'
+      __THROW __attribute_pure__ __nonnull ((1)) __wur;
+                                                 ^~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:28:19: error: storage class specified for parameter 'u_int8_t'
+ typedef __uint8_t u_int8_t;
+                   ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:31:20: error: storage class specified for parameter 'u_int16_t'
+ typedef __uint16_t u_int16_t;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:34:20: error: storage class specified for parameter 'u_int32_t'
+ typedef __uint32_t u_int32_t;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:37:20: error: storage class specified for parameter 'u_int64_t'
+ typedef __uint64_t u_int64_t;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:39:20: error: storage class specified for parameter 'register_t'
+ typedef __intptr_t register_t;
+                    ^~~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:24,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:45,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/lib/gcc/arm-unknown-linux-gnueabi/8.3.0/include/stddef.h:357:23: error: storage class specified for parameter 'wint_t'
+ typedef __WINT_TYPE__ wint_t;
+                       ^~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:45,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:30:14: error: storage class specified for parameter '__blkcnt_t'
+ typedef long __blkcnt_t;
+              ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:34:14: error: storage class specified for parameter '__blksize_t'
+ typedef long __blksize_t;
+              ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:38:20: error: storage class specified for parameter '__fsblkcnt_t'
+ typedef __uint64_t __fsblkcnt_t;
+                    ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:42:20: error: storage class specified for parameter '__fsfilcnt_t'
+ typedef __uint32_t __fsfilcnt_t;
+                    ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:46:14: error: storage class specified for parameter '_off_t'
+ typedef long _off_t;
+              ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:52:13: error: storage class specified for parameter '__pid_t'
+ typedef int __pid_t;
+             ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:56:15: error: storage class specified for parameter '__dev_t'
+ typedef short __dev_t;
+               ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:60:24: error: storage class specified for parameter '__uid_t'
+ typedef unsigned short __uid_t;
+                        ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:63:24: error: storage class specified for parameter '__gid_t'
+ typedef unsigned short __gid_t;
+                        ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:67:20: error: storage class specified for parameter '__id_t'
+ typedef __uint32_t __id_t;
+                    ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:75:24: error: storage class specified for parameter '__ino_t'
+ typedef unsigned short __ino_t;
+                        ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:90:20: error: storage class specified for parameter '__mode_t'
+ typedef __uint32_t __mode_t;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:96:1: error: expected declaration specifiers before '__extension__'
+ __extension__ typedef long long _off64_t;
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:102:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__off_t'
+ typedef _off_t __off_t;
+                ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:105:9: error: unknown type name '_off64_t'
+ typedef _off64_t __loff_t;
+         ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:105:18: error: storage class specified for parameter '__loff_t'
+ typedef _off64_t __loff_t;
+                  ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:108:14: error: storage class specified for parameter '__key_t'
+ typedef long __key_t;
+              ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:116:14: error: storage class specified for parameter '_fpos_t'
+ typedef long _fpos_t;  /* XXX must match off_t in <sys/types.h> */
+              ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:131:23: error: storage class specified for parameter '__size_t'
+ typedef __SIZE_TYPE__ __size_t;
+                       ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:147:23: error: storage class specified for parameter '_ssize_t'
+ typedef __SIZE_TYPE__ _ssize_t;
+                       ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:158:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__ssize_t'
+ typedef _ssize_t __ssize_t;
+                  ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:167:5: error: expected specifier-qualifier-list before 'wint_t'
+     wint_t __wch;
+     ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:170:3: error: storage class specified for parameter '_mbstate_t'
+ } _mbstate_t;
+   ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:175:15: error: storage class specified for parameter '_iconv_t'
+ typedef void *_iconv_t;
+               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:182:19: error: storage class specified for parameter '__clock_t'
+ typedef _CLOCK_T_ __clock_t;
+                   ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:189:18: error: storage class specified for parameter '__time_t'
+ typedef _TIME_T_ __time_t;
+                  ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:195:21: error: storage class specified for parameter '__clockid_t'
+ typedef _CLOCKID_T_ __clockid_t;
+                     ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:198:15: error: storage class specified for parameter '__daddr_t'
+ typedef long  __daddr_t;
+               ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:202:19: error: storage class specified for parameter '__timer_t'
+ typedef _TIMER_T_ __timer_t;
+                   ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:205:19: error: storage class specified for parameter '__sa_family_t'
+ typedef __uint8_t __sa_family_t;
+                   ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:209:20: error: storage class specified for parameter '__socklen_t'
+ typedef __uint32_t __socklen_t;
+                    ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:212:14: error: storage class specified for parameter '__nl_item'
+ typedef int  __nl_item;
+              ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:213:24: error: storage class specified for parameter '__nlink_t'
+ typedef unsigned short __nlink_t;
+                        ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:214:15: error: storage class specified for parameter '__suseconds_t'
+ typedef long  __suseconds_t; /* microseconds (signed) */
+               ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:215:23: error: storage class specified for parameter '__useconds_t'
+ typedef unsigned long __useconds_t; /* microseconds (unsigned) */
+                       ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h:223:27: error: storage class specified for parameter '__va_list'
+ typedef __builtin_va_list __va_list;
+                           ^~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:46,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:20:18: error: storage class specified for parameter 'int8_t'
+ typedef __int8_t int8_t ;
+                  ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:24:19: error: storage class specified for parameter 'uint8_t'
+ typedef __uint8_t uint8_t ;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:32:19: error: storage class specified for parameter 'int16_t'
+ typedef __int16_t int16_t ;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:36:20: error: storage class specified for parameter 'uint16_t'
+ typedef __uint16_t uint16_t ;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:44:19: error: storage class specified for parameter 'int32_t'
+ typedef __int32_t int32_t ;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:48:20: error: storage class specified for parameter 'uint32_t'
+ typedef __uint32_t uint32_t ;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:56:19: error: storage class specified for parameter 'int64_t'
+ typedef __int64_t int64_t ;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:60:20: error: storage class specified for parameter 'uint64_t'
+ typedef __uint64_t uint64_t ;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:67:20: error: storage class specified for parameter 'intmax_t'
+ typedef __intmax_t intmax_t;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:72:21: error: storage class specified for parameter 'uintmax_t'
+ typedef __uintmax_t uintmax_t;
+                     ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:77:20: error: storage class specified for parameter 'intptr_t'
+ typedef __intptr_t intptr_t;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h:82:21: error: storage class specified for parameter 'uintptr_t'
+ typedef __uintptr_t uintptr_t;
+                     ^~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:14,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:50,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_sigset.h:41:23: error: storage class specified for parameter '__sigset_t'
+ typedef unsigned long __sigset_t;
+                       ^~~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:15,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:50,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timeval.h:37:23: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'suseconds_t'
+ typedef __suseconds_t suseconds_t;
+                       ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timeval.h:42:18: error: storage class specified for parameter 'time_t'
+ typedef _TIME_T_ time_t;
+                  ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timeval.h:55:2: error: expected specifier-qualifier-list before 'time_t'
+  time_t  tv_sec;  /* seconds */
+  ^~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/timespec.h:38,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:16,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:50,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timespec.h:48:2: error: expected specifier-qualifier-list before 'time_t'
+  time_t tv_sec;  /* seconds */
+  ^~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:50,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:20:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'sigset_t'
+ typedef __sigset_t sigset_t;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:38:23: error: storage class specified for parameter '__fd_mask'
+ typedef unsigned long __fd_mask;
+                       ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:40:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fd_mask'
+ typedef __fd_mask fd_mask;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:53:2: error: expected specifier-qualifier-list before '__fd_mask'
+  __fd_mask __fds_bits[_howmany(FD_SETSIZE, _NFDBITS)];
+  ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:54:3: error: storage class specified for parameter 'fd_set'
+ } fd_set;
+   ^~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/features.h:450,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:25,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:80:12: error: expected declaration specifiers or '...' before 'fd_set'
+ int select __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+            ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:80:12: error: expected declaration specifiers or '...' before 'fd_set'
+ int select __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+            ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:80:12: error: expected declaration specifiers or '...' before 'fd_set'
+ int select __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+            ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:83:13: error: expected declaration specifiers or '...' before 'fd_set'
+ int pselect __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+             ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:83:13: error: expected declaration specifiers or '...' before 'fd_set'
+ int pselect __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+             ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:83:13: error: expected declaration specifiers or '...' before 'fd_set'
+ int pselect __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+             ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h:83:13: error: unknown type name 'sigset_t'
+ int pselect __P ((int __n, fd_set *__readfds, fd_set *__writefds,
+             ^~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:55:20: error: storage class specified for parameter 'in_addr_t'
+ typedef __uint32_t in_addr_t; /* base type for internet address */
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:60:20: error: storage class specified for parameter 'in_port_t'
+ typedef __uint16_t in_port_t;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:64:21: error: storage class specified for parameter 'u_register_t'
+ typedef __uintptr_t u_register_t;
+                     ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:71:23: error: storage class specified for parameter 'u_char'
+ typedef unsigned char u_char;
+                       ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:75:24: error: storage class specified for parameter 'u_short'
+ typedef unsigned short u_short;
+                        ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:79:22: error: storage class specified for parameter 'u_int'
+ typedef unsigned int u_int;
+                      ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:83:23: error: storage class specified for parameter 'u_long'
+ typedef unsigned long u_long;
+                       ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:91:24: error: storage class specified for parameter 'ushort'
+ typedef unsigned short ushort;  /* System V compatibility */
+                        ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:92:22: error: storage class specified for parameter 'uint'
+ typedef unsigned int uint;  /* System V compatibility */
+                      ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:93:23: error: storage class specified for parameter 'ulong'
+ typedef unsigned long ulong;  /* System V compatibility */
+                       ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:97:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'blkcnt_t'
+ typedef __blkcnt_t blkcnt_t;
+                    ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:102:21: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'blksize_t'
+ typedef __blksize_t blksize_t;
+                     ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:107:19: error: storage class specified for parameter 'clock_t'
+ typedef _CLOCK_T_ clock_t;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:118:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'daddr_t'
+ typedef __daddr_t daddr_t;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:121:16: error: storage class specified for parameter 'caddr_t'
+ typedef char * caddr_t;
+                ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:126:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fsblkcnt_t'
+ typedef __fsblkcnt_t fsblkcnt_t;
+                      ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:127:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fsfilcnt_t'
+ typedef __fsfilcnt_t fsfilcnt_t;
+                      ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:132:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'id_t'
+ typedef __id_t  id_t;  /* can hold a uid_t or pid_t */
+                 ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:137:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ino_t'
+ typedef __ino_t  ino_t;  /* inode number */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:155:9: error: unknown type name '__off_t'
+ typedef __off_t  off_t;  /* file offset */
+         ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:155:18: error: storage class specified for parameter 'off_t'
+ typedef __off_t  off_t;  /* file offset */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:159:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'dev_t'
+ typedef __dev_t  dev_t;  /* device number or struct cdev */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:163:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'uid_t'
+ typedef __uid_t  uid_t;  /* user id */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:167:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'gid_t'
+ typedef __gid_t  gid_t;  /* group id */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:172:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'pid_t'
+ typedef __pid_t  pid_t;  /* process id */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:177:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'key_t'
+ typedef __key_t  key_t;  /* IPC key */
+                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:182:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ssize_t'
+ typedef _ssize_t ssize_t;
+                  ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:187:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mode_t'
+ typedef __mode_t mode_t;  /* permissions */
+                  ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:192:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'nlink_t'
+ typedef __nlink_t nlink_t; /* link count */
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:197:21: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'clockid_t'
+ typedef __clockid_t clockid_t;
+                     ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:203:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'timer_t'
+ typedef __timer_t timer_t;
+                   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:209:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'useconds_t'
+ typedef __useconds_t useconds_t; /* microseconds (unsigned) */
+                      ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:218:19: error: storage class specified for parameter 'sbintime_t'
+ typedef __int64_t sbintime_t;
+                   ^~~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h:221,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:394,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:32:20: error: storage class specified for parameter 'pthread_t'
+ typedef __uint32_t pthread_t;            /* identify a thread */
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:75:3: error: storage class specified for parameter 'pthread_attr_t'
+ } pthread_attr_t;
+   ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:154:20: error: storage class specified for parameter 'pthread_mutex_t'
+ typedef __uint32_t pthread_mutex_t;      /* identify a mutex */
+                    ^~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:169:3: error: storage class specified for parameter 'pthread_mutexattr_t'
+ } pthread_mutexattr_t;
+   ^~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:176:20: error: storage class specified for parameter 'pthread_cond_t'
+ typedef __uint32_t pthread_cond_t;       /* identify a condition variable */
+                    ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:182:3: error: expected specifier-qualifier-list before 'clock_t'
+   clock_t  clock;             /* specifiy clock for timeouts */
+   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:186:3: error: storage class specified for parameter 'pthread_condattr_t'
+ } pthread_condattr_t;         /* a condition attribute object */
+   ^~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:190:20: error: storage class specified for parameter 'pthread_key_t'
+ typedef __uint32_t pthread_key_t;        /* thread-specific data keys */
+                    ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h:195:3: error: storage class specified for parameter 'pthread_once_t'
+ } pthread_once_t;       /* dynamic package initialization */
+   ^~~~~~~~~~~~~~
+In file included from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:401:17: error: storage class specified for parameter 'random'
+ extern long int random (void) __THROW;
+                 ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:404:13: error: storage class specified for parameter 'srandom'
+ extern void srandom (unsigned int __seed) __THROW;
+             ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:410:14: error: storage class specified for parameter 'initstate'
+ extern char *initstate (unsigned int __seed, char *__statebuf,
+              ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:415:14: error: storage class specified for parameter 'setstate'
+ extern char *setstate (char *__statebuf) __THROW __nonnull ((1));
+              ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:425:5: error: expected specifier-qualifier-list before 'int32_t'
+     int32_t *fptr;  /* Front pointer.  */
+     ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:435:8: error: expected declaration specifiers or '...' before 'int32_t'
+        int32_t *__restrict __result) __THROW __nonnull ((1, 2));
+        ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:437:12: error: storage class specified for parameter 'srandom_r'
+ extern int srandom_r (unsigned int __seed, struct random_data *__buf)
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:440:12: error: storage class specified for parameter 'initstate_r'
+ extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
+            ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:445:12: error: storage class specified for parameter 'setstate_r'
+ extern int setstate_r (char *__restrict __statebuf,
+            ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:453:12: error: storage class specified for parameter 'rand'
+ extern int rand (void) __THROW;
+            ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:455:13: error: storage class specified for parameter 'srand'
+ extern void srand (unsigned int __seed) __THROW;
+             ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:459:12: error: storage class specified for parameter 'rand_r'
+ extern int rand_r (unsigned int *__seed) __THROW;
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:467:15: error: storage class specified for parameter 'drand48'
+ extern double drand48 (void) __THROW;
+               ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:468:15: error: storage class specified for parameter 'erand48'
+ extern double erand48 (unsigned short int __xsubi[3]) __THROW __nonnull ((1));
+               ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:471:17: error: storage class specified for parameter 'lrand48'
+ extern long int lrand48 (void) __THROW;
+                 ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:472:17: error: storage class specified for parameter 'nrand48'
+ extern long int nrand48 (unsigned short int __xsubi[3])
+                 ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:476:17: error: storage class specified for parameter 'mrand48'
+ extern long int mrand48 (void) __THROW;
+                 ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:477:17: error: storage class specified for parameter 'jrand48'
+ extern long int jrand48 (unsigned short int __xsubi[3])
+                 ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:481:13: error: storage class specified for parameter 'srand48'
+ extern void srand48 (long int __seedval) __THROW;
+             ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:482:28: error: storage class specified for parameter 'seed48'
+ extern unsigned short int *seed48 (unsigned short int __seed16v[3])
+                            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:484:13: error: storage class specified for parameter 'lcong48'
+ extern void lcong48 (unsigned short int __param[7]) __THROW __nonnull ((1));
+             ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:501:12: error: storage class specified for parameter 'drand48_r'
+ extern int drand48_r (struct drand48_data *__restrict __buffer,
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:503:12: error: storage class specified for parameter 'erand48_r'
+ extern int erand48_r (unsigned short int __xsubi[3],
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:508:12: error: storage class specified for parameter 'lrand48_r'
+ extern int lrand48_r (struct drand48_data *__restrict __buffer,
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:511:12: error: storage class specified for parameter 'nrand48_r'
+ extern int nrand48_r (unsigned short int __xsubi[3],
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:517:12: error: storage class specified for parameter 'mrand48_r'
+ extern int mrand48_r (struct drand48_data *__restrict __buffer,
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:520:12: error: storage class specified for parameter 'jrand48_r'
+ extern int jrand48_r (unsigned short int __xsubi[3],
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:526:12: error: storage class specified for parameter 'srand48_r'
+ extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:529:12: error: storage class specified for parameter 'seed48_r'
+ extern int seed48_r (unsigned short int __seed16v[3],
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:532:12: error: storage class specified for parameter 'lcong48_r'
+ extern int lcong48_r (unsigned short int __param[7],
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:539:66: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+ extern void *malloc (size_t __size) __THROW __attribute_malloc__ __wur;
+                                                                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:542:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+      __THROW __attribute_malloc__ __wur;
+                                   ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:550:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__attribute_warn_unused_result__'
+      __THROW __attribute_warn_unused_result__;
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:559:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__attribute_warn_unused_result__'
+      __THROW __attribute_warn_unused_result__;
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:563:13: error: storage class specified for parameter 'free'
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/alloca.h:11,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:566,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:22:25: error: storage class specified for parameter '__ULong'
+ typedef unsigned __Long __ULong;
+                         ^~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:34,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/alloca.h:11,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:566,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/lock.h:11:13: error: storage class specified for parameter '_LOCK_T'
+ typedef int _LOCK_T;
+             ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/lock.h:12:13: error: storage class specified for parameter '_LOCK_RECURSIVE_T'
+ typedef int _LOCK_RECURSIVE_T;
+             ^~~~~~~~~~~~~~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/alloca.h:11,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:566,
+                 from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:35:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_flock_t'
+ typedef _LOCK_RECURSIVE_T _flock_t;
+                           ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:56:3: error: expected specifier-qualifier-list before '__ULong'
+   __ULong _x[1];
+   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:83:2: error: expected specifier-qualifier-list before '__ULong'
+  __ULong _fntypes;                    /* type of exit routine -
+  ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:173:3: error: expected specifier-qualifier-list before '_fpos_t'
+   _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
+   ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:269:26: error: storage class specified for parameter '__FILE'
+ typedef struct __sFILE   __FILE;
+                          ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:273:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__sf'
+ extern __FILE __sf[3];
+               ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:279:3: error: expected specifier-qualifier-list before '__FILE'
+   __FILE *_iobs;
+   ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:282:21: error: storage class specified for parameter '__sglue'
+ extern struct _glue __sglue;
+                     ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:574:3: error: expected specifier-qualifier-list before '__FILE'
+   __FILE *_stdin, *_stdout, *_stderr;
+   ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:765:23: error: storage class specified for parameter '_impure_ptr'
+ extern struct _reent *_impure_ptr __ATTRIBUTE_IMPURE_PTR__;
+                       ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:771:22: error: storage class specified for parameter '_impure_data'
+ extern struct _reent _impure_data __ATTRIBUTE_IMPURE_DATA__;
+                      ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:883:24: error: storage class specified for parameter '__atexit'
+ extern struct _atexit *__atexit; /* points to head of LIFO stack */
+                        ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:884:23: error: storage class specified for parameter '__atexit0'
+ extern struct _atexit __atexit0; /* one guaranteed table, required by ANSI */
+                       ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:886:15: error: storage class specified for parameter '__stdio_exit_handler'
+ extern void (*__stdio_exit_handler) (void);
+               ^~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:890:68: error: expected declaration specifiers or '...' before '__FILE'
+ extern int _fwalk_sglue (struct _reent *, int (*)(struct _reent *, __FILE *),
+                                                                    ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h:891:5: error: expected ';', ',' or ')' before 'struct'
+     struct _glue *);
+     ^~~~~~
+In file included from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:572:66: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+ extern void *valloc (size_t __size) __THROW __attribute_malloc__ __wur;
+                                                                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:577:12: error: storage class specified for parameter 'posix_memalign'
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+            ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:578:30: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((1)) __wur;
+                              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:584:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__attribute_alloc_size__'
+      __THROW __attribute_malloc__ __attribute_alloc_size__ ((2)) __wur;
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:588:13: error: storage class specified for parameter 'abort'
+ extern void abort (void) __THROW __attribute__ ((__noreturn__));
+             ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:592:12: error: storage class specified for parameter 'atexit'
+ extern int atexit (void (*__func) (void)) __THROW __nonnull ((1));
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:600:12: error: storage class specified for parameter 'at_quick_exit'
+ extern int at_quick_exit (void (*__func) (void)) __THROW __nonnull ((1));
+            ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:607:12: error: storage class specified for parameter 'on_exit'
+ extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:614:13: error: storage class specified for parameter 'exit'
+ extern void exit (int __status) __THROW __attribute__ ((__noreturn__));
+             ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:620:13: error: storage class specified for parameter 'quick_exit'
+ extern void quick_exit (int __status) __THROW __attribute__ ((__noreturn__));
+             ^~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:626:13: error: storage class specified for parameter '_Exit'
+ extern void _Exit (int __status) __THROW __attribute__ ((__noreturn__));
+             ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:631:14: error: storage class specified for parameter 'getenv'
+ extern char *getenv (const char *__name) __THROW __nonnull ((1)) __wur;
+              ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:631:66: error: expected ',' or ';' before '__wur'
+ extern char *getenv (const char *__name) __THROW __nonnull ((1)) __wur;
+                                                                  ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:644:12: error: storage class specified for parameter 'putenv'
+ extern int putenv (char *__string) __THROW __nonnull ((1));
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:650:12: error: storage class specified for parameter 'setenv'
+ extern int setenv (const char *__name, const char *__value, int __replace)
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:654:12: error: storage class specified for parameter 'unsetenv'
+ extern int unsetenv (const char *__name) __THROW __nonnull ((1));
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:661:12: error: storage class specified for parameter 'clearenv'
+ extern int clearenv (void) __THROW;
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:672:14: error: storage class specified for parameter 'mktemp'
+ extern char *mktemp (char *__template) __THROW __nonnull ((1));
+              ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:685:12: error: storage class specified for parameter 'mkstemp'
+ extern int mkstemp (char *__template) __nonnull ((1)) __wur;
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:685:55: error: expected ',' or ';' before '__wur'
+ extern int mkstemp (char *__template) __nonnull ((1)) __wur;
+                                                       ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:707:12: error: storage class specified for parameter 'mkstemps'
+ extern int mkstemps (char *__template, int __suffixlen) __nonnull ((1)) __wur;
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:707:73: error: expected ',' or ';' before '__wur'
+ extern int mkstemps (char *__template, int __suffixlen) __nonnull ((1)) __wur;
+                                                                         ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:728:14: error: storage class specified for parameter 'mkdtemp'
+ extern char *mkdtemp (char *__template) __THROW __nonnull ((1)) __wur;
+              ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:728:65: error: expected ',' or ';' before '__wur'
+ extern char *mkdtemp (char *__template) __THROW __nonnull ((1)) __wur;
+                                                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:781:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+ extern int system (const char *__command) __wur;
+                                           ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:798:47: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__wur'
+          char *__restrict __resolved) __THROW __wur;
+                                               ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:805:15: error: storage class specified for parameter '__compar_fn_t'
+ typedef int (*__compar_fn_t) (const void *, const void *);
+               ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:818:40: error: expected declaration specifiers or '...' before '__compar_fn_t'
+         size_t __nmemb, size_t __size, __compar_fn_t __compar)
+                                        ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:828:6: error: expected declaration specifiers or '...' before '__compar_fn_t'
+      __compar_fn_t __compar) __nonnull ((1, 4));
+      ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:837:12: error: storage class specified for parameter 'abs'
+ extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+            ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:837:62: error: expected ',' or ';' before '__wur'
+ extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+                                                              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:838:17: error: storage class specified for parameter 'labs'
+ extern long int labs (long int __x) __THROW __attribute__ ((__const__)) __wur;
+                 ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:838:73: error: expected ',' or ';' before '__wur'
+ extern long int labs (long int __x) __THROW __attribute__ ((__const__)) __wur;
+                                                                         ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:841:1: error: expected declaration specifiers before '__extension__'
+ __extension__ extern long long int llabs (long long int __x)
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:849:14: error: storage class specified for parameter 'div'
+ extern div_t div (int __numer, int __denom)
+              ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:850:42: error: expected ',' or ';' before '__wur'
+      __THROW __attribute__ ((__const__)) __wur;
+                                          ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:851:15: error: storage class specified for parameter 'ldiv'
+ extern ldiv_t ldiv (long int __numer, long int __denom)
+               ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:852:42: error: expected ',' or ';' before '__wur'
+      __THROW __attribute__ ((__const__)) __wur;
+                                          ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:855:1: error: expected declaration specifiers before '__extension__'
+ __extension__ extern lldiv_t lldiv (long long int __numer,
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:869:14: error: storage class specified for parameter 'ecvt'
+ extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+              ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:870:57: error: expected ',' or ';' before '__wur'
+      int *__restrict __sign) __THROW __nonnull ((3, 4)) __wur;
+                                                         ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:875:14: error: storage class specified for parameter 'fcvt'
+ extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+              ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:876:57: error: expected ',' or ';' before '__wur'
+      int *__restrict __sign) __THROW __nonnull ((3, 4)) __wur;
+                                                         ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:881:14: error: storage class specified for parameter 'gcvt'
+ extern char *gcvt (double __value, int __ndigit, char *__buf)
+              ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:882:30: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((3)) __wur;
+                              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:887:14: error: storage class specified for parameter 'qecvt'
+ extern char *qecvt (long double __value, int __ndigit,
+              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:889:33: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((3, 4)) __wur;
+                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:890:14: error: storage class specified for parameter 'qfcvt'
+ extern char *qfcvt (long double __value, int __ndigit,
+              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:892:33: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((3, 4)) __wur;
+                                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:893:14: error: storage class specified for parameter 'qgcvt'
+ extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:894:30: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((3)) __wur;
+                              ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:899:12: error: storage class specified for parameter 'ecvt_r'
+ extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:902:12: error: storage class specified for parameter 'fcvt_r'
+ extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:906:12: error: storage class specified for parameter 'qecvt_r'
+ extern int qecvt_r (long double __value, int __ndigit,
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:910:12: error: storage class specified for parameter 'qfcvt_r'
+ extern int qfcvt_r (long double __value, int __ndigit,
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:919:12: error: storage class specified for parameter 'mblen'
+ extern int mblen (const char *__s, size_t __n) __THROW;
+            ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:922:12: error: storage class specified for parameter 'mbtowc'
+ extern int mbtowc (wchar_t *__restrict __pwc,
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:926:12: error: storage class specified for parameter 'wctomb'
+ extern int wctomb (char *__s, wchar_t __wchar) __THROW;
+            ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:930:15: error: storage class specified for parameter 'mbstowcs'
+ extern size_t mbstowcs (wchar_t *__restrict  __pwcs,
+               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:933:15: error: storage class specified for parameter 'wcstombs'
+ extern size_t wcstombs (char *__restrict __s,
+               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:943:12: error: storage class specified for parameter 'rpmatch'
+ extern int rpmatch (const char *__response) __THROW __nonnull ((1)) __wur;
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:943:69: error: expected ',' or ';' before '__wur'
+ extern int rpmatch (const char *__response) __THROW __nonnull ((1)) __wur;
+                                                                     ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:954:12: error: storage class specified for parameter 'getsubopt'
+ extern int getsubopt (char **__restrict __optionp,
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:957:36: error: expected ',' or ';' before '__wur'
+      __THROW __nonnull ((1, 2, 3)) __wur;
+                                    ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:1000:12: error: storage class specified for parameter 'getloadavg'
+ extern int getloadavg (double __loadavg[], int __nelem)
+            ^~~~~~~~~~
+In file included from src/FreeRTOS.h:50,
+                 from src/event_groups.c:38:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:21:24: error: storage class specified for parameter 'int_least8_t'
+ typedef __int_least8_t int_least8_t;
+                        ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:22:25: error: storage class specified for parameter 'uint_least8_t'
+ typedef __uint_least8_t uint_least8_t;
+                         ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:27:25: error: storage class specified for parameter 'int_least16_t'
+ typedef __int_least16_t int_least16_t;
+                         ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:28:26: error: storage class specified for parameter 'uint_least16_t'
+ typedef __uint_least16_t uint_least16_t;
+                          ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:33:25: error: storage class specified for parameter 'int_least32_t'
+ typedef __int_least32_t int_least32_t;
+                         ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:34:26: error: storage class specified for parameter 'uint_least32_t'
+ typedef __uint_least32_t uint_least32_t;
+                          ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:39:25: error: storage class specified for parameter 'int_least64_t'
+ typedef __int_least64_t int_least64_t;
+                         ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:40:26: error: storage class specified for parameter 'uint_least64_t'
+ typedef __uint_least64_t uint_least64_t;
+                          ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:51:30: error: storage class specified for parameter 'int_fast8_t'
+   typedef __INT_FAST8_TYPE__ int_fast8_t;
+                              ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:52:31: error: storage class specified for parameter 'uint_fast8_t'
+   typedef __UINT_FAST8_TYPE__ uint_fast8_t;
+                               ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:61:31: error: storage class specified for parameter 'int_fast16_t'
+   typedef __INT_FAST16_TYPE__ int_fast16_t;
+                               ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:62:32: error: storage class specified for parameter 'uint_fast16_t'
+   typedef __UINT_FAST16_TYPE__ uint_fast16_t;
+                                ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:71:31: error: storage class specified for parameter 'int_fast32_t'
+   typedef __INT_FAST32_TYPE__ int_fast32_t;
+                               ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:72:32: error: storage class specified for parameter 'uint_fast32_t'
+   typedef __UINT_FAST32_TYPE__ uint_fast32_t;
+                                ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:81:31: error: storage class specified for parameter 'int_fast64_t'
+   typedef __INT_FAST64_TYPE__ int_fast64_t;
+                               ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h:82:32: error: storage class specified for parameter 'uint_fast64_t'
+   typedef __UINT_FAST64_TYPE__ uint_fast64_t;
+                                ^~~~~~~~~~~~~
+In file included from src/FreeRTOS.h:59,
+                 from src/event_groups.c:38:
+src/FreeRTOSConfig.h:158:1: error: expected declaration specifiers before 'uint64_t'
+ uint64_t freertos_get_us(void);
+ ^~~~~~~~
+In file included from src/FreeRTOS.h:62,
+                 from src/event_groups.c:38:
+src/projdefs.h:38:17: error: storage class specified for parameter 'TaskFunction_t'
+ typedef void (* TaskFunction_t)( void * );
+                 ^~~~~~~~~~~~~~
+In file included from src/portable/portmacro.h:36,
+                 from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:19:1: warning: empty declaration
+ enum IRQ_NUMBER_t {
+ ^~~~
+In file included from src/portable/portmacro.h:36,
+                 from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:449:25: error: storage class specified for parameter '_VectorsRam'
+ extern void (* volatile _VectorsRam[NVIC_NUM_INTERRUPTS+16])(void);
+                         ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:450:20: error: storage class specified for parameter 'attachInterruptVector'
+ static inline void attachInterruptVector(enum IRQ_NUMBER_t irq, void (*function)(void)) __attribute__((always_inline, unused));
+                    ^~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:450:20: warning: parameter 'attachInterruptVector' declared 'inline'
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:450:47: warning: 'always_inline' attribute ignored [-Wattributes]
+ static inline void attachInterruptVector(enum IRQ_NUMBER_t irq, void (*function)(void)) __attribute__((always_inline, unused));
+                                               ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:451:89: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static inline void attachInterruptVector(enum IRQ_NUMBER_t irq, void (*function)(void)) { _VectorsRam[irq + 16] = function; asm volatile("": : :"memory"); }
+                                                                                         ^
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:455:20: error: expected ':', ',', ';', '}' or '__attribute__' before 'offset000'
+  volatile uint32_t offset000;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:711:3: error: storage class specified for parameter 'IMXRT_REGISTER32_t'
+ } IMXRT_REGISTER32_t;
+   ^~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:714:20: error: expected ':', ',', ';', '}' or '__attribute__' before 'offset000'
+  volatile uint16_t offset000;
+                    ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:970:3: error: storage class specified for parameter 'IMXRT_REGISTER16_t'
+ } IMXRT_REGISTER16_t;
+   ^~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:973:19: error: expected ':', ',', ';', '}' or '__attribute__' before 'offset00'
+  volatile uint8_t offset00;
+                   ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:989:3: error: storage class specified for parameter 'IMXRT_REGISTER8_t'
+ } IMXRT_REGISTER8_t;
+   ^~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:1027:27: error: expected ':', ',', ';', '}' or '__attribute__' before 'HC0'
+         volatile uint32_t HC0;
+                           ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:1050:3: error: storage class specified for parameter 'IMXRT_ADCS_t'
+ } IMXRT_ADCS_t;
+   ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:1138:21: error: expected ':', ',', ';', '}' or '__attribute__' before 'CTRL'
+   volatile uint32_t CTRL;              // offset 0
+                     ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:1154:3: error: storage class specified for parameter 'IMXRT_ADC_ETC_t'
+ } IMXRT_ADC_ETC_t;
+   ^~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:1979:20: error: expected ':', ',', ';', '}' or '__attribute__' before 'CR'
+  volatile uint32_t CR; // 0
+                    ^~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:2036:3: error: storage class specified for parameter 'IMXRT_DMA_t'
+ } IMXRT_DMA_t;
+   ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:2040:2: error: expected specifier-qualifier-list before 'int16_t'
+  int16_t SOFF;
+  ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:2069:3: error: storage class specified for parameter 'IMXRT_DMA_TCD_t'
+ } IMXRT_DMA_TCD_t;
+   ^~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:2818:21: error: expected ':', ',', ';', '}' or '__attribute__' before 'CTRL'
+   volatile uint16_t CTRL;  /**< Control Register, offset: 0x0 */
+                     ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:2838:3: error: storage class specified for parameter 'IMXRT_ENC_t'
+ } IMXRT_ENC_t;
+   ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:3718:26: error: expected ':', ',', ';', '}' or '__attribute__' before 'VERID'
+         const   uint32_t VERID;                         // 0x00 (IMXRT_FLEXIO1.offset000)
+                          ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:3757:3: error: storage class specified for parameter 'IMXRT_FLEXIO_t'
+ } IMXRT_FLEXIO_t;
+   ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:4131:21: error: expected ':', ',', ';', '}' or '__attribute__' before 'CNT'
+   volatile uint16_t CNT;
+                     ^~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:4180:20: error: expected ':', ',', ';', '}' or '__attribute__' before 'OUTEN'
+  volatile uint16_t OUTEN;
+                    ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:4191:3: error: storage class specified for parameter 'IMXRT_FLEXPWM_t'
+ } IMXRT_FLEXPWM_t;
+   ^~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:5659:27: error: expected ':', ',', ';', '}' or '__attribute__' before 'DR'
+         volatile uint32_t DR;                  // 00
+                           ^~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:5672:3: error: storage class specified for parameter 'IMXRT_GPIO_t'
+ } IMXRT_GPIO_t;
+   ^~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:6761:17: error: expected ':', ',', ';', '}' or '__attribute__' before 'VERID'
+  const uint32_t VERID;
+                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:6802:3: error: storage class specified for parameter 'IMXRT_LPI2C_t'
+ } IMXRT_LPI2C_t;
+   ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7124:24: error: expected ':', ',', ';', '}' or '__attribute__' before 'VERID'
+         const uint32_t VERID;           // 0
+                        ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7154:3: error: storage class specified for parameter 'IMXRT_LPSPI_t'
+ } IMXRT_LPSPI_t;
+   ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7309:17: error: expected ':', ',', ';', '}' or '__attribute__' before 'VERID'
+  const uint32_t VERID;
+                 ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7321:3: error: storage class specified for parameter 'IMXRT_LPUART_t'
+ } IMXRT_LPUART_t;
+   ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7625:20: error: expected ':', ',', ';', '}' or '__attribute__' before 'LDVAL'
+  volatile uint32_t LDVAL;
+                    ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7629:3: error: storage class specified for parameter 'IMXRT_PIT_CHANNEL_t'
+ } IMXRT_PIT_CHANNEL_t;
+   ^~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7767:23: error: expected ':', ',', ';', '}' or '__attribute__' before 'CTRL'
+     volatile uint32_t CTRL;
+                       ^~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:7838:3: error: storage class specified for parameter 'IMXRT_PXP_t'
+ } IMXRT_PXP_t;
+   ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8006:22: error: expected ':', ',', ';', '}' or '__attribute__' before 'COMP1'
+    volatile uint16_t COMP1;
+                      ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8020:3: error: storage class specified for parameter 'IMXRT_TMR_CH_t'
+ } IMXRT_TMR_CH_t;
+   ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8024:7: error: expected specifier-qualifier-list before 'IMXRT_TMR_CH_t'
+       IMXRT_TMR_CH_t CH[4];
+       ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8031:3: error: storage class specified for parameter 'IMXRT_TMR_t'
+ } IMXRT_TMR_t;
+   ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8295:27: error: expected ':', ',', ';', '}' or '__attribute__' before 'VERID'
+         const    uint32_t VERID;                // offset000
+                           ^~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:8320:3: error: storage class specified for parameter 'IMXRT_SAI_t'
+ } IMXRT_SAI_t;
+   ^~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10057:1: error: expected declaration specifiers before '__attribute__'
+ __attribute__((always_inline, unused))
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10096:1: error: expected declaration specifiers before '__attribute__'
+ __attribute__((always_inline, unused))
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10117:1: error: expected declaration specifiers before '__attribute__'
+ __attribute__((always_inline, unused))
+ ^~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10134:2: error: expected specifier-qualifier-list before 'uint32_t'
+  uint32_t len;  // all fields must be 32 bits
+  ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10133:1: warning: empty declaration
+ struct arm_fault_info_struct {
+ ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10149:2: error: expected specifier-qualifier-list before 'uint32_t'
+  uint32_t bitmask;
+  ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/imxrt.h:10148:1: warning: empty declaration
+ struct crashreport_breadcrumbs_struct {
+ ^~~~~~
+In file included from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable/portmacro.h:68:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'StackType_t'
+     typedef portSTACK_TYPE   StackType_t;
+                              ^~~~~~~~~~~
+src/portable/portmacro.h:69:30: error: storage class specified for parameter 'BaseType_t'
+     typedef long             BaseType_t;
+                              ^~~~~~~~~~
+src/portable/portmacro.h:70:30: error: storage class specified for parameter 'UBaseType_t'
+     typedef unsigned long    UBaseType_t;
+                              ^~~~~~~~~~~
+src/portable/portmacro.h:76:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'TickType_t'
+         typedef uint32_t     TickType_t;
+                              ^~~~~~~~~~
+src/portable/portmacro.h:112:17: error: storage class specified for parameter 'vPortEnterCritical'
+     extern void vPortEnterCritical( void );
+                 ^~~~~~~~~~~~~~~~~~
+src/portable/portmacro.h:113:17: error: storage class specified for parameter 'vPortExitCritical'
+     extern void vPortExitCritical( void );
+                 ^~~~~~~~~~~~~~~~~
+src/portable/portmacro.h:132:49: error: unknown type name 'TickType_t'
+         extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime );
+                                                 ^~~~~~~~~~
+src/portable/portmacro.h:145:9: error: expected declaration specifiers before '__attribute__'
+         __attribute__( ( always_inline ) ) static inline uint8_t ucPortCountLeadingZeros( uint32_t ulBitmap )
+         ^~~~~~~~~~~~~
+In file included from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable/portmacro.h:189:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'xPortIsInsideInterrupt'
+     portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void )
+                                        ^~~~~~~~~~~~~~~~~~~~~~
+src/portable/portmacro.h:212:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+     {
+     ^
+src/portable/portmacro.h:227:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ulPortRaiseBASEPRI'
+     portFORCE_INLINE static uint32_t ulPortRaiseBASEPRI( void )
+                                      ^~~~~~~~~~~~~~~~~~
+src/portable/portmacro.h:245:51: error: expected declaration specifiers or '...' before 'uint32_t'
+     portFORCE_INLINE static void vPortSetBASEPRI( uint32_t ulNewMaskValue )
+                                                   ^~~~~~~~
+src/portable/portmacro.h:261:5: warning: 'malloc' attribute ignored [-Wattributes]
+     void* malloc( size_t ) __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1 ) ) );
+     ^~~~
+src/portable/portmacro.h:262:35: error: storage class specified for parameter 'pvPortMalloc'
+     portFORCE_INLINE static void* pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1 ) ) );
+                                   ^~~~~~~~~~~~
+src/portable/portmacro.h:262:35: warning: parameter 'pvPortMalloc' declared 'inline'
+src/portable/portmacro.h:262:5: warning: 'malloc' attribute ignored [-Wattributes]
+     portFORCE_INLINE static void* pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1 ) ) );
+     ^~~~~~~~~~~~~~~~
+src/portable/portmacro.h:262:5: warning: 'always_inline' attribute ignored [-Wattributes]
+src/portable/portmacro.h:263:84: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+     portFORCE_INLINE static void* pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION {
+                                                                                    ^
+src/portable/portmacro.h:267:5: warning: 'malloc' attribute ignored [-Wattributes]
+     void* calloc( size_t, size_t ) __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1, 2 ) ) );
+     ^~~~
+src/portable/portmacro.h:268:35: error: storage class specified for parameter 'pvPortCalloc'
+     portFORCE_INLINE static void* pvPortCalloc( size_t xNum, size_t xSize ) PRIVILEGED_FUNCTION __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1, 2 ) ) );
+                                   ^~~~~~~~~~~~
+src/portable/portmacro.h:268:35: warning: parameter 'pvPortCalloc' declared 'inline'
+src/portable/portmacro.h:268:5: warning: 'malloc' attribute ignored [-Wattributes]
+     portFORCE_INLINE static void* pvPortCalloc( size_t xNum, size_t xSize ) PRIVILEGED_FUNCTION __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1, 2 ) ) );
+     ^~~~~~~~~~~~~~~~
+src/portable/portmacro.h:268:5: warning: 'always_inline' attribute ignored [-Wattributes]
+src/portable/portmacro.h:269:97: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+     portFORCE_INLINE static void* pvPortCalloc( size_t xNum, size_t xSize ) PRIVILEGED_FUNCTION {
+                                                                                                 ^
+src/portable/portmacro.h:273:10: error: redefinition of parameter 'free'
+     void free( void* );
+          ^~~~
+In file included from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:563:13: note: previous definition of 'free' was here
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable/portmacro.h:274:76: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+     portFORCE_INLINE static void vPortFree( void* pv ) PRIVILEGED_FUNCTION {
+                                                                            ^
+In file included from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable.h:127:9: error: unknown type name 'StackType_t'
+         StackType_t * pxPortInitialiseStack( StackType_t * pxTopOfStack,
+         ^~~~~~~~~~~
+src/portable.h:127:46: error: unknown type name 'StackType_t'
+         StackType_t * pxPortInitialiseStack( StackType_t * pxTopOfStack,
+                                              ^~~~~~~~~~~
+src/portable.h:128:46: error: expected declaration specifiers or '...' before 'TaskFunction_t'
+                                              TaskFunction_t pxCode,
+                                              ^~~~~~~~~~~~~~
+src/portable.h:137:5: error: expected specifier-qualifier-list before 'uint8_t'
+     uint8_t * pucStartAddress;
+     ^~~~~~~
+src/portable.h:139:3: error: storage class specified for parameter 'HeapRegion_t'
+ } HeapRegion_t;
+   ^~~~~~~~~~~~
+src/portable.h:151:3: error: storage class specified for parameter 'HeapStats_t'
+ } HeapStats_t;
+   ^~~~~~~~~~~
+src/portable.h:164:36: warning: type defaults to 'int' in declaration of 'HeapRegion_t' [-Wimplicit-int]
+ void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions ) PRIVILEGED_FUNCTION;
+                                    ^~~~~~~~~~~~
+src/portable.h:164:49: error: expected ';', ',' or ')' before '*' token
+ void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions ) PRIVILEGED_FUNCTION;
+                                                 ^
+src/portable.h:170:25: error: expected declaration specifiers or '...' before 'HeapStats_t'
+ void vPortGetHeapStats( HeapStats_t * pxHeapStats );
+                         ^~~~~~~~~~~
+src/portable.h:175:8: error: redefinition of parameter 'pvPortMalloc'
+ void * pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION;
+        ^~~~~~~~~~~~
+In file included from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable/portmacro.h:262:35: note: previous definition of 'pvPortMalloc' was here
+     portFORCE_INLINE static void* pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION __attribute__( ( __malloc__, __warn_unused_result__, __alloc_size__( 1 ) ) );
+                                   ^~~~~~~~~~~~
+In file included from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable.h:208:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xPortStartScheduler( void ) PRIVILEGED_FUNCTION __attribute__ (( section( ".flashmem" ), noinline ));
+ ^~~~~~~~~~
+src/portable.h:215:6: error: section attribute not allowed for 'vPortEndScheduler'
+ void vPortEndScheduler( void ) PRIVILEGED_FUNCTION __attribute__ (( section( ".flashmem" ) ));
+      ^~~~~~~~~~~~~~~~~
+In file included from src/FreeRTOS.h:84,
+                 from src/event_groups.c:38:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:101:1: warning: empty declaration
+ struct stat;
+ ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:102:1: warning: empty declaration
+ struct tms;
+ ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:103:1: warning: empty declaration
+ struct timeval;
+ ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:104:1: warning: empty declaration
+ struct timezone;
+ ^~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:139:12: error: storage class specified for parameter '_close_r'
+ extern int _close_r (struct _reent *, int);
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:140:12: error: storage class specified for parameter '_execve_r'
+ extern int _execve_r (struct _reent *, const char *, char *const *, char *const *);
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:141:12: error: storage class specified for parameter '_fcntl_r'
+ extern int _fcntl_r (struct _reent *, int, int, int);
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:142:12: error: storage class specified for parameter '_fork_r'
+ extern int _fork_r (struct _reent *);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:143:12: error: storage class specified for parameter '_fstat_r'
+ extern int _fstat_r (struct _reent *, int, struct stat *);
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:144:12: error: storage class specified for parameter '_getpid_r'
+ extern int _getpid_r (struct _reent *);
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:145:12: error: storage class specified for parameter '_isatty_r'
+ extern int _isatty_r (struct _reent *, int);
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:146:12: error: storage class specified for parameter '_kill_r'
+ extern int _kill_r (struct _reent *, int, int);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:147:12: error: storage class specified for parameter '_link_r'
+ extern int _link_r (struct _reent *, const char *, const char *);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:148:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_lseek_r'
+ extern _off_t _lseek_r (struct _reent *, int, _off_t, int);
+               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:149:12: error: storage class specified for parameter '_mkdir_r'
+ extern int _mkdir_r (struct _reent *, const char *, int);
+            ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:150:12: error: storage class specified for parameter '_open_r'
+ extern int _open_r (struct _reent *, const char *, int, int);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:151:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_read_r'
+ extern _ssize_t _read_r (struct _reent *, int, void *, size_t);
+                 ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:152:12: error: storage class specified for parameter '_rename_r'
+ extern int _rename_r (struct _reent *, const char *, const char *);
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:153:14: error: storage class specified for parameter '_sbrk_r'
+ extern void *_sbrk_r (struct _reent *, ptrdiff_t);
+              ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:154:12: error: storage class specified for parameter '_stat_r'
+ extern int _stat_r (struct _reent *, const char *, struct stat *);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:155:18: error: storage class specified for parameter '_times_r'
+ extern _CLOCK_T_ _times_r (struct _reent *, struct tms *);
+                  ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:156:12: error: storage class specified for parameter '_unlink_r'
+ extern int _unlink_r (struct _reent *, const char *);
+            ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:157:12: error: storage class specified for parameter '_wait_r'
+ extern int _wait_r (struct _reent *, int *);
+            ^~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:158:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_write_r'
+ extern _ssize_t _write_r (struct _reent *, int, const void *, size_t);
+                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/reent.h:161:12: error: storage class specified for parameter '_gettimeofday_r'
+ extern int _gettimeofday_r (struct _reent *, struct timeval *__tp, void *__tzp);
+            ^~~~~~~~~~~~~~~
+In file included from src/event_groups.c:38:
+src/FreeRTOS.h:1212:9: error: unknown type name 'TickType_t'
+         TickType_t xDummy1;
+         ^~~~~~~~~~
+src/FreeRTOS.h:1214:5: error: unknown type name 'TickType_t'
+     TickType_t xDummy2;
+     ^~~~~~~~~~
+src/FreeRTOS.h:1217:9: error: unknown type name 'TickType_t'
+         TickType_t xDummy4;
+         ^~~~~~~~~~
+src/FreeRTOS.h:1209:1: warning: empty declaration
+ struct xSTATIC_LIST_ITEM
+ ^~~~~~
+src/FreeRTOS.h:1220:34: error: storage class specified for parameter 'StaticListItem_t'
+ typedef struct xSTATIC_LIST_ITEM StaticListItem_t;
+                                  ^~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1227:13: error: unknown type name 'TickType_t'
+             TickType_t xDummy1;
+             ^~~~~~~~~~
+src/FreeRTOS.h:1229:9: error: unknown type name 'TickType_t'
+         TickType_t xDummy2;
+         ^~~~~~~~~~
+src/FreeRTOS.h:1224:5: warning: empty declaration
+     struct xSTATIC_MINI_LIST_ITEM
+     ^~~~~~
+src/FreeRTOS.h:1232:43: error: storage class specified for parameter 'StaticMiniListItem_t'
+     typedef struct xSTATIC_MINI_LIST_ITEM StaticMiniListItem_t;
+                                           ^~~~~~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1241:9: error: unknown type name 'TickType_t'
+         TickType_t xDummy1;
+         ^~~~~~~~~~
+src/FreeRTOS.h:1243:5: error: expected specifier-qualifier-list before 'UBaseType_t'
+     UBaseType_t uxDummy2;
+     ^~~~~~~~~~~
+src/FreeRTOS.h:1249:3: error: storage class specified for parameter 'StaticList_t'
+ } StaticList_t;
+   ^~~~~~~~~~~~
+src/FreeRTOS.h:1270:5: error: expected specifier-qualifier-list before 'StaticListItem_t'
+     StaticListItem_t xDummy3[ 2 ];
+     ^~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1312:3: error: storage class specified for parameter 'StaticTask_t'
+ } StaticTask_t;
+   ^~~~~~~~~~~~
+src/FreeRTOS.h:1335:9: error: expected specifier-qualifier-list before 'UBaseType_t'
+         UBaseType_t uxDummy2;
+         ^~~~~~~~~~~
+src/FreeRTOS.h:1338:5: error: expected specifier-qualifier-list before 'StaticList_t'
+     StaticList_t xDummy3[ 2 ];
+     ^~~~~~~~~~~~
+src/FreeRTOS.h:1354:3: error: storage class specified for parameter 'StaticQueue_t'
+ } StaticQueue_t;
+   ^~~~~~~~~~~~~
+src/FreeRTOS.h:1355:23: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'StaticSemaphore_t'
+ typedef StaticQueue_t StaticSemaphore_t;
+                       ^~~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1373:5: error: unknown type name 'TickType_t'
+     TickType_t xDummy1;
+     ^~~~~~~~~~
+src/FreeRTOS.h:1374:5: error: expected specifier-qualifier-list before 'StaticList_t'
+     StaticList_t xDummy2;
+     ^~~~~~~~~~~~
+src/FreeRTOS.h:1383:3: error: storage class specified for parameter 'StaticEventGroup_t'
+ } StaticEventGroup_t;
+   ^~~~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1402:5: error: expected specifier-qualifier-list before 'StaticListItem_t'
+     StaticListItem_t xDummy2;
+     ^~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1410:3: error: storage class specified for parameter 'StaticTimer_t'
+ } StaticTimer_t;
+   ^~~~~~~~~~~~~
+src/FreeRTOS.h:1430:5: error: expected specifier-qualifier-list before 'uint8_t'
+     uint8_t ucDummy3;
+     ^~~~~~~
+src/FreeRTOS.h:1437:3: error: storage class specified for parameter 'StaticStreamBuffer_t'
+ } StaticStreamBuffer_t;
+   ^~~~~~~~~~~~~~~~~~~~
+src/FreeRTOS.h:1440:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'StaticMessageBuffer_t'
+ typedef StaticStreamBuffer_t StaticMessageBuffer_t;
+                              ^~~~~~~~~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:143:1: warning: empty declaration
+ struct xLIST;
+ ^~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:122:59: error: unknown type name 'TickType_t'
+     #define listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE     TickType_t xListItemIntegrityValue1;
+                                                           ^~~~~~~~~~
+src/list.h:146:5: note: in expansion of macro 'listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE'
+     listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE           /*< Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:147:25: error: unknown type name 'TickType_t'
+     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+                         ^~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:123:59: error: unknown type name 'TickType_t'
+     #define listSECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE    TickType_t xListItemIntegrityValue2;
+                                                           ^~~~~~~~~~
+src/list.h:152:5: note: in expansion of macro 'listSECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE'
+     listSECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE          /*< Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:144:1: warning: empty declaration
+ struct xLIST_ITEM
+ ^~~~~~
+src/list.h:154:27: error: storage class specified for parameter 'ListItem_t'
+ typedef struct xLIST_ITEM ListItem_t;                   /* For some reason lint wants this as two separate definitions. */
+                           ^~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:122:59: error: unknown type name 'TickType_t'
+     #define listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE     TickType_t xListItemIntegrityValue1;
+                                                           ^~~~~~~~~~
+src/list.h:159:9: note: in expansion of macro 'listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE'
+         listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE /*< Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:160:29: error: unknown type name 'TickType_t'
+         configLIST_VOLATILE TickType_t xItemValue;
+                             ^~~~~~~~~~
+src/list.h:157:5: warning: empty declaration
+     struct xMINI_LIST_ITEM
+     ^~~~~~
+src/list.h:164:36: error: storage class specified for parameter 'MiniListItem_t'
+     typedef struct xMINI_LIST_ITEM MiniListItem_t;
+                                    ^~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:124:59: error: unknown type name 'TickType_t'
+     #define listFIRST_LIST_INTEGRITY_CHECK_VALUE          TickType_t xListIntegrityValue1;
+                                                           ^~~~~~~~~~
+src/list.h:174:5: note: in expansion of macro 'listFIRST_LIST_INTEGRITY_CHECK_VALUE'
+     listFIRST_LIST_INTEGRITY_CHECK_VALUE      /*< Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/task.h:38,
+                 from src/event_groups.c:39:
+src/list.h:175:26: error: expected ':', ',', ';', '}' or '__attribute__' before 'uxNumberOfItems'
+     volatile UBaseType_t uxNumberOfItems;
+                          ^~~~~~~~~~~~~~~
+src/list.h:179:3: error: storage class specified for parameter 'List_t'
+ } List_t;
+   ^~~~~~
+src/list.h:433:23: error: expected declaration specifiers or '...' before 'List_t'
+ void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+                       ^~~~~~
+src/list.h:444:27: error: expected declaration specifiers or '...' before 'ListItem_t'
+ void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+                           ^~~~~~~~~~
+src/list.h:457:19: error: expected declaration specifiers or '...' before 'List_t'
+ void vListInsert( List_t * const pxList,
+                   ^~~~~~
+src/list.h:458:19: error: expected declaration specifiers or '...' before 'ListItem_t'
+                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+                   ^~~~~~~~~~
+src/list.h:479:22: error: expected declaration specifiers or '...' before 'List_t'
+ void vListInsertEnd( List_t * const pxList,
+                      ^~~~~~
+src/list.h:480:22: error: expected declaration specifiers or '...' before 'ListItem_t'
+                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+                      ^~~~~~~~~~
+src/list.h:495:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+In file included from src/event_groups.c:39:
+src/task.h:86:1: warning: empty declaration
+ struct tskTaskControlBlock; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+ ^~~~~~
+src/task.h:87:38: error: storage class specified for parameter 'TaskHandle_t'
+ typedef struct tskTaskControlBlock * TaskHandle_t;
+                                      ^~~~~~~~~~~~
+src/task.h:93:21: error: expected declaration specifiers or '...' before '*' token
+ typedef BaseType_t (* TaskHookFunction_t)( void * );
+                     ^
+In file included from src/event_groups.c:39:
+src/task.h:104:3: error: storage class specified for parameter 'eTaskState'
+ } eTaskState;
+   ^~~~~~~~~~
+src/task.h:114:3: error: storage class specified for parameter 'eNotifyAction'
+ } eNotifyAction;
+   ^~~~~~~~~~~~~
+src/task.h:121:5: error: expected specifier-qualifier-list before 'BaseType_t'
+     BaseType_t xOverflowCount;
+     ^~~~~~~~~~
+src/task.h:123:3: error: storage class specified for parameter 'TimeOut_t'
+ } TimeOut_t;
+   ^~~~~~~~~
+src/task.h:131:5: error: expected specifier-qualifier-list before 'uint32_t'
+     uint32_t ulLengthInBytes;
+     ^~~~~~~~
+src/task.h:133:3: error: storage class specified for parameter 'MemoryRegion_t'
+ } MemoryRegion_t;
+   ^~~~~~~~~~~~~~
+src/task.h:140:5: error: expected specifier-qualifier-list before 'TaskFunction_t'
+     TaskFunction_t pvTaskCode;
+     ^~~~~~~~~~~~~~
+src/task.h:150:3: error: storage class specified for parameter 'TaskParameters_t'
+ } TaskParameters_t;
+   ^~~~~~~~~~~~~~~~
+src/task.h:156:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+     TaskHandle_t xHandle;                         /* The handle of the task to which the rest of the information in the structure relates. */
+     ^~~~~~~~~~~~
+In file included from src/event_groups.c:39:
+src/task.h:169:3: error: storage class specified for parameter 'TaskStatus_t'
+ } TaskStatus_t;
+   ^~~~~~~~~~~~
+src/task.h:179:3: error: storage class specified for parameter 'eSleepModeStatus'
+ } eSleepModeStatus;
+   ^~~~~~~~~~~~~~~~
+src/task.h:355:5: error: expected declaration specifiers before 'BaseType_t'
+     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+     ^~~~~~~~~~
+src/task.h:472:5: error: expected declaration specifiers before 'TaskHandle_t'
+     TaskHandle_t xTaskCreateStatic( TaskFunction_t pxTaskCode,
+     ^~~~~~~~~~~~
+src/task.h:696:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskAllocateMPURegions( TaskHandle_t xTask,
+                               ^~~~~~~~~~~~
+src/task.h:697:37: warning: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Wimplicit-int]
+                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+                                     ^~~~~~~~~~~~~~
+src/task.h:697:52: error: expected ';', ',' or ')' before '*' token
+                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+                                                    ^
+src/task.h:740:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ^~~~~~~~~~~~
+src/task.h:794:24: error: unknown type name 'TickType_t'
+ void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+                        ^~~~~~~~~~
+src/task.h:861:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+ ^~~~~~~~~~
+src/task.h:904:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:953:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/task.h:963:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/task.h:983:1: error: expected declaration specifiers before 'eTaskState'
+ eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:1041:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskGetInfo( TaskHandle_t xTask,
+                    ^~~~~~~~~~~~
+src/task.h:1042:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+                    TaskStatus_t * pxTaskStatus,
+                    ^~~~~~~~~~~~
+src/task.h:1043:20: error: expected declaration specifiers or '...' before 'BaseType_t'
+                    BaseType_t xGetFreeStackSpace,
+                    ^~~~~~~~~~
+src/task.h:1044:20: error: expected declaration specifiers or '...' before 'eTaskState'
+                    eTaskState eState ) PRIVILEGED_FUNCTION;
+                    ^~~~~~~~~~
+src/task.h:1088:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskPrioritySet( TaskHandle_t xTask,
+                        ^~~~~~~~~~~~
+src/task.h:1089:24: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+                        ^~~~~~~~~~~
+src/task.h:1142:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+                    ^~~~~~~~~~~~
+src/task.h:1193:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+                   ^~~~~~~~~~~~
+src/task.h:1224:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:1426:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:1443:1: error: unknown type name 'TickType_t'
+ TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:1461:1: error: unknown type name 'TickType_t'
+ TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:1477:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/task.h:1492:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+                       ^~~~~~~~~~~~
+src/task.h:1510:1: error: expected declaration specifiers before 'TaskHandle_t'
+ TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+ ^~~~~~~~~~~~
+src/task.h:1539:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+In file included from src/event_groups.c:38:
+src/FreeRTOS.h:986:39: error: expected declaration specifiers before 'uint16_t'
+     #define configSTACK_DEPTH_TYPE    uint16_t
+                                       ^~~~~~~~
+src/task.h:1568:1: note: in expansion of macro 'configSTACK_DEPTH_TYPE'
+ configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~~~~~~~~~~~
+In file included from src/event_groups.c:39:
+src/task.h:1624:45: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+     void vTaskSetThreadLocalStoragePointer( TaskHandle_t xTaskToSet,
+                                             ^~~~~~~~~~~~
+src/task.h:1625:45: error: expected declaration specifiers or '...' before 'BaseType_t'
+                                             BaseType_t xIndex,
+                                             ^~~~~~~~~~
+src/task.h:1627:48: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+     void * pvTaskGetThreadLocalStoragePointer( TaskHandle_t xTaskToQuery,
+                                                ^~~~~~~~~~~~
+src/task.h:1628:48: error: expected declaration specifiers or '...' before 'BaseType_t'
+                                                BaseType_t xIndex ) PRIVILEGED_FUNCTION;
+                                                ^~~~~~~~~~
+src/task.h:1647:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+     void vApplicationStackOverflowHook( TaskHandle_t xTask,
+                                         ^~~~~~~~~~~~
+src/task.h:1681:41: error: expected declaration specifiers or '...' before 'StaticTask_t'
+     void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
+                                         ^~~~~~~~~~~~
+src/task.h:1682:41: error: unknown type name 'StackType_t'
+                                         StackType_t ** ppxIdleTaskStackBuffer,
+                                         ^~~~~~~~~~~
+src/task.h:1683:41: error: expected declaration specifiers or '...' before 'uint32_t'
+                                         uint32_t * pulIdleTaskStackSize ); /*lint !e526 Symbol not defined as it is an application callback. */
+                                         ^~~~~~~~
+src/task.h:1699:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+ ^~~~~~~~~~
+src/task.h:1709:1: error: expected declaration specifiers before 'TaskHandle_t'
+ TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~
+src/task.h:1808:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+ ^~~~~~~~~~~
+In file included from src/event_groups.c:38:
+src/FreeRTOS.h:994:44: error: expected declaration specifiers before 'uint32_t'
+     #define configRUN_TIME_COUNTER_TYPE    uint32_t
+                                            ^~~~~~~~
+src/task.h:1957:1: note: in expansion of macro 'configRUN_TIME_COUNTER_TYPE'
+ configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/FreeRTOS.h:994:44: error: expected declaration specifiers before 'uint32_t'
+     #define configRUN_TIME_COUNTER_TYPE    uint32_t
+                                            ^~~~~~~~
+src/task.h:1958:1: note: in expansion of macro 'configRUN_TIME_COUNTER_TYPE'
+ configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/event_groups.c:39:
+src/task.h:2068:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+ ^~~~~~~~~~
+src/task.h:2220:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+ ^~~~~~~~~~
+src/task.h:2364:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+ ^~~~~~~~~~
+src/task.h:2530:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+                                     ^~~~~~~~~~~~
+src/task.h:2531:37: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                                     UBaseType_t uxIndexToNotify,
+                                     ^~~~~~~~~~~
+src/task.h:2532:37: error: expected declaration specifiers or '...' before 'BaseType_t'
+                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+                                     ^~~~~~~~~~
+src/task.h:2636:1: error: expected declaration specifiers before 'uint32_t'
+ uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+ ^~~~~~~~
+src/task.h:2701:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+ ^~~~~~~~~~
+src/task.h:2766:1: error: expected declaration specifiers before 'uint32_t'
+ uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+ ^~~~~~~~
+src/task.h:2788:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+                            ^~~~~~~~~
+src/task.h:2873:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+ ^~~~~~~~~~
+src/task.h:2902:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:2924:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:2957:29: error: expected declaration specifiers or '...' before 'List_t'
+ void vTaskPlaceOnEventList( List_t * const pxEventList,
+                             ^~~~~~
+src/task.h:2958:35: error: unknown type name 'TickType_t'
+                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+                                   ^~~~~~~~~~
+src/task.h:2959:38: error: expected declaration specifiers or '...' before 'List_t'
+ void vTaskPlaceOnUnorderedEventList( List_t * pxEventList,
+                                      ^~~~~~
+src/task.h:2960:44: error: unknown type name 'TickType_t'
+                                      const TickType_t xItemValue,
+                                            ^~~~~~~~~~
+src/task.h:2961:44: error: unknown type name 'TickType_t'
+                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+                                            ^~~~~~~~~~
+src/task.h:2974:39: error: expected declaration specifiers or '...' before 'List_t'
+ void vTaskPlaceOnEventListRestricted( List_t * const pxEventList,
+                                       ^~~~~~
+src/task.h:2975:39: error: unknown type name 'TickType_t'
+                                       TickType_t xTicksToWait,
+                                       ^~~~~~~~~~
+src/task.h:2976:45: warning: type defaults to 'int' in declaration of 'BaseType_t' [-Wimplicit-int]
+                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+                                             ^~~~~~~~~~
+src/task.h:2976:56: error: expected ';', ',' or ')' before 'xWaitIndefinitely'
+                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+                                                        ^~~~~~~~~~~~~~~~~
+src/task.h:3002:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:3003:41: error: expected declaration specifiers or '...' before 'ListItem_t'
+ void vTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem,
+                                         ^~~~~~~~~~
+src/task.h:3004:47: error: unknown type name 'TickType_t'
+                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+                                               ^~~~~~~~~~
+In file included from src/portable.h:53,
+                 from src/FreeRTOS.h:65,
+                 from src/event_groups.c:38:
+src/portable/portmacro.h:90:35: error: expected declaration specifiers before '__attribute__'
+     #define portDONT_DISCARD      __attribute__( ( used ) )
+                                   ^~~~~~~~~~~~~
+src/task.h:3014:1: note: in expansion of macro 'portDONT_DISCARD'
+ portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~~~~~
+In file included from src/event_groups.c:39:
+src/task.h:3020:1: error: unknown type name 'TickType_t'
+ TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:3025:1: error: expected declaration specifiers before 'TaskHandle_t'
+ TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~
+src/task.h:3037:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:3043:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:3049:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/task.h:3059:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+                                           ^~~~~~~~~~~~
+src/task.h:3060:43: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+                                           ^~~~~~~~~~~
+src/task.h:3065:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/task.h:3071:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ void vTaskSetTaskNumber( TaskHandle_t xTask,
+                          ^~~~~~~~~~~~
+src/task.h:3072:32: warning: type defaults to 'int' in declaration of 'UBaseType_t' [-Wimplicit-int]
+                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+                                ^~~~~~~~~~~
+src/task.h:3072:44: error: expected ';', ',' or ')' before 'uxHandle'
+                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+                                            ^~~~~~~~
+src/task.h:3082:21: error: unknown type name 'TickType_t'
+ void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+                     ^~~~~~~~~~
+src/task.h:3098:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~~~~~
+src/task.h:3104:1: error: expected declaration specifiers before 'TaskHandle_t'
+ TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~
+src/task.h:3110:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+                                    ^~~~~~~~~
+In file included from src/event_groups.c:40:
+src/timers.h:79:1: warning: empty declaration
+ struct tmrTimerControl; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+ ^~~~~~
+src/timers.h:80:34: error: storage class specified for parameter 'TimerHandle_t'
+ typedef struct tmrTimerControl * TimerHandle_t;
+                                  ^~~~~~~~~~~~~
+src/timers.h:85:43: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ typedef void (* TimerCallbackFunction_t)( TimerHandle_t xTimer );
+                                           ^~~~~~~~~~~~~
+src/timers.h:92:36: error: expected declaration specifiers or '...' before 'uint32_t'
+                                    uint32_t );
+                                    ^~~~~~~~
+src/timers.h:232:5: error: expected declaration specifiers before 'TimerHandle_t'
+     TimerHandle_t xTimerCreate( const char * const pcTimerName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+     ^~~~~~~~~~~~~
+In file included from src/event_groups.c:40:
+src/timers.h:362:5: error: expected declaration specifiers before 'TimerHandle_t'
+     TimerHandle_t xTimerCreateStatic( const char * const pcTimerName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+     ^~~~~~~~~~~~~
+src/timers.h:390:33: warning: type defaults to 'int' in declaration of 'TimerHandle_t' [-Wimplicit-int]
+ void * pvTimerGetTimerID( const TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+                                 ^~~~~~~~~~~~~
+src/timers.h:390:47: error: expected ';', ',' or ')' before 'xTimer'
+ void * pvTimerGetTimerID( const TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+                                               ^~~~~~
+src/timers.h:411:24: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ void vTimerSetTimerID( TimerHandle_t xTimer,
+                        ^~~~~~~~~~~~~
+src/timers.h:449:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerIsTimerActive( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/timers.h:457:1: error: expected declaration specifiers before 'TaskHandle_t'
+ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~~
+src/timers.h:1201:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerPendFunctionCallFromISR( PendedFunction_t xFunctionToPend,
+ ^~~~~~~~~~
+src/timers.h:1238:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerPendFunctionCall( PendedFunction_t xFunctionToPend,
+ ^~~~~~~~~~
+src/timers.h:1252:30: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ const char * pcTimerGetName( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+                              ^~~~~~~~~~~~~
+src/timers.h:1269:27: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ void vTimerSetReloadMode( TimerHandle_t xTimer,
+                           ^~~~~~~~~~~~~
+src/timers.h:1270:33: warning: type defaults to 'int' in declaration of 'BaseType_t' [-Wimplicit-int]
+                           const BaseType_t xAutoReload ) PRIVILEGED_FUNCTION;
+                                 ^~~~~~~~~~
+src/timers.h:1270:44: error: expected ';', ',' or ')' before 'xAutoReload'
+                           const BaseType_t xAutoReload ) PRIVILEGED_FUNCTION;
+                                            ^~~~~~~~~~~
+src/timers.h:1284:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerGetReloadMode( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/timers.h:1298:1: error: expected declaration specifiers before 'UBaseType_t'
+ UBaseType_t uxTimerGetReloadMode( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/timers.h:1309:1: error: unknown type name 'TickType_t'
+ TickType_t xTimerGetPeriod( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/timers.h:1309:29: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ TickType_t xTimerGetPeriod( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+                             ^~~~~~~~~~~~~
+src/timers.h:1324:1: error: unknown type name 'TickType_t'
+ TickType_t xTimerGetExpiryTime( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/timers.h:1324:33: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+ TickType_t xTimerGetExpiryTime( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+                                 ^~~~~~~~~~~~~
+src/timers.h:1330:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerCreateTimerTask( void ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~
+src/timers.h:1331:1: error: expected declaration specifiers before 'BaseType_t'
+ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer,
+ ^~~~~~~~~~
+src/timers.h:1338:32: error: expected declaration specifiers or '...' before 'TimerHandle_t'
+     void vTimerSetTimerNumber( TimerHandle_t xTimer,
+                                ^~~~~~~~~~~~~
+src/timers.h:1339:32: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                                UBaseType_t uxTimerNumber ) PRIVILEGED_FUNCTION;
+                                ^~~~~~~~~~~
+src/timers.h:1340:5: error: expected declaration specifiers before 'UBaseType_t'
+     UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) PRIVILEGED_FUNCTION;
+     ^~~~~~~~~~~
+src/timers.h:1358:42: error: expected declaration specifiers or '...' before 'StaticTask_t'
+     void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer,
+                                          ^~~~~~~~~~~~
+src/timers.h:1359:42: error: unknown type name 'StackType_t'
+                                          StackType_t ** ppxTimerTaskStackBuffer,
+                                          ^~~~~~~~~~~
+src/timers.h:1360:42: error: expected declaration specifiers or '...' before 'uint32_t'
+                                          uint32_t * pulTimerTaskStackSize );
+                                          ^~~~~~~~
+In file included from src/event_groups.c:41:
+src/event_groups.h:82:1: warning: empty declaration
+ struct EventGroupDef_t;
+ ^~~~~~
+src/event_groups.h:83:36: error: storage class specified for parameter 'EventGroupHandle_t'
+ typedef struct EventGroupDef_t   * EventGroupHandle_t;
+                                    ^~~~~~~~~~~~~~~~~~
+src/event_groups.h:93:9: error: unknown type name 'TickType_t'
+ typedef TickType_t               EventBits_t;
+         ^~~~~~~~~~
+src/event_groups.h:93:34: error: storage class specified for parameter 'EventBits_t'
+ typedef TickType_t               EventBits_t;
+                                  ^~~~~~~~~~~
+src/event_groups.h:148:5: error: expected declaration specifiers before 'EventGroupHandle_t'
+     EventGroupHandle_t xEventGroupCreate( void ) PRIVILEGED_FUNCTION;
+     ^~~~~~~~~~~~~~~~~~
+src/event_groups.h:201:5: error: expected declaration specifiers before 'EventGroupHandle_t'
+     EventGroupHandle_t xEventGroupCreateStatic( StaticEventGroup_t * pxEventGroupBuffer ) PRIVILEGED_FUNCTION;
+     ^~~~~~~~~~~~~~~~~~
+src/event_groups.h:297:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.h:358:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.h:422:5: error: expected declaration specifiers before 'BaseType_t'
+     BaseType_t xEventGroupClearBitsFromISR( EventGroupHandle_t xEventGroup,
+     ^~~~~~~~~~
+In file included from src/event_groups.c:41:
+src/event_groups.h:501:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.h:577:5: error: expected declaration specifiers before 'BaseType_t'
+     BaseType_t xEventGroupSetBitsFromISR( EventGroupHandle_t xEventGroup,
+     ^~~~~~~~~~
+src/event_groups.h:709:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupSync( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.h:748:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupGetBitsFromISR( EventGroupHandle_t xEventGroup ) PRIVILEGED_FUNCTION;
+ ^~~~~~~~~~~
+src/event_groups.h:762:25: error: expected declaration specifiers or '...' before 'EventGroupHandle_t'
+ void vEventGroupDelete( EventGroupHandle_t xEventGroup ) PRIVILEGED_FUNCTION;
+                         ^~~~~~~~~~~~~~~~~~
+src/event_groups.h:766:40: warning: type defaults to 'int' in declaration of 'uint32_t' [-Wimplicit-int]
+                                  const uint32_t ulBitsToSet ) PRIVILEGED_FUNCTION;
+                                        ^~~~~~~~
+src/event_groups.h:766:49: error: expected ';', ',' or ')' before 'ulBitsToSet'
+                                  const uint32_t ulBitsToSet ) PRIVILEGED_FUNCTION;
+                                                 ^~~~~~~~~~~
+src/event_groups.h:768:42: warning: type defaults to 'int' in declaration of 'uint32_t' [-Wimplicit-int]
+                                    const uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
+                                          ^~~~~~~~
+src/event_groups.h:768:51: error: expected ';', ',' or ')' before 'ulBitsToClear'
+                                    const uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
+                                                   ^~~~~~~~~~~~~
+src/event_groups.h:772:5: error: expected declaration specifiers before 'UBaseType_t'
+     UBaseType_t uxEventGroupGetNumber( void * xEventGroup ) PRIVILEGED_FUNCTION;
+     ^~~~~~~~~~~
+src/event_groups.h:774:32: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                                UBaseType_t uxEventGroupNumber ) PRIVILEGED_FUNCTION;
+                                ^~~~~~~~~~~
+src/event_groups.c:66:5: error: expected specifier-qualifier-list before 'EventBits_t'
+     EventBits_t uxEventBits;
+     ^~~~~~~~~~~
+src/event_groups.c:76:3: error: storage class specified for parameter 'EventGroup_t'
+ } EventGroup_t;
+   ^~~~~~~~~~~~
+src/event_groups.c:88:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'prvTestWaitCondition'
+ static BaseType_t prvTestWaitCondition( const EventBits_t uxCurrentEventBits,
+                   ^~~~~~~~~~~~~~~~~~~~
+src/event_groups.c:96:5: error: expected declaration specifiers before 'EventGroupHandle_t'
+     EventGroupHandle_t xEventGroupCreateStatic( StaticEventGroup_t * pxEventGroupBuffer )
+     ^~~~~~~~~~~~~~~~~~
+src/event_groups.c:148:5: error: expected declaration specifiers before 'EventGroupHandle_t'
+     EventGroupHandle_t xEventGroupCreate( void )
+     ^~~~~~~~~~~~~~~~~~
+src/event_groups.c:194:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupSync( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.c:317:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.c:473:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.c:503:5: error: expected declaration specifiers before 'BaseType_t'
+     BaseType_t xEventGroupClearBitsFromISR( EventGroupHandle_t xEventGroup,
+     ^~~~~~~~~~
+src/event_groups.c:517:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupGetBitsFromISR( EventGroupHandle_t xEventGroup )
+ ^~~~~~~~~~~
+src/event_groups.c:533:1: error: expected declaration specifiers before 'EventBits_t'
+ EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup,
+ ^~~~~~~~~~~
+src/event_groups.c:628:25: error: expected declaration specifiers or '...' before 'EventGroupHandle_t'
+ void vEventGroupDelete( EventGroupHandle_t xEventGroup )
+                         ^~~~~~~~~~~~~~~~~~
+src/event_groups.c:677:40: warning: type defaults to 'int' in declaration of 'uint32_t' [-Wimplicit-int]
+                                  const uint32_t ulBitsToSet )
+                                        ^~~~~~~~
+src/event_groups.c:677:49: error: expected ';', ',' or ')' before 'ulBitsToSet'
+                                  const uint32_t ulBitsToSet )
+                                                 ^~~~~~~~~~~
+src/event_groups.c:686:42: warning: type defaults to 'int' in declaration of 'uint32_t' [-Wimplicit-int]
+                                    const uint32_t ulBitsToClear )
+                                          ^~~~~~~~
+src/event_groups.c:686:51: error: expected ';', ',' or ')' before 'ulBitsToClear'
+                                    const uint32_t ulBitsToClear )
+                                                   ^~~~~~~~~~~~~
+src/event_groups.c:692:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'prvTestWaitCondition'
+ static BaseType_t prvTestWaitCondition( const EventBits_t uxCurrentEventBits,
+                   ^~~~~~~~~~~~~~~~~~~~
+src/event_groups.c:731:5: error: expected declaration specifiers before 'BaseType_t'
+     BaseType_t xEventGroupSetBitsFromISR( EventGroupHandle_t xEventGroup,
+     ^~~~~~~~~~
+src/event_groups.c:748:5: error: expected declaration specifiers before 'UBaseType_t'
+     UBaseType_t uxEventGroupGetNumber( void * xEventGroup )
+     ^~~~~~~~~~~
+src/event_groups.c:771:32: error: expected declaration specifiers or '...' before 'UBaseType_t'
+                                UBaseType_t uxEventGroupNumber )
+                                ^~~~~~~~~~~
+In file included from src/event_groups.c:30:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/stdlib.h:97:15: error: old-style parameter declarations in prototyped function definition
+ extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;
+               ^~~~~~~~~~~~~~~~~~~~~~
+src/event_groups.c:777: error: expected '{' at end of input
+ /*-----------------------------------------------------------*/
+ 
+src/event_groups.c:774:5: warning: control reaches end of non-void function [-Wreturn-type]
+     }
+     ^
+make: *** [src/event_groups.o] Error 1

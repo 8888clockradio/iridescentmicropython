@@ -126,23 +126,23 @@ struct __gthread_time_t {
     std::time_t sec;
     long nsec;
     int64_t milliseconds() const {
-        return static_cast<int64_t>(sec) * 1'000LL + nsec / 1'000'000LL;
+        return static_cast<int64_t>(sec) * (long long) 1000 + nsec / (long long) 1000000;
     }
 
     int64_t microseconds() const {
-        return static_cast<int64_t>(sec) * 1'000'000LL + nsec / 1'000LL;
+        return static_cast<int64_t>(sec) * (long long) 1000000 + nsec / (long long) 1000;
     }
 };
 
 static inline __gthread_time_t operator-(const __gthread_time_t& lhs, const timeval& rhs) {
     auto s { lhs.sec - rhs.tv_sec };
-    int64_t ns { lhs.nsec - rhs.tv_usec * 1'000LL };
+    int64_t ns { lhs.nsec - rhs.tv_usec * (long long) 1000 };
     if (ns < 0) {
         --s;
-        ns += 1'000'000'000LL;
-    } else if (ns > 1'000'000'000LL) {
+        ns += (long long) 1000000000;
+    } else if (ns > (long long) 1000000000) {
         ++s;
-        ns -= 1'000'000'000LL;
+        ns -= (long long) 1000000000;
     }
 
     return __gthread_time_t { s, static_cast<long>(ns) };

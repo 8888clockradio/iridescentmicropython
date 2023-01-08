@@ -129,6 +129,7 @@ INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src
 INC += -I$(abspath ./lib/cpp/src/bits)
 INC += -I$(abspath ./lib/cpp/src)
 INC += -I$(abspath ./src)
+INC += -I$(IRIDESCENT_ROOT)/newlib_code/arm-unknown-linux-gnueabi/include
 CFLAGS += -c -ggdb  # always include debug info in the ELF
 CXXFLAGS += -c -ggdb  # always include debug info in the ELF
 CPPFLAGS += -c -ggdb  # always include debug info in the ELF
@@ -148,10 +149,10 @@ ASFLAGS += -Os -DNDEBUG
 LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 endif
 # CPPFLAGS = compiler options for C and C++
-CPPFLAGS = -Wall -D__GNUC_PYTHON__ $(CPUOPTIONS) -MMD $(OPTIONS) -I. $(INC) -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mlong-calls
+CPPFLAGS = -D__USE_XOPEN2K8 -Wall -D__GNUC_PYTHON__ $(CPUOPTIONS) -MMD $(OPTIONS) -I. $(INC) -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mlong-calls
 
 # compiler options for C++ only
-CXXFLAGS = -D__GNUC_PYTHON__ -std=gnu++14 -felide-constructors -fno-exceptions -I. $(INC) -fpermissive -fno-rtti -Wno-error=narrowing -fasynchronous-unwind-tables -mlong-calls
+CXXFLAGS = -D__USE_XOPEN2K8 -D__GNUC_PYTHON__ -std=gnu++2a -felide-constructors -fno-exceptions -I. $(INC) -fpermissive -fno-rtti -Wno-error=narrowing -fasynchronous-unwind-tables -mlong-calls
 #/Users/georgerosar/GitHub/iridescentCoconutSynth/iridescentCoconut_micropythonMakefile/ports/mimxrt/IRIDESCENT/cores-master/teensy4/arm_math.h
 # compiler options for C only
 CFLAGS =

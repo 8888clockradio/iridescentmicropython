@@ -107,7 +107,7 @@ INC += -Ihal
 INC += -IIRIDESCENT/SPI
 INC += -IIRIDESCENT/SPIFlash
 INC += -IIRIDESCENT/SerialFlash
-INC += -IIRIDESCENT/Wire
+INC += -IIRIDESCENT/teensy4_i2c-master/src
 INC += -IIRIDESCENT/TeensyDebug-master/src
 INC += -IIRIDESCENT/StreamLib-master/src
 INC += -IIRIDESCENT/TeensyThreads-master
@@ -115,12 +115,13 @@ INC += -IIRIDESCENT/FNET-master/src
 INC += -IIRIDESCENT/FNET-master
 INC += -IIRIDESCENT/FNET-master/third_party/mbedtls/src
 INC += -IIRIDESCENT/NativeEthernet-master/src
-INC += -IIRIDESCENT/freertos-teensy-master/src
-INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src
+#INC += -IIRIDESCENT/freertos-teensy-master/src
+#INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src
 INC += -IIRIDESCENT/qhull-inc
 INC += -IIRIDESCENT/sdl
 INC += -IIRIDESCENT/RA8875-0.70b11
 INC += -IIRIDESCENT/TeensyOpenGL_t4-master
+#INC += -IIRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include
 
 # All settings for Ethernet support are controller by the value of MICROPY_PY_LWIP
 ifeq ($(MICROPY_PY_LWIP),1)
@@ -198,7 +199,7 @@ endif
 
 # C source files
 #took out main.cpp for linker to use a .o file
-SRC_CPP += main.cpp mphalport.cpp mpthreadport.cpp
+SRC_CPP += main.cpp mphalport.cpp
 #mpthreadport.cpp
 
 SRC_C += \
@@ -287,26 +288,26 @@ endif
 
 # Math library source files
 ifeq ($(MICROPY_FLOAT_IMPL),double)
-    LIBM_SRC_C += $(addprefix lib/libm_dbl/,\
+    #LIBM_SRC_C += $(addprefix lib/libm_dbl/,\
         __cos.c __expo2.c __fpclassify.c __rem_pio2.c __rem_pio2_large.c __signbit.c __sin.c __tan.c acos.c acosh.c \
         asin.c asinh.c atan.c atan2.c atanh.c ceil.c copysign.c cos.c cosh.c erf.c exp.c expm1.c floor.c fmod.c \
         frexp.c ldexp.c lgamma.c log.c log10.c log1p.c modf.c nearbyint.c pow.c rint.c round.c scalbn.c sin.c \
         sinh.c tan.c tanh.c tgamma.c trunc.c)
     #
     ifeq ($(SUPPORTS_HARDWARE_FP_DOUBLE),1)
-        LIBM_SRC_C += lib/libm_dbl/thumb_vfp_sqrt.c
+        #LIBM_SRC_C += lib/libm_dbl/thumb_vfp_sqrt.c
     else
-        LIBM_SRC_C += lib/libm_dbl/sqrt.c
+        #LIBM_SRC_C += lib/libm_dbl/sqrt.c
     endif
 else
-    LIBM_SRC_C += $(addprefix lib/libm/,\
+    #LIBM_SRC_C += $(addprefix lib/libm/,\
         acoshf.c asinfacosf.c asinhf.c atan2f.c atanf.c atanhf.c ef_rem_pio2.c erf_lgamma.c fmodf.c kf_cos.c \
         kf_rem_pio2.c kf_sin.c kf_tan.c log1pf.c math.c nearbyintf.c roundf.c sf_cos.c sf_erf.c sf_frexp.c sf_ldexp.c \
         sf_modf.c sf_sin.c sf_tan.c wf_lgamma.c wf_tgamma.c)
     ifeq ($(SUPPORTS_HARDWARE_FP_SINGLE),1)
-        LIBM_SRC_C += lib/libm/thumb_vfp_sqrtf.c
+        #LIBM_SRC_C += lib/libm/thumb_vfp_sqrtf.c
     else
-        LIBM_SRC_C += lib/libm/ef_sqrt.c
+        #LIBM_SRC_C += lib/libm/ef_sqrt.c
     endif
 endif
 
@@ -369,13 +370,13 @@ CPPFLAGS += -c  # always include debug info in the ELF
 ASFLAGS += -c   # always include debug info in the ELF
 ifeq ($(DEBUG),1)
 CFLAGS += -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables
-CXXFLAGS += -ggdb -O2 -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
-CPPFLAGS += -ggdb -O2 -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
+CXXFLAGS += -ggdb -O2 -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
+CPPFLAGS += -ggdb -O2 -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
 ASFLAGS += -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables
 else
 CFLAGS += -Os -DNDEBUG -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables
-CXXFLAGS += -Os -DNDEBUG -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
-CPPFLAGS += -Os -DNDEBUG -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
+CXXFLAGS += -Os -DNDEBUG -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
+CPPFLAGS += -Os -DNDEBUG -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS)
 ASFLAGS += -Os -DNDEBUG -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables
 endif
 
@@ -447,7 +448,7 @@ ifeq ($(MICROPY_FLOAT_IMPL),single)
         -DMICROPY_FLOAT_IMPL=MICROPY_FLOAT_IMPL_FLOAT \
         -fsingle-precision-constant \
         -mfloat-abi=softfp \
-        -mfpu=fpv5-sp-d16
+        -mfpu=fpv5-d16
 else ifeq ($(MICROPY_FLOAT_IMPL),double)
     CFLAGS += \
         \
@@ -476,15 +477,14 @@ CFLAGS += $(CFLAGS_MOD) $(CFLAGS_EXTRA)
 # =============================================================================
 # Linker Flags
 # =============================================================================
-CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb
+CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float
 ifeq ($(DEBUG),1)
-LDFLAGS = -O2 \
-	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
-LINKFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard) $(CFLAGS)
+LDFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
+LINKFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) $(CFLAGS)
 else
 	LDFLAGS = -O2 \
-	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
-LINKFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard) $(CFLAGS)
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
+LINKFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) $(CFLAGS)
 endif
 #LDFLAGS = -Os -Wl,--gc-sections,--copy-dt-needed-entries,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS)
 
@@ -509,7 +509,7 @@ endif
 # Library and Object files
 # =============================================================================
 
-LIBM_O = $(addprefix $(BUILD)/, $(LIBM_SRC_C:.c=.o))
+#LIBM_O = $(addprefix $(BUILD)/, $(LIBM_SRC_C:.c=.o))
 
 # Too many warnings in libm_dbl, disable for now.
 ifeq ($(MICROPY_FLOAT_IMPL),double)
@@ -565,7 +565,7 @@ CXXFLAGS += \
 	-Wno-error=sign-conversion \
 	-Wno-error=conversion \
 	-Wno-error=unused-parameter \
-	-stdlib=libc++ \
+	-stdlib=C++20 \
 	-mfloat-abi=hard -mfpu=fpv5-d16 \
 	-fdata-sections \
 	-ffunction-sections \
@@ -615,7 +615,7 @@ ASFLAGS += \
 	-DSKIP_SYSCLK_INIT \
 	-D_POSIX_THREADS
 #OBJ += $(PY_O)
-OBJ += $(LIBM_O)
+#OBJ += $(LIBM_O)
 #OBJ += $(SRC_TINYUSB_OBJ)
 OBJ += $(SRC_HAL_IMX_OBJ)
 OBJ += $(SRC_ETH_OBJ)
@@ -626,15 +626,15 @@ OBJ += $(addprefix $(BUILD)/, $(SRC_SS:.S=.o))
 OBJ += $(addprefix $(BUILD)/, $(SRC_MOD:.c=.o))
 OBJ += $(BUILD)/pins_gen.o
 
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AS = $(COMPILERPATH)/arm-none-eabi-gcc $(ASFLAGS)
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AS = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc $(ASFLAGS)
 
 QUADLIBS = -larm_cortexM7lfdp_math -lm -lstdc++
 
-LIBS += -Llib -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhull_r
+LIBS += -Llib -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhullstatic_r
 #-lTeensyThreads
 CORE = -lTeensy41Core
 # Workaround for bug in older gcc, warning on "static usbd_device_t _usbd_dev = { 0 };"
@@ -646,7 +646,7 @@ RUST := $(OBJ)
 # =============================================================================
 
 #all: $(BUILD)/firmware.hex $(BUILD)/firmware.bin
-.PHONY: all clean makedirs copylibmicropython libTeensyStreamLib libTeensyStreamLibClean libTeensy41Core libTeensy41CoreClean libTeensyWire libTeensyWireClean libTeensySerialFlash libTeensySerialFlashClean libTeensySPI libTeensySPIClean libTeensyDebug libTeensyDebugClean libTeensyThreads libTeensyThreadsClean libTeensyMBEDTLS libTeensyMBEDTLSClean libTeensyFNET libTeensyFNETClean libTeensyNativeEthernet libTeensyNativeEthernetClean libz libzClean libRA8875 libRA8875Clean libSDL3 libSDL3Clean libSDL2Compat libSDL2CompatClean libqhull libqhullClean libTeensyOpenGL libTeensyOpenGLClean libgstreamer libgstreamerClean libglew libglewClean
+.PHONY: all clean makedirs copylibmicropython libTeensyStreamLib libTeensyStreamLibClean libTeensy41Core libTeensy41CoreClean libTeensyWire libTeensyWireClean libTeensySerialFlash libTeensySerialFlashClean libTeensySPI libTeensySPIClean libTeensyDebug libTeensyDebugClean libTeensyThreads libTeensyThreadsClean libTeensyMBEDTLS libTeensyMBEDTLSClean libTeensyFNET libTeensyFNETClean libTeensyNativeEthernet libTeensyNativeEthernetClean libz libzClean libRA8875 libRA8875Clean libSDL3 libSDL3Clean libSDL2Compat libSDL2CompatClean libFreeRTOS libFreeRTOSclean libqhull libqhullClean libTeensyOpenGL libTeensyOpenGLClean libgstreamer libgstreamerClean libglew libglewClean newlib newlibclean
 
 libRA8875:
 	cd IRIDESCENT/RA8875-0.70b11 && $(MAKE) DEBUG=$(DEBUG) V=$(V)
@@ -656,20 +656,27 @@ libRA8875Clean:
 
 
 libSDL3:
-	mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) && $(MAKE) install
-	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
-	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
+	#mkdir -p IRIDESCENT/SDL3-main/BUILD && cd IRIDESCENT/SDL3-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) --toolchain ../toolchain.cmake -B . --install-prefix $(abspath ../../SDL) && $(MAKE) DEBUG=$(DEBUG) VERBOSE=$(V) V=$(V) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) && $(MAKE) install
+	#cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
+	#cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	#cp -R IRIDESCENT/SDL3-main/BUILD/CMakeFiles/SDL3.dir/src/dynapi/SDL_dynapi.c.obj $(LIBPATHFILEDROP)/
 	#cp -R IRIDESCENT/SDL3-main/BUILD/CMakeFiles/SDL3-static.dir/src/thread/SDL_thread.c.obj $(LIBPATHFILEDROP)/
 
 libSDL3Clean:
-	cd IRIDESCENT/SDL3-main/BUILD && $(MAKE) clean && rm -rf ./*
+	#cd IRIDESCENT/SDL3-main/BUILD && $(MAKE) clean && rm -rf ./*
+
+newlib:
+	mkdir -p IRIDESCENT/newlib/arm-linux/ && cd IRIDESCENT/newlib/arm-linux && ../newlib/configure --host arm-unknown-linux-gnueabi --prefix=$(abspath ./../../newlib_code) LDFLAGS="-O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(LIBPATHFILEDROP)/../../../../${CROSSCOMPILEPREFIX}/lib/thumb/v7e-m+dp/hard" CFLAGS="-ggdb -O2 -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float" CPPFLAGS="-ggdb -O2 -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float" && $(MAKE) && $(MAKE) install
+	cd IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/lib && cp * $(LIBPATHFILEDROP)/
+	
+newlibclean:
+	cd IRIDESCENT/newlib/arm-linux && $(MAKE) distclean
 
 
 libSDL2Compat:
-	mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
-	cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
-	cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
+	#mkdir -p IRIDESCENT/sdl2-compat-main/BUILD && cd IRIDESCENT/sdl2-compat-main/BUILD && cmake .. -DLIBPATHFILEDROP=$(LIBPATHFILEDROP) -DCOMPILERPATH=$(COMPILERPATH) --toolchain ../toolchain.cmake -B . --install-prefix `pwd`../../../../../../SDL -DTOOLSPATH=$(TOOLSPATH) -DCROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) -DSDL3_INCLUDE_DIRS=`pwd`/../../../../../SDL/include && $(MAKE) DEBUG=${DEBUG} V=${V} VERBOSE=${V} LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH) && $(MAKE) install
+	#cp -R $(abspath ../../SDL/include)/* IRIDESCENT/SDL/
+	#cp -R $(abspath ../../SDL/lib)/*.a $(LIBPATHFILEDROP)/
 	
 libSDL2CompatClean:
 	cd IRIDESCENT/sdl2-compat-main/BUILD && rm -rf ./*
@@ -700,8 +707,14 @@ libglew:
 	
 libglewClean:
 	cd IRIDESCENT/glew-master && $(MAKE) clean
+#libSDL3 libSDL2Compat libSDL3
+all: makedirs newlib $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libqhull libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libglew libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
 
-all: libSDL3 libSDL2Compat makedirs $(BUILD)/libmicropython.a copylibmicropython libTeensyStreamLib libTeensyWire libTeensySerialFlash libTeensySPI libTeensyDebug libTeensyThreads libTeensyMBEDTLS libTeensyFNET libTeensyNativeEthernet libz libRA8875 libTeensyOpenGL libglew libSDL3 libTeensy41Core $(BUILD)/$(TARGET).elf $(BUILD)/$(TARGET).hex
+libFreeRTOS:
+	#cd IRIDESCENT/freertos-teensy-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
+
+libFreeRTOSclean:
+	#cd IRIDESCENT/freertos-teensy-master && $(MAKE) clean
 
 libTeensyStreamLib:
 	cd IRIDESCENT/StreamLib-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
@@ -716,10 +729,10 @@ libTeensy41CoreClean:
 	cd IRIDESCENT/cores-master/teensy4 && $(MAKE) clean
 	
 libTeensyWire:
-	cd IRIDESCENT/Wire && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
+	cd IRIDESCENT/teensy4_i2c-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyWireClean:
-	cd IRIDESCENT/Wire && $(MAKE) clean
+	cd IRIDESCENT/teensy4_i2c-master && $(MAKE) clean
 	
 libTeensySerialFlash:
 	cd IRIDESCENT/SerialFlash && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
@@ -758,7 +771,7 @@ libTeensyFNETClean:
 	cd IRIDESCENT/FNET-master && $(MAKE) clean
 	
 libTeensyNativeEthernet:
-	cd IRIDESCENT/NativeEthernet-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
+	#cd IRIDESCENT/NativeEthernet-master && $(MAKE) DEBUG=$(DEBUG) V=$(V) TOOLSPATH=$(TOOLSPATH) CROSSCOMPILEPREFIX=$(CROSSCOMPILEPREFIX) LIBPATHFILEDROP=$(LIBPATHFILEDROP) COMPILERPATH=$(COMPILERPATH)
 	
 libTeensyNativeEthernetClean:
 	cd IRIDESCENT/NativeEthernet-master && $(MAKE) clean
@@ -791,7 +804,7 @@ $(BUILD)/hal/%.o: %.cpp
 #	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -o $@ $<
 
 $(BUILD)/mphalport.o: mphalport.cpp
-	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=gnu++20 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -o $@ $<
+	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -o $@ $<
 
 $(BUILD)/hal/%.o: %.s
 	$(CROSS_COMPILE)gcc $(CPUOPTIONS) $(ASFLAGS) -ggdb -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -o $@ $<
@@ -800,11 +813,11 @@ $(BUILD)/hal/%.o: %.S
 	$(CROSS_COMPILE)gcc $(CPUOPTIONS) $(ASFLAGS) -ggdb -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -o $@ $<
 
 $(BUILD)/mpthreadport.o:
-	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=c++11 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) mpthreadport.cpp -o $(BUILD)/mpthreadport.o
+	$(CROSS_COMPILE)g++ -c -ggdb -O2 -std=gnu++14  -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) mpthreadport.cpp -o $(BUILD)/mpthreadport.o
 
 $(BUILD)/main.o:
 	rm -f $(BUILD)/main.o main.d
-	$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -std=gnu++20 main.cpp -o $(BUILD)/main.o
+	$(CROSS_COMPILE)g++ -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(CXXFLAGS) -std=gnu++14  main.cpp -o $(BUILD)/main.o
 	#cp $(BUILD)/main.o $(LIBPATHFILEDROP)/main.o
 
 $(BUILD)/mphalport.o:
@@ -824,7 +837,7 @@ $(BUILD)/libmicropython.a: $(RUST)
 	#rm -f $(BUILD)/shared/runtime/gchelper_m3.o gchelper_m3.d
 	#$(CROSS_COMPILE)gcc -c -ggdb -O2 -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables $(CPUOPTIONS) $(ASFLAGS) $(abspath ../../shared/runtime/gchelper_m3.s) -o $(BUILD)/shared/runtime/gchelper_m3.o
 	$(AR) rcs $(BUILD)/libmicropython.a $<
-	$(CROSS_COMPILE)size $@
+	$(CROSS_COMPILE)size $(BUILD)/libmicropython.a
 	
 $(BUILD)/$(TARGET).elf: $(RUST) $(BUILD)/main.o
 	#rm -f $(BUILD)/mphalport.o mphalport.d
@@ -843,7 +856,7 @@ $(BUILD)/$(TARGET).elf: $(RUST) $(BUILD)/main.o
 	#$(CROSS_COMPILE)g++ $(CPUOPTIONS) -fPIC -T$(BUILD)/link.ld $(OBJ) $(LIBS) -o $(BUILD)/$(TARGET).elf
 	#$(CROSS_COMPILE)g++ -ggdb $(LDFLAGS) -T$(BUILD)/link.ld $(CPUOPTIONS) -DhasMainFunction_loader_in -fno-exceptions -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -Wl,--whole-archive $(RUST)  $(LIBS) -Wl,--no-whole-archive $(CORE) $(QUADLIBS) -o $(BUILD)/$(TARGET).elf
 	$(CROSS_COMPILE)g++ -ggdb -DhasMainFunction_loader_in $(CPUOPTIONS) -T$(BUILD)/link.ld -Wl,--whole-archive $(LIBS) $(RUST) -Wl,--no-whole-archive $(CORE) $(QUADLIBS) -o $(BUILD)/$(TARGET).elf
-	$(CROSS_COMPILE)size $@
+	$(CROSS_COMPILE)size $(BUILD)/$(TARGET).elf
 	
 copylibmicropython:
 	cp $(BUILD)/libmicropython.a $(LIBPATHFILEDROP)/libmicropython.a
@@ -852,13 +865,12 @@ $(BUILD)/$(TARGET).bin: $(BUILD)/$(TARGET).elf
 	$(CROSS_COMPILE)objcopy -O binary $^ $@
 
 $(BUILD)/$(TARGET).hex: $(BUILD)/$(TARGET).elf
-	$(SIZE) $<
 	$(OBJCOPY) -O ihex -R .eeprom $< $@
 	-$(TOOLSPATH)/teensy_post_compile -file=$(TARGET) -path=$(shell pwd)/$(BUILD) -tools=$(TOOLSPATH)
 	#-$(TOOLSPATH)/teensy_size $(BUILD)/$(TARGET).elf
 	#-$(TOOLSPATH)/teensy_secure encrypthex TEENSY41 $(BUILD)/$(TARGET).hex
 	#-$(TOOLSPATH)/teensy_reboot
-clean: libTeensyStreamLibClean libTeensy41CoreClean libTeensyWireClean libTeensySerialFlashClean libTeensySPIClean libTeensyDebugClean libTeensyThreadsClean libTeensyMBEDTLSClean libTeensyFNETClean libTeensyNativeEthernetClean libzClean libRA8875Clean libSDL3Clean libSDL2CompatClean libqhullClean libTeensyOpenGLClean libgstreamerClean libglewClean
+clean: libTeensyStreamLibClean libTeensy41CoreClean libTeensyWireClean libTeensySerialFlashClean libTeensySPIClean libTeensyDebugClean libTeensyThreadsClean libTeensyMBEDTLSClean libTeensyFNETClean libTeensyNativeEthernetClean libzClean libRA8875Clean libSDL3Clean libSDL2CompatClean libqhullClean libTeensyOpenGLClean libgstreamerClean libglewClean libFreeRTOSclean newlibclean
 	find . -name '*.o' -type f -delete
 	find . -name '*.d' -type f -delete
 	rm -f *.o *.d libmicropython.a $(BUILD)

@@ -70,7 +70,7 @@ IRIDESCENT_ROOT ?= $(abspath ../..)
 OPTIONS += -D__$(MCU)__ -DARDUINO=10813 -DTEENSYDUINO=154 -D$(MCU_DEF)
 
 # for Cortex M7 with single & double precision FPU
-CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb
+CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float
 
 MICROPY_HW_FLASH_SIZE ?= 0x790000
 MICROPY_HW_FLASH_RESERVED ?= 0x070000
@@ -133,7 +133,7 @@ LDFLAGS = -O2 \
 include $(abspath ../../../../../toolchain.mk)
 
 INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/build-SHAREDLIB) -I$(abspath ../../freertos-teensy-master/src)
-INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/)
+INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/) -I$(IRIDESCENT_ROOT)/newlib_code/arm-unknown-linux-gnueabi/include
 
 #************************************************************************
 # Settings below this point usually do not need to be edited
@@ -162,7 +162,7 @@ OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
 SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
 AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 
-LIBS = -lmicropython -lm -larm_cortexM7lfsp_math -lstdc++
+LIBS = -lmicropython -lm -larm_cortexM7lfdp_math -lstdc++
 
 LDDEFINES = \
 	-DMICROPY_HW_FLASH_TYPE=$(MICROPY_HW_FLASH_TYPE) \
@@ -189,7 +189,7 @@ OBJS := $(S_FILES:.S=.o) $(C_FILES:.c=.o) $(CPP_FILES:.cpp=.o)
 
 # the actual makefile rules (all .o files built by GNU make's default implicit rules)
 .PHONY: install
-all: $(TARGET).a install $(TARGET).elf $(TARGET).hex
+all: $(TARGET).a $(TARGET).elf $(TARGET).hex install
 
 $(TARGET).a: $(OBJS) $(MCU_LD)
 	#rm -f $(TARGET).a
@@ -197,9 +197,9 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 	#$(CXX) -shared -fPIC $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 $(TARGET).elf: $(OBJS) $(MCU_LD)
-	$(CXX) -E -x c $(LDDEFINES) ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) -Wl,--whole-archive -lmicropython -lTeensyfreeRTOS -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhull_r -Wl,--no-whole-archive $(OBJS) -o $(TARGET).elf
+	$(CXX) -E -x c++ $(LDDEFINES) -mhard-float ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -mhard-float -DMELTYMAIN_H_EXTERN main.cpp -o main.o
+	$(CXX) -Tlink.ld $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC) $(LDFLAGS) -L$(LIBPATHFILEDROP) -Wl,--whole-archive -lmicropython -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhullstatic_r -Wl,--no-whole-archive $(OBJS) -o $(TARGET).elf
 	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a
@@ -212,7 +212,7 @@ install:
 #endif
 
 %.hex: %.elf
-	$(SIZE) $<
+	#$(SIZE) $<
 	$(OBJCOPY) -O ihex -R .eeprom $< $@
 #ifneq (,$(wildcard $(TOOLSPATH)))
 	-$(TOOLSPATH)/teensy_post_compile -file=$(basename $@) -path=$(shell pwd) -tools=$(TOOLSPATH)

@@ -41,7 +41,7 @@ MCU_DEF = ARDUINO_TEENSY41
 TARGET = libTeensyWire
 
 # configurable options
-OPTIONS = -D__IMXRT1062__ -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL
+OPTIONS = -DARDUINO_TEENSY41 -D__IMXRT1062__ -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL
 #
 # USB Type configuration:
 #   -DUSB_SERIAL
@@ -125,6 +125,7 @@ INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/Include
 INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/ComputeLibrary/Include
 INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/PrivateInclude
 INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src
+INC += -I$(IRIDESCENT_ROOT)/newlib_code/arm-unknown-linux-gnueabi/include
 CFLAGS += -c -ggdb  # always include debug info in the ELF
 CXXFLAGS += -c -ggdb  # always include debug info in the ELF
 CPPFLAGS += -c -ggdb  # always include debug info in the ELF

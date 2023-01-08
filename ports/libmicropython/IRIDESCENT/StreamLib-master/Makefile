@@ -126,7 +126,7 @@ INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/Include
 INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/ComputeLibrary/Include
 INC += -I$(IRIDESCENT_ROOT)/CMSIS-DSP-main/PrivateInclude
 INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src
-
+INC += -I$(IRIDESCENT_ROOT)/newlib_code/arm-unknown-linux-gnueabi/include
 # CPPFLAGS = compiler options for C and C++
 CPPFLAGS = -c -ggdb -Wall -D_POSIX_THREADS -D__GNUC_PYTHON__ -g -O2 $(CPUOPTIONS) -fno-exceptions -ffunction-sections -fdata-sections -MMD $(OPTIONS) -I./src $(INC)
 
