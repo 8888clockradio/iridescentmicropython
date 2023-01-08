@@ -1,0 +1,5 @@
+LLVM Embedded Toolchain for Arm 16.0.0
+
+Components:
+* LLVM: https://github.com/llvm/llvm-project.git (commit eda8e999dd01e9a741a43330b693cff94d4cb955)
+* Picolibc: https://github.com/picolibc/picolibc.git (commit c4bc2d01968c81c1f1a61b207e5369044f798633)
