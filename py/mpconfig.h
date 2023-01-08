@@ -1399,7 +1399,7 @@ typedef double mp_float_t;
 // Whether to provide sys.{stdin,stdout,stderr}.buffer object
 // This is implemented per-port
 #ifndef MICROPY_PY_SYS_STDIO_BUFFER
-#define MICROPY_PY_SYS_STDIO_BUFFER (MICROPY_CONFIG_ROM_LEVEL_AT_LEAST_EXTRA_FEATURES)
+#define MICROPY_PY_SYS_STDIO_BUFFER (1)
 #endif
 
 // Whether to provide sys.tracebacklimit mutable attribute
@@ -1453,7 +1453,7 @@ typedef double mp_float_t;
 
 // Whether to provide "_thread" module
 #ifndef MICROPY_PY_THREAD
-#define MICROPY_PY_THREAD (1)
+#define MICROPY_PY_THREAD (0)
 #endif
 
 // Whether to make the VM/runtime thread-safe using a global lock

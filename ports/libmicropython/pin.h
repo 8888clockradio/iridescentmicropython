@@ -26,7 +26,7 @@
 
 #ifndef MICROPY_INCLUDED_MIMXRT_PIN_H
 #define MICROPY_INCLUDED_MIMXRT_PIN_H
-
+#include <MIMXRT1062.h>
 #include <stdint.h>
 #include "py/obj.h"
 #include "shared/runtime/mpirq.h"

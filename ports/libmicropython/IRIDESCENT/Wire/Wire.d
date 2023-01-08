@@ -1,7 +1,45 @@
 Wire.o: Wire.cpp \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/Arduino.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/WProgram.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdlib.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/ieeefp.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/_ansi.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/newlib.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/_newlib_version.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/config.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/features.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/reent.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/_ansi.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_types.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/_types.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/_default_types.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/lock.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/cdefs.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/stdlib.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/alloca.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_locale.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/string.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/strings.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/string.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/math.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/time.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/time.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/types.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_stdint.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/endian.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/_endian.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/select.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_sigset.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timeval.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/timespec.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_timespec.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_pthreadtypes.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/sched.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/machine/types.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/avr/pgmspace.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdint.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/_intsup.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/inttypes.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/avr/interrupt.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/avr_functions.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/wiring.h \
@@ -13,7 +51,10 @@ Wire.o: Wire.cpp \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/HardwareSerial.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/Stream.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/Print.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/stdio.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/sys/stdio.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/WString.h \
+ /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/newlib_code/arm-unknown-linux-gnueabi/include/ctype.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/avr/pgmspace.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/Printable.h \
  /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/cores-master/teensy4/avr_emulation.h \

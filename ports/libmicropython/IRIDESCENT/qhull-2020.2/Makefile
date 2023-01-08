@@ -132,17 +132,16 @@ PRINTC = enscript -2r
 # -fpic is required for linking to shared libraries
 # -fpic may be slower for 32-bit builds on 64-bit hosts
 # Disable -fpic with 'make FPIC=' 
-FPIC      = -fpic
-CC        = $(abspath $(COMPILERPATH)/arm-none-eabi-gcc)
-CC_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -ansi -Isrc/ $(CC_WARNINGS) $(M32) $(FPIC)
-CXX       = $(abspath $(COMPILERPATH)/arm-none-eabi-g++)
+#FPIC      = -fpic
+CC        = $(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc)
+CC_OPTS1  = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fno-exceptions -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -ansi -I./src  $(CC_WARNINGS) $(M32) $(FPIC)
+CXX       = $(abspath $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++)
 
 # libqhullcpp must be listed before libqhull_r, otherwise libqhull_r pulls in userprintf_r.c
-CXX_OPTS1  = -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -O3 -Isrc/ $(CXX_WARNINGS) $(M32) $(FPIC)
+CXX_OPTS1  = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -I./src  $(CC_WARNINGS) $(M32) $(FPIC)
 
 # for shared library link
-CC_OPTS3  = -ggdb -O2
-
+CC_OPTS3  = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -std=c++98 -I./src  $(CC_WARNINGS) $(M32) $(FPIC)
 # for Sun's cc compiler, -fast or O2 for optimization, -g for debugging, -Xc for ANSI
 #CC       = cc
 #CC_OPTS1 = -Xc -v -fast
@@ -154,17 +153,16 @@ CC_OPTS3  = -ggdb -O2
 # for Next cc compiler with fat executable
 #CC       = cc
 #CC_OPTS1 = -ansi -O2 -arch m68k -arch i386 -arch hppa
-
 # For loader, ld, 
-CC_OPTS2 = $(CC_OPTS1)
-CXX_OPTS2 = $(CXX_OPTS1)
+CC_OPTS2 = -ggdb -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -I./src $(CXX_WARNINGS) $(M32)
+CXX_OPTS2 = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) -ffunction-sections -fdata-sections -fexceptions -fpermissive -MMD -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fasynchronous-unwind-tables -I./src  $(CXX_WARNINGS) $(M32)
 
 # Warnings for gcc
 # [gcc 8.1 from may'2018] Compiles without error (-Werror)
 # gcc -pedantic not used due to -Woverlength-strings.  Maximum string length is less than 2000
 # g++ -pedantic not used due to 'long long' warning.
-CC_WARNINGS  = -ggdb -Wall -Wcast-qual -Wextra -Wwrite-strings -Wshadow -Wsign-conversion -Wconversion -Wno-return-type
-CXX_WARNINGS = -ggdb -Wall -Wcast-qual -Wextra -Wwrite-strings -Wno-sign-conversion -Wshadow -Wconversion -Wno-return-type
+CC_WARNINGS  = -Wall -Wcast-qual -Wextra -Wwrite-strings -Wshadow -Wsign-conversion -Wconversion -Wno-return-type
+CXX_WARNINGS = -Wall -Wcast-qual -Wextra -Wwrite-strings -Wno-sign-conversion -Wshadow -Wconversion -Wno-return-type
 
 # All warnings for gcc
 # Ignore these gcc warnings (-f*, Fortran only, Go only, ObjC only, Qhull issues)
@@ -269,12 +267,12 @@ install: bin/qconvex bin/qdelaunay bin/qhalf bin/qhull bin/qvoronoi bin/rbox
 	mkdir -p $(ABS_LIBDIR)
 	mkdir -p $(ABS_MANDIR)
 	mkdir -p $(ABS_PCDIR)
-	cp bin/qconvex $(ABS_BINDIR)
-	cp bin/qdelaunay $(ABS_BINDIR)
-	cp bin/qhalf $(ABS_BINDIR)
-	cp bin/qhull $(ABS_BINDIR)
-	cp bin/qvoronoi $(ABS_BINDIR)
-	cp bin/rbox $(ABS_BINDIR)
+	#cp bin/qconvex $(ABS_BINDIR)
+	#cp bin/qdelaunay $(ABS_BINDIR)
+	#cp bin/qhalf $(ABS_BINDIR)
+	#cp bin/qhull $(ABS_BINDIR)
+	#cp bin/qvoronoi $(ABS_BINDIR)
+	#cp bin/rbox $(ABS_BINDIR)
 	cp -p html/qhull.man $(ABS_MANDIR)/qhull.1
 	cp -p html/rbox.man $(ABS_MANDIR)/rbox.1
 	cp -p README.txt REGISTER.txt Announce.txt COPYING.txt index.htm $(ABS_DOCDIR)/
@@ -637,17 +635,17 @@ qhullx: src/qconvex/qconvex.o src/qdelaunay/qdelaun.o src/qhalf/qhalf.o src/qvor
 	    src/qhull/unix_r.o src/rbox/rbox.o src/testqset/testqset.o src/testqset_r/testqset_r.o\
 	    $(LIBQHULLS_RBOX_OBJS) $(LIBQHULLSR_USER_OBJS) $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o
 	mkdir -p bin/
-	$(CC) -o bin/qconvex $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qconvex/qconvex.o
-	$(CC) -o bin/qdelaunay $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qdelaunay/qdelaun.o
-	$(CC) -o bin/qhalf $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qhalf/qhalf.o
-	$(CC) -o bin/qvoronoi $(CC_OPTS2) -lm $(LIBQHULLS_USER_OBJS) src/qvoronoi/qvoronoi.o
-	$(CC) -o bin/qhull $(CC_OPTS2) -lm $(LIBQHULLSR_USER_OBJS) src/qhull/unix_r.o
-	$(CC) -o bin/rbox $(CC_OPTS2) -lm $(LIBQHULLS_RBOX_OBJS) src/rbox/rbox.o
-	$(CC) -o bin/testqset $(CC_OPTS2) -lm $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o src/testqset/testqset.o
-	$(CC) -o bin/testqset_r $(CC_OPTS2) -lm $(LSR)/mem_r.o $(LSR)/qset_r.o $(LSR)/usermem_r.o src/testqset_r/testqset_r.o
-	-bin/testqset 10000
-	-bin/testqset_r 10000
-	-bin/rbox D4 | bin/qhull
+	#$(CC) -o bin/qconvex $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qconvex/qconvex.o
+	#$(CC) -o bin/qdelaunay $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qdelaunay/qdelaun.o
+	#$(CC) -o bin/qhalf $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qhalf/qhalf.o
+	#$(CC) -o bin/qvoronoi $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_USER_OBJS) src/qvoronoi/qvoronoi.o
+	#$(CC) -o bin/qhull $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLSR_USER_OBJS) src/qhull/unix_r.o
+	#$(CC) -o bin/rbox $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LIBQHULLS_RBOX_OBJS) src/rbox/rbox.o
+	#$(CC) -o bin/testqset $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LS)/mem.o $(LS)/qset.o $(LS)/usermem.o src/testqset/testqset.o
+	#$(CC) -o bin/testqset_r $(CC_OPTS2) -lm -lc -lg ../newlib_code/arm-unknown-linux-gnueabi/lib/crt0.o $(LSR)/mem_r.o $(LSR)/qset_r.o $(LSR)/usermem_r.o src/testqset_r/testqset_r.o
+	#-bin/testqset 10000
+	#-bin/testqset_r 10000
+	#-bin/rbox D4 | bin/qhull
 
 # The static library, libqhullstatic, contains non-reentrant code for Qhull.  It is somewhat faster than reentrant libqhullstatic_r
 
@@ -727,51 +725,51 @@ lib/libqhullstatic.a: $(LIBQHULLS_RBOX_OBJS)
 	@echo ==========================================
 	@echo ==== If 'ar' fails, try 'make qhullx' ====
 	@echo ==========================================
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#If 'ar -rs' fails, try using 'ar -s' with 'ranlib'
 	#ranlib $@
 
 lib/libqhullstatic_r.a: $(LIBQHULLSR_RBOX_OBJS)
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#ranlib $@
 
 # Do not create libqhullcpp as a shared library.  Qhull C++ classes may change layout and size. 
 lib/libqhullcpp.a: $(LIBQHULLCPP_OBJS)
-	/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-ar -rs $@ $^
+	$(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar -rs $@ $^
 	#ranlib $@
 
 lib/libqhull_r.$(SO): $(LIBQHULLSR_RBOX_OBJS)
-	$(CC) -shared $(CC_OPTS2) -o $@ $(CC_OPTS3) $^
+	#$(CC) -shared $(CC_OPTS2) -o $@ $(CC_OPTS3) $^
 	# the following line fails under MSYS, not needed for SO=dll
-	-(cd lib/ && ln -f -s libqhull_r.$(SO) libqhull_r.so)
-	-(cd lib/ && ln -f -s libqhull_r.$(SO) libqhull_r.$(SONAME_EXT))
+	#-(cd lib/ && ln -f -s libqhull_r.$(SO) libqhull_r.so)
+	#-(cd lib/ && ln -f -s libqhull_r.$(SO) libqhull_r.$(SONAME_EXT))
 
 # don't use ../qconvex.	 Does not work on Red Hat Linux
 bin/qconvex: src/qconvex/qconvex.o lib/libqhullstatic.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
 
 bin/qdelaunay: src/qdelaunay/qdelaun.o lib/libqhullstatic.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
 
 bin/qhalf: src/qhalf/qhalf.o lib/libqhullstatic.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
 
 bin/qvoronoi: src/qvoronoi/qvoronoi.o lib/libqhullstatic.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
 
 bin/qhull: src/qhull/unix_r.o lib/libqhullstatic_r.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic_r -lm
-	-chmod +x eg/q_test eg/q_eg eg/q_egtest
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic_r -lm
+	#-chmod +x eg/q_test eg/q_eg eg/q_egtest
 
 bin/rbox: src/rbox/rbox.o lib/libqhullstatic.a
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic -lm
 	#--specs=nosys.specs
 
 bin/testqset: src/testqset/testqset.o src/libqhull/qset.o src/libqhull/mem.o src/libqhull/usermem.o
-	$(CC) -o $@ $^ $(CC_OPTS2) src/syscalls.c -lm
+	#$(CC) -o $@ $^ $(CC_OPTS2) src/syscalls.c -lm
 
 bin/testqset_r: src/testqset_r/testqset_r.o src/libqhull_r/qset_r.o src/libqhull_r/mem_r.o src/libqhull_r/usermem_r.o
-	$(CC) -o $@ $^ $(CC_OPTS2) src/syscalls.c -lm
+	#$(CC) -o $@ $^ $(CC_OPTS2) src/syscalls.c -lm
 
 # You may use  -lqhullstatic_r instead of -lqhull_r
 bin/user_eg: src/user_eg/user_eg_r.o lib/libqhull_r.$(SO)
@@ -780,15 +778,15 @@ bin/user_eg: src/user_eg/user_eg_r.o lib/libqhull_r.$(SO)
 	@echo -e '==   "make SO=dll" and copy lib/libqhull_r.dll to bin/'
 	@echo -e '== Otherwise if user_eg fails to link, switch to -lqhullstatic_r'
 	@echo -e '===================================================\n'
-	$(CC) -o $@ $< $(CC_OPTS1) $(CC_OPTS3) src/syscalls.c -Llib -lqhull_r -lm
+	#$(CC) -o $@ $< $(CC_OPTS1) $(CC_OPTS3) src/syscalls.c -Llib -lqhull_r -lm
 
 bin/user_eg2: src/user_eg2/user_eg2_r.o lib/libqhullstatic_r.a
 	@echo -e '\n\n==================================================='
 	@echo -e '== user_eg2 links to  qhullstatic_r.  It may use libqhull_r instead.'
 	@echo -e '===================================================\n'
-	$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic_r -lm
+	#$(CC) -o $@ $< $(CC_OPTS2) src/syscalls.c -Llib -lqhullstatic_r -lm
 
 bin/user_eg3: src/user_eg3/user_eg3_r.o lib/libqhullstatic_r.a lib/libqhullcpp.a
-	$(CXX) --specs=nosys.specs -o $@ $< $(CXX_OPTS2) -ffreestanding -flto -lgcc -Llib -lqhullcpp -lqhullstatic_r -lm
+	#$(CXX) --specs=nosys.specs -o $@ $< $(CXX_OPTS2) -ffreestanding -flto -lgcc -Llib -lqhullcpp -lqhullstatic_r -lm
 
 # end of Makefile

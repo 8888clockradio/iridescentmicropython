@@ -22,7 +22,10 @@
  */
 
 #pragma once
-
+#include <type_traits>
+#include <new>
+#include <iostream>
+#include <string>
 #ifndef _GLIBCXX_HAS_GTHREADS
 #define _GLIBCXX_HAS_GTHREADS
 #endif

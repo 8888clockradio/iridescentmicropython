@@ -100,22 +100,22 @@ IRIDESCENT_ROOT ?= $(abspath ..)
 ifdef ARDUINOPATH
 
 # path location for Teensy Loader, teensy_post_compile and teensy_reboot (on Linux)
-TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
+#TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
 
 # path location for Arduino libraries (currently not used)
-LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
+#LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
 
 # path location for the arm-none-eabi compiler
-LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
 else
 # Default to the normal GNU/Linux compiler path if NO_ARDUINO
 # and ARDUINOPATH was not set.
-LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
 
 endif
-
+include $(abspath ../../../../toolchain.mk)
 #************************************************************************
 # Settings below this point usually do not need to be edited
 #************************************************************************
@@ -137,14 +137,14 @@ CXXFLAGS = -D__GNUC_PYTHON__ -std=gnu++14 -felide-constructors -fno-exceptions -
 # compiler options for C only
 CFLAGS =
 # linker options
-LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 #LDFLAGS = -Os -Wl,--gc-sections,--relax $(SPECS) $(CPUOPTIONS) -T$(MCU_LD)
 
 # names for the compiler programs
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
 # additional libraries to link
 LIBS = -lmicropythonTeensy -lTeensyStreamLib -lTeensy41Core -lTeensyWire -lTeensySPI -lTeensySD
 #LIBS = -larm_cortexM7lfsp_math -lm -lstdc++

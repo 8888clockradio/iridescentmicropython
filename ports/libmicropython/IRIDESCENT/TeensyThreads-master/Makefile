@@ -100,34 +100,34 @@ IRIDESCENT_ROOT ?= $(abspath ..)
 ifdef ARDUINOPATH
 
 # path location for Teensy Loader, teensy_post_compile and teensy_reboot (on Linux)
-TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
+#TOOLSPATH = $(abspath $(ARDUINOPATH)/hardware/tools)
 
 # path location for Arduino libraries (currently not used)
-LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
+#LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
 
 # path location for the arm-none-eabi compiler
-LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 
 include $(abspath ../../../../toolchain.mk)
 
 
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AR = $(COMPILERPATH)/arm-none-eabi-ar
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 else
 # Default to the normal GNU/Linux compiler path if NO_ARDUINO
 # and ARDUINOPATH was not set.
-LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AR = $(COMPILERPATH)/arm-none-eabi-ar
+#LIBPATHFILEDROP = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../gcc-arm-none-eabi-10.3-2021.10/bin)
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 
 endif
 
@@ -150,13 +150,13 @@ CXXFLAGS = -std=gnu++14 -felide-constructors -fno-exceptions -fpermissive -fno-r
 # compiler options for C only
 CFLAGS =
 # linker options
-LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 #LDFLAGS = -Os -Wl,--gc-sections,--relax $(SPECS) $(CPUOPTIONS) -T$(MCU_LD)
 # names for the compiler programs
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
 # additional libraries to link
 LIBS = -lmicropythonTeensy -lTeensyStreamLib -lTeensy41Core
 #LIBS = -larm_cortexM7lfsp_math -lm -lstdc++
@@ -273,13 +273,13 @@ CFLAGS += -O2
 CXXFLAGS += -O2
 CPPFLAGS += -O2
 ASFLAGS += -O2
-LDFLAGS = -O2 -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -O2 -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 else
 CFLAGS += -Os -DNDEBUG
 CXXFLAGS += -Os -DNDEBUG
 CPPFLAGS += -Os -DNDEBUG
 ASFLAGS += -Os -DNDEBUG
-LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -Os -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 endif
 # CPPFLAGS = compiler options for C and C++
 CPPFLAGS = -Wall -D__GNUC_PYTHON__ $(CPUOPTIONS) -MMD $(OPTIONS) -I. $(INC) -ffunction-sections -fdata-sections -fasynchronous-unwind-tables -mlong-calls

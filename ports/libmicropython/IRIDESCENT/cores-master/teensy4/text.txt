@@ -1,0 +1,1553 @@
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o memcpy-armv7m.o memcpy-armv7m.S
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o memset.o memset.S
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o analog.o analog.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o bootdata.o bootdata.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o clockspeed.o clockspeed.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o debugprintf.o debugprintf.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o delay.o delay.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o digital.o digital.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o eeprom.o eeprom.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o extmem.o extmem.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o fuse.o fuse.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o interrupt.o interrupt.c
+interrupt.c:16:13: warning: 'dummy_isr' defined but not used [-Wunused-function]
+   16 | static void dummy_isr() {};
+      |             ^~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o keylayouts.o keylayouts.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o libc.o libc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o nonstd.o nonstd.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o pwm.o pwm.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o rtc.o rtc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_alloc_valid.o sm_alloc_valid.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_calloc.o sm_calloc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_free.o sm_free.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_hash.o sm_hash.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_malloc.o sm_malloc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_malloc_stats.o sm_malloc_stats.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_pool.o sm_pool.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_realloc.o sm_realloc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_realloc_i.o sm_realloc_i.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_realloc_move.o sm_realloc_move.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_szalloc.o sm_szalloc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_util.o sm_util.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o sm_zalloc.o sm_zalloc.c
+/Users/iridescent/iridescent/iridescentCoconutSynth2/arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -DUSING_MAKEFILE -DUSB_MIDI_AUDIO_SERIAL -D__IMXRT1062__ -DARDUINO=10813 -DTEENSYDUINO=154 -DARDUINO_TEENSY41 -I. -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/StreamLib-master/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/boards/TEENSY41 -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/build-SHAREDLIB -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/IRIDESCENT/freertos-teensy-master/src -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062  -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers -I/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD  -c -o startup.o startup.c
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h:22,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/ports/libmicropython/mpconfigport.h:59,
+                 from startup.c:10:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/fsl_device_registers.h:28:6: error: #error "No valid CPU defined!"
+   28 |     #error "No valid CPU defined!"
+      |      ^~~~~
+In file included from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common.h:290:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h: In function '_SDK_AtomicLocalAdd1Byte':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:74:17: warning: implicit declaration of function '__LDREXB' [-Wimplicit-function-declaration]
+   74 |         (val) = __LDREXB(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:96:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_1BYTE'
+   96 |     _SDK_ATOMIC_LOCAL_OPS_1BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:76:21: warning: implicit declaration of function '__STREXB' [-Wimplicit-function-declaration]
+   76 |     } while (0UL != __STREXB((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:96:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_1BYTE'
+   96 |     _SDK_ATOMIC_LOCAL_OPS_1BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h: In function '_SDK_AtomicLocalAdd2Byte':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:81:17: warning: implicit declaration of function '__LDREXH' [-Wimplicit-function-declaration]
+   81 |         (val) = __LDREXH(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:103:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_2BYTE'
+  103 |     _SDK_ATOMIC_LOCAL_OPS_2BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:83:21: warning: implicit declaration of function '__STREXH' [-Wimplicit-function-declaration]
+   83 |     } while (0UL != __STREXH((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:103:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_2BYTE'
+  103 |     _SDK_ATOMIC_LOCAL_OPS_2BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h: In function '_SDK_AtomicLocalAdd4Byte':
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:88:17: warning: implicit declaration of function '__LDREXW' [-Wimplicit-function-declaration]
+   88 |         (val) = __LDREXW(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:110:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_4BYTE'
+  110 |     _SDK_ATOMIC_LOCAL_OPS_4BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:90:21: warning: implicit declaration of function '__STREXW' [-Wimplicit-function-declaration]
+   90 |     } while (0UL != __STREXW((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:110:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_4BYTE'
+  110 |     _SDK_ATOMIC_LOCAL_OPS_4BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./cmsis_compiler.h:54,
+                 from ./core_cm7.h:162,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:11,
+                 from /Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:455:
+./cmsis_gcc.h: At top level:
+./cmsis_gcc.h:1152:30: error: conflicting types for '__LDREXB'; have 'uint8_t(volatile uint8_t *)' {aka 'unsigned char(volatile unsigned char *)'}
+ 1152 | __STATIC_FORCEINLINE uint8_t __LDREXB(volatile uint8_t *addr)
+      |                              ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:74:17: note: previous implicit declaration of '__LDREXB' with type 'int()'
+   74 |         (val) = __LDREXB(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:96:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_1BYTE'
+   96 |     _SDK_ATOMIC_LOCAL_OPS_1BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cmsis_gcc.h:1177:31: error: conflicting types for '__LDREXH'; have 'uint16_t(volatile uint16_t *)' {aka 'short unsigned int(volatile short unsigned int *)'}
+ 1177 | __STATIC_FORCEINLINE uint16_t __LDREXH(volatile uint16_t *addr)
+      |                               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:81:17: note: previous implicit declaration of '__LDREXH' with type 'int()'
+   81 |         (val) = __LDREXH(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:103:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_2BYTE'
+  103 |     _SDK_ATOMIC_LOCAL_OPS_2BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cmsis_gcc.h:1202:31: error: conflicting types for '__LDREXW'; have 'uint32_t(volatile uint32_t *)' {aka 'long unsigned int(volatile long unsigned int *)'}
+ 1202 | __STATIC_FORCEINLINE uint32_t __LDREXW(volatile uint32_t *addr)
+      |                               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:88:17: note: previous implicit declaration of '__LDREXW' with type 'int()'
+   88 |         (val) = __LDREXW(addr);                     \
+      |                 ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:110:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_4BYTE'
+  110 |     _SDK_ATOMIC_LOCAL_OPS_4BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cmsis_gcc.h:1223:31: error: conflicting types for '__STREXB'; have 'uint32_t(uint8_t,  volatile uint8_t *)' {aka 'long unsigned int(unsigned char,  volatile unsigned char *)'}
+ 1223 | __STATIC_FORCEINLINE uint32_t __STREXB(uint8_t value, volatile uint8_t *addr)
+      |                               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:76:21: note: previous implicit declaration of '__STREXB' with type 'int()'
+   76 |     } while (0UL != __STREXB((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:96:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_1BYTE'
+   96 |     _SDK_ATOMIC_LOCAL_OPS_1BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cmsis_gcc.h:1245:31: error: conflicting types for '__STREXH'; have 'uint32_t(uint16_t,  volatile uint16_t *)' {aka 'long unsigned int(short unsigned int,  volatile short unsigned int *)'}
+ 1245 | __STATIC_FORCEINLINE uint32_t __STREXH(uint16_t value, volatile uint16_t *addr)
+      |                               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:83:21: note: previous implicit declaration of '__STREXH' with type 'int()'
+   83 |     } while (0UL != __STREXH((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:103:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_2BYTE'
+  103 |     _SDK_ATOMIC_LOCAL_OPS_2BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cmsis_gcc.h:1265:31: error: conflicting types for '__STREXW'; have 'uint32_t(uint32_t,  volatile uint32_t *)' {aka 'long unsigned int(long unsigned int,  volatile long unsigned int *)'}
+ 1265 | __STATIC_FORCEINLINE uint32_t __STREXW(uint32_t value, volatile uint32_t *addr)
+      |                               ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:90:21: note: previous implicit declaration of '__STREXW' with type 'int()'
+   90 |     } while (0UL != __STREXW((val), (addr)))
+      |                     ^~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:110:5: note: in expansion of macro '_SDK_ATOMIC_LOCAL_OPS_4BYTE'
+  110 |     _SDK_ATOMIC_LOCAL_OPS_4BYTE(addr, s_val, s_val += val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./core_cm7.h:1885:39: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1885 | __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
+      |                                       ^~~~~~~~~
+      |                                       ITM_Type
+./core_cm7.h:1902:46: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1902 | __STATIC_INLINE uint32_t __NVIC_GetEnableIRQ(IRQn_Type IRQn)
+      |                                              ^~~~~~~~~
+      |                                              ITM_Type
+./core_cm7.h:1921:40: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1921 | __STATIC_INLINE void __NVIC_DisableIRQ(IRQn_Type IRQn)
+      |                                        ^~~~~~~~~
+      |                                        ITM_Type
+./core_cm7.h:1940:47: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1940 | __STATIC_INLINE uint32_t __NVIC_GetPendingIRQ(IRQn_Type IRQn)
+      |                                               ^~~~~~~~~
+      |                                               ITM_Type
+./core_cm7.h:1959:43: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1959 | __STATIC_INLINE void __NVIC_SetPendingIRQ(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+      |                                           ITM_Type
+./core_cm7.h:1974:45: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1974 | __STATIC_INLINE void __NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+      |                                             ITM_Type
+./core_cm7.h:1991:43: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1991 | __STATIC_INLINE uint32_t __NVIC_GetActive(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+      |                                           ITM_Type
+./core_cm7.h:2013:41: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 2013 | __STATIC_INLINE void __NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+      |                                         ^~~~~~~~~
+      |                                         ITM_Type
+./core_cm7.h:2035:45: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 2035 | __STATIC_INLINE uint32_t __NVIC_GetPriority(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+      |                                             ITM_Type
+./core_cm7.h:2110:39: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 2110 | __STATIC_INLINE void __NVIC_SetVector(IRQn_Type IRQn, uint32_t vector)
+      |                                       ^~~~~~~~~
+      |                                       ITM_Type
+./core_cm7.h:2125:43: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 2125 | __STATIC_INLINE uint32_t __NVIC_GetVector(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+      |                                           ITM_Type
+./core_cm7.h: In function 'SysTick_Config':
+./core_cm7.h:1826:39: warning: implicit declaration of function '__NVIC_SetPriority'; did you mean 'NVIC_SetPriority'? [-Wimplicit-function-declaration]
+ 1826 |   #define NVIC_SetPriority            __NVIC_SetPriority
+      |                                       ^~~~~~~~~~~~~~~~~~
+./core_cm7.h:2561:3: note: in expansion of macro 'NVIC_SetPriority'
+ 2561 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |   ^~~~~~~~~~~~~~~~
+./core_cm7.h:2561:21: error: 'SysTick_IRQn' undeclared (first use in this function); did you mean 'SysTick_Type'?
+ 2561 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |                     ^~~~~~~~~~~~
+      |                     SysTick_Type
+./core_cm7.h:2561:21: note: each undeclared identifier is reported only once for each function it appears in
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h: At top level:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:731: warning: "CCM_CCR_OSCNT" redefined
+  731 | #define CCM_CCR_OSCNT(x)                         (((uint32_t)(((uint32_t)(x)) << CCM_CCR_OSCNT_SHIFT)) & CCM_CCR_OSCNT_MASK)
+      | 
+In file included from startup.c:1:
+imxrt.h:1370: note: this is the location of the previous definition
+ 1370 | #define CCM_CCR_OSCNT(n)                        ((uint32_t)(((n) & 0xFF) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:739: warning: "CCM_CCR_COSC_EN" redefined
+  739 | #define CCM_CCR_COSC_EN(x)                       (((uint32_t)(((uint32_t)(x)) << CCM_CCR_COSC_EN_SHIFT)) & CCM_CCR_COSC_EN_MASK)
+      | 
+imxrt.h:1369: note: this is the location of the previous definition
+ 1369 | #define CCM_CCR_COSC_EN                         ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:748: warning: "CCM_CCR_REG_BYPASS_COUNT" redefined
+  748 | #define CCM_CCR_REG_BYPASS_COUNT(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CCR_REG_BYPASS_COUNT_SHIFT)) & CCM_CCR_REG_BYPASS_COUNT_MASK)
+      | 
+imxrt.h:1368: note: this is the location of the previous definition
+ 1368 | #define CCM_CCR_REG_BYPASS_COUNT(n)             ((uint32_t)(((n) & 0x3F) << 21))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:756: warning: "CCM_CCR_RBC_EN" redefined
+  756 | #define CCM_CCR_RBC_EN(x)                        (((uint32_t)(((uint32_t)(x)) << CCM_CCR_RBC_EN_SHIFT)) & CCM_CCR_RBC_EN_MASK)
+      | 
+imxrt.h:1367: note: this is the location of the previous definition
+ 1367 | #define CCM_CCR_RBC_EN                          ((uint32_t)(1<<27))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:768: warning: "CCM_CSR_REF_EN_B" redefined
+  768 | #define CCM_CSR_REF_EN_B(x)                      (((uint32_t)(((uint32_t)(x)) << CCM_CSR_REF_EN_B_SHIFT)) & CCM_CSR_REF_EN_B_MASK)
+      | 
+imxrt.h:1373: note: this is the location of the previous definition
+ 1373 | #define CCM_CSR_REF_EN_B                        ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:776: warning: "CCM_CSR_CAMP2_READY" redefined
+  776 | #define CCM_CSR_CAMP2_READY(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CSR_CAMP2_READY_SHIFT)) & CCM_CSR_CAMP2_READY_MASK)
+      | 
+imxrt.h:1372: note: this is the location of the previous definition
+ 1372 | #define CCM_CSR_CAMP2_READY                     ((uint32_t)(1<<3))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:784: warning: "CCM_CSR_COSC_READY" redefined
+  784 | #define CCM_CSR_COSC_READY(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CSR_COSC_READY_SHIFT)) & CCM_CSR_COSC_READY_MASK)
+      | 
+imxrt.h:1371: note: this is the location of the previous definition
+ 1371 | #define CCM_CSR_COSC_READY                      ((uint32_t)(1<<5))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:796: warning: "CCM_CCSR_PLL3_SW_CLK_SEL" redefined
+  796 | #define CCM_CCSR_PLL3_SW_CLK_SEL(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CCSR_PLL3_SW_CLK_SEL_SHIFT)) & CCM_CCSR_PLL3_SW_CLK_SEL_MASK)
+      | 
+imxrt.h:1374: note: this is the location of the previous definition
+ 1374 | #define CCM_CCSR_PLL3_SW_CLK_SEL                ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:802: warning: "CCM_CACRR_ARM_PODF_MASK" redefined
+  802 | #define CCM_CACRR_ARM_PODF_MASK                  (0x7U)
+      | 
+imxrt.h:1376: note: this is the location of the previous definition
+ 1376 | #define CCM_CACRR_ARM_PODF_MASK                 ((uint32_t)(0x07 << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:814: warning: "CCM_CACRR_ARM_PODF" redefined
+  814 | #define CCM_CACRR_ARM_PODF(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CACRR_ARM_PODF_SHIFT)) & CCM_CACRR_ARM_PODF_MASK)
+      | 
+imxrt.h:1375: note: this is the location of the previous definition
+ 1375 | #define CCM_CACRR_ARM_PODF(n)                   ((uint32_t)(((n) & 0x07) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:826: warning: "CCM_CBCDR_SEMC_CLK_SEL" redefined
+  826 | #define CCM_CBCDR_SEMC_CLK_SEL(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_SEMC_CLK_SEL_SHIFT)) & CCM_CBCDR_SEMC_CLK_SEL_MASK)
+      | 
+imxrt.h:1386: note: this is the location of the previous definition
+ 1386 | #define CCM_CBCDR_SEMC_CLK_SEL                  ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:834: warning: "CCM_CBCDR_SEMC_ALT_CLK_SEL" redefined
+  834 | #define CCM_CBCDR_SEMC_ALT_CLK_SEL(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_SEMC_ALT_CLK_SEL_SHIFT)) & CCM_CBCDR_SEMC_ALT_CLK_SEL_MASK)
+      | 
+imxrt.h:1385: note: this is the location of the previous definition
+ 1385 | #define CCM_CBCDR_SEMC_ALT_CLK_SEL              ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:836: warning: "CCM_CBCDR_IPG_PODF_MASK" redefined
+  836 | #define CCM_CBCDR_IPG_PODF_MASK                  (0x300U)
+      | 
+imxrt.h:1384: note: this is the location of the previous definition
+ 1384 | #define CCM_CBCDR_IPG_PODF_MASK                 ((uint32_t)(0x03 << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:844: warning: "CCM_CBCDR_IPG_PODF" redefined
+  844 | #define CCM_CBCDR_IPG_PODF(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_IPG_PODF_SHIFT)) & CCM_CBCDR_IPG_PODF_MASK)
+      | 
+imxrt.h:1383: note: this is the location of the previous definition
+ 1383 | #define CCM_CBCDR_IPG_PODF(n)                   ((uint32_t)(((n) & 0x03) << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:846: warning: "CCM_CBCDR_AHB_PODF_MASK" redefined
+  846 | #define CCM_CBCDR_AHB_PODF_MASK                  (0x1C00U)
+      | 
+imxrt.h:1382: note: this is the location of the previous definition
+ 1382 | #define CCM_CBCDR_AHB_PODF_MASK                 ((uint32_t)(0x07 << 10))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:858: warning: "CCM_CBCDR_AHB_PODF" redefined
+  858 | #define CCM_CBCDR_AHB_PODF(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_AHB_PODF_SHIFT)) & CCM_CBCDR_AHB_PODF_MASK)
+      | 
+imxrt.h:1381: note: this is the location of the previous definition
+ 1381 | #define CCM_CBCDR_AHB_PODF(n)                   ((uint32_t)(((n) & 0x07) << 10))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:872: warning: "CCM_CBCDR_SEMC_PODF" redefined
+  872 | #define CCM_CBCDR_SEMC_PODF(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_SEMC_PODF_SHIFT)) & CCM_CBCDR_SEMC_PODF_MASK)
+      | 
+imxrt.h:1380: note: this is the location of the previous definition
+ 1380 | #define CCM_CBCDR_SEMC_PODF(n)                  ((uint32_t)(((n) & 0x07) << 16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:880: warning: "CCM_CBCDR_PERIPH_CLK_SEL" redefined
+  880 | #define CCM_CBCDR_PERIPH_CLK_SEL(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_PERIPH_CLK_SEL_SHIFT)) & CCM_CBCDR_PERIPH_CLK_SEL_MASK)
+      | 
+imxrt.h:1379: note: this is the location of the previous definition
+ 1379 | #define CCM_CBCDR_PERIPH_CLK_SEL                ((uint32_t)(1<<25))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:882: warning: "CCM_CBCDR_PERIPH_CLK2_PODF_MASK" redefined
+  882 | #define CCM_CBCDR_PERIPH_CLK2_PODF_MASK          (0x38000000U)
+      | 
+imxrt.h:1378: note: this is the location of the previous definition
+ 1378 | #define CCM_CBCDR_PERIPH_CLK2_PODF_MASK         ((uint32_t)(0x07 << 27))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:894: warning: "CCM_CBCDR_PERIPH_CLK2_PODF" redefined
+  894 | #define CCM_CBCDR_PERIPH_CLK2_PODF(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CBCDR_PERIPH_CLK2_PODF_SHIFT)) & CCM_CBCDR_PERIPH_CLK2_PODF_MASK)
+      | 
+imxrt.h:1377: note: this is the location of the previous definition
+ 1377 | #define CCM_CBCDR_PERIPH_CLK2_PODF(n)           ((uint32_t)(((n) & 0x07) << 27))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:900: warning: "CCM_CBCMR_LPSPI_CLK_SEL_MASK" redefined
+  900 | #define CCM_CBCMR_LPSPI_CLK_SEL_MASK             (0x30U)
+      | 
+imxrt.h:1402: note: this is the location of the previous definition
+ 1402 | #define CCM_CBCMR_LPSPI_CLK_SEL_MASK            ((uint32_t)(0x03 << 4))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:908: warning: "CCM_CBCMR_LPSPI_CLK_SEL" redefined
+  908 | #define CCM_CBCMR_LPSPI_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_LPSPI_CLK_SEL_SHIFT)) & CCM_CBCMR_LPSPI_CLK_SEL_MASK)
+      | 
+imxrt.h:1394: note: this is the location of the previous definition
+ 1394 | #define CCM_CBCMR_LPSPI_CLK_SEL(n)              ((uint32_t)(((n) & 0x03) << 4))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:910: warning: "CCM_CBCMR_FLEXSPI2_CLK_SEL_MASK" redefined
+  910 | #define CCM_CBCMR_FLEXSPI2_CLK_SEL_MASK          (0x300U)
+      | 
+imxrt.h:1401: note: this is the location of the previous definition
+ 1401 | #define CCM_CBCMR_FLEXSPI2_CLK_SEL_MASK         ((uint32_t)(0x03 << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:918: warning: "CCM_CBCMR_FLEXSPI2_CLK_SEL" redefined
+  918 | #define CCM_CBCMR_FLEXSPI2_CLK_SEL(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_FLEXSPI2_CLK_SEL_SHIFT)) & CCM_CBCMR_FLEXSPI2_CLK_SEL_MASK)
+      | 
+imxrt.h:1393: note: this is the location of the previous definition
+ 1393 | #define CCM_CBCMR_FLEXSPI2_CLK_SEL(n)           ((uint32_t)(((n) & 0x03) << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:920: warning: "CCM_CBCMR_PERIPH_CLK2_SEL_MASK" redefined
+  920 | #define CCM_CBCMR_PERIPH_CLK2_SEL_MASK           (0x3000U)
+      | 
+imxrt.h:1400: note: this is the location of the previous definition
+ 1400 | #define CCM_CBCMR_PERIPH_CLK2_SEL_MASK          ((uint32_t)(0x03 << 12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:928: warning: "CCM_CBCMR_PERIPH_CLK2_SEL" redefined
+  928 | #define CCM_CBCMR_PERIPH_CLK2_SEL(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_PERIPH_CLK2_SEL_SHIFT)) & CCM_CBCMR_PERIPH_CLK2_SEL_MASK)
+      | 
+imxrt.h:1392: note: this is the location of the previous definition
+ 1392 | #define CCM_CBCMR_PERIPH_CLK2_SEL(n)            ((uint32_t)(((n) & 0x03) << 12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:930: warning: "CCM_CBCMR_TRACE_CLK_SEL_MASK" redefined
+  930 | #define CCM_CBCMR_TRACE_CLK_SEL_MASK             (0xC000U)
+      | 
+imxrt.h:1399: note: this is the location of the previous definition
+ 1399 | #define CCM_CBCMR_TRACE_CLK_SEL_MASK            ((uint32_t)(0x03 << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:938: warning: "CCM_CBCMR_TRACE_CLK_SEL" redefined
+  938 | #define CCM_CBCMR_TRACE_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_TRACE_CLK_SEL_SHIFT)) & CCM_CBCMR_TRACE_CLK_SEL_MASK)
+      | 
+imxrt.h:1391: note: this is the location of the previous definition
+ 1391 | #define CCM_CBCMR_TRACE_CLK_SEL(n)              ((uint32_t)(((n) & 0x03) << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:940: warning: "CCM_CBCMR_PRE_PERIPH_CLK_SEL_MASK" redefined
+  940 | #define CCM_CBCMR_PRE_PERIPH_CLK_SEL_MASK        (0xC0000U)
+      | 
+imxrt.h:1398: note: this is the location of the previous definition
+ 1398 | #define CCM_CBCMR_PRE_PERIPH_CLK_SEL_MASK       ((uint32_t)(0x03 << 18))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:948: warning: "CCM_CBCMR_PRE_PERIPH_CLK_SEL" redefined
+  948 | #define CCM_CBCMR_PRE_PERIPH_CLK_SEL(x)          (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_PRE_PERIPH_CLK_SEL_SHIFT)) & CCM_CBCMR_PRE_PERIPH_CLK_SEL_MASK)
+      | 
+imxrt.h:1390: note: this is the location of the previous definition
+ 1390 | #define CCM_CBCMR_PRE_PERIPH_CLK_SEL(n)         ((uint32_t)(((n) & 0x03) << 18))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:950: warning: "CCM_CBCMR_LCDIF_PODF_MASK" redefined
+  950 | #define CCM_CBCMR_LCDIF_PODF_MASK                (0x3800000U)
+      | 
+imxrt.h:1397: note: this is the location of the previous definition
+ 1397 | #define CCM_CBCMR_LCDIF_PODF_MASK               ((uint32_t)(0x07 << 23))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:962: warning: "CCM_CBCMR_LCDIF_PODF" redefined
+  962 | #define CCM_CBCMR_LCDIF_PODF(x)                  (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_LCDIF_PODF_SHIFT)) & CCM_CBCMR_LCDIF_PODF_MASK)
+      | 
+imxrt.h:1389: note: this is the location of the previous definition
+ 1389 | #define CCM_CBCMR_LCDIF_PODF(n)                 ((uint32_t)(((n) & 0x07) << 23))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:964: warning: "CCM_CBCMR_LPSPI_PODF_MASK" redefined
+  964 | #define CCM_CBCMR_LPSPI_PODF_MASK                (0x1C000000U)
+      | 
+imxrt.h:1396: note: this is the location of the previous definition
+ 1396 | #define CCM_CBCMR_LPSPI_PODF_MASK               ((uint32_t)(0x07 << 26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:976: warning: "CCM_CBCMR_LPSPI_PODF" redefined
+  976 | #define CCM_CBCMR_LPSPI_PODF(x)                  (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_LPSPI_PODF_SHIFT)) & CCM_CBCMR_LPSPI_PODF_MASK)
+      | 
+imxrt.h:1388: note: this is the location of the previous definition
+ 1388 | #define CCM_CBCMR_LPSPI_PODF(n)                 ((uint32_t)(((n) & 0x07) << 26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:978: warning: "CCM_CBCMR_FLEXSPI2_PODF_MASK" redefined
+  978 | #define CCM_CBCMR_FLEXSPI2_PODF_MASK             (0xE0000000U)
+      | 
+imxrt.h:1395: note: this is the location of the previous definition
+ 1395 | #define CCM_CBCMR_FLEXSPI2_PODF_MASK            ((uint32_t)(0x07 << 29))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:990: warning: "CCM_CBCMR_FLEXSPI2_PODF" redefined
+  990 | #define CCM_CBCMR_FLEXSPI2_PODF(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CBCMR_FLEXSPI2_PODF_SHIFT)) & CCM_CBCMR_FLEXSPI2_PODF_MASK)
+      | 
+imxrt.h:1387: note: this is the location of the previous definition
+ 1387 | #define CCM_CBCMR_FLEXSPI2_PODF(n)              ((uint32_t)(((n) & 0x07) << 29))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1064: warning: "CCM_CSCMR1_PERCLK_PODF" redefined
+ 1064 | #define CCM_CSCMR1_PERCLK_PODF(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_PERCLK_PODF_SHIFT)) & CCM_CSCMR1_PERCLK_PODF_MASK)
+      | 
+imxrt.h:1412: note: this is the location of the previous definition
+ 1412 | #define CCM_CSCMR1_PERCLK_PODF(n)               ((uint32_t)(((n) & 0x3F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1072: warning: "CCM_CSCMR1_PERCLK_CLK_SEL" redefined
+ 1072 | #define CCM_CSCMR1_PERCLK_CLK_SEL(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_PERCLK_CLK_SEL_SHIFT)) & CCM_CSCMR1_PERCLK_CLK_SEL_MASK)
+      | 
+imxrt.h:1410: note: this is the location of the previous definition
+ 1410 | #define CCM_CSCMR1_PERCLK_CLK_SEL               ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1074: warning: "CCM_CSCMR1_SAI1_CLK_SEL_MASK" redefined
+ 1074 | #define CCM_CSCMR1_SAI1_CLK_SEL_MASK             (0xC00U)
+      | 
+imxrt.h:1612: note: this is the location of the previous definition
+ 1612 | #define CCM_CSCMR1_SAI1_CLK_SEL_MASK            (CCM_CSCMR1_SAI1_CLK_SEL(0x03))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1082: warning: "CCM_CSCMR1_SAI1_CLK_SEL" redefined
+ 1082 | #define CCM_CSCMR1_SAI1_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_SAI1_CLK_SEL_SHIFT)) & CCM_CSCMR1_SAI1_CLK_SEL_MASK)
+      | 
+imxrt.h:1409: note: this is the location of the previous definition
+ 1409 | #define CCM_CSCMR1_SAI1_CLK_SEL(n)              ((uint32_t)(((n) & 0x03) << 10))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1084: warning: "CCM_CSCMR1_SAI2_CLK_SEL_MASK" redefined
+ 1084 | #define CCM_CSCMR1_SAI2_CLK_SEL_MASK             (0x3000U)
+      | 
+imxrt.h:1615: note: this is the location of the previous definition
+ 1615 | #define CCM_CSCMR1_SAI2_CLK_SEL_MASK            (CCM_CSCMR1_SAI2_CLK_SEL(0x03))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1092: warning: "CCM_CSCMR1_SAI2_CLK_SEL" redefined
+ 1092 | #define CCM_CSCMR1_SAI2_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_SAI2_CLK_SEL_SHIFT)) & CCM_CSCMR1_SAI2_CLK_SEL_MASK)
+      | 
+imxrt.h:1408: note: this is the location of the previous definition
+ 1408 | #define CCM_CSCMR1_SAI2_CLK_SEL(n)              ((uint32_t)(((n) & 0x03) << 12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1094: warning: "CCM_CSCMR1_SAI3_CLK_SEL_MASK" redefined
+ 1094 | #define CCM_CSCMR1_SAI3_CLK_SEL_MASK             (0xC000U)
+      | 
+imxrt.h:1618: note: this is the location of the previous definition
+ 1618 | #define CCM_CSCMR1_SAI3_CLK_SEL_MASK            (CCM_CSCMR1_SAI3_CLK_SEL(0x03))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1102: warning: "CCM_CSCMR1_SAI3_CLK_SEL" redefined
+ 1102 | #define CCM_CSCMR1_SAI3_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_SAI3_CLK_SEL_SHIFT)) & CCM_CSCMR1_SAI3_CLK_SEL_MASK)
+      | 
+imxrt.h:1407: note: this is the location of the previous definition
+ 1407 | #define CCM_CSCMR1_SAI3_CLK_SEL(n)              ((uint32_t)(((n) & 0x03) << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1110: warning: "CCM_CSCMR1_USDHC1_CLK_SEL" redefined
+ 1110 | #define CCM_CSCMR1_USDHC1_CLK_SEL(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_USDHC1_CLK_SEL_SHIFT)) & CCM_CSCMR1_USDHC1_CLK_SEL_MASK)
+      | 
+imxrt.h:1406: note: this is the location of the previous definition
+ 1406 | #define CCM_CSCMR1_USDHC1_CLK_SEL               ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1118: warning: "CCM_CSCMR1_USDHC2_CLK_SEL" redefined
+ 1118 | #define CCM_CSCMR1_USDHC2_CLK_SEL(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_USDHC2_CLK_SEL_SHIFT)) & CCM_CSCMR1_USDHC2_CLK_SEL_MASK)
+      | 
+imxrt.h:1405: note: this is the location of the previous definition
+ 1405 | #define CCM_CSCMR1_USDHC2_CLK_SEL               ((uint32_t)(1<<17))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1132: warning: "CCM_CSCMR1_FLEXSPI_PODF" redefined
+ 1132 | #define CCM_CSCMR1_FLEXSPI_PODF(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_FLEXSPI_PODF_SHIFT)) & CCM_CSCMR1_FLEXSPI_PODF_MASK)
+      | 
+imxrt.h:1404: note: this is the location of the previous definition
+ 1404 | #define CCM_CSCMR1_FLEXSPI_PODF(n)              ((uint32_t)(((n) & 0x07) << 23))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1142: warning: "CCM_CSCMR1_FLEXSPI_CLK_SEL" redefined
+ 1142 | #define CCM_CSCMR1_FLEXSPI_CLK_SEL(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR1_FLEXSPI_CLK_SEL_SHIFT)) & CCM_CSCMR1_FLEXSPI_CLK_SEL_MASK)
+      | 
+imxrt.h:1403: note: this is the location of the previous definition
+ 1403 | #define CCM_CSCMR1_FLEXSPI_CLK_SEL(n)           ((uint32_t)(((n) & 0x03) << 29))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1216: warning: "CCM_CSCMR2_CAN_CLK_PODF" redefined
+ 1216 | #define CCM_CSCMR2_CAN_CLK_PODF(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR2_CAN_CLK_PODF_SHIFT)) & CCM_CSCMR2_CAN_CLK_PODF_MASK)
+      | 
+imxrt.h:1415: note: this is the location of the previous definition
+ 1415 | #define CCM_CSCMR2_CAN_CLK_PODF(n)              ((uint32_t)(((n) & 0x3F) << 2))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1226: warning: "CCM_CSCMR2_CAN_CLK_SEL" redefined
+ 1226 | #define CCM_CSCMR2_CAN_CLK_SEL(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR2_CAN_CLK_SEL_SHIFT)) & CCM_CSCMR2_CAN_CLK_SEL_MASK)
+      | 
+imxrt.h:1414: note: this is the location of the previous definition
+ 1414 | #define CCM_CSCMR2_CAN_CLK_SEL(n)               ((uint32_t)(((n) & 0x03) << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1236: warning: "CCM_CSCMR2_FLEXIO2_CLK_SEL" redefined
+ 1236 | #define CCM_CSCMR2_FLEXIO2_CLK_SEL(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CSCMR2_FLEXIO2_CLK_SEL_SHIFT)) & CCM_CSCMR2_FLEXIO2_CLK_SEL_MASK)
+      | 
+imxrt.h:1413: note: this is the location of the previous definition
+ 1413 | #define CCM_CSCMR2_FLEXIO2_CLK_SEL(n)           ((uint32_t)(((n) & 0x03) << 19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1310: warning: "CCM_CSCDR1_UART_CLK_PODF" redefined
+ 1310 | #define CCM_CSCDR1_UART_CLK_PODF(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR1_UART_CLK_PODF_SHIFT)) & CCM_CSCDR1_UART_CLK_PODF_MASK)
+      | 
+imxrt.h:1421: note: this is the location of the previous definition
+ 1421 | #define CCM_CSCDR1_UART_CLK_PODF(n)             ((uint32_t)(((n) & 0x3F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1318: warning: "CCM_CSCDR1_UART_CLK_SEL" redefined
+ 1318 | #define CCM_CSCDR1_UART_CLK_SEL(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR1_UART_CLK_SEL_SHIFT)) & CCM_CSCDR1_UART_CLK_SEL_MASK)
+      | 
+imxrt.h:1419: note: this is the location of the previous definition
+ 1419 | #define CCM_CSCDR1_UART_CLK_SEL                 ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1332: warning: "CCM_CSCDR1_USDHC1_PODF" redefined
+ 1332 | #define CCM_CSCDR1_USDHC1_PODF(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR1_USDHC1_PODF_SHIFT)) & CCM_CSCDR1_USDHC1_PODF_MASK)
+      | 
+imxrt.h:1418: note: this is the location of the previous definition
+ 1418 | #define CCM_CSCDR1_USDHC1_PODF(n)               ((uint32_t)(((n) & 0x07) << 11))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1346: warning: "CCM_CSCDR1_USDHC2_PODF" redefined
+ 1346 | #define CCM_CSCDR1_USDHC2_PODF(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR1_USDHC2_PODF_SHIFT)) & CCM_CSCDR1_USDHC2_PODF_MASK)
+      | 
+imxrt.h:1417: note: this is the location of the previous definition
+ 1417 | #define CCM_CSCDR1_USDHC2_PODF(n)               ((uint32_t)(((n) & 0x07) << 16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1356: warning: "CCM_CSCDR1_TRACE_PODF" redefined
+ 1356 | #define CCM_CSCDR1_TRACE_PODF(x)                 (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR1_TRACE_PODF_SHIFT)) & CCM_CSCDR1_TRACE_PODF_MASK)
+      | 
+imxrt.h:1416: note: this is the location of the previous definition
+ 1416 | #define CCM_CSCDR1_TRACE_PODF(n)                ((uint32_t)(((n) & 0x07) << 25))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1362: warning: "CCM_CS1CDR_SAI1_CLK_PODF_MASK" redefined
+ 1362 | #define CCM_CS1CDR_SAI1_CLK_PODF_MASK            (0x3FU)
+      | 
+imxrt.h:1614: note: this is the location of the previous definition
+ 1614 | #define CCM_CS1CDR_SAI1_CLK_PODF_MASK           (CCM_CS1CDR_SAI1_CLK_PODF(0x3f))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1431: warning: "CCM_CS1CDR_SAI1_CLK_PODF" redefined
+ 1431 | #define CCM_CS1CDR_SAI1_CLK_PODF(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_SAI1_CLK_PODF_SHIFT)) & CCM_CS1CDR_SAI1_CLK_PODF_MASK)
+      | 
+imxrt.h:1427: note: this is the location of the previous definition
+ 1427 | #define CCM_CS1CDR_SAI1_CLK_PODF(n)             ((uint32_t)(((n) & 0x3F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1433: warning: "CCM_CS1CDR_SAI1_CLK_PRED_MASK" redefined
+ 1433 | #define CCM_CS1CDR_SAI1_CLK_PRED_MASK            (0x1C0U)
+      | 
+imxrt.h:1613: note: this is the location of the previous definition
+ 1613 | #define CCM_CS1CDR_SAI1_CLK_PRED_MASK           (CCM_CS1CDR_SAI1_CLK_PRED(0x07))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1445: warning: "CCM_CS1CDR_SAI1_CLK_PRED" redefined
+ 1445 | #define CCM_CS1CDR_SAI1_CLK_PRED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_SAI1_CLK_PRED_SHIFT)) & CCM_CS1CDR_SAI1_CLK_PRED_MASK)
+      | 
+imxrt.h:1426: note: this is the location of the previous definition
+ 1426 | #define CCM_CS1CDR_SAI1_CLK_PRED(n)             ((uint32_t)(((n) & 0x07) << 6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1459: warning: "CCM_CS1CDR_FLEXIO2_CLK_PRED" redefined
+ 1459 | #define CCM_CS1CDR_FLEXIO2_CLK_PRED(x)           (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_FLEXIO2_CLK_PRED_SHIFT)) & CCM_CS1CDR_FLEXIO2_CLK_PRED_MASK)
+      | 
+imxrt.h:1425: note: this is the location of the previous definition
+ 1425 | #define CCM_CS1CDR_FLEXIO2_CLK_PRED(n)          ((uint32_t)(((n) & 0x07) << 9))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1461: warning: "CCM_CS1CDR_SAI3_CLK_PODF_MASK" redefined
+ 1461 | #define CCM_CS1CDR_SAI3_CLK_PODF_MASK            (0x3F0000U)
+      | 
+imxrt.h:1620: note: this is the location of the previous definition
+ 1620 | #define CCM_CS1CDR_SAI3_CLK_PODF_MASK           (CCM_CS1CDR_SAI3_CLK_PODF(0x3f))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1530: warning: "CCM_CS1CDR_SAI3_CLK_PODF" redefined
+ 1530 | #define CCM_CS1CDR_SAI3_CLK_PODF(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_SAI3_CLK_PODF_SHIFT)) & CCM_CS1CDR_SAI3_CLK_PODF_MASK)
+      | 
+imxrt.h:1424: note: this is the location of the previous definition
+ 1424 | #define CCM_CS1CDR_SAI3_CLK_PODF(n)             ((uint32_t)(((n) & 0x3F) << 16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1532: warning: "CCM_CS1CDR_SAI3_CLK_PRED_MASK" redefined
+ 1532 | #define CCM_CS1CDR_SAI3_CLK_PRED_MASK            (0x1C00000U)
+      | 
+imxrt.h:1619: note: this is the location of the previous definition
+ 1619 | #define CCM_CS1CDR_SAI3_CLK_PRED_MASK           (CCM_CS1CDR_SAI3_CLK_PRED(0x07))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1544: warning: "CCM_CS1CDR_SAI3_CLK_PRED" redefined
+ 1544 | #define CCM_CS1CDR_SAI3_CLK_PRED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_SAI3_CLK_PRED_SHIFT)) & CCM_CS1CDR_SAI3_CLK_PRED_MASK)
+      | 
+imxrt.h:1423: note: this is the location of the previous definition
+ 1423 | #define CCM_CS1CDR_SAI3_CLK_PRED(n)             ((uint32_t)(((n) & 0x07) << 22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1558: warning: "CCM_CS1CDR_FLEXIO2_CLK_PODF" redefined
+ 1558 | #define CCM_CS1CDR_FLEXIO2_CLK_PODF(x)           (((uint32_t)(((uint32_t)(x)) << CCM_CS1CDR_FLEXIO2_CLK_PODF_SHIFT)) & CCM_CS1CDR_FLEXIO2_CLK_PODF_MASK)
+      | 
+imxrt.h:1422: note: this is the location of the previous definition
+ 1422 | #define CCM_CS1CDR_FLEXIO2_CLK_PODF(n)          ((uint32_t)(((n) & 0x07) << 25))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1564: warning: "CCM_CS2CDR_SAI2_CLK_PODF_MASK" redefined
+ 1564 | #define CCM_CS2CDR_SAI2_CLK_PODF_MASK            (0x3FU)
+      | 
+imxrt.h:1617: note: this is the location of the previous definition
+ 1617 | #define CCM_CS2CDR_SAI2_CLK_PODF_MASK           (CCM_CS2CDR_SAI2_CLK_PODF(0x3f))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1633: warning: "CCM_CS2CDR_SAI2_CLK_PODF" redefined
+ 1633 | #define CCM_CS2CDR_SAI2_CLK_PODF(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS2CDR_SAI2_CLK_PODF_SHIFT)) & CCM_CS2CDR_SAI2_CLK_PODF_MASK)
+      | 
+imxrt.h:1429: note: this is the location of the previous definition
+ 1429 | #define CCM_CS2CDR_SAI2_CLK_PODF(n)             ((uint32_t)(((n) & 0x3F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1635: warning: "CCM_CS2CDR_SAI2_CLK_PRED_MASK" redefined
+ 1635 | #define CCM_CS2CDR_SAI2_CLK_PRED_MASK            (0x1C0U)
+      | 
+imxrt.h:1616: note: this is the location of the previous definition
+ 1616 | #define CCM_CS2CDR_SAI2_CLK_PRED_MASK           (CCM_CS2CDR_SAI2_CLK_PRED(0x07))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1647: warning: "CCM_CS2CDR_SAI2_CLK_PRED" redefined
+ 1647 | #define CCM_CS2CDR_SAI2_CLK_PRED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CS2CDR_SAI2_CLK_PRED_SHIFT)) & CCM_CS2CDR_SAI2_CLK_PRED_MASK)
+      | 
+imxrt.h:1428: note: this is the location of the previous definition
+ 1428 | #define CCM_CS2CDR_SAI2_CLK_PRED(n)             ((uint32_t)(((n) & 0x07) << 6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1661: warning: "CCM_CDCDR_FLEXIO1_CLK_SEL" redefined
+ 1661 | #define CCM_CDCDR_FLEXIO1_CLK_SEL(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_FLEXIO1_CLK_SEL_SHIFT)) & CCM_CDCDR_FLEXIO1_CLK_SEL_MASK)
+      | 
+imxrt.h:1435: note: this is the location of the previous definition
+ 1435 | #define CCM_CDCDR_FLEXIO1_CLK_SEL(n)            ((uint32_t)(((n) & 0x03) << 7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1675: warning: "CCM_CDCDR_FLEXIO1_CLK_PODF" redefined
+ 1675 | #define CCM_CDCDR_FLEXIO1_CLK_PODF(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_FLEXIO1_CLK_PODF_SHIFT)) & CCM_CDCDR_FLEXIO1_CLK_PODF_MASK)
+      | 
+imxrt.h:1434: note: this is the location of the previous definition
+ 1434 | #define CCM_CDCDR_FLEXIO1_CLK_PODF(n)           ((uint32_t)(((n) & 0x07) << 9))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1689: warning: "CCM_CDCDR_FLEXIO1_CLK_PRED" redefined
+ 1689 | #define CCM_CDCDR_FLEXIO1_CLK_PRED(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_FLEXIO1_CLK_PRED_SHIFT)) & CCM_CDCDR_FLEXIO1_CLK_PRED_MASK)
+      | 
+imxrt.h:1433: note: this is the location of the previous definition
+ 1433 | #define CCM_CDCDR_FLEXIO1_CLK_PRED(n)           ((uint32_t)(((n) & 0x07) << 12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1691: warning: "CCM_CDCDR_SPDIF0_CLK_SEL_MASK" redefined
+ 1691 | #define CCM_CDCDR_SPDIF0_CLK_SEL_MASK            (0x300000U)
+      | 
+imxrt.h:1621: note: this is the location of the previous definition
+ 1621 | #define CCM_CDCDR_SPDIF0_CLK_SEL_MASK           (CCM_CDCDR_SPDIF0_CLK_SEL(0x03))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1699: warning: "CCM_CDCDR_SPDIF0_CLK_SEL" redefined
+ 1699 | #define CCM_CDCDR_SPDIF0_CLK_SEL(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_SPDIF0_CLK_SEL_SHIFT)) & CCM_CDCDR_SPDIF0_CLK_SEL_MASK)
+      | 
+imxrt.h:1432: note: this is the location of the previous definition
+ 1432 | #define CCM_CDCDR_SPDIF0_CLK_SEL(n)             ((uint32_t)(((n) & 0x03) << 20))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1701: warning: "CCM_CDCDR_SPDIF0_CLK_PODF_MASK" redefined
+ 1701 | #define CCM_CDCDR_SPDIF0_CLK_PODF_MASK           (0x1C00000U)
+      | 
+imxrt.h:1623: note: this is the location of the previous definition
+ 1623 | #define CCM_CDCDR_SPDIF0_CLK_PODF_MASK          (CCM_CDCDR_SPDIF0_CLK_PODF(0x07))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1713: warning: "CCM_CDCDR_SPDIF0_CLK_PODF" redefined
+ 1713 | #define CCM_CDCDR_SPDIF0_CLK_PODF(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_SPDIF0_CLK_PODF_SHIFT)) & CCM_CDCDR_SPDIF0_CLK_PODF_MASK)
+      | 
+imxrt.h:1431: note: this is the location of the previous definition
+ 1431 | #define CCM_CDCDR_SPDIF0_CLK_PODF(n)            ((uint32_t)(((n) & 0x07) << 22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1715: warning: "CCM_CDCDR_SPDIF0_CLK_PRED_MASK" redefined
+ 1715 | #define CCM_CDCDR_SPDIF0_CLK_PRED_MASK           (0xE000000U)
+      | 
+imxrt.h:1622: note: this is the location of the previous definition
+ 1622 | #define CCM_CDCDR_SPDIF0_CLK_PRED_MASK          (CCM_CDCDR_SPDIF0_CLK_PRED(0x07))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1727: warning: "CCM_CDCDR_SPDIF0_CLK_PRED" redefined
+ 1727 | #define CCM_CDCDR_SPDIF0_CLK_PRED(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CDCDR_SPDIF0_CLK_PRED_SHIFT)) & CCM_CDCDR_SPDIF0_CLK_PRED_MASK)
+      | 
+imxrt.h:1430: note: this is the location of the previous definition
+ 1430 | #define CCM_CDCDR_SPDIF0_CLK_PRED(n)            ((uint32_t)(((n) & 0x07) << 25))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1745: warning: "CCM_CSCDR2_LCDIF_PRED" redefined
+ 1745 | #define CCM_CSCDR2_LCDIF_PRED(x)                 (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR2_LCDIF_PRED_SHIFT)) & CCM_CSCDR2_LCDIF_PRED_MASK)
+      | 
+imxrt.h:1439: note: this is the location of the previous definition
+ 1439 | #define CCM_CSCDR2_LCDIF_PRED(n)                ((uint32_t)(((n) & 0x07) << 12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1757: warning: "CCM_CSCDR2_LCDIF_PRE_CLK_SEL" redefined
+ 1757 | #define CCM_CSCDR2_LCDIF_PRE_CLK_SEL(x)          (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR2_LCDIF_PRE_CLK_SEL_SHIFT)) & CCM_CSCDR2_LCDIF_PRE_CLK_SEL_MASK)
+      | 
+imxrt.h:1438: note: this is the location of the previous definition
+ 1438 | #define CCM_CSCDR2_LCDIF_PRE_CLK_SEL(n)         ((uint32_t)(((n) & 0x07) << 15))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1765: warning: "CCM_CSCDR2_LPI2C_CLK_SEL" redefined
+ 1765 | #define CCM_CSCDR2_LPI2C_CLK_SEL(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR2_LPI2C_CLK_SEL_SHIFT)) & CCM_CSCDR2_LPI2C_CLK_SEL_MASK)
+      | 
+imxrt.h:1437: note: this is the location of the previous definition
+ 1437 | #define CCM_CSCDR2_LPI2C_CLK_SEL                ((uint32_t)(1<<18))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1837: warning: "CCM_CSCDR2_LPI2C_CLK_PODF" redefined
+ 1837 | #define CCM_CSCDR2_LPI2C_CLK_PODF(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR2_LPI2C_CLK_PODF_SHIFT)) & CCM_CSCDR2_LPI2C_CLK_PODF_MASK)
+      | 
+imxrt.h:1436: note: this is the location of the previous definition
+ 1436 | #define CCM_CSCDR2_LPI2C_CLK_PODF(n)            ((uint32_t)(((n) & 0x1F) << 19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1851: warning: "CCM_CSCDR3_CSI_CLK_SEL" redefined
+ 1851 | #define CCM_CSCDR3_CSI_CLK_SEL(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR3_CSI_CLK_SEL_SHIFT)) & CCM_CSCDR3_CSI_CLK_SEL_MASK)
+      | 
+imxrt.h:1442: note: this is the location of the previous definition
+ 1442 | #define CCM_CSCDR3_CSI_CLK_SEL(n)               ((uint32_t)(((n) & 0x03) << 9))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1865: warning: "CCM_CSCDR3_CSI_PODF" redefined
+ 1865 | #define CCM_CSCDR3_CSI_PODF(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CSCDR3_CSI_PODF_SHIFT)) & CCM_CSCDR3_CSI_PODF_MASK)
+      | 
+imxrt.h:1441: note: this is the location of the previous definition
+ 1441 | #define CCM_CSCDR3_CSI_PODF(n)                  ((uint32_t)(((n) & 0x07) << 11))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1878: warning: "CCM_CDHIPR_SEMC_PODF_BUSY" redefined
+ 1878 | #define CCM_CDHIPR_SEMC_PODF_BUSY(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CDHIPR_SEMC_PODF_BUSY_SHIFT)) & CCM_CDHIPR_SEMC_PODF_BUSY_MASK)
+      | 
+imxrt.h:1447: note: this is the location of the previous definition
+ 1447 | #define CCM_CDHIPR_SEMC_PODF_BUSY               ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1887: warning: "CCM_CDHIPR_AHB_PODF_BUSY" redefined
+ 1887 | #define CCM_CDHIPR_AHB_PODF_BUSY(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CDHIPR_AHB_PODF_BUSY_SHIFT)) & CCM_CDHIPR_AHB_PODF_BUSY_MASK)
+      | 
+imxrt.h:1446: note: this is the location of the previous definition
+ 1446 | #define CCM_CDHIPR_AHB_PODF_BUSY                ((uint32_t)(1<<1))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1896: warning: "CCM_CDHIPR_PERIPH2_CLK_SEL_BUSY" redefined
+ 1896 | #define CCM_CDHIPR_PERIPH2_CLK_SEL_BUSY(x)       (((uint32_t)(((uint32_t)(x)) << CCM_CDHIPR_PERIPH2_CLK_SEL_BUSY_SHIFT)) & CCM_CDHIPR_PERIPH2_CLK_SEL_BUSY_MASK)
+      | 
+imxrt.h:1445: note: this is the location of the previous definition
+ 1445 | #define CCM_CDHIPR_PERIPH2_CLK_SEL_BUSY         ((uint32_t)(1<<3))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1905: warning: "CCM_CDHIPR_PERIPH_CLK_SEL_BUSY" redefined
+ 1905 | #define CCM_CDHIPR_PERIPH_CLK_SEL_BUSY(x)        (((uint32_t)(((uint32_t)(x)) << CCM_CDHIPR_PERIPH_CLK_SEL_BUSY_SHIFT)) & CCM_CDHIPR_PERIPH_CLK_SEL_BUSY_MASK)
+      | 
+imxrt.h:1444: note: this is the location of the previous definition
+ 1444 | #define CCM_CDHIPR_PERIPH_CLK_SEL_BUSY          ((uint32_t)(1<<5))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1914: warning: "CCM_CDHIPR_ARM_PODF_BUSY" redefined
+ 1914 | #define CCM_CDHIPR_ARM_PODF_BUSY(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CDHIPR_ARM_PODF_BUSY_SHIFT)) & CCM_CDHIPR_ARM_PODF_BUSY_MASK)
+      | 
+imxrt.h:1443: note: this is the location of the previous definition
+ 1443 | #define CCM_CDHIPR_ARM_PODF_BUSY                ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1928: warning: "CCM_CLPCR_LPM" redefined
+ 1928 | #define CCM_CLPCR_LPM(x)                         (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_LPM_SHIFT)) & CCM_CLPCR_LPM_MASK)
+      | 
+imxrt.h:1459: note: this is the location of the previous definition
+ 1459 | #define CCM_CLPCR_LPM(n)                        ((uint32_t)(((n) & 0x03) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1936: warning: "CCM_CLPCR_ARM_CLK_DIS_ON_LPM" redefined
+ 1936 | #define CCM_CLPCR_ARM_CLK_DIS_ON_LPM(x)          (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_ARM_CLK_DIS_ON_LPM_SHIFT)) & CCM_CLPCR_ARM_CLK_DIS_ON_LPM_MASK)
+      | 
+imxrt.h:1458: note: this is the location of the previous definition
+ 1458 | #define CCM_CLPCR_ARM_CLK_DIS_ON_LPM            ((uint32_t)(1<<5))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1948: warning: "CCM_CLPCR_SBYOS" redefined
+ 1948 | #define CCM_CLPCR_SBYOS(x)                       (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_SBYOS_SHIFT)) & CCM_CLPCR_SBYOS_MASK)
+      | 
+imxrt.h:1457: note: this is the location of the previous definition
+ 1457 | #define CCM_CLPCR_SBYOS                         ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1956: warning: "CCM_CLPCR_DIS_REF_OSC" redefined
+ 1956 | #define CCM_CLPCR_DIS_REF_OSC(x)                 (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_DIS_REF_OSC_SHIFT)) & CCM_CLPCR_DIS_REF_OSC_MASK)
+      | 
+imxrt.h:1456: note: this is the location of the previous definition
+ 1456 | #define CCM_CLPCR_DIS_REF_OSC                   ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1964: warning: "CCM_CLPCR_VSTBY" redefined
+ 1964 | #define CCM_CLPCR_VSTBY(x)                       (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_VSTBY_SHIFT)) & CCM_CLPCR_VSTBY_MASK)
+      | 
+imxrt.h:1455: note: this is the location of the previous definition
+ 1455 | #define CCM_CLPCR_VSTBY                         ((uint32_t)(1<<8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1974: warning: "CCM_CLPCR_STBY_COUNT" redefined
+ 1974 | #define CCM_CLPCR_STBY_COUNT(x)                  (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_STBY_COUNT_SHIFT)) & CCM_CLPCR_STBY_COUNT_MASK)
+      | 
+imxrt.h:1454: note: this is the location of the previous definition
+ 1454 | #define CCM_CLPCR_STBY_COUNT(n)                 ((uint32_t)(((n) & 0x03) << 9))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1982: warning: "CCM_CLPCR_COSC_PWRDOWN" redefined
+ 1982 | #define CCM_CLPCR_COSC_PWRDOWN(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_COSC_PWRDOWN_SHIFT)) & CCM_CLPCR_COSC_PWRDOWN_MASK)
+      | 
+imxrt.h:1453: note: this is the location of the previous definition
+ 1453 | #define CCM_CLPCR_COSC_PWRDOWN                  ((uint32_t)(1<<11))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1986: warning: "CCM_CLPCR_BYPASS_LPM_HS1" redefined
+ 1986 | #define CCM_CLPCR_BYPASS_LPM_HS1(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_BYPASS_LPM_HS1_SHIFT)) & CCM_CLPCR_BYPASS_LPM_HS1_MASK)
+      | 
+imxrt.h:1452: note: this is the location of the previous definition
+ 1452 | #define CCM_CLPCR_BYPASS_LPM_HS1                ((uint32_t)(1<<19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1990: warning: "CCM_CLPCR_BYPASS_LPM_HS0" redefined
+ 1990 | #define CCM_CLPCR_BYPASS_LPM_HS0(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_BYPASS_LPM_HS0_SHIFT)) & CCM_CLPCR_BYPASS_LPM_HS0_MASK)
+      | 
+imxrt.h:1451: note: this is the location of the previous definition
+ 1451 | #define CCM_CLPCR_BYPASS_LPM_HS0                ((uint32_t)(1<<21))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:1998: warning: "CCM_CLPCR_MASK_CORE0_WFI" redefined
+ 1998 | #define CCM_CLPCR_MASK_CORE0_WFI(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_MASK_CORE0_WFI_SHIFT)) & CCM_CLPCR_MASK_CORE0_WFI_MASK)
+      | 
+imxrt.h:1450: note: this is the location of the previous definition
+ 1450 | #define CCM_CLPCR_MASK_CORE0_WFI                ((uint32_t)(1<<22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2006: warning: "CCM_CLPCR_MASK_SCU_IDLE" redefined
+ 2006 | #define CCM_CLPCR_MASK_SCU_IDLE(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_MASK_SCU_IDLE_SHIFT)) & CCM_CLPCR_MASK_SCU_IDLE_MASK)
+      | 
+imxrt.h:1449: note: this is the location of the previous definition
+ 1449 | #define CCM_CLPCR_MASK_SCU_IDLE                 ((uint32_t)(1<<26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2014: warning: "CCM_CLPCR_MASK_L2CC_IDLE" redefined
+ 2014 | #define CCM_CLPCR_MASK_L2CC_IDLE(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CLPCR_MASK_L2CC_IDLE_SHIFT)) & CCM_CLPCR_MASK_L2CC_IDLE_MASK)
+      | 
+imxrt.h:1448: note: this is the location of the previous definition
+ 1448 | #define CCM_CLPCR_MASK_L2CC_IDLE                ((uint32_t)(1<<27))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2026: warning: "CCM_CISR_LRF_PLL" redefined
+ 2026 | #define CCM_CISR_LRF_PLL(x)                      (((uint32_t)(((uint32_t)(x)) << CCM_CISR_LRF_PLL_SHIFT)) & CCM_CISR_LRF_PLL_MASK)
+      | 
+imxrt.h:1466: note: this is the location of the previous definition
+ 1466 | #define CCM_CISR_LRF_PLL                        ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2034: warning: "CCM_CISR_COSC_READY" redefined
+ 2034 | #define CCM_CISR_COSC_READY(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CISR_COSC_READY_SHIFT)) & CCM_CISR_COSC_READY_MASK)
+      | 
+imxrt.h:1465: note: this is the location of the previous definition
+ 1465 | #define CCM_CISR_COSC_READY                     ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2042: warning: "CCM_CISR_SEMC_PODF_LOADED" redefined
+ 2042 | #define CCM_CISR_SEMC_PODF_LOADED(x)             (((uint32_t)(((uint32_t)(x)) << CCM_CISR_SEMC_PODF_LOADED_SHIFT)) & CCM_CISR_SEMC_PODF_LOADED_MASK)
+      | 
+imxrt.h:1464: note: this is the location of the previous definition
+ 1464 | #define CCM_CISR_SEMC_PODF_LOADED               ((uint32_t)(1<<17))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2050: warning: "CCM_CISR_PERIPH2_CLK_SEL_LOADED" redefined
+ 2050 | #define CCM_CISR_PERIPH2_CLK_SEL_LOADED(x)       (((uint32_t)(((uint32_t)(x)) << CCM_CISR_PERIPH2_CLK_SEL_LOADED_SHIFT)) & CCM_CISR_PERIPH2_CLK_SEL_LOADED_MASK)
+      | 
+imxrt.h:1463: note: this is the location of the previous definition
+ 1463 | #define CCM_CISR_PERIPH2_CLK_SEL_LOADED         ((uint32_t)(1<<19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2058: warning: "CCM_CISR_AHB_PODF_LOADED" redefined
+ 2058 | #define CCM_CISR_AHB_PODF_LOADED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CISR_AHB_PODF_LOADED_SHIFT)) & CCM_CISR_AHB_PODF_LOADED_MASK)
+      | 
+imxrt.h:1462: note: this is the location of the previous definition
+ 1462 | #define CCM_CISR_AHB_PODF_LOADED                ((uint32_t)(1<<20))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2066: warning: "CCM_CISR_PERIPH_CLK_SEL_LOADED" redefined
+ 2066 | #define CCM_CISR_PERIPH_CLK_SEL_LOADED(x)        (((uint32_t)(((uint32_t)(x)) << CCM_CISR_PERIPH_CLK_SEL_LOADED_SHIFT)) & CCM_CISR_PERIPH_CLK_SEL_LOADED_MASK)
+      | 
+imxrt.h:1461: note: this is the location of the previous definition
+ 1461 | #define CCM_CISR_PERIPH_CLK_SEL_LOADED          ((uint32_t)(1<<22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2074: warning: "CCM_CISR_ARM_PODF_LOADED" redefined
+ 2074 | #define CCM_CISR_ARM_PODF_LOADED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CISR_ARM_PODF_LOADED_SHIFT)) & CCM_CISR_ARM_PODF_LOADED_MASK)
+      | 
+imxrt.h:1460: note: this is the location of the previous definition
+ 1460 | #define CCM_CISR_ARM_PODF_LOADED                ((uint32_t)(1<<26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2086: warning: "CCM_CIMR_MASK_LRF_PLL" redefined
+ 2086 | #define CCM_CIMR_MASK_LRF_PLL(x)                 (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_LRF_PLL_SHIFT)) & CCM_CIMR_MASK_LRF_PLL_MASK)
+      | 
+imxrt.h:1473: note: this is the location of the previous definition
+ 1473 | #define CCM_CIMR_MASK_LRF_PLL                   ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2094: warning: "CCM_CIMR_MASK_COSC_READY" redefined
+ 2094 | #define CCM_CIMR_MASK_COSC_READY(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_COSC_READY_SHIFT)) & CCM_CIMR_MASK_COSC_READY_MASK)
+      | 
+imxrt.h:1472: note: this is the location of the previous definition
+ 1472 | #define CCM_CIMR_MASK_COSC_READY                ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2102: warning: "CCM_CIMR_MASK_SEMC_PODF_LOADED" redefined
+ 2102 | #define CCM_CIMR_MASK_SEMC_PODF_LOADED(x)        (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_SEMC_PODF_LOADED_SHIFT)) & CCM_CIMR_MASK_SEMC_PODF_LOADED_MASK)
+      | 
+imxrt.h:1471: note: this is the location of the previous definition
+ 1471 | #define CCM_CIMR_MASK_SEMC_PODF_LOADED          ((uint32_t)(1<<17))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2110: warning: "CCM_CIMR_MASK_PERIPH2_CLK_SEL_LOADED" redefined
+ 2110 | #define CCM_CIMR_MASK_PERIPH2_CLK_SEL_LOADED(x)  (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_PERIPH2_CLK_SEL_LOADED_SHIFT)) & CCM_CIMR_MASK_PERIPH2_CLK_SEL_LOADED_MASK)
+      | 
+imxrt.h:1470: note: this is the location of the previous definition
+ 1470 | #define CCM_CIMR_MASK_PERIPH2_CLK_SEL_LOADED    ((uint32_t)(1<<19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2118: warning: "CCM_CIMR_MASK_AHB_PODF_LOADED" redefined
+ 2118 | #define CCM_CIMR_MASK_AHB_PODF_LOADED(x)         (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_AHB_PODF_LOADED_SHIFT)) & CCM_CIMR_MASK_AHB_PODF_LOADED_MASK)
+      | 
+imxrt.h:1469: note: this is the location of the previous definition
+ 1469 | #define CCM_CIMR_MASK_AHB_PODF_LOADED           ((uint32_t)(1<<20))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2126: warning: "CCM_CIMR_MASK_PERIPH_CLK_SEL_LOADED" redefined
+ 2126 | #define CCM_CIMR_MASK_PERIPH_CLK_SEL_LOADED(x)   (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_MASK_PERIPH_CLK_SEL_LOADED_SHIFT)) & CCM_CIMR_MASK_PERIPH_CLK_SEL_LOADED_MASK)
+      | 
+imxrt.h:1468: note: this is the location of the previous definition
+ 1468 | #define CCM_CIMR_MASK_PERIPH_CLK_SEL_LOADED     ((uint32_t)(1<<22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2134: warning: "CCM_CIMR_ARM_PODF_LOADED" redefined
+ 2134 | #define CCM_CIMR_ARM_PODF_LOADED(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CIMR_ARM_PODF_LOADED_SHIFT)) & CCM_CIMR_ARM_PODF_LOADED_MASK)
+      | 
+imxrt.h:1467: note: this is the location of the previous definition
+ 1467 | #define CCM_CIMR_ARM_PODF_LOADED                ((uint32_t)(1<<26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2155: warning: "CCM_CCOSR_CLKO1_SEL" redefined
+ 2155 | #define CCM_CCOSR_CLKO1_SEL(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO1_SEL_SHIFT)) & CCM_CCOSR_CLKO1_SEL_MASK)
+      | 
+imxrt.h:1480: note: this is the location of the previous definition
+ 1480 | #define CCM_CCOSR_CLKO1_SEL(n)                  ((uint32_t)(((n) & 0x0F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2169: warning: "CCM_CCOSR_CLKO1_DIV" redefined
+ 2169 | #define CCM_CCOSR_CLKO1_DIV(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO1_DIV_SHIFT)) & CCM_CCOSR_CLKO1_DIV_MASK)
+      | 
+imxrt.h:1479: note: this is the location of the previous definition
+ 1479 | #define CCM_CCOSR_CLKO1_DIV(n)                  ((uint32_t)(((n) & 0x07) << 4))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2177: warning: "CCM_CCOSR_CLKO1_EN" redefined
+ 2177 | #define CCM_CCOSR_CLKO1_EN(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO1_EN_SHIFT)) & CCM_CCOSR_CLKO1_EN_MASK)
+      | 
+imxrt.h:1478: note: this is the location of the previous definition
+ 1478 | #define CCM_CCOSR_CLKO1_EN                      ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2185: warning: "CCM_CCOSR_CLK_OUT_SEL" redefined
+ 2185 | #define CCM_CCOSR_CLK_OUT_SEL(x)                 (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLK_OUT_SEL_SHIFT)) & CCM_CCOSR_CLK_OUT_SEL_MASK)
+      | 
+imxrt.h:1477: note: this is the location of the previous definition
+ 1477 | #define CCM_CCOSR_CLK_OUT_SEL                   ((uint32_t)(1<<8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2204: warning: "CCM_CCOSR_CLKO2_SEL" redefined
+ 2204 | #define CCM_CCOSR_CLKO2_SEL(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO2_SEL_SHIFT)) & CCM_CCOSR_CLKO2_SEL_MASK)
+      | 
+imxrt.h:1476: note: this is the location of the previous definition
+ 1476 | #define CCM_CCOSR_CLKO2_SEL(n)                  ((uint32_t)(((n) & 0x1F) << 16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2218: warning: "CCM_CCOSR_CLKO2_DIV" redefined
+ 2218 | #define CCM_CCOSR_CLKO2_DIV(x)                   (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO2_DIV_SHIFT)) & CCM_CCOSR_CLKO2_DIV_MASK)
+      | 
+imxrt.h:1475: note: this is the location of the previous definition
+ 1475 | #define CCM_CCOSR_CLKO2_DIV(n)                  ((uint32_t)(((n) & 0x07) << 21))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2226: warning: "CCM_CCOSR_CLKO2_EN" redefined
+ 2226 | #define CCM_CCOSR_CLKO2_EN(x)                    (((uint32_t)(((uint32_t)(x)) << CCM_CCOSR_CLKO2_EN_SHIFT)) & CCM_CCOSR_CLKO2_EN_MASK)
+      | 
+imxrt.h:1474: note: this is the location of the previous definition
+ 1474 | #define CCM_CCOSR_CLKO2_EN                      ((uint32_t)(1<<24))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2238: warning: "CCM_CGPR_PMIC_DELAY_SCALER" redefined
+ 2238 | #define CCM_CGPR_PMIC_DELAY_SCALER(x)            (((uint32_t)(((uint32_t)(x)) << CCM_CGPR_PMIC_DELAY_SCALER_SHIFT)) & CCM_CGPR_PMIC_DELAY_SCALER_MASK)
+      | 
+imxrt.h:1485: note: this is the location of the previous definition
+ 1485 | #define CCM_CGPR_PMIC_DELAY_SCALER              ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2246: warning: "CCM_CGPR_EFUSE_PROG_SUPPLY_GATE" redefined
+ 2246 | #define CCM_CGPR_EFUSE_PROG_SUPPLY_GATE(x)       (((uint32_t)(((uint32_t)(x)) << CCM_CGPR_EFUSE_PROG_SUPPLY_GATE_SHIFT)) & CCM_CGPR_EFUSE_PROG_SUPPLY_GATE_MASK)
+      | 
+imxrt.h:1484: note: this is the location of the previous definition
+ 1484 | #define CCM_CGPR_EFUSE_PROG_SUPPLY_GATE         ((uint32_t)(1<<4))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2255: warning: "CCM_CGPR_SYS_MEM_DS_CTRL" redefined
+ 2255 | #define CCM_CGPR_SYS_MEM_DS_CTRL(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CGPR_SYS_MEM_DS_CTRL_SHIFT)) & CCM_CGPR_SYS_MEM_DS_CTRL_MASK)
+      | 
+imxrt.h:1483: note: this is the location of the previous definition
+ 1483 | #define CCM_CGPR_SYS_MEM_DS_CTRL(n)             ((uint32_t)(((n) & 0x03) << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2263: warning: "CCM_CGPR_FPL" redefined
+ 2263 | #define CCM_CGPR_FPL(x)                          (((uint32_t)(((uint32_t)(x)) << CCM_CGPR_FPL_SHIFT)) & CCM_CGPR_FPL_MASK)
+      | 
+imxrt.h:1482: note: this is the location of the previous definition
+ 1482 | #define CCM_CGPR_FPL                            ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2272: warning: "CCM_CGPR_INT_MEM_CLK_LPM" redefined
+ 2272 | #define CCM_CGPR_INT_MEM_CLK_LPM(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CGPR_INT_MEM_CLK_LPM_SHIFT)) & CCM_CGPR_INT_MEM_CLK_LPM_MASK)
+      | 
+imxrt.h:1481: note: this is the location of the previous definition
+ 1481 | #define CCM_CGPR_INT_MEM_CLK_LPM                ((uint32_t)(1<<17))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2794: warning: "CCM_CMEOR_MOD_EN_OV_GPT" redefined
+ 2794 | #define CCM_CMEOR_MOD_EN_OV_GPT(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_OV_GPT_SHIFT)) & CCM_CMEOR_MOD_EN_OV_GPT_MASK)
+      | 
+imxrt.h:1610: note: this is the location of the previous definition
+ 1610 | #define CCM_CMEOR_MOD_EN_OV_GPT                 ((uint32_t)(1<<5))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2802: warning: "CCM_CMEOR_MOD_EN_OV_PIT" redefined
+ 2802 | #define CCM_CMEOR_MOD_EN_OV_PIT(x)               (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_OV_PIT_SHIFT)) & CCM_CMEOR_MOD_EN_OV_PIT_MASK)
+      | 
+imxrt.h:1609: note: this is the location of the previous definition
+ 1609 | #define CCM_CMEOR_MOD_EN_OV_PIT                 ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2810: warning: "CCM_CMEOR_MOD_EN_USDHC" redefined
+ 2810 | #define CCM_CMEOR_MOD_EN_USDHC(x)                (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_USDHC_SHIFT)) & CCM_CMEOR_MOD_EN_USDHC_MASK)
+      | 
+imxrt.h:1608: note: this is the location of the previous definition
+ 1608 | #define CCM_CMEOR_MOD_EN_USDHC                  ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2818: warning: "CCM_CMEOR_MOD_EN_OV_TRNG" redefined
+ 2818 | #define CCM_CMEOR_MOD_EN_OV_TRNG(x)              (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_OV_TRNG_SHIFT)) & CCM_CMEOR_MOD_EN_OV_TRNG_MASK)
+      | 
+imxrt.h:1607: note: this is the location of the previous definition
+ 1607 | #define CCM_CMEOR_MOD_EN_OV_TRNG                ((uint32_t)(1<<9))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2834: warning: "CCM_CMEOR_MOD_EN_OV_CAN2_CPI" redefined
+ 2834 | #define CCM_CMEOR_MOD_EN_OV_CAN2_CPI(x)          (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_OV_CAN2_CPI_SHIFT)) & CCM_CMEOR_MOD_EN_OV_CAN2_CPI_MASK)
+      | 
+imxrt.h:1606: note: this is the location of the previous definition
+ 1606 | #define CCM_CMEOR_MOD_EN_OV_CAN2_CPI            ((uint32_t)(1<<28))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2842: warning: "CCM_CMEOR_MOD_EN_OV_CAN1_CPI" redefined
+ 2842 | #define CCM_CMEOR_MOD_EN_OV_CAN1_CPI(x)          (((uint32_t)(((uint32_t)(x)) << CCM_CMEOR_MOD_EN_OV_CAN1_CPI_SHIFT)) & CCM_CMEOR_MOD_EN_OV_CAN1_CPI_MASK)
+      | 
+imxrt.h:1605: note: this is the location of the previous definition
+ 1605 | #define CCM_CMEOR_MOD_EN_OV_CAN1_CPI            ((uint32_t)(1<<30))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2956: warning: "CCM_ANALOG_PLL_ARM_DIV_SELECT_MASK" redefined
+ 2956 | #define CCM_ANALOG_PLL_ARM_DIV_SELECT_MASK       (0x7FU)
+      | 
+imxrt.h:1687: note: this is the location of the previous definition
+ 1687 | #define CCM_ANALOG_PLL_ARM_DIV_SELECT_MASK      ((uint32_t)(0x7F << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2958: warning: "CCM_ANALOG_PLL_ARM_DIV_SELECT" redefined
+ 2958 | #define CCM_ANALOG_PLL_ARM_DIV_SELECT(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ARM_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_ARM_DIV_SELECT_MASK)
+      | 
+imxrt.h:1686: note: this is the location of the previous definition
+ 1686 | #define CCM_ANALOG_PLL_ARM_DIV_SELECT(n)        ((uint32_t)(((n) & 0x7F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2962: warning: "CCM_ANALOG_PLL_ARM_POWERDOWN" redefined
+ 2962 | #define CCM_ANALOG_PLL_ARM_POWERDOWN(x)          (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ARM_POWERDOWN_SHIFT)) & CCM_ANALOG_PLL_ARM_POWERDOWN_MASK)
+      | 
+imxrt.h:1685: note: this is the location of the previous definition
+ 1685 | #define CCM_ANALOG_PLL_ARM_POWERDOWN            ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2966: warning: "CCM_ANALOG_PLL_ARM_ENABLE" redefined
+ 2966 | #define CCM_ANALOG_PLL_ARM_ENABLE(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ARM_ENABLE_SHIFT)) & CCM_ANALOG_PLL_ARM_ENABLE_MASK)
+      | 
+imxrt.h:1684: note: this is the location of the previous definition
+ 1684 | #define CCM_ANALOG_PLL_ARM_ENABLE               ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2980: warning: "CCM_ANALOG_PLL_ARM_BYPASS" redefined
+ 2980 | #define CCM_ANALOG_PLL_ARM_BYPASS(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ARM_BYPASS_SHIFT)) & CCM_ANALOG_PLL_ARM_BYPASS_MASK)
+      | 
+imxrt.h:1683: note: this is the location of the previous definition
+ 1683 | #define CCM_ANALOG_PLL_ARM_BYPASS               ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:2988: warning: "CCM_ANALOG_PLL_ARM_LOCK" redefined
+ 2988 | #define CCM_ANALOG_PLL_ARM_LOCK(x)               (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ARM_LOCK_SHIFT)) & CCM_ANALOG_PLL_ARM_LOCK_MASK)
+      | 
+imxrt.h:1682: note: this is the location of the previous definition
+ 1682 | #define CCM_ANALOG_PLL_ARM_LOCK                 ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3110: warning: "CCM_ANALOG_PLL_USB1_DIV_SELECT" redefined
+ 3110 | #define CCM_ANALOG_PLL_USB1_DIV_SELECT(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_USB1_DIV_SELECT_MASK)
+      | 
+imxrt.h:1694: note: this is the location of the previous definition
+ 1694 | #define CCM_ANALOG_PLL_USB1_DIV_SELECT          ((uint32_t)(1<<1))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3118: warning: "CCM_ANALOG_PLL_USB1_EN_USB_CLKS" redefined
+ 3118 | #define CCM_ANALOG_PLL_USB1_EN_USB_CLKS(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_EN_USB_CLKS_SHIFT)) & CCM_ANALOG_PLL_USB1_EN_USB_CLKS_MASK)
+      | 
+imxrt.h:1693: note: this is the location of the previous definition
+ 1693 | #define CCM_ANALOG_PLL_USB1_EN_USB_CLKS         ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3122: warning: "CCM_ANALOG_PLL_USB1_POWER" redefined
+ 3122 | #define CCM_ANALOG_PLL_USB1_POWER(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_POWER_SHIFT)) & CCM_ANALOG_PLL_USB1_POWER_MASK)
+      | 
+imxrt.h:1692: note: this is the location of the previous definition
+ 1692 | #define CCM_ANALOG_PLL_USB1_POWER               ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3126: warning: "CCM_ANALOG_PLL_USB1_ENABLE" redefined
+ 3126 | #define CCM_ANALOG_PLL_USB1_ENABLE(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_ENABLE_SHIFT)) & CCM_ANALOG_PLL_USB1_ENABLE_MASK)
+      | 
+imxrt.h:1691: note: this is the location of the previous definition
+ 1691 | #define CCM_ANALOG_PLL_USB1_ENABLE              ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3138: warning: "CCM_ANALOG_PLL_USB1_BYPASS" redefined
+ 3138 | #define CCM_ANALOG_PLL_USB1_BYPASS(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_BYPASS_SHIFT)) & CCM_ANALOG_PLL_USB1_BYPASS_MASK)
+      | 
+imxrt.h:1689: note: this is the location of the previous definition
+ 1689 | #define CCM_ANALOG_PLL_USB1_BYPASS              ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3142: warning: "CCM_ANALOG_PLL_USB1_LOCK" redefined
+ 3142 | #define CCM_ANALOG_PLL_USB1_LOCK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB1_LOCK_SHIFT)) & CCM_ANALOG_PLL_USB1_LOCK_MASK)
+      | 
+imxrt.h:1688: note: this is the location of the previous definition
+ 1688 | #define CCM_ANALOG_PLL_USB1_LOCK                ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3270: warning: "CCM_ANALOG_PLL_USB2_DIV_SELECT" redefined
+ 3270 | #define CCM_ANALOG_PLL_USB2_DIV_SELECT(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_USB2_DIV_SELECT_MASK)
+      | 
+imxrt.h:1701: note: this is the location of the previous definition
+ 1701 | #define CCM_ANALOG_PLL_USB2_DIV_SELECT          ((uint32_t)(1<<1))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3274: warning: "CCM_ANALOG_PLL_USB2_EN_USB_CLKS" redefined
+ 3274 | #define CCM_ANALOG_PLL_USB2_EN_USB_CLKS(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_EN_USB_CLKS_SHIFT)) & CCM_ANALOG_PLL_USB2_EN_USB_CLKS_MASK)
+      | 
+imxrt.h:1700: note: this is the location of the previous definition
+ 1700 | #define CCM_ANALOG_PLL_USB2_EN_USB_CLKS         ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3278: warning: "CCM_ANALOG_PLL_USB2_POWER" redefined
+ 3278 | #define CCM_ANALOG_PLL_USB2_POWER(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_POWER_SHIFT)) & CCM_ANALOG_PLL_USB2_POWER_MASK)
+      | 
+imxrt.h:1699: note: this is the location of the previous definition
+ 1699 | #define CCM_ANALOG_PLL_USB2_POWER               ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3282: warning: "CCM_ANALOG_PLL_USB2_ENABLE" redefined
+ 3282 | #define CCM_ANALOG_PLL_USB2_ENABLE(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_ENABLE_SHIFT)) & CCM_ANALOG_PLL_USB2_ENABLE_MASK)
+      | 
+imxrt.h:1698: note: this is the location of the previous definition
+ 1698 | #define CCM_ANALOG_PLL_USB2_ENABLE              ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3296: warning: "CCM_ANALOG_PLL_USB2_BYPASS" redefined
+ 3296 | #define CCM_ANALOG_PLL_USB2_BYPASS(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_BYPASS_SHIFT)) & CCM_ANALOG_PLL_USB2_BYPASS_MASK)
+      | 
+imxrt.h:1697: note: this is the location of the previous definition
+ 1697 | #define CCM_ANALOG_PLL_USB2_BYPASS              ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3300: warning: "CCM_ANALOG_PLL_USB2_LOCK" redefined
+ 3300 | #define CCM_ANALOG_PLL_USB2_LOCK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_USB2_LOCK_SHIFT)) & CCM_ANALOG_PLL_USB2_LOCK_MASK)
+      | 
+imxrt.h:1696: note: this is the location of the previous definition
+ 1696 | #define CCM_ANALOG_PLL_USB2_LOCK                ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3422: warning: "CCM_ANALOG_PLL_SYS_DIV_SELECT" redefined
+ 3422 | #define CCM_ANALOG_PLL_SYS_DIV_SELECT(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_SYS_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_SYS_DIV_SELECT_MASK)
+      | 
+imxrt.h:1706: note: this is the location of the previous definition
+ 1706 | #define CCM_ANALOG_PLL_SYS_DIV_SELECT           ((uint32_t)(1<<1))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3426: warning: "CCM_ANALOG_PLL_SYS_POWERDOWN" redefined
+ 3426 | #define CCM_ANALOG_PLL_SYS_POWERDOWN(x)          (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_SYS_POWERDOWN_SHIFT)) & CCM_ANALOG_PLL_SYS_POWERDOWN_MASK)
+      | 
+imxrt.h:1705: note: this is the location of the previous definition
+ 1705 | #define CCM_ANALOG_PLL_SYS_POWERDOWN            ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3430: warning: "CCM_ANALOG_PLL_SYS_ENABLE" redefined
+ 3430 | #define CCM_ANALOG_PLL_SYS_ENABLE(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_SYS_ENABLE_SHIFT)) & CCM_ANALOG_PLL_SYS_ENABLE_MASK)
+      | 
+imxrt.h:1704: note: this is the location of the previous definition
+ 1704 | #define CCM_ANALOG_PLL_SYS_ENABLE               ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3442: warning: "CCM_ANALOG_PLL_SYS_BYPASS" redefined
+ 3442 | #define CCM_ANALOG_PLL_SYS_BYPASS(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_SYS_BYPASS_SHIFT)) & CCM_ANALOG_PLL_SYS_BYPASS_MASK)
+      | 
+imxrt.h:1703: note: this is the location of the previous definition
+ 1703 | #define CCM_ANALOG_PLL_SYS_BYPASS               ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3446: warning: "CCM_ANALOG_PLL_SYS_LOCK" redefined
+ 3446 | #define CCM_ANALOG_PLL_SYS_LOCK(x)               (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_SYS_LOCK_SHIFT)) & CCM_ANALOG_PLL_SYS_LOCK_MASK)
+      | 
+imxrt.h:1702: note: this is the location of the previous definition
+ 1702 | #define CCM_ANALOG_PLL_SYS_LOCK                 ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3586: warning: "CCM_ANALOG_PLL_AUDIO_DIV_SELECT" redefined
+ 3586 | #define CCM_ANALOG_PLL_AUDIO_DIV_SELECT(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_AUDIO_DIV_SELECT_MASK)
+      | 
+imxrt.h:1712: note: this is the location of the previous definition
+ 1712 | #define CCM_ANALOG_PLL_AUDIO_DIV_SELECT(n)      ((uint32_t)((n) & ((1<<6)-1)))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3590: warning: "CCM_ANALOG_PLL_AUDIO_POWERDOWN" redefined
+ 3590 | #define CCM_ANALOG_PLL_AUDIO_POWERDOWN(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_POWERDOWN_SHIFT)) & CCM_ANALOG_PLL_AUDIO_POWERDOWN_MASK)
+      | 
+imxrt.h:1711: note: this is the location of the previous definition
+ 1711 | #define CCM_ANALOG_PLL_AUDIO_POWERDOWN          ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3594: warning: "CCM_ANALOG_PLL_AUDIO_ENABLE" redefined
+ 3594 | #define CCM_ANALOG_PLL_AUDIO_ENABLE(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_ENABLE_SHIFT)) & CCM_ANALOG_PLL_AUDIO_ENABLE_MASK)
+      | 
+imxrt.h:1710: note: this is the location of the previous definition
+ 1710 | #define CCM_ANALOG_PLL_AUDIO_ENABLE             ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3604: warning: "CCM_ANALOG_PLL_AUDIO_BYPASS_CLK_SRC" redefined
+ 3604 | #define CCM_ANALOG_PLL_AUDIO_BYPASS_CLK_SRC(x)   (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_BYPASS_CLK_SRC_SHIFT)) & CCM_ANALOG_PLL_AUDIO_BYPASS_CLK_SRC_MASK)
+      | 
+imxrt.h:1709: note: this is the location of the previous definition
+ 1709 | #define CCM_ANALOG_PLL_AUDIO_BYPASS_CLK_SRC(n)  ((uint32_t)(((n) & 0x03) <<14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3608: warning: "CCM_ANALOG_PLL_AUDIO_BYPASS" redefined
+ 3608 | #define CCM_ANALOG_PLL_AUDIO_BYPASS(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_BYPASS_SHIFT)) & CCM_ANALOG_PLL_AUDIO_BYPASS_MASK)
+      | 
+imxrt.h:1708: note: this is the location of the previous definition
+ 1708 | #define CCM_ANALOG_PLL_AUDIO_BYPASS             ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3618: warning: "CCM_ANALOG_PLL_AUDIO_POST_DIV_SELECT" redefined
+ 3618 | #define CCM_ANALOG_PLL_AUDIO_POST_DIV_SELECT(x)  (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_POST_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_AUDIO_POST_DIV_SELECT_MASK)
+      | 
+imxrt.h:1707: note: this is the location of the previous definition
+ 1707 | #define CCM_ANALOG_PLL_AUDIO_POST_DIV_SELECT(n) ((uint32_t)(((n) & 0x03) <<19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3622: warning: "CCM_ANALOG_PLL_AUDIO_LOCK" redefined
+ 3622 | #define CCM_ANALOG_PLL_AUDIO_LOCK(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_AUDIO_LOCK_SHIFT)) & CCM_ANALOG_PLL_AUDIO_LOCK_MASK)
+      | 
+imxrt.h:1775: note: this is the location of the previous definition
+ 1775 | #define CCM_ANALOG_PLL_AUDIO_LOCK               ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3778: warning: "CCM_ANALOG_PLL_VIDEO_DIV_SELECT" redefined
+ 3778 | #define CCM_ANALOG_PLL_VIDEO_DIV_SELECT(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_VIDEO_DIV_SELECT_MASK)
+      | 
+imxrt.h:1719: note: this is the location of the previous definition
+ 1719 | #define CCM_ANALOG_PLL_VIDEO_DIV_SELECT(n)      ((uint32_t)(((n) & 0x7F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3782: warning: "CCM_ANALOG_PLL_VIDEO_POWERDOWN" redefined
+ 3782 | #define CCM_ANALOG_PLL_VIDEO_POWERDOWN(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_POWERDOWN_SHIFT)) & CCM_ANALOG_PLL_VIDEO_POWERDOWN_MASK)
+      | 
+imxrt.h:1718: note: this is the location of the previous definition
+ 1718 | #define CCM_ANALOG_PLL_VIDEO_POWERDOWN          ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3786: warning: "CCM_ANALOG_PLL_VIDEO_ENABLE" redefined
+ 3786 | #define CCM_ANALOG_PLL_VIDEO_ENABLE(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_ENABLE_SHIFT)) & CCM_ANALOG_PLL_VIDEO_ENABLE_MASK)
+      | 
+imxrt.h:1717: note: this is the location of the previous definition
+ 1717 | #define CCM_ANALOG_PLL_VIDEO_ENABLE             ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3796: warning: "CCM_ANALOG_PLL_VIDEO_BYPASS_CLK_SRC" redefined
+ 3796 | #define CCM_ANALOG_PLL_VIDEO_BYPASS_CLK_SRC(x)   (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_BYPASS_CLK_SRC_SHIFT)) & CCM_ANALOG_PLL_VIDEO_BYPASS_CLK_SRC_MASK)
+      | 
+imxrt.h:1716: note: this is the location of the previous definition
+ 1716 | #define CCM_ANALOG_PLL_VIDEO_BYPASS_CLK_SRC(n)  ((uint32_t)(((n) & 0x03) << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3800: warning: "CCM_ANALOG_PLL_VIDEO_BYPASS" redefined
+ 3800 | #define CCM_ANALOG_PLL_VIDEO_BYPASS(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_BYPASS_SHIFT)) & CCM_ANALOG_PLL_VIDEO_BYPASS_MASK)
+      | 
+imxrt.h:1715: note: this is the location of the previous definition
+ 1715 | #define CCM_ANALOG_PLL_VIDEO_BYPASS             ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3810: warning: "CCM_ANALOG_PLL_VIDEO_POST_DIV_SELECT" redefined
+ 3810 | #define CCM_ANALOG_PLL_VIDEO_POST_DIV_SELECT(x)  (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_POST_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_VIDEO_POST_DIV_SELECT_MASK)
+      | 
+imxrt.h:1714: note: this is the location of the previous definition
+ 1714 | #define CCM_ANALOG_PLL_VIDEO_POST_DIV_SELECT(n) ((uint32_t)(((n) & 0x03) << 19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3814: warning: "CCM_ANALOG_PLL_VIDEO_LOCK" redefined
+ 3814 | #define CCM_ANALOG_PLL_VIDEO_LOCK(x)             (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_VIDEO_LOCK_SHIFT)) & CCM_ANALOG_PLL_VIDEO_LOCK_MASK)
+      | 
+imxrt.h:1713: note: this is the location of the previous definition
+ 1713 | #define CCM_ANALOG_PLL_VIDEO_LOCK               ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3970: warning: "CCM_ANALOG_PLL_ENET_DIV_SELECT" redefined
+ 3970 | #define CCM_ANALOG_PLL_ENET_DIV_SELECT(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_ENET_DIV_SELECT_MASK)
+      | 
+imxrt.h:1728: note: this is the location of the previous definition
+ 1728 | #define CCM_ANALOG_PLL_ENET_DIV_SELECT(n)       ((uint32_t)(((n) & 0x03) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3980: warning: "CCM_ANALOG_PLL_ENET_ENET2_DIV_SELECT" redefined
+ 3980 | #define CCM_ANALOG_PLL_ENET_ENET2_DIV_SELECT(x)  (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_ENET2_DIV_SELECT_SHIFT)) & CCM_ANALOG_PLL_ENET_ENET2_DIV_SELECT_MASK)
+      | 
+imxrt.h:1727: note: this is the location of the previous definition
+ 1727 | #define CCM_ANALOG_PLL_ENET_ENET2_DIV_SELECT(n) ((uint32_t)(((n) & 0x03) << 2))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3984: warning: "CCM_ANALOG_PLL_ENET_POWERDOWN" redefined
+ 3984 | #define CCM_ANALOG_PLL_ENET_POWERDOWN(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_POWERDOWN_SHIFT)) & CCM_ANALOG_PLL_ENET_POWERDOWN_MASK)
+      | 
+imxrt.h:1726: note: this is the location of the previous definition
+ 1726 | #define CCM_ANALOG_PLL_ENET_POWERDOWN           ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3988: warning: "CCM_ANALOG_PLL_ENET_ENABLE" redefined
+ 3988 | #define CCM_ANALOG_PLL_ENET_ENABLE(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_ENABLE_SHIFT)) & CCM_ANALOG_PLL_ENET_ENABLE_MASK)
+      | 
+imxrt.h:1725: note: this is the location of the previous definition
+ 1725 | #define CCM_ANALOG_PLL_ENET_ENABLE              ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:3998: warning: "CCM_ANALOG_PLL_ENET_BYPASS_CLK_SRC" redefined
+ 3998 | #define CCM_ANALOG_PLL_ENET_BYPASS_CLK_SRC(x)    (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_BYPASS_CLK_SRC_SHIFT)) & CCM_ANALOG_PLL_ENET_BYPASS_CLK_SRC_MASK)
+      | 
+imxrt.h:1724: note: this is the location of the previous definition
+ 1724 | #define CCM_ANALOG_PLL_ENET_BYPASS_CLK_SRC(n)   ((uint32_t)(((n) & 0x03) << 14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4002: warning: "CCM_ANALOG_PLL_ENET_BYPASS" redefined
+ 4002 | #define CCM_ANALOG_PLL_ENET_BYPASS(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_BYPASS_SHIFT)) & CCM_ANALOG_PLL_ENET_BYPASS_MASK)
+      | 
+imxrt.h:1723: note: this is the location of the previous definition
+ 1723 | #define CCM_ANALOG_PLL_ENET_BYPASS              ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4006: warning: "CCM_ANALOG_PLL_ENET_ENET2_REF_EN" redefined
+ 4006 | #define CCM_ANALOG_PLL_ENET_ENET2_REF_EN(x)      (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_ENET2_REF_EN_SHIFT)) & CCM_ANALOG_PLL_ENET_ENET2_REF_EN_MASK)
+      | 
+imxrt.h:1722: note: this is the location of the previous definition
+ 1722 | #define CCM_ANALOG_PLL_ENET_ENET2_REF_EN        ((uint32_t)(1<<20))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4010: warning: "CCM_ANALOG_PLL_ENET_ENET_25M_REF_EN" redefined
+ 4010 | #define CCM_ANALOG_PLL_ENET_ENET_25M_REF_EN(x)   (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_ENET_25M_REF_EN_SHIFT)) & CCM_ANALOG_PLL_ENET_ENET_25M_REF_EN_MASK)
+      | 
+imxrt.h:1721: note: this is the location of the previous definition
+ 1721 | #define CCM_ANALOG_PLL_ENET_ENET_25M_REF_EN     ((uint32_t)(1<<21))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4014: warning: "CCM_ANALOG_PLL_ENET_LOCK" redefined
+ 4014 | #define CCM_ANALOG_PLL_ENET_LOCK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_PLL_ENET_LOCK_SHIFT)) & CCM_ANALOG_PLL_ENET_LOCK_MASK)
+      | 
+imxrt.h:1720: note: this is the location of the previous definition
+ 1720 | #define CCM_ANALOG_PLL_ENET_LOCK                ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4594: warning: "CCM_ANALOG_MISC0_REFTOP_PWD" redefined
+ 4594 | #define CCM_ANALOG_MISC0_REFTOP_PWD(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_REFTOP_PWD_SHIFT)) & CCM_ANALOG_MISC0_REFTOP_PWD_MASK)
+      | 
+imxrt.h:1741: note: this is the location of the previous definition
+ 1741 | #define CCM_ANALOG_MISC0_REFTOP_PWD             ((uint32_t)(1<<0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4602: warning: "CCM_ANALOG_MISC0_REFTOP_SELFBIASOFF" redefined
+ 4602 | #define CCM_ANALOG_MISC0_REFTOP_SELFBIASOFF(x)   (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_REFTOP_SELFBIASOFF_SHIFT)) & CCM_ANALOG_MISC0_REFTOP_SELFBIASOFF_MASK)
+      | 
+imxrt.h:1740: note: this is the location of the previous definition
+ 1740 | #define CCM_ANALOG_MISC0_REFTOP_SELFBIASOFF     ((uint32_t)(1<<3))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4616: warning: "CCM_ANALOG_MISC0_REFTOP_VBGADJ" redefined
+ 4616 | #define CCM_ANALOG_MISC0_REFTOP_VBGADJ(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_REFTOP_VBGADJ_SHIFT)) & CCM_ANALOG_MISC0_REFTOP_VBGADJ_MASK)
+      | 
+imxrt.h:1739: note: this is the location of the previous definition
+ 1739 | #define CCM_ANALOG_MISC0_REFTOP_VBGADJ(n)       ((uint32_t)(((n) & 0x07) << 4))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4620: warning: "CCM_ANALOG_MISC0_REFTOP_VBGUP" redefined
+ 4620 | #define CCM_ANALOG_MISC0_REFTOP_VBGUP(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_REFTOP_VBGUP_SHIFT)) & CCM_ANALOG_MISC0_REFTOP_VBGUP_MASK)
+      | 
+imxrt.h:1738: note: this is the location of the previous definition
+ 1738 | #define CCM_ANALOG_MISC0_REFTOP_VBGUP           ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4631: warning: "CCM_ANALOG_MISC0_STOP_MODE_CONFIG" redefined
+ 4631 | #define CCM_ANALOG_MISC0_STOP_MODE_CONFIG(x)     (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_STOP_MODE_CONFIG_SHIFT)) & CCM_ANALOG_MISC0_STOP_MODE_CONFIG_MASK)
+      | 
+imxrt.h:1737: note: this is the location of the previous definition
+ 1737 | #define CCM_ANALOG_MISC0_STOP_MODE_CONFIG(n)    ((uint32_t)(((n) & 0x03) << 10))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4639: warning: "CCM_ANALOG_MISC0_DISCON_HIGH_SNVS" redefined
+ 4639 | #define CCM_ANALOG_MISC0_DISCON_HIGH_SNVS(x)     (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_DISCON_HIGH_SNVS_SHIFT)) & CCM_ANALOG_MISC0_DISCON_HIGH_SNVS_MASK)
+      | 
+imxrt.h:1736: note: this is the location of the previous definition
+ 1736 | #define CCM_ANALOG_MISC0_DISCON_HIGH_SNVS       ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4649: warning: "CCM_ANALOG_MISC0_OSC_I" redefined
+ 4649 | #define CCM_ANALOG_MISC0_OSC_I(x)                (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_OSC_I_SHIFT)) & CCM_ANALOG_MISC0_OSC_I_MASK)
+      | 
+imxrt.h:1735: note: this is the location of the previous definition
+ 1735 | #define CCM_ANALOG_MISC0_OSC_I(n)               ((uint32_t)(((n) & 0x03) << 13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4653: warning: "CCM_ANALOG_MISC0_OSC_XTALOK" redefined
+ 4653 | #define CCM_ANALOG_MISC0_OSC_XTALOK(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_OSC_XTALOK_SHIFT)) & CCM_ANALOG_MISC0_OSC_XTALOK_MASK)
+      | 
+imxrt.h:1734: note: this is the location of the previous definition
+ 1734 | #define CCM_ANALOG_MISC0_OSC_XTALOK             ((uint32_t)(1<<15))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4657: warning: "CCM_ANALOG_MISC0_OSC_XTALOK_EN" redefined
+ 4657 | #define CCM_ANALOG_MISC0_OSC_XTALOK_EN(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_OSC_XTALOK_EN_SHIFT)) & CCM_ANALOG_MISC0_OSC_XTALOK_EN_MASK)
+      | 
+imxrt.h:1733: note: this is the location of the previous definition
+ 1733 | #define CCM_ANALOG_MISC0_OSC_XTALOK_EN          ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4665: warning: "CCM_ANALOG_MISC0_CLKGATE_CTRL" redefined
+ 4665 | #define CCM_ANALOG_MISC0_CLKGATE_CTRL(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_CLKGATE_CTRL_SHIFT)) & CCM_ANALOG_MISC0_CLKGATE_CTRL_MASK)
+      | 
+imxrt.h:1732: note: this is the location of the previous definition
+ 1732 | #define CCM_ANALOG_MISC0_CLKGATE_CTRL           ((uint32_t)(1<<25))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4679: warning: "CCM_ANALOG_MISC0_CLKGATE_DELAY" redefined
+ 4679 | #define CCM_ANALOG_MISC0_CLKGATE_DELAY(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_CLKGATE_DELAY_SHIFT)) & CCM_ANALOG_MISC0_CLKGATE_DELAY_MASK)
+      | 
+imxrt.h:1731: note: this is the location of the previous definition
+ 1731 | #define CCM_ANALOG_MISC0_CLKGATE_DELAY(n)       ((uint32_t)(((n) & 0x07) << 26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4687: warning: "CCM_ANALOG_MISC0_RTC_XTAL_SOURCE" redefined
+ 4687 | #define CCM_ANALOG_MISC0_RTC_XTAL_SOURCE(x)      (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_RTC_XTAL_SOURCE_SHIFT)) & CCM_ANALOG_MISC0_RTC_XTAL_SOURCE_MASK)
+      | 
+imxrt.h:1730: note: this is the location of the previous definition
+ 1730 | #define CCM_ANALOG_MISC0_RTC_XTAL_SOURCE        ((uint32_t)(1<<29))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:4691: warning: "CCM_ANALOG_MISC0_XTAL_24M_PWD" redefined
+ 4691 | #define CCM_ANALOG_MISC0_XTAL_24M_PWD(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC0_XTAL_24M_PWD_SHIFT)) & CCM_ANALOG_MISC0_XTAL_24M_PWD_MASK)
+      | 
+imxrt.h:1729: note: this is the location of the previous definition
+ 1729 | #define CCM_ANALOG_MISC0_XTAL_24M_PWD           ((uint32_t)(1<<30))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5032: warning: "CCM_ANALOG_MISC1_LVDS1_CLK_SEL" redefined
+ 5032 | #define CCM_ANALOG_MISC1_LVDS1_CLK_SEL(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_LVDS1_CLK_SEL_SHIFT)) & CCM_ANALOG_MISC1_LVDS1_CLK_SEL_MASK)
+      | 
+imxrt.h:1751: note: this is the location of the previous definition
+ 1751 | #define CCM_ANALOG_MISC1_LVDS1_CLK_SEL(n)       ((uint32_t)(((n) & 0x1F) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5036: warning: "CCM_ANALOG_MISC1_LVDSCLK1_OBEN" redefined
+ 5036 | #define CCM_ANALOG_MISC1_LVDSCLK1_OBEN(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_LVDSCLK1_OBEN_SHIFT)) & CCM_ANALOG_MISC1_LVDSCLK1_OBEN_MASK)
+      | 
+imxrt.h:1750: note: this is the location of the previous definition
+ 1750 | #define CCM_ANALOG_MISC1_LVDSCLK1_OBEN          ((uint32_t)(1<<10))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5040: warning: "CCM_ANALOG_MISC1_LVDSCLK1_IBEN" redefined
+ 5040 | #define CCM_ANALOG_MISC1_LVDSCLK1_IBEN(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_LVDSCLK1_IBEN_SHIFT)) & CCM_ANALOG_MISC1_LVDSCLK1_IBEN_MASK)
+      | 
+imxrt.h:1749: note: this is the location of the previous definition
+ 1749 | #define CCM_ANALOG_MISC1_LVDSCLK1_IBEN          ((uint32_t)(1<<12))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5044: warning: "CCM_ANALOG_MISC1_PFD_480_AUTOGATE_EN" redefined
+ 5044 | #define CCM_ANALOG_MISC1_PFD_480_AUTOGATE_EN(x)  (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_PFD_480_AUTOGATE_EN_SHIFT)) & CCM_ANALOG_MISC1_PFD_480_AUTOGATE_EN_MASK)
+      | 
+imxrt.h:1748: note: this is the location of the previous definition
+ 1748 | #define CCM_ANALOG_MISC1_PFD_480_AUTOGATE_EN    ((uint32_t)(1<<16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5048: warning: "CCM_ANALOG_MISC1_PFD_528_AUTOGATE_EN" redefined
+ 5048 | #define CCM_ANALOG_MISC1_PFD_528_AUTOGATE_EN(x)  (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_PFD_528_AUTOGATE_EN_SHIFT)) & CCM_ANALOG_MISC1_PFD_528_AUTOGATE_EN_MASK)
+      | 
+imxrt.h:1747: note: this is the location of the previous definition
+ 1747 | #define CCM_ANALOG_MISC1_PFD_528_AUTOGATE_EN    ((uint32_t)(1<<17))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5052: warning: "CCM_ANALOG_MISC1_IRQ_TEMPPANIC" redefined
+ 5052 | #define CCM_ANALOG_MISC1_IRQ_TEMPPANIC(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_IRQ_TEMPPANIC_SHIFT)) & CCM_ANALOG_MISC1_IRQ_TEMPPANIC_MASK)
+      | 
+imxrt.h:1746: note: this is the location of the previous definition
+ 1746 | #define CCM_ANALOG_MISC1_IRQ_TEMPPANIC          ((uint32_t)(1<<27))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5056: warning: "CCM_ANALOG_MISC1_IRQ_TEMPLOW" redefined
+ 5056 | #define CCM_ANALOG_MISC1_IRQ_TEMPLOW(x)          (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_IRQ_TEMPLOW_SHIFT)) & CCM_ANALOG_MISC1_IRQ_TEMPLOW_MASK)
+      | 
+imxrt.h:1745: note: this is the location of the previous definition
+ 1745 | #define CCM_ANALOG_MISC1_IRQ_TEMPLOW            ((uint32_t)(1<<28))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5060: warning: "CCM_ANALOG_MISC1_IRQ_TEMPHIGH" redefined
+ 5060 | #define CCM_ANALOG_MISC1_IRQ_TEMPHIGH(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_IRQ_TEMPHIGH_SHIFT)) & CCM_ANALOG_MISC1_IRQ_TEMPHIGH_MASK)
+      | 
+imxrt.h:1744: note: this is the location of the previous definition
+ 1744 | #define CCM_ANALOG_MISC1_IRQ_TEMPHIGH           ((uint32_t)(1<<29))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5064: warning: "CCM_ANALOG_MISC1_IRQ_ANA_BO" redefined
+ 5064 | #define CCM_ANALOG_MISC1_IRQ_ANA_BO(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_IRQ_ANA_BO_SHIFT)) & CCM_ANALOG_MISC1_IRQ_ANA_BO_MASK)
+      | 
+imxrt.h:1743: note: this is the location of the previous definition
+ 1743 | #define CCM_ANALOG_MISC1_IRQ_ANA_BO             ((uint32_t)(1<<30))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5068: warning: "CCM_ANALOG_MISC1_IRQ_DIG_BO" redefined
+ 5068 | #define CCM_ANALOG_MISC1_IRQ_DIG_BO(x)           (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC1_IRQ_DIG_BO_SHIFT)) & CCM_ANALOG_MISC1_IRQ_DIG_BO_MASK)
+      | 
+imxrt.h:1742: note: this is the location of the previous definition
+ 1742 | #define CCM_ANALOG_MISC1_IRQ_DIG_BO             ((uint32_t)(1<<31))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5266: warning: "CCM_ANALOG_MISC2_REG0_BO_OFFSET" redefined
+ 5266 | #define CCM_ANALOG_MISC2_REG0_BO_OFFSET(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG0_BO_OFFSET_SHIFT)) & CCM_ANALOG_MISC2_REG0_BO_OFFSET_MASK)
+      | 
+imxrt.h:1772: note: this is the location of the previous definition
+ 1772 | #define CCM_ANALOG_MISC2_REG0_BO_OFFSET(n)      ((uint32_t)(((n) & 0x07) << 0))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5273: warning: "CCM_ANALOG_MISC2_REG0_BO_STATUS" redefined
+ 5273 | #define CCM_ANALOG_MISC2_REG0_BO_STATUS(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG0_BO_STATUS_SHIFT)) & CCM_ANALOG_MISC2_REG0_BO_STATUS_MASK)
+      | 
+imxrt.h:1771: note: this is the location of the previous definition
+ 1771 | #define CCM_ANALOG_MISC2_REG0_BO_STATUS         ((uint32_t)(1<<3))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5277: warning: "CCM_ANALOG_MISC2_REG0_ENABLE_BO" redefined
+ 5277 | #define CCM_ANALOG_MISC2_REG0_ENABLE_BO(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG0_ENABLE_BO_SHIFT)) & CCM_ANALOG_MISC2_REG0_ENABLE_BO_MASK)
+      | 
+imxrt.h:1770: note: this is the location of the previous definition
+ 1770 | #define CCM_ANALOG_MISC2_REG0_ENABLE_BO         ((uint32_t)(1<<5))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5281: warning: "CCM_ANALOG_MISC2_REG0_OK" redefined
+ 5281 | #define CCM_ANALOG_MISC2_REG0_OK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG0_OK_SHIFT)) & CCM_ANALOG_MISC2_REG0_OK_MASK)
+      | 
+imxrt.h:1769: note: this is the location of the previous definition
+ 1769 | #define CCM_ANALOG_MISC2_REG0_OK                ((uint32_t)(1<<6))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5289: warning: "CCM_ANALOG_MISC2_PLL3_DISABLE" redefined
+ 5289 | #define CCM_ANALOG_MISC2_PLL3_DISABLE(x)         (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_PLL3_DISABLE_SHIFT)) & CCM_ANALOG_MISC2_PLL3_DISABLE_MASK)
+      | 
+imxrt.h:1768: note: this is the location of the previous definition
+ 1768 | #define CCM_ANALOG_MISC2_PLL3_DISABLE           ((uint32_t)(1<<7))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5297: warning: "CCM_ANALOG_MISC2_REG1_BO_OFFSET" redefined
+ 5297 | #define CCM_ANALOG_MISC2_REG1_BO_OFFSET(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG1_BO_OFFSET_SHIFT)) & CCM_ANALOG_MISC2_REG1_BO_OFFSET_MASK)
+      | 
+imxrt.h:1767: note: this is the location of the previous definition
+ 1767 | #define CCM_ANALOG_MISC2_REG1_BO_OFFSET(n)      ((uint32_t)(((n) & 0x07) << 8))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5304: warning: "CCM_ANALOG_MISC2_REG1_BO_STATUS" redefined
+ 5304 | #define CCM_ANALOG_MISC2_REG1_BO_STATUS(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG1_BO_STATUS_SHIFT)) & CCM_ANALOG_MISC2_REG1_BO_STATUS_MASK)
+      | 
+imxrt.h:1766: note: this is the location of the previous definition
+ 1766 | #define CCM_ANALOG_MISC2_REG1_BO_STATUS         ((uint32_t)(1<<11))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5308: warning: "CCM_ANALOG_MISC2_REG1_ENABLE_BO" redefined
+ 5308 | #define CCM_ANALOG_MISC2_REG1_ENABLE_BO(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG1_ENABLE_BO_SHIFT)) & CCM_ANALOG_MISC2_REG1_ENABLE_BO_MASK)
+      | 
+imxrt.h:1765: note: this is the location of the previous definition
+ 1765 | #define CCM_ANALOG_MISC2_REG1_ENABLE_BO         ((uint32_t)(1<<13))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5312: warning: "CCM_ANALOG_MISC2_REG1_OK" redefined
+ 5312 | #define CCM_ANALOG_MISC2_REG1_OK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG1_OK_SHIFT)) & CCM_ANALOG_MISC2_REG1_OK_MASK)
+      | 
+imxrt.h:1764: note: this is the location of the previous definition
+ 1764 | #define CCM_ANALOG_MISC2_REG1_OK                ((uint32_t)(1<<14))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5320: warning: "CCM_ANALOG_MISC2_AUDIO_DIV_LSB" redefined
+ 5320 | #define CCM_ANALOG_MISC2_AUDIO_DIV_LSB(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_AUDIO_DIV_LSB_SHIFT)) & CCM_ANALOG_MISC2_AUDIO_DIV_LSB_MASK)
+      | 
+imxrt.h:1763: note: this is the location of the previous definition
+ 1763 | #define CCM_ANALOG_MISC2_AUDIO_DIV_LSB          ((uint32_t)(1<<15))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5328: warning: "CCM_ANALOG_MISC2_REG2_BO_OFFSET" redefined
+ 5328 | #define CCM_ANALOG_MISC2_REG2_BO_OFFSET(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG2_BO_OFFSET_SHIFT)) & CCM_ANALOG_MISC2_REG2_BO_OFFSET_MASK)
+      | 
+imxrt.h:1761: note: this is the location of the previous definition
+ 1761 | #define CCM_ANALOG_MISC2_REG2_BO_OFFSET(n)      ((uint32_t)(((n) & 0x07) << 16))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5332: warning: "CCM_ANALOG_MISC2_REG2_BO_STATUS" redefined
+ 5332 | #define CCM_ANALOG_MISC2_REG2_BO_STATUS(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG2_BO_STATUS_SHIFT)) & CCM_ANALOG_MISC2_REG2_BO_STATUS_MASK)
+      | 
+imxrt.h:1760: note: this is the location of the previous definition
+ 1760 | #define CCM_ANALOG_MISC2_REG2_BO_STATUS         ((uint32_t)(1<<19))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5336: warning: "CCM_ANALOG_MISC2_REG2_ENABLE_BO" redefined
+ 5336 | #define CCM_ANALOG_MISC2_REG2_ENABLE_BO(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG2_ENABLE_BO_SHIFT)) & CCM_ANALOG_MISC2_REG2_ENABLE_BO_MASK)
+      | 
+imxrt.h:1759: note: this is the location of the previous definition
+ 1759 | #define CCM_ANALOG_MISC2_REG2_ENABLE_BO         ((uint32_t)(1<<21))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5340: warning: "CCM_ANALOG_MISC2_REG2_OK" redefined
+ 5340 | #define CCM_ANALOG_MISC2_REG2_OK(x)              (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG2_OK_SHIFT)) & CCM_ANALOG_MISC2_REG2_OK_MASK)
+      | 
+imxrt.h:1758: note: this is the location of the previous definition
+ 1758 | #define CCM_ANALOG_MISC2_REG2_OK                ((uint32_t)(1<<22))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5348: warning: "CCM_ANALOG_MISC2_AUDIO_DIV_MSB" redefined
+ 5348 | #define CCM_ANALOG_MISC2_AUDIO_DIV_MSB(x)        (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_AUDIO_DIV_MSB_SHIFT)) & CCM_ANALOG_MISC2_AUDIO_DIV_MSB_MASK)
+      | 
+imxrt.h:1757: note: this is the location of the previous definition
+ 1757 | #define CCM_ANALOG_MISC2_AUDIO_DIV_MSB          ((uint32_t)(1<<23))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5358: warning: "CCM_ANALOG_MISC2_REG0_STEP_TIME" redefined
+ 5358 | #define CCM_ANALOG_MISC2_REG0_STEP_TIME(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG0_STEP_TIME_SHIFT)) & CCM_ANALOG_MISC2_REG0_STEP_TIME_MASK)
+      | 
+imxrt.h:1755: note: this is the location of the previous definition
+ 1755 | #define CCM_ANALOG_MISC2_REG0_STEP_TIME(n)      ((uint32_t)(((n) & 0x03) << 24))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5368: warning: "CCM_ANALOG_MISC2_REG1_STEP_TIME" redefined
+ 5368 | #define CCM_ANALOG_MISC2_REG1_STEP_TIME(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG1_STEP_TIME_SHIFT)) & CCM_ANALOG_MISC2_REG1_STEP_TIME_MASK)
+      | 
+imxrt.h:1754: note: this is the location of the previous definition
+ 1754 | #define CCM_ANALOG_MISC2_REG1_STEP_TIME(n)      ((uint32_t)(((n) & 0x03) << 26))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5378: warning: "CCM_ANALOG_MISC2_REG2_STEP_TIME" redefined
+ 5378 | #define CCM_ANALOG_MISC2_REG2_STEP_TIME(x)       (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_REG2_STEP_TIME_SHIFT)) & CCM_ANALOG_MISC2_REG2_STEP_TIME_MASK)
+      | 
+imxrt.h:1753: note: this is the location of the previous definition
+ 1753 | #define CCM_ANALOG_MISC2_REG2_STEP_TIME(n)      ((uint32_t)(((n) & 0x03) << 28))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_clock.h:5388: warning: "CCM_ANALOG_MISC2_VIDEO_DIV" redefined
+ 5388 | #define CCM_ANALOG_MISC2_VIDEO_DIV(x)            (((uint32_t)(((uint32_t)(x)) << CCM_ANALOG_MISC2_VIDEO_DIV_SHIFT)) & CCM_ANALOG_MISC2_VIDEO_DIV_MASK)
+      | 
+imxrt.h:1752: note: this is the location of the previous definition
+ 1752 | #define CCM_ANALOG_MISC2_VIDEO_DIV(n)           ((uint32_t)(((n) & 0x03) << 30))
+      | 
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h: In function 'EnableIRQ':
+./core_cm7.h:1819:39: warning: implicit declaration of function '__NVIC_EnableIRQ'; did you mean 'NVIC_EnableIRQ'? [-Wimplicit-function-declaration]
+ 1819 |   #define NVIC_EnableIRQ              __NVIC_EnableIRQ
+      |                                       ^~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:510:9: note: in expansion of macro 'NVIC_EnableIRQ'
+  510 |         NVIC_EnableIRQ(interrupt);
+      |         ^~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h: In function 'DisableIRQ':
+./core_cm7.h:1821:39: warning: implicit declaration of function '__NVIC_DisableIRQ'; did you mean 'NVIC_DisableIRQ'? [-Wimplicit-function-declaration]
+ 1821 |   #define NVIC_DisableIRQ             __NVIC_DisableIRQ
+      |                                       ^~~~~~~~~~~~~~~~~
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers/fsl_common_arm.h:554:9: note: in expansion of macro 'NVIC_DisableIRQ'
+  554 |         NVIC_DisableIRQ(interrupt);
+      |         ^~~~~~~~~~~~~~~
+In file included from startup.c:11:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/py/compile.h: At top level:
+/Users/iridescent/iridescent/iridescentCoconutSynth2/iridescentmicropython/py/compile.h:31: warning: "FLASHMEM" redefined
+   31 | #define FLASHMEM
+      | 
+In file included from startup.c:5:
+avr/pgmspace.h:41: note: this is the location of the previous definition
+   41 | #define FLASHMEM __attribute__((section(".flashmem")))
+      | 
+make: *** [startup.o] Error 1

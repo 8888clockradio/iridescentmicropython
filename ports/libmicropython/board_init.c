@@ -26,7 +26,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-//#include <Arduino.h>
+#include <avr/pgmspace.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -45,7 +45,7 @@ extern "C" {
 
 const uint8_t dcd_data[] = { 0x00 };
 
-void board_init(void) {
+FLASHMEM void board_init(void) {
     //Init clock
     BOARD_BootClockRUN();
     SystemCoreClockUpdate();
@@ -115,13 +115,13 @@ void board_init(void) {
 
 }
 
-void USB_OTG1_IRQHandler(void) {
+FLASHMEM void USB_OTG1_IRQHandler(void) {
     //tud_int_handler(0);
     //tud_task();
     __SEV();
 }
 
-void USB_OTG2_IRQHandler(void) {
+FLASHMEM void USB_OTG2_IRQHandler(void) {
     //tud_int_handler(1);
     //tud_task();
     __SEV();

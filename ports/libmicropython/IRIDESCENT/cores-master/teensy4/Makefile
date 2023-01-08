@@ -36,7 +36,7 @@
 MCU = IMXRT1062
 MCU_LD = imxrt1062_t41.ld
 MCU_DEF = ARDUINO_TEENSY41
-TOOLSPATH ?= /Applications/Teensyduino.app/Contents/Java/hardware/tools
+#TOOLSPATH ?= /Applications/Teensyduino.app/Contents/Java/hardware/tools
 # The name of your project (used to name the compiled .hex file)
 TARGET = libTeensy41Core
 
@@ -70,7 +70,7 @@ IRIDESCENT_ROOT ?= $(abspath ../..)
 OPTIONS += -D__$(MCU)__ -DARDUINO=10813 -DTEENSYDUINO=154 -D$(MCU_DEF)
 
 # for Cortex M7 with single & double precision FPU
-CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb
+CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float
 
 MICROPY_HW_FLASH_SIZE ?= 0x790000
 MICROPY_HW_FLASH_RESERVED ?= 0x070000
@@ -114,21 +114,26 @@ ifdef ARDUINOPATH
 #LIBRARYPATH = $(abspath $(ARDUINOPATH)/libraries)
 
 # path location for the arm-none-eabi compiler
-LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 LDFLAGS = -O2 \
-	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 
 else
 # Default to the normal GNU/Linux compiler path if NO_ARDUINO
 # and ARDUINOPATH was not set.
-LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
-COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
+#LIBPATHFILEDROP = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m+dp/hard)
+#COMPILERPATH = $(abspath ../../../../../../arm-gnu-toolchain-12.2.mpacbti-bet1-darwin-x86_64-arm-none-eabi/bin)
 
 endif
+LDFLAGS = -O2 \
+	-Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
+	
+include $(abspath ../../../../../toolchain.mk)
 
-INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../micropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers)
+INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/..) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/boards/TEENSY41) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/ports/libmicropython/build-SHAREDLIB) -I$(abspath ../../freertos-teensy-master/src)
+INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062)  -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/lib/nxp_driver/sdk/devices/MIMXRT1062/drivers) -I$(abspath $(IRIDESCENT_ROOT)../../../../../iridescentmicropython/) -I$(IRIDESCENT_ROOT)/newlib_code/arm-unknown-linux-gnueabi/include
 
 #************************************************************************
 # Settings below this point usually do not need to be edited
@@ -138,26 +143,26 @@ INC += -I$(IRIDESCENT_ROOT)/StreamLib-master/src -I$(abspath $(IRIDESCENT_ROOT)/
 CPPFLAGS = -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD
 
 # compiler options for C++ only
-CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
+CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
 
 # compiler options for C only
-CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
+CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
 
 # linker options
-LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard)
+LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 #LDFLAGS = -Os -Wl,--gc-sections,--relax $(SPECS) $(CPUOPTIONS) -T$(MCU_LD)
 
 # additional libraries to link
 #LIBS = -larm_cortexM7lfsp_math -lm -lstdc++
 
 # names for the compiler programs
-CC = $(COMPILERPATH)/arm-none-eabi-gcc
-CXX = $(COMPILERPATH)/arm-none-eabi-g++
-OBJCOPY = $(COMPILERPATH)/arm-none-eabi-objcopy
-SIZE = $(COMPILERPATH)/arm-none-eabi-size
-AR = $(COMPILERPATH)/arm-none-eabi-ar
+CC = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-gcc
+CXX = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-g++
+OBJCOPY = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-objcopy
+SIZE = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-size
+AR = $(COMPILERPATH)/$(CROSSCOMPILEPREFIX)-ar
 
-LIBS = -lmicropython -lm -larm_cortexM7lfsp_math -lstdc++
+LIBS = -lmicropython -lm -larm_cortexM7lfdp_math -lstdc++
 
 LDDEFINES = \
 	-DMICROPY_HW_FLASH_TYPE=$(MICROPY_HW_FLASH_TYPE) \
@@ -184,7 +189,7 @@ OBJS := $(S_FILES:.S=.o) $(C_FILES:.c=.o) $(CPP_FILES:.cpp=.o)
 
 # the actual makefile rules (all .o files built by GNU make's default implicit rules)
 .PHONY: install
-all: $(TARGET).a install $(TARGET).elf $(TARGET).hex
+all: $(TARGET).a $(TARGET).elf $(TARGET).hex install
 
 $(TARGET).a: $(OBJS) $(MCU_LD)
 	#rm -f $(TARGET).a
@@ -192,15 +197,14 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 	#$(CXX) -shared -fPIC $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 $(TARGET).elf: $(OBJS) $(MCU_LD)
-	$(CXX) -E -x c $(LDDEFINES) ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) $(OBJS) -o $(TARGET).elf
-	#$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
+	$(CXX) -E -x c++ $(LDDEFINES) $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DMELTYMAIN_H_EXTERN main.cpp -o main.o
+	$(CXX) -Tlink.ld $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC) $(LDFLAGS) -L$(LIBPATHFILEDROP) -Wl,--whole-archive -lmicropython -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhullstatic_r -Wl,--no-whole-archive $(OBJS) `arm-unknown-linux-gnueabi-gcc -mfloat-abi=hard -print-libgcc-file-name --enable-libgcc-rebuild` -o $(TARGET).elf
+	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a
-
-#%.hex: %.elf
-#	$(SIZE) $<
+#%../../../build-SHAREDLIB/.hex: %.elf
+#	../../../build-SHAREDLIB/$(SIZE) $<
 #	$(OBJCOPY) -O ihex -R .eeprom $< $@
 #ifneq (,$(wildcard $(TOOLSPATH)))
 #	$(TOOLSPATH)/teensy_post_compile -file=$(basename $@) -path=$(shell pwd) -tools=$(TOOLSPATH)
@@ -208,7 +212,7 @@ install:
 #endif
 
 %.hex: %.elf
-	$(SIZE) $<
+	#$(SIZE) $<
 	$(OBJCOPY) -O ihex -R .eeprom $< $@
 #ifneq (,$(wildcard $(TOOLSPATH)))
 	-$(TOOLSPATH)/teensy_post_compile -file=$(basename $@) -path=$(shell pwd) -tools=$(TOOLSPATH)
