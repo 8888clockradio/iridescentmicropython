@@ -14,7 +14,7 @@ The MOST IMPORTANT development issue is getting micropython to recieve and send 
 installing
 ```
 mkdir iridescentBUILD; cd iridescentBUILD
-git checkout https://github.com/8888clockradio/iridescentmicropython.git
+git clone https://github.com/8888clockradio/iridescentmicropython.git
 ```
 
 edit iridescentBUILD/iridescentmicropython/toolchain.mk
