@@ -143,10 +143,10 @@ INC += -IIRIDESCENT/freertos-teensy-master/lib/cpp/src -I$(abspath $(IRIDESCENT_
 CPPFLAGS = -c -ggdb -O2 -Wall -ffunction-sections -fdata-sections -fno-exceptions -MMD
 
 # compiler options for C++ only
-CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
+CXXFLAGS = -std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC)
 
 # compiler options for C only
-CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
+CFLAGS = -c -ggdb -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>' -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -I. $(INC)
 
 # linker options
 LDFLAGS = -ggdb -Wl,--gc-sections,--relax,-Map=$@.map $(SPECS) $(CPUOPTIONS) -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
@@ -197,9 +197,9 @@ $(TARGET).a: $(OBJS) $(MCU_LD)
 	#$(CXX) -shared -fPIC $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 $(TARGET).elf: $(OBJS) $(MCU_LD)
-	$(CXX) -E -x c++ $(LDDEFINES) -mhard-float ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -mhard-float -DMELTYMAIN_H_EXTERN main.cpp -o main.o
-	$(CXX) -Tlink.ld $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC) $(LDFLAGS) -L$(LIBPATHFILEDROP) -Wl,--whole-archive -lmicropython -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhullstatic_r -Wl,--no-whole-archive $(OBJS) -o $(TARGET).elf
+	$(CXX) -E -x c++ $(LDDEFINES) $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections ../../imxmrt_ld/imxrt1062_t41.ld | grep -v '^#' > link.ld
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DMELTYMAIN_H_EXTERN main.cpp -o main.o
+	$(CXX) -Tlink.ld $(CPUOPTIONS) -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mhard-float -mfpu=fpv5-d16 -fno-exceptions -ffunction-sections -fdata-sections -DCPU_MIMXRT1062 -DCPU_MIMXRT1062DVJ6A -DCPU_HEADER_H='<MIMXRT1062.h>'  -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DUSB_MIDI_AUDIO_SERIAL -DLAYOUT_US_ENGLISH $(OPTIONS) -fno-rtti -I. $(INC) $(LDFLAGS) -L$(LIBPATHFILEDROP) -Wl,--whole-archive -lmicropython -lTeensyStreamLib -lTeensyWire -lTeensySerialFlash -lTeensySPI -lTeensyDebug -lTeensyMBEDTLS -lTeensyThreads -lRA8875 -lTeensyOpenGL -lqhullstatic_r -Wl,--no-whole-archive $(OBJS) `arm-unknown-linux-gnueabi-gcc -mfloat-abi=hard -print-libgcc-file-name --enable-libgcc-rebuild` -o $(TARGET).elf
 	#../../../build-SHAREDLIB/$(CPUOPTIONS) $(LDFLAGS) -T$(BUILD)/link.ld -o $@ $(OBJS) $(LIBS)
 install:
 	cp $(TARGET).a $(LIBPATHFILEDROP)/$(TARGET).a

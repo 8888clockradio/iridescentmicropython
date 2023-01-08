@@ -409,7 +409,6 @@ CFLAGS += \
 	-DARDUINO_TEENSY41 \
 	-fdata-sections \
 	-ffunction-sections \
-	-mcpu=cortex-m7 \
 	-mthumb \
 	-mtune=cortex-m7 \
 	-std=c99 \
@@ -477,7 +476,7 @@ CFLAGS += $(CFLAGS_MOD) $(CFLAGS_EXTRA)
 # =============================================================================
 # Linker Flags
 # =============================================================================
-CPUOPTIONS = -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float
+CPUOPTIONS = --target=arm-linux-gnueabi -march=armv7a -mfloat-abi=hard -mfpu=fpv5-d16 -mthumb -mhard-float
 ifeq ($(DEBUG),1)
 LDFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,--no-warn-rwx-segments,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard)
 LINKFLAGS = -O2 -Wl,--cref,--gc-sections,--copy-dt-needed-entries,--print-memory-usage,-Map=$@.map -L$(LIBPATHFILEDROP) -L$(abspath $(LIBPATHFILEDROP)/../../../../$(CROSSCOMPILEPREFIX)/lib/thumb/v7e-m+dp/hard) $(CFLAGS)
@@ -550,7 +549,6 @@ CXXFLAGS += \
 	-DXIP_BOOT_HEADER_ENABLE=1 \
 	-DXIP_EXTERNAL_FLASH=1 \
 	-DFLASHMEM_MPYCROSS_HACK \
-	-mcpu=cortex-m7 \
 	-mthumb \
 	-mtune=cortex-m7 \
 	-fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing \
